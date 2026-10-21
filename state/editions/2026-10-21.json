@@ -1,13 +1,12 @@
 {
  "date": "2026-10-21",
- "generated_at": "2026-10-21T20:57:57+13:00",
- "headline": "Netflix's layoffs cost animation-friendly film chief Dan Lin his job, OpenUSD 26.11.0 and Redshift 2027.0 ship, and Obsidian's Pele renders Mermaid diagrams in 0.2 ms.",
+ "generated_at": "2026-10-21T21:03:24+13:00",
+ "headline": "OpenUSD v26.11.0 ships, Netflix ousts film chief Dan Lin amid layoffs, and Digital Domain breaks down its Disclosure Day aliens and train chase.",
  "writer": "claude-sonnet-5-5",
- "sources_ok": 23,
+ "sources_ok": 24,
  "sources_total": 30,
  "source_errors": {
-  "Obsidian community plugins": "no stories found",
-  "Gourmet Pens": "SSLError: HTTPSConnectionPool(host='www.gourmetpens.com', port=443): Max retries exceeded with url: /feeds/posts/default (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occ",
+  "The Well-Appointed Desk": "ConnectTimeout: HTTPSConnectionPool(host='www.wellappointeddesk.com', port=443): Max retries exceeded with url: /feed/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.wellappointeddesk.com',",
   "r/fountainpens": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/fountainpens/top/.rss?t=day",
   "r/stationery": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/stationery/top/.rss?t=day",
   "r/vfx": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/vfx/top/.rss?t=day",
@@ -20,12 +19,21 @@
  },
  "stories": [
   {
+   "id": "f63403f4fe5c",
+   "topic": "obsidian",
+   "source": "Obsidian blog",
+   "title": "Obsidian October 2026 kicks off with a community survey and build-in-public push",
+   "url": "https://obsidian.md/blog/2026-obsidian-october/",
+   "summary": "This year's Obsidian October invites users to take the State of Obsidian survey and to build and improve plugins, themes and community projects. It is a good moment to ship or polish your own tools.",
+   "image": "thumbs/f9b48989cd33cf58.webp"
+  },
+  {
    "id": "f8ce0e6e79f9",
    "topic": "obsidian",
    "source": "r/ObsidianMD",
-   "title": "Obsidian team open-sources Pele, a dependency-free Mermaid-to-SVG renderer",
+   "title": "Obsidian team's Pele renders Mermaid diagrams to SVG in fractions of a millisecond",
    "url": "https://www.reddit.com/r/ObsidianMD/comments/1xaqlcg/pele_from_the_obsidian_team_mermaid_diagrams/",
-   "summary": "Pele turns Mermaid syntax into SVG in about 0.2 ms, versus roughly 43 ms for Mermaid.js in the team's playground. Users are asking whether it will replace the in-app Mermaid renderer.",
+   "summary": "A new open-source, dependency-free library from the Obsidian org turns Mermaid syntax straight into SVG. A demo shows about 0.2 ms against 42.6 ms for Mermaid.js. Users are asking whether it will replace the built-in renderer.",
    "date": "2026-10-21",
    "image": "thumbs/e0959968c7466f33.webp",
    "also": [
@@ -40,9 +48,9 @@
    "id": "427594395e18",
    "topic": "obsidian",
    "source": "Obsidian blog",
-   "title": "Obsidian unveils a new Community site and developer dashboard for plugins",
+   "title": "Obsidian launches Community site and developer dashboard for plugins",
    "url": "https://obsidian.md/blog/future-of-plugins/",
-   "summary": "Obsidian is reworking how plugins and themes are published and discovered, with a dedicated community site and a dashboard for developers. Theme authors are already linking to listings there.",
+   "summary": "The future of the plugin ecosystem now runs through a new Obsidian Community site and a developer dashboard. This changes how plugins and themes are discovered and managed, and it affects anyone who publishes their own.",
    "image": "thumbs/f9b48989cd33cf58.webp"
   },
   {
@@ -51,25 +59,16 @@
    "source": "Obsidian blog",
    "title": "Two independent security audits of Obsidian Sync are published",
    "url": "https://obsidian.md/blog/cure53-tob-sync-audits/",
-   "summary": "Cure53 and Trail of Bits audited Obsidian Sync. All findings have been remediated and validated by the auditors, which matters if you sync a vault holding work notes.",
-   "image": "thumbs/f9b48989cd33cf58.webp"
-  },
-  {
-   "id": "f63403f4fe5c",
-   "topic": "obsidian",
-   "source": "Obsidian blog",
-   "title": "Obsidian October 2026 invites the community to build and take the survey",
-   "url": "https://obsidian.md/blog/2026-obsidian-october/",
-   "summary": "This year's Obsidian October encourages people to ship plugin, theme and vault projects, and to fill in the State of Obsidian survey.",
+   "summary": "Cure53 and Trail of Bits both audited Sync, and every finding has been fixed or disclosed and validated by the auditors. This is reassuring if you keep a work vault in the cloud.",
    "image": "thumbs/f9b48989cd33cf58.webp"
   },
   {
    "id": "256c8f5385a3",
    "topic": "obsidian",
    "source": "r/ObsidianMD",
-   "title": "Home Cards plugin 1.32 adds multiple home pages, pins and cover images",
+   "title": "Home Cards 1.32 adds multiple home pages, pins and cover images",
    "url": "https://www.reddit.com/r/ObsidianMD/comments/1xb9h1w/home_cards_plugin_132_is_out_with_multiple_home/",
-   "summary": "The update builds home pages from note properties, tags and folders and inherits your theme's fonts and colours. It also adds several new customisable sections.",
+   "summary": "The Home Cards plugin builds a native-looking home page from your notes' properties, tags, links and folders. It takes its fonts and colors from your theme, and this release adds several new customizable sections.",
    "date": "2026-10-21",
    "kind": "reddit"
   },
@@ -77,9 +76,9 @@
    "id": "8d5a34f5a0e9",
    "topic": "obsidian",
    "source": "r/ObsidianMD",
-   "title": "S-Charts plugin turns markdown tables into theme-coloured charts",
+   "title": "S-Charts plugin turns markdown tables in code blocks into theme-matched charts",
    "url": "https://www.reddit.com/r/ObsidianMD/comments/1xanpvj/i_made_scharts_type_a_markdown_table_in_a_code/",
-   "summary": "A code block holding a plain markdown table renders as a bar chart in your theme's colours, with no Dataview scripting. Charts can also be built from note properties in a folder. It is still in development.",
+   "summary": "Write a plain table inside an s-chart block and get a bar chart in your theme's colors, with no Dataview scripting. It can also pull from note properties. It is still in development ahead of a review submission.",
    "date": "2026-10-20",
    "image": "thumbs/cf8b72d18d60c056.webp",
    "also": [
@@ -94,61 +93,173 @@
    "id": "8aab575d9872",
    "topic": "obsidian",
    "source": "r/ObsidianMD",
-   "title": "Stretchtext plugin brings Ted Nelson's expandable text to Obsidian",
+   "title": "Stretchtext plugin brings Ted Nelson's expandable-text idea into Obsidian",
    "url": "https://www.reddit.com/r/ObsidianMD/comments/1xaofzj/stretchtext_plugin/",
-   "summary": "Inspired by a Claude Code plugin, it lets phrases expand into extra detail and collapse back on demand. An interesting experiment in progressive-disclosure notes.",
+   "summary": "Inspired by a similar Claude Code tool, the plugin lets text expand with extra detail and shrink back on demand. It is an interesting experiment in progressive disclosure for long notes.",
    "date": "2026-10-20",
    "kind": "reddit"
   },
   {
-   "id": "7901ef74927b",
+   "id": "d43a7a0e16be",
    "topic": "obsidian",
    "source": "r/ObsidianMD",
-   "title": "Zen UI plugin adds toggles to hide interface clutter",
-   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbg581/made_a_little_plugin_to_make_obsidian_even_more/",
-   "summary": "A small plugin that collapses sidebar and file-explorer elements and other UI chrome for distraction-free writing, replacing a pile of CSS snippets.",
-   "date": "2026-10-21",
+   "title": "Trouble Tags v2 tracks TODO and FIXME-style flags across the whole vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xb2rel/trouble_tags_plugin_manage_tags_flags_and_tasks/",
+   "summary": "The plugin now scans the full vault instead of only the current note for keywords like TODO and FIXME. It adds sorting, toggles, list-callouts and real tasks, which suits long working notes.",
+   "date": "2026-10-20",
    "kind": "reddit"
   },
   {
    "id": "2cb7213f041b",
    "topic": "stationery",
    "source": "Sailor",
-   "title": "Sailor launches 450-piece ebonite fountain pen 'Enryu' with long-blade-ground nib",
+   "title": "Sailor releases a 450-piece ebonite fountain pen with long-blade nib grinding",
    "url": "https://sailor.co.jp/news/20261014/",
-   "summary": "Sailor's limited run of 450 pens worldwide (225 domestic, 225 overseas) goes on sale 24 October. It pairs an ebonite body with a long-blade-ground nib, aimed at calligraphy-minded collectors.",
+   "summary": "The 長刀研ぎ ebonite pen 'Enryu' goes on sale on 24 October, limited to 450 pieces worldwide (225 domestic, 225 overseas). It is a notable calligraphy-oriented nib release.",
    "date": "2026-10-14",
-   "title_ja": "『長刀研ぎエボナイト万年筆 焔龍』 2026年10月24日（土）より世界450本限定発売",
+   "title_ja": "長刀研ぎエボナイト万年筆 焔龍 2026年10月24日より世界450本限定発売",
    "image": "thumbs/0b7cd63af3cfba0c.webp"
   },
   {
-   "id": "d06f02d6a292",
+   "id": "8aedf909e979",
    "topic": "stationery",
-   "source": "The Pen Addict",
-   "title": "Pen Addict finds Sailor's steel-nib Pro Gear Regular hard to justify at $200",
-   "url": "https://www.penaddict.com/blog/2026/10/19/sailor-pro-gear-regular-fountain-pen-review",
-   "summary": "The reviewer says the pen writes fine but feels underwhelming for the price, and regrets buying it. A useful counterpoint to Sailor's gold-nib reputation.",
-   "date": "2026-10-19",
-   "image": "thumbs/f7838f6663b6214b.webp"
+   "source": "Platinum",
+   "title": "Platinum announces it is discontinuing the #3776 Century series",
+   "url": "https://www.platinum-pen.co.jp/news/13584/",
+   "summary": "Platinum says it is ending production of the long-running #3776 Century line, citing future product plans. The notice lists the affected models, including PNB-18000CR. Collectors may want to buy soon.",
+   "title_ja": "#3776センチュリーシリーズ 生産終了のお知らせ",
+   "image": "thumbs/cc624308a7204cbc.webp"
   },
   {
    "id": "3d37e2ceb4f3",
    "topic": "stationery",
    "source": "Pilot",
-   "title": "Pilot releases limited 'Christmas Market in Blue World' Acro 300 ballpoint",
+   "title": "Pilot adds a limited Christmas Market edition of the Acro 300 ballpoint",
    "url": "https://www.pilot.co.jp/press_release/2026/10/21/_in_blue_world.html",
-   "summary": "A seasonal limited edition of Pilot's smooth, dark-writing Acro 300 oil-based ballpoint, on sale in limited quantities.",
+   "summary": "The seasonal 'Blue World' Acro is based on the Acro 300, the smooth, dark-writing oil-based ballpoint. It is a numbered limited run.",
    "date": "2026-10-21",
-   "title_ja": "油性ボールペン『アクロ クリスマスマーケット in Blue World 』限定発売",
+   "title_ja": "アクロ クリスマスマーケット in Blue World 限定発売",
    "image": "thumbs/21ec62ea380a76bf.webp"
+  },
+  {
+   "id": "d06f02d6a292",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Pen Addict is disappointed by the Sailor Pro Gear Regular steel-nib model",
+   "url": "https://www.penaddict.com/blog/2026/10/19/sailor-pro-gear-regular-fountain-pen-review",
+   "summary": "The reviewer finds nothing technically wrong with the pen but regrets paying about $200 for its feel. The review shows how steel-nib models are squeezed as gold-nib prices climb.",
+   "date": "2026-10-19",
+   "image": "thumbs/f7838f6663b6214b.webp"
+  },
+  {
+   "id": "6715d3adaa44",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens interviews Hobonichi's president on the planner's history and design",
+   "url": "https://www.jetpens.com/blog/Hobonichi-Interview-Hobonichi-s-History-Designs-and-Future/pt/1028",
+   "summary": "Ayako Koizumi, who joined in 2000, talks about the Techo's origins, how the planners are designed and where the brand is heading. It is a useful look at the thinking behind a Japanese paper icon.",
+   "date": "2026-10-15"
+  },
+  {
+   "id": "c93f30e59aee",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens rounds up the 2027 Hobonichi Techo covers and accessories",
+   "url": "https://www.jetpens.com/blog/2027-Hobonichi-Techo-Covers-Accessories/pt/987",
+   "summary": "The full 2027 lineup is available, covering planner sizes, new and archive cover designs, accessories and a ONE PIECE collection.",
+   "date": "2026-10-15"
+  },
+  {
+   "id": "946250e619e5",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens publishes a complete guide to the Traveler's Company notebook system",
+   "url": "https://www.jetpens.com/blog/TRAVELER-S-COMPANY-TRAVELER-S-notebook-A-Comprehensive-Guide/pt/726",
+   "summary": "The guide covers the leather-cover notebook, its refills, planners and accessories, and notes that the 2027 planners are now available. It is a handy reference for choosing a setup.",
+   "date": "2026-10-19"
+  },
+  {
+   "id": "bfae15cb3c0a",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum's PRO-USE 171 drafting pencil gets pastel limited colors",
+   "url": "https://www.platinum-pen.co.jp/news/13573/",
+   "summary": "The mechanical pencil with an adjustable writing feel (Shnoke system and thin switch mechanism) arrives in new pastel limited colors. They are a fresh take on a drafting tool.",
+   "title_ja": "次世代シャープ「PRO-USE 171」新たな限定色が登場",
+   "image": "thumbs/35d69e40d59c6fe8.webp"
+  },
+  {
+   "id": "f1c384cc0ea0",
+   "topic": "pipeline",
+   "source": "OpenUSD releases",
+   "title": "Pixar publishes OpenUSD v26.11.0",
+   "url": "https://github.com/PixarAnimationStudios/OpenUSD/releases/tag/v26.11.0",
+   "summary": "A new tagged release of OpenUSD is available on GitHub. Pipeline teams should check the release notes for changes affecting their USD stacks and plugins.",
+   "date": "2026-10-20"
+  },
+  {
+   "id": "e02c3e9f20a0",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Redshift 2027.0 adds a fur procedural and ACES 2 support",
+   "url": "https://www.cgchannel.com/2026/10/maxon-releases-redshift-2027-0/",
+   "summary": "Maxon's GPU renderer gains a new fur procedural and ACES 2 color support, plus updates to its real-time Redshift Live engine. ACES 2 matters for color-managed pipelines.",
+   "date": "2026-10-18"
+  },
+  {
+   "id": "ac009111aa15",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Cinema 4D 2027.0 introduces a new object scattering system",
+   "url": "https://www.cgchannel.com/2026/10/maxon-releases-cinema-4d-2027-0/",
+   "summary": "Maxon's release brings a new scattering system and updated liquid simulations. It is another step in procedural layout and FX tooling.",
+   "date": "2026-10-15"
+  },
+  {
+   "id": "f4f8f419ffd6",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "ZBrush 2027.0 gains a UV Editor and iPad projection painting",
+   "url": "https://www.cgchannel.com/2026/10/maxon-releases-zbrush-2027-0-and-zbrush-for-ipad-2027-0/",
+   "summary": "The desktop sculpting app gets a native UV Editor, while the iPad version adds projection painting. Both are useful for asset prep.",
+   "date": "2026-10-15"
+  },
+  {
+   "id": "7b5af40d271d",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Plasticity 2026.2 adds reusable asset libraries and a curvature shader",
+   "url": "https://www.cgchannel.com/2026/10/plasticity-2026-2-is-out/",
+   "summary": "The CAD-style modeling tool gets a system for building reusable asset libraries and a Curvature Analysis shader for checking surface quality.",
+   "date": "2026-10-20"
+  },
+  {
+   "id": "e21c678796ae",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "Digital Domain's Disclosure Day breakdown shows aliens, train chase and new muscle system",
+   "url": "https://www.cgchannel.com/2026/10/check-out-digital-domains-vfx-breakdown-for-disclosure-day/",
+   "summary": "DD delivered 418 shots for Spielberg's film, including a 40-shot train chase built on a CG New Jersey location. Its new three-tier muscle system drives the creatures, which is worth watching for creature technical directors.",
+   "date": "2026-10-20",
+   "image": "thumbs/cd52f79bf9e98c37.webp",
+   "also": [
+    {
+     "source": "befores & afters",
+     "url": "https://beforesandafters.com/2026/10/20/digital-domains-vfx-breakdown-for-disclosure-day-is-here/"
+    },
+    {
+     "source": "Art of VFX",
+     "url": "https://www.artofvfx.com/disclosure-day-digital-domain-creates-aliens-epic-action-and-cg-environments/"
+    }
+   ]
   },
   {
    "id": "e8c352731c7c",
    "topic": "vfx",
    "source": "Cartoon Brew",
-   "title": "Netflix ousts animation-friendly film chief Dan Lin amid 1,000 layoffs",
+   "title": "Netflix ousts animation-friendly film chief Dan Lin amid mass layoffs",
    "url": "https://www.cartoonbrew.com/executives/netflix-dan-lin-fired-mass-layoffs-268061.html",
-   "summary": "Lin, who backed animation and wider theatrical windows for family films, leaves as Netflix cuts about 6% of staff. His exit raises questions about the studio's animation priorities.",
+   "summary": "Lin, who pushed for wider theatrical windows for family films, leaves as Netflix cuts about 1,000 staff (6% of employees). The move raises questions about the streamer's animation commitment.",
    "date": "2026-10-20",
    "image": "thumbs/70ed175ec5188d95.webp",
    "also": [
@@ -166,67 +277,21 @@
    "id": "71104b699e32",
    "topic": "vfx",
    "source": "Cartoon Brew",
-   "title": "Disney spends $180M to hire most of bankrupt Character.AI's staff",
+   "title": "Disney hires most of bankrupt Character.AI's staff after a year of layoffs",
    "url": "https://www.cartoonbrew.com/artificial-intelligence/disney-character-ai-employee-hires-268139.html",
-   "summary": "After a year of job cuts, Disney is bringing in the chatbot startup's workforce. The move deepens its AI ties and sits awkwardly with ongoing worries about animation jobs.",
+   "summary": "Disney is paying about $180 million to recruit most of Character.AI's workforce, deepening ties to the struggling startup. The deal lands as it keeps cutting jobs elsewhere.",
    "date": "2026-10-20",
    "image": "thumbs/80a6a02502d2c36f.webp"
-  },
-  {
-   "id": "7b308ac170fb",
-   "topic": "vfx",
-   "source": "Art of VFX",
-   "title": "Digital Domain breaks down 418 shots on Spielberg's 'Disclosure Day'",
-   "url": "https://www.artofvfx.com/disclosure-day-digital-domain-creates-aliens-epic-action-and-cg-environments/",
-   "summary": "The work includes a CG-rebuilt New Jersey train chase, aliens, and animals built with DD's new three-tier muscle system. A good watch for creature-rigging ideas.",
-   "date": "2026-10-20",
-   "image": "thumbs/c917203140283e1c.webp",
-   "also": [
-    {
-     "source": "befores & afters",
-     "url": "https://beforesandafters.com/2026/10/20/digital-domains-vfx-breakdown-for-disclosure-day-is-here/"
-    },
-    {
-     "source": "CG Channel",
-     "url": "https://www.cgchannel.com/2026/10/check-out-digital-domains-vfx-breakdown-for-disclosure-day/"
-    }
-   ]
-  },
-  {
-   "id": "a6d28b91348d",
-   "topic": "vfx",
-   "source": "Cartoon Brew",
-   "title": "View Conference: studio and ILM executives debate AI, pipelines and jobs",
-   "url": "https://www.cartoonbrew.com/events/studio-executive-roundtable-view-conference-267928.html",
-   "summary": "Executives from Sony, ILM and Skydance discussed AI-driven pipeline change and incentives, with workforce protection looming large. Directors on a separate panel debated AI and distribution.",
-   "date": "2026-10-15",
-   "image": "thumbs/f2a43787440fe8c0.webp",
-   "also": [
-    {
-     "source": "Cartoon Brew",
-     "url": "https://www.cartoonbrew.com/events/view-conference-joel-crawford-januel-mercado-mckenna-harris-tyree-dillihay-267957.html"
-    }
-   ]
-  },
-  {
-   "id": "11c8e22143e3",
-   "topic": "vfx",
-   "source": "befores & afters",
-   "title": "Framestore shares VFX breakdown for 'East of Eden'",
-   "url": "https://beforesandafters.com/2026/10/21/watch-framestores-vfx-breakdown-for-east-of-eden/",
-   "summary": "A behind-the-scenes reel from Framestore covering its visual effects work on the series.",
-   "date": "2026-10-21",
-   "image": "thumbs/94a8a241baf18cce.webp"
   },
   {
    "id": "6a64a709af2d",
    "topic": "vfx",
    "source": "Art of VFX",
-   "title": "Framestore upgrades Appa's fur, skin and eyes for 'Avatar: The Last Airbender' S2",
+   "title": "Framestore details its upgraded Appa and sky bison family for Avatar: The Last Airbender S2",
    "url": "https://www.artofvfx.com/avatar-the-last-airbender-season-2-framestore-brings-appas-family-to-life/",
-   "summary": "With the camera closer to Appa, Framestore rebuilt his asset for higher fidelity and added sky-bison relatives. The VFX supervisors also discuss how the approach evolved from season one.",
+   "summary": "With the camera closer than before, the studio improved Appa's fur, skin, eyes and underlying asset, and expanded the sky bison family. The production VFX supervisor and producer also discuss how the approach evolved.",
    "date": "2026-10-16",
-   "image": "thumbs/9579cbd0855975f0.webp",
+   "image": "thumbs/81ea864270af516b.webp",
    "also": [
     {
      "source": "befores & afters",
@@ -239,68 +304,44 @@
    ]
   },
   {
+   "id": "11c8e22143e3",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Framestore shares its VFX breakdown for East of Eden",
+   "url": "https://beforesandafters.com/2026/10/21/watch-framestores-vfx-breakdown-for-east-of-eden/",
+   "summary": "A behind-the-scenes reel from Framestore shows how the studio's effects work on the series was built.",
+   "date": "2026-10-21",
+   "image": "thumbs/94a8a241baf18cce.webp"
+  },
+  {
    "id": "37db142393ba",
    "topic": "vfx",
    "source": "Cartoon Brew",
-   "title": "Toy Story 5 director describes a two-week production pause that reshaped Jessie's arc",
+   "title": "Toy Story 5 director says a two-week shutdown rescued the film's story",
    "url": "https://www.cartoonbrew.com/feature-film/toy-story-5-mckenna-harris-view-conference-268055.html",
-   "summary": "McKenna Harris says Pixar halted production to rethink Jessie's motivation after deciding the film 'wasn't good'. It is a candid look at story-driven course correction in feature animation.",
+   "summary": "McKenna Harris explains that Pixar paused production when the film wasn't working. The team reworked Jessie's motivation so she helps Bonnie find a human friend, a rare look at a story reset in production.",
    "date": "2026-10-19",
    "image": "thumbs/b6377ef07d52c924.webp"
   },
   {
-   "id": "57ced6f68be6",
+   "id": "a6d28b91348d",
    "topic": "vfx",
-   "source": "CG Channel",
-   "title": "Raynault shows its CG Washington D.C. aerial for 'Mayday'",
-   "url": "https://www.cgchannel.com/2026/10/watch-raynaults-vfx-breakdown-for-mayday/",
-   "summary": "The studio's breakdown covers a full CG recreation of the city for an aerial shot in the Apple TV action comedy.",
-   "date": "2026-10-20"
+   "source": "Cartoon Brew",
+   "title": "View Conference: studio executives debate AI, pipelines and job protection",
+   "url": "https://www.cartoonbrew.com/events/studio-executive-roundtable-view-conference-267928.html",
+   "summary": "Executives from Sony, ILM, Skydance and others discussed changing production pipelines, tax incentives and new business. Questions about how workers will be protected loomed over the AI talk.",
+   "date": "2026-10-15",
+   "image": "thumbs/f2a43787440fe8c0.webp"
   },
   {
-   "id": "f1c384cc0ea0",
-   "topic": "pipeline",
-   "source": "OpenUSD releases",
-   "title": "OpenUSD v26.11.0 is released",
-   "url": "https://github.com/PixarAnimationStudios/OpenUSD/releases/tag/v26.11.0",
-   "summary": "Pixar has tagged version 26.11.0 of OpenUSD on GitHub. Check the release notes for changes that may affect USD-based pipelines.",
-   "date": "2026-10-20"
-  },
-  {
-   "id": "e02c3e9f20a0",
-   "topic": "pipeline",
-   "source": "CG Channel",
-   "title": "Redshift 2027.0 adds fur procedural and ACES 2 support",
-   "url": "https://www.cgchannel.com/2026/10/maxon-releases-redshift-2027-0/",
-   "summary": "Maxon's GPU renderer gains a new fur procedural, ACES 2 colour support and updates to Redshift Live. ACES 2 support is relevant for colour-managed pipelines.",
-   "date": "2026-10-18"
-  },
-  {
-   "id": "ac009111aa15",
-   "topic": "pipeline",
-   "source": "CG Channel",
-   "title": "Cinema 4D 2027.0 brings a new object scattering system",
-   "url": "https://www.cgchannel.com/2026/10/maxon-releases-cinema-4d-2027-0/",
-   "summary": "Maxon's release adds a scattering system for objects and improved liquid simulations.",
-   "date": "2026-10-15"
-  },
-  {
-   "id": "f4f8f419ffd6",
-   "topic": "pipeline",
-   "source": "CG Channel",
-   "title": "ZBrush 2027.0 adds a desktop UV Editor and iPad projection painting",
-   "url": "https://www.cgchannel.com/2026/10/maxon-releases-zbrush-2027-0-and-zbrush-for-ipad-2027-0/",
-   "summary": "Maxon's sculpting update brings a new UV Editor on desktop and projection painting on the iPad version.",
-   "date": "2026-10-15"
-  },
-  {
-   "id": "a0d69c1eb14d",
-   "topic": "pipeline",
-   "source": "SideFX",
-   "title": "Frame48's Lenovo spot follows a CG artist sculpting terrain and rigging a car",
-   "url": "https://www.sidefx.com/community/frame48-lenovo/",
-   "summary": "The LA studio's Yoga Pro 7a campaign is a meta-story about CG creation, from a volcanic landscape to a hyper car, showcased on SideFX's site.",
-   "image": "thumbs/85672c4e0e653668.webp"
+   "id": "face936d68c2",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "DNEG's VFX and animation leads discuss Coyote vs. Acme",
+   "url": "https://www.artofvfx.com/coyote-vs-acme-alexander-seaman-vfx-supervisor-and-keith-roberts-animation-director-dneg/",
+   "summary": "Alexander Seaman and Keith Roberts talk about DNEG's work on the film, which mixes live action with an animated Looney Tunes character.",
+   "date": "2026-10-20",
+   "image": "thumbs/347180d31f034655.webp"
   }
  ]
 }
