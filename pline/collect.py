@@ -66,6 +66,11 @@ def _feed_image(entry) -> str | None:
     return None
 
 
+def _youtube_thumb(link: str) -> str | None:
+    m = re.search(r"(?:v=|youtu\.be/)([\w-]{11})", link or "")
+    return f"https://i.ytimg.com/vi/{m.group(1)}/hqdefault.jpg" if m else None
+
+
 def _entry_date(entry) -> str | None:
     for key in ("published_parsed", "updated_parsed"):
         t = entry.get(key)
@@ -95,7 +100,7 @@ def parse_feed(body: bytes, src: dict) -> list[Item]:
                 date=_entry_date(e) or date_from_url(link),
                 excerpt=excerpt,
                 lang=src.get("lang", "en"),
-                image_url=_feed_image(e),
+                image_url=_youtube_thumb(link) if src.get("kind") == "video" else _feed_image(e),
                 weight=float(src.get("weight", 1)),
                 kind=src.get("kind", "article"),
             )
@@ -148,7 +153,7 @@ def parse_reddit_listing(data: dict, src: dict) -> list[Item]:
             Item(
                 source=f"r/{p.get('subreddit', src.get('subreddit'))}",
                 title=html_lib.unescape(p.get("title", "")),
-                url="https://www.reddit.com" + p.get("permalink", ""),
+                url="https://www.reddit.com" + (p.get("permalink") or f"/r/{p.get('subreddit', src.get('subreddit'))}/comments/{p.get('id', '')}/"),
                 topics=list(src["topics"]),
                 date=datetime.fromtimestamp(p.get("created_utc", time.time()), timezone.utc).strftime("%Y-%m-%d"),
                 excerpt=(text + " " if text else "") + stats,
@@ -184,7 +189,6 @@ def reddit(http: Http, src: dict) -> list[Item]:
 
 
 ARCTIC = "https://arctic-shift.photon-reddit.com/api/posts/search"
-ARCTIC_FIELDS = "title,score,num_comments,permalink,created_utc,subreddit,over_18,stickied,selftext,preview,thumbnail"
 
 
 def arctic_shift(http: Http, src: dict) -> list[Item]:
@@ -195,8 +199,7 @@ def arctic_shift(http: Http, src: dict) -> list[Item]:
     it gets three polite attempts.
     """
     now = int(time.time())
-    params = {"subreddit": src["subreddit"], "after": now - 84 * 3600, "before": now - 36 * 3600,
-              "limit": 100, "fields": ARCTIC_FIELDS}
+    params = {"subreddit": src["subreddit"], "after": now - 84 * 3600, "before": now - 36 * 3600, "limit": 100}
     last = None
     for attempt in range(3):
         r = http.session.get(ARCTIC, params=params, timeout=40)
