@@ -46,6 +46,18 @@
   });
   document.querySelectorAll(".grid").forEach(syncGrid);
 
+  // ── Show more: reveal the section's reserve stories ──
+  document.querySelectorAll(".pill.more").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var section = btn.closest(".tile"), grid = section.querySelector(".grid");
+      grid.querySelectorAll(".card.extra[hidden]").forEach(function (c) { c.hidden = false; c.classList.add("revealed"); });
+      btn.closest(".more-row").hidden = true;
+      syncGrid(grid);
+      var first = grid.querySelector(".card.extra.revealed a");
+      if (first) first.focus({ preventScroll: true });
+    });
+  });
+
   // ── Hide read ──
   var hideBtn = document.getElementById("hideRead"), hide = load("pline.hideRead", false) === true;
   function applyHide() { document.body.classList.toggle("hide-read", hide); hideBtn.setAttribute("aria-pressed", String(hide)); }
