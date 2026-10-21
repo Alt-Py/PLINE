@@ -172,9 +172,41 @@ def reddit(http: Http, src: dict) -> list[Item]:
         )
         r.raise_for_status()
         return parse_reddit_listing(r.json(), src)
-    # Without API credentials, try the public feed (Reddit often blocks cloud runners).
-    body, _ = http.get_bytes(f"https://www.reddit.com/r/{sub}/top/.rss?t={src.get('period', 'day')}")
-    return parse_feed(body, {**src, "name": f"r/{sub}", "kind": "reddit"})
+    # No account: Reddit's public feed first, then the Arctic Shift archive.
+    try:
+        body, _ = http.get_bytes(f"https://www.reddit.com/r/{sub}/top/.rss?t={src.get('period', 'day')}")
+        items = parse_feed(body, {**src, "name": f"r/{sub}", "kind": "reddit"})
+        if items:
+            return items
+    except Exception as exc:
+        log.info("r/%s feed unavailable (%s), using the Arctic Shift archive", sub, type(exc).__name__)
+    return arctic_shift(http, src)
+
+
+ARCTIC = "https://arctic-shift.photon-reddit.com/api/posts/search"
+ARCTIC_FIELDS = "title,score,num_comments,permalink,created_utc,subreddit,over_18,stickied,selftext,preview,thumbnail"
+
+
+def arctic_shift(http: Http, src: dict) -> list[Item]:
+    """Top posts from 36-84 h ago via Arctic Shift, a free public Reddit archive.
+
+    The archive refreshes scores about 36 hours after a post, so this window has
+    real upvote counts. It is a free service that often answers "slow down", so
+    it gets three polite attempts.
+    """
+    now = int(time.time())
+    params = {"subreddit": src["subreddit"], "after": now - 84 * 3600, "before": now - 36 * 3600,
+              "limit": 100, "fields": ARCTIC_FIELDS}
+    last = None
+    for attempt in range(3):
+        r = http.session.get(ARCTIC, params=params, timeout=40)
+        if r.ok:
+            posts = r.json().get("data") or []
+            posts.sort(key=lambda p: p.get("score", 0), reverse=True)
+            return parse_reddit_listing({"data": {"children": [{"data": p} for p in posts[:25]]}}, src)
+        last = f"HTTP {r.status_code}: {r.text[:80]}"
+        time.sleep(6 * (attempt + 1))
+    raise RuntimeError(f"Arctic Shift: {last}")
 
 
 # ── YouTube Data API search (needs YOUTUBE_API_KEY) ──────
@@ -273,9 +305,7 @@ def collect_source(http: Http, src: dict) -> tuple[list[Item], str | None]:
             body, _ = http.get_bytes(url)
             items = [it for it in parse_feed(body, {**src, "kind": "video"}) if "/shorts/" not in it.url]
         elif src["type"] == "youtube_search":
-            if not os.environ.get("YOUTUBE_API_KEY"):
-                return [], f"{SKIPPED} add the YOUTUBE_API_KEY secret to enable"
-            items = youtube_search(http, src)
+            items = youtube_search(http, src) if os.environ.get("YOUTUBE_API_KEY") else youtube_keyless(http, src)
         elif src["type"] == "reddit":
             items = reddit(http, src)
         elif src["type"] == "html_list":
@@ -308,3 +338,117 @@ def collect_all(http: Http, sources: list[dict]) -> tuple[list[Item], dict[str, 
 
 def now_utc() -> datetime:
     return datetime.now(timezone.utc)
+
+
+
+# ── YouTube search without a key: public Invidious and Piped servers ──
+# Community-run front-ends that relay YouTube search. Individual servers come and
+# go, so Pline asks the public directory, tries a few, and remembers which one
+# answered for the rest of the run. Links always point to youtube.com itself.
+
+PIPED_HOSTS = ["https://api.piped.private.coffee", "https://pipedapi.kavin.rocks", "https://pipedapi.adminforge.de",
+               "https://pipedapi.leptons.xyz", "https://piped-api.lunar.icu"]
+_yt_lock = threading.Lock()
+_yt_state: dict = {"hosts": None, "good": None}
+
+
+def _invidious_hosts(http: Http) -> list[str]:
+    with _yt_lock:
+        if _yt_state["hosts"] is None:
+            try:
+                data = http.session.get("https://api.invidious.io/instances.json?sort_by=type,users", timeout=15).json()
+                _yt_state["hosts"] = [i[1]["uri"].rstrip("/") for i in data if i[1].get("api") and i[1].get("type") == "https"][:6]
+            except Exception:
+                _yt_state["hosts"] = []
+        return list(_yt_state["hosts"])
+
+
+_REL = re.compile(r"(\d+)\s*(second|minute|hour|day|week|month|year)", re.I)
+_UNIT = {"second": 1 / 86400, "minute": 1 / 1440, "hour": 1 / 24, "day": 1, "week": 7, "month": 30, "year": 365}
+
+
+def days_ago(text: str | None) -> float | None:
+    m = _REL.search(text or "")
+    return int(m.group(1)) * _UNIT[m.group(2).lower()] if m else None
+
+
+def _video_item(vid: str, title: str, channel: str, when: datetime | None, desc: str, views, src: dict) -> Item:
+    return Item(
+        source=html_lib.unescape(channel or "YouTube"),
+        title=html_lib.unescape(title or ""),
+        url=f"https://www.youtube.com/watch?v={vid}",
+        topics=list(src["topics"]),
+        date=when.strftime("%Y-%m-%d") if when else None,
+        excerpt=(html_lib.unescape(desc or "")[:380] + (f" ({int(views):,} views)" if isinstance(views, (int, float)) and views > 0 else "")).strip(),
+        lang="ja" if src.get("lang") == "ja" else "en",
+        image_url=f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
+        weight=float(src.get("weight", 0.7)),
+        kind="video",
+    )
+
+
+def parse_invidious(results: list, src: dict, days: int) -> list[Item]:
+    now = datetime.now(timezone.utc)
+    items = []
+    for v in results:
+        if v.get("type") != "video" or not v.get("videoId") or v.get("liveNow"):
+            continue
+        if not 180 <= int(v.get("lengthSeconds") or 0) <= 4 * 3600:   # no shorts, no streams
+            continue
+        when = datetime.fromtimestamp(v["published"], timezone.utc) if v.get("published") else None
+        if when and (now - when).days > days:
+            continue
+        items.append(_video_item(v["videoId"], v.get("title"), v.get("author"), when, v.get("description"), v.get("viewCount"), src))
+    return items
+
+
+def parse_piped(results: list, src: dict, days: int) -> list[Item]:
+    now = datetime.now(timezone.utc)
+    items = []
+    for v in results:
+        m = re.search(r"v=([\w-]{11})", v.get("url") or "")
+        if not m or v.get("isShort") or not 180 <= int(v.get("duration") or 0) <= 4 * 3600:
+            continue
+        up = v.get("uploaded") or -1
+        if up > 0:
+            when = datetime.fromtimestamp(up / 1000, timezone.utc)
+        else:
+            ago = days_ago(v.get("uploadedDate"))
+            when = now - timedelta(days=ago) if ago is not None else None
+        if when is None or (now - when).days > days:
+            continue
+        items.append(_video_item(m.group(1), v.get("title"), v.get("uploaderName"), when, v.get("shortDescription"), v.get("views"), src))
+    return items
+
+
+def youtube_keyless(http: Http, src: dict) -> list[Item]:
+    days = src.get("days", 7)
+    inv = {"q": src["query"], "type": "video", "date": "week" if days <= 7 else "month", "sort_by": "relevance"}
+    if src.get("lang") == "ja":
+        inv["region"] = "JP"
+    tried = []
+    candidates = ([_yt_state["good"]] if _yt_state["good"] else []) + \
+        [("invidious", h) for h in _invidious_hosts(http)] + [("piped", h) for h in PIPED_HOSTS]
+    seen = set()
+    for kind, host in candidates:
+        if (kind, host) in seen:
+            continue
+        seen.add((kind, host))
+        try:
+            if kind == "invidious":
+                r = http.session.get(f"{host}/api/v1/search", params=inv, timeout=15)
+                data = r.json() if r.ok and "json" in r.headers.get("content-type", "") else None
+                items = parse_invidious(data, src, days) if isinstance(data, list) else None
+            else:
+                r = http.session.get(f"{host}/search", params={"q": src["query"], "filter": "videos"}, timeout=15)
+                data = r.json() if r.ok and "json" in r.headers.get("content-type", "") else None
+                items = parse_piped(data.get("items", []), src, days) if isinstance(data, dict) else None
+        except Exception as exc:
+            tried.append(f"{host.split('//')[-1]} {type(exc).__name__}")
+            continue
+        if items is None:
+            tried.append(f"{host.split('//')[-1]} HTTP {r.status_code}")
+            continue
+        _yt_state["good"] = (kind, host)
+        return items[: src.get("max", 10)]
+    raise RuntimeError("no public YouTube server answered: " + ", ".join(tried[:6]))

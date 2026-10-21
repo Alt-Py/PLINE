@@ -63,6 +63,8 @@ def prune(today: date, keep_days: int) -> None:
         for s in ed.get("stories", [])
         if s.get("image")
     }
+    saved = load_json(STATE / "saved.json", {"items": {}})["items"].values()
+    used |= {Path(s["image"]).name for s in saved if s.get("saved") and s.get("image")}
     if THUMBS.exists():
         for p in THUMBS.glob("*.webp"):
             if p.name not in used:

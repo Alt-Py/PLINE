@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Pline · Wednesday 21 October</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M22 50V14h12a11 11 0 0 1 0 22h-6' fill='none' stroke='%23f5f5f7' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -171,13 +171,27 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
   .likes-label { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Save + Saved page */
+.vote.save[aria-pressed="true"] { background: var(--ink); color: #000; }
+.vote.save[aria-pressed="true"] .ic-off, .vote.save[aria-pressed="false"] .ic-on { display: none; }
+.pill .num { font-variant-numeric: tabular-nums; color: var(--muted); }
+.pill[aria-current="page"] .num { color: #fff; }
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.filters .pill[aria-pressed="true"] { background: var(--ink); color: #000; }
+.saved-at { color: var(--muted); }
+.card.unsaved { opacity: .45; }
+.empty-saved { text-align: center; color: var(--body); display: grid; gap: 8px; justify-items: center; padding-block: 24px 8px; }
+.empty-saved svg { width: 28px; height: 28px; color: var(--muted); }
 </style>
 </head>
-<body data-repo="Alt-Py/PLINE" data-issue="1">
+<body data-repo="Alt-Py/PLINE" data-issue="1" data-page="edition">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2.5 2.5 0 0 1 2.5 2.5V9h5.2a2 2 0 0 1 2 2.3l-1.2 8A2 2 0 0 1 17.5 21H7"/></symbol>
   <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M17 14V3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-3Zm0 0-4 7a2.5 2.5 0 0 1-2.5-2.5V15H5.3a2 2 0 0 1-2-2.3l1.2-8A2 2 0 0 1 6.5 3H17"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path fill="#fff" d="M8 5.5v13a1 1 0 0 0 1.5.9l10.4-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5Z"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1v16l-6.5-4.2-6.5 4.2v-16a1 1 0 0 1 1-1Z"/></symbol>
+  <symbol id="i-saved" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 3h11A1.5 1.5 0 0 1 19 4.5V21l-7-4.5L5 21V4.5A1.5 1.5 0 0 1 6.5 3Z"/></symbol>
 </svg>
 
 <header class="gnav">
@@ -195,9 +209,9 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
       <a class="pill" href="./">Today</a>
       <a class="pill" href="2026-10-21.html" aria-current="page">Wed 21</a>
     </nav>
-    <button class="pill" id="likesBtn" type="button" aria-haspopup="dialog"><svg width="16" height="16" aria-hidden="true"><use href="#i-up"/></svg><span class="likes-label">Likes</span><span class="dot" id="pendingDot" hidden></span></button>
-    <button class="pill" id="hideRead" type="button" aria-pressed="false">Hide read</button>
-  </div>
+    <a class="pill" href="saved.html" id="savedLink" aria-label="Saved stories"><svg width="16" height="16" aria-hidden="true"><use href="#i-saved"/></svg><span class="likes-label">Saved</span><span class="num" id="savedCount"></span></a>
+    <button class="pill" id="likesBtn" type="button" aria-haspopup="dialog" aria-label="Likes and sync"><svg width="16" height="16" aria-hidden="true"><use href="#i-up"/></svg><span class="likes-label">Likes</span><span class="dot" id="pendingDot" hidden></span></button>
+<button class="pill" id="hideRead" type="button" aria-pressed="false">Hide read</button>  </div>
 </div>
 
 <main>
@@ -235,6 +249,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -255,6 +270,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -275,6 +291,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -295,6 +312,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -312,6 +330,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -332,6 +351,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -349,6 +369,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -366,6 +387,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -383,6 +405,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -400,6 +423,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -417,6 +441,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -434,6 +459,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -454,6 +480,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -471,6 +498,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -502,6 +530,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -522,6 +551,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -542,6 +572,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -562,6 +593,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -579,6 +611,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -596,6 +629,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -613,6 +647,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -633,6 +668,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -653,6 +689,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -673,6 +710,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -693,6 +731,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -710,6 +749,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -730,6 +770,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -761,6 +802,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -781,6 +823,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -801,6 +844,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -821,6 +865,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -841,6 +886,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -861,6 +907,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -881,6 +928,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -901,6 +949,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -921,6 +970,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -938,6 +988,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -955,6 +1006,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -975,6 +1027,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -995,6 +1048,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1015,6 +1069,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1035,6 +1090,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1055,6 +1111,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1083,6 +1140,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1100,6 +1158,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1117,6 +1176,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1134,6 +1194,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1151,6 +1212,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1171,6 +1233,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
             <div class="votes">
               <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
               <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
             </div>
           </div>
         </div>
@@ -1181,18 +1244,19 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
 
   <nav class="pager" aria-label="Other editions"><div class="wrap">
 <span></span><a class="pill" href="2026-10-22.html">Thursday 22 October ›</a>  </div></nav>
+<script type="application/json" id="pline-stories">[{"date": "2026-10-21", "id": "f8ce0e6e79f9", "image": "thumbs/e0959968c7466f33.webp", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A new library from the Obsidian org renders Mermaid diagrams to SVG in about 0.2 ms, against roughly 43 ms for Mermaid.js. It could eventually speed up diagram rendering in the app itself.", "title": "Obsidian team open-sources Pele, a dependency-free Mermaid-to-SVG renderer", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xaqlcg/pele_from_the_obsidian_team_mermaid_diagrams/"}, {"id": "b3a4084e97f7", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "Cure53 and Trail of Bits audited Sync, and the team says every finding has been fixed and verified by the auditors. Reassuring if you keep production notes or private research in a synced vault.", "title": "Obsidian Sync passes two independent security audits", "topic": "obsidian", "url": "https://obsidian.md/blog/cure53-tob-sync-audits/"}, {"id": "427594395e18", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "The plugin ecosystem gets a new Community site and a dashboard for developers. This changes where plugins and themes are discovered and managed.", "title": "Obsidian launches a Community site and developer dashboard for plugins", "topic": "obsidian", "url": "https://obsidian.md/blog/future-of-plugins/"}, {"id": "f63403f4fe5c", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "This year\u0027s Obsidian October asks users to take the State of Obsidian survey and to build and share plugins, themes and other projects in public.", "title": "Obsidian October 2026 invites community builders and a State of Obsidian survey", "topic": "obsidian", "url": "https://obsidian.md/blog/2026-obsidian-october/"}, {"date": "2026-10-21", "id": "256c8f5385a3", "kind": "reddit", "source": "r/ObsidianMD", "summary": "The home-page plugin builds its dashboards from note properties, tags and folders, and takes its look from your theme. This release adds several home pages, pinning, covers and more customizable sections.", "title": "Home Cards 1.32 adds multiple home pages, pins and cover images", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xb9h1w/home_cards_plugin_132_is_out_with_multiple_home/"}, {"date": "2026-10-20", "id": "8d5a34f5a0e9", "image": "thumbs/cf8b72d18d60c056.webp", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A new plugin renders bar and other charts from a plain markdown table in a code block. It needs no Dataview scripting and can also pull data from note properties.", "title": "S-Charts turns markdown tables into charts in your theme\u0027s colours", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xanpvj/i_made_scharts_type_a_markdown_table_in_a_code/"}, {"date": "2026-10-21", "id": "20990eabe6ee", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A user shares Lifein, a theme grown out of long tinkering with Obsidian\u0027s interface, and asks for feedback.", "title": "Lifein: a new community theme built from interface experiments", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbc80o/i_couldnt_find_the_right_obsidian_theme_so_i_made/"}, {"date": "2026-10-20", "id": "54a6bc3b536d", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A new pastel dark theme, with a light variant, is now listed on the Obsidian community site.", "title": "Moonpetal brings a soft pastel theme to the Community themes list", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xax8o8/i_made_my_own_soft_pastel_theme/"}, {"date": "2026-10-21", "id": "7901ef74927b", "kind": "reddit", "source": "r/ObsidianMD", "summary": "The plugin collects toggles for hiding interface elements and customizing the sidebar and file explorer. It replaces a stack of CSS snippets for distraction-free writing.", "title": "Zen UI plugin adds toggles to hide interface clutter", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbg581/made_a_little_plugin_to_make_obsidian_even_more/"}, {"date": "2026-10-20", "id": "d43a7a0e16be", "kind": "reddit", "source": "r/ObsidianMD", "summary": "The update extends keyword tracking from the current note to the full vault. It adds sorting and toggles, and covers list callouts and tasks.", "title": "Trouble Tags v2 tracks TODO and FIXME markers across the whole vault", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xb2rel/trouble_tags_plugin_manage_tags_flags_and_tasks/"}, {"date": "2026-10-20", "id": "8aab575d9872", "kind": "reddit", "source": "r/ObsidianMD", "summary": "Inspired by a Claude Code tool, the plugin lets text expand with added detail and shrink back on demand.", "title": "Stretchtext plugin revives Ted Nelson\u0027s expandable-text idea in Obsidian", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xaofzj/stretchtext_plugin/"}, {"date": "2026-10-20", "id": "a8d837100c5a", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A user-made theme mixes the Catppuccin Frapp\u00e9 and Atom One Dark palettes, with heading colours tuned for readability, and asks whether to publish it.", "title": "Orange Mocha Frappuccinos: a readability-minded Catppuccin and One Dark blend", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xb7rlu/my_custom_theme_orange_mocha_frappuccinos/"}, {"date": "2026-10-21", "id": "4e51df6bb306", "image": "thumbs/28af74c512aab879.webp", "kind": "reddit", "source": "r/ObsidianMD", "summary": "The plugins range from a website auditor to image tools. All seven are now in Community plugins.", "title": "One developer shows seven Obsidian plugins in a 30-second run-through", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbg43u/ive_built_7_obsidian_plugins_heres_a_30second/"}, {"date": "2026-10-20", "id": "01b94ccbb1a7", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A user reports more saturated headings and tables that now scroll horizontally. Worth checking if your vault relies on Minimal\u0027s cssclasses.", "title": "Minimal theme update changes heading colours and breaks table-100 layouts", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xav4tr/minimal_theme_changed_colors_of_the_headings_and/"}, {"date": "2026-10-14", "id": "2cb7213f041b", "image": "thumbs/0b7cd63af3cfba0c.webp", "source": "Sailor", "summary": "Sailor releases the pen worldwide on 24 October, with 225 pieces for Japan and 225 for overseas. It is a limited ebonite model with Sailor\u0027s distinctive Naginata-togi nib grind.", "title": "Sailor announces the Naginata-togi ebonite fountain pen \u0027Enryu\u0027, limited to 450", "title_ja": "\u9577\u5200\u7814\u304e\u30a8\u30dc\u30ca\u30a4\u30c8\u4e07\u5e74\u7b46 \u7114\u9f8d 2026\u5e7410\u670824\u65e5\u3088\u308a\u4e16\u754c450\u672c\u9650\u5b9a\u767a\u58f2", "topic": "stationery", "url": "https://sailor.co.jp/news/20261014/"}, {"date": "2026-10-21", "id": "3d37e2ceb4f3", "image": "thumbs/21ec62ea380a76bf.webp", "source": "Pilot", "summary": "A numbered-run seasonal edition of the smooth-writing Acro ballpoint, based on the Acro 300 body.", "title": "Pilot issues a limited Acro 300 \u0027Christmas Market in Blue World\u0027 ballpoint", "title_ja": "\u30a2\u30af\u30ed \u30af\u30ea\u30b9\u30de\u30b9\u30de\u30fc\u30b1\u30c3\u30c8 in Blue World \u9650\u5b9a\u767a\u58f2", "topic": "stationery", "url": "https://www.pilot.co.jp/press_release/2026/10/21/_in_blue_world.html"}, {"id": "8aedf909e979", "image": "thumbs/cc624308a7204cbc.webp", "source": "Platinum", "summary": "Platinum is ending production of several #3776 Century models, including the PNB-18000CR, as it reshapes its lineup. Collectors may want to buy soon.", "title": "Platinum discontinues the #3776 Century series models", "title_ja": "#3776\u30bb\u30f3\u30c1\u30e5\u30ea\u30fc\u30b7\u30ea\u30fc\u30ba \u751f\u7523\u7d42\u4e86\u306e\u304a\u77e5\u3089\u305b", "topic": "stationery", "url": "https://www.platinum-pen.co.jp/news/13584/"}, {"date": "2026-10-19", "id": "d06f02d6a292", "image": "thumbs/f7838f6663b6214b.webp", "source": "The Pen Addict", "summary": "The reviewer finds the pen works fine but says its feel and $200 price don\u0027t add up. A useful warning about Sailor\u0027s steel-nib pricing.", "title": "The Pen Addict regrets buying the steel-nib Sailor Pro Gear Regular", "topic": "stationery", "url": "https://www.penaddict.com/blog/2026/10/19/sailor-pro-gear-regular-fountain-pen-review"}, {"date": "2026-10-15", "id": "6715d3adaa44", "source": "JetPens blog", "summary": "Ayako Koizumi talks about how Hobonichi designs its planners and where the company is heading.", "title": "JetPens interviews Hobonichi\u0027s president on the planner\u0027s history and design", "topic": "stationery", "url": "https://www.jetpens.com/blog/Hobonichi-Interview-Hobonichi-s-History-Designs-and-Future/pt/1028"}, {"date": "2026-10-15", "id": "c93f30e59aee", "source": "JetPens blog", "summary": "A rundown of the 2027 lineup: planner sizes, cover designs including a ONE PIECE collection, and accessories.", "title": "JetPens guide to the 2027 Hobonichi Techo covers and accessories", "topic": "stationery", "url": "https://www.jetpens.com/blog/2027-Hobonichi-Techo-Covers-Accessories/pt/987"}, {"date": "2026-10-19", "id": "946250e619e5", "source": "JetPens blog", "summary": "Covers the leather cover, refills and accessories, and notes that the 2027 planners are now available.", "title": "JetPens\u0027 comprehensive guide to the TRAVELER\u0027S notebook system", "topic": "stationery", "url": "https://www.jetpens.com/blog/TRAVELER-S-COMPANY-TRAVELER-S-notebook-A-Comprehensive-Guide/pt/726"}, {"id": "bfae15cb3c0a", "image": "thumbs/35d69e40d59c6fe8.webp", "source": "Platinum", "summary": "The mechanical pencil with adjustable writing feel via its Shunoku and thin-switch mechanisms gets new pastel limited colours.", "title": "Platinum adds pastel limited colours to the PRO-USE 171 drafting pencil", "title_ja": "\u6b21\u4e16\u4ee3\u30b7\u30e3\u30fc\u30d7\u300cPRO-USE 171\u300d\u65b0\u305f\u306a\u9650\u5b9a\u8272\u304c\u767b\u5834", "topic": "stationery", "url": "https://www.platinum-pen.co.jp/news/13573/"}, {"id": "e775c2dff77d", "image": "thumbs/a7915c6e60e09c98.webp", "source": "Platinum", "summary": "Previously sold only abroad, the affordable entry-level pen is now on sale domestically and has already been featured in Mono Magazine.", "title": "Platinum brings the Prefounte starter fountain pen from overseas to Japan", "title_ja": "\u6d77\u5916\u9650\u5b9a\u3067\u8ca9\u58f2\u3057\u3066\u3044\u305f\u5165\u9580\u4e07\u5e74\u7b46\u300c\u30d7\u30ec\u30d5\u30a9\u30f3\u30c6\u300d\u3092\u56fd\u5185\u3067\u3082\u8ca9\u58f2\u958b\u59cb", "topic": "stationery", "url": "https://www.platinum-pen.co.jp/news/13492/"}, {"id": "0b58a3a4a9f3", "image": "thumbs/bb912a47a1e19f53.webp", "source": "Platinum", "summary": "The Mount Fuji-themed Century series adds its fourth edition, the \u0027sea of clouds\u0027 pen.", "title": "Platinum\u0027s fourth Fuji Kumokage #3776 Century release, \u0027Unkai\u0027", "title_ja": "\u5bcc\u58eb\u96f2\u666f\u30b7\u30ea\u30fc\u30ba\u300c\u96f2\u6d77\u300d\u767b\u5834", "topic": "stationery", "url": "https://www.platinum-pen.co.jp/news/13448/"}, {"id": "e5312e672fb5", "image": "thumbs/cc624308a7204cbc.webp", "source": "Platinum", "summary": "The company cites rising raw material and other costs after trying to hold prices as long as possible.", "title": "Platinum announces a price revision across its products", "title_ja": "\u5546\u54c1\u4fa1\u683c\u6539\u5b9a\u306e\u3054\u6848\u5185", "topic": "stationery", "url": "https://www.platinum-pen.co.jp/news/13499/"}, {"date": "2026-10-19", "id": "f9879e132ac0", "source": "JetPens blog", "summary": "A tested guide to white pens for dark paper, including ways to use them for lettering and artwork.", "title": "JetPens ranks the best white gel pens, markers and paint pens", "topic": "stationery", "url": "https://www.jetpens.com/blog/The-Best-White-Ink-Pens/pt/340"}, {"id": "b95639eae779", "image": "thumbs/49959b188e7b7e59.webp", "source": "Platinum", "summary": "Platinum is working with education groups to mark the Soft Pen\u0027s long use for grading in Japanese schools.", "title": "Platinum thanks teachers for 60 years of the Soft Pen marking pen", "title_ja": "\u63a1\u70b9\u3057\u3084\u3059\u3044\u30da\u30f3\u300c\u30bd\u30d5\u30c8\u30da\u30f3\u300d\u3067\u5b66\u6821\u306e\u5148\u751f\u3092\u5fdc\u63f4", "topic": "stationery", "url": "https://www.platinum-pen.co.jp/news/13568/"}, {"date": "2026-10-20", "id": "e8c352731c7c", "image": "thumbs/70ed175ec5188d95.webp", "source": "Cartoon Brew", "summary": "Dan Lin, who pushed for wider theatrical windows for family films, leaves as Netflix cuts about 6% of staff. A further blow for animation jobs.", "title": "Netflix ousts animation-friendly film chief Dan Lin during 1,000-person layoffs", "topic": "vfx", "url": "https://www.cartoonbrew.com/executives/netflix-dan-lin-fired-mass-layoffs-268061.html"}, {"date": "2026-10-20", "id": "ae0c82aa0ebd", "image": "thumbs/cd52f79bf9e98c37.webp", "source": "befores \u0026 afters", "summary": "The studio shows its CG aliens and animals, built on a new three-tier muscle system, plus a 40-shot CG train chase and full digital environments.", "title": "Digital Domain breaks down 418 shots for Spielberg\u0027s Disclosure Day", "topic": "vfx", "url": "https://beforesandafters.com/2026/10/20/digital-domains-vfx-breakdown-for-disclosure-day-is-here/"}, {"date": "2026-10-20", "id": "71104b699e32", "image": "thumbs/80a6a02502d2c36f.webp", "source": "Cartoon Brew", "summary": "The hire follows a year of Disney job cuts and deepens its ties to the AI chatbot startup.", "title": "Disney spends $180M to recruit most of bankrupt Character.AI\u0027s staff", "topic": "vfx", "url": "https://www.cartoonbrew.com/artificial-intelligence/disney-character-ai-employee-hires-268139.html"}, {"date": "2026-10-16", "id": "616956a7f2a4", "image": "thumbs/81ea864270af516b.webp", "source": "befores \u0026 afters", "summary": "With the camera closer to the bison, Framestore upgraded the fur, skin, eyes and underlying asset. The VFX supervisor and producer also discuss how the season\u0027s approach evolved.", "title": "Framestore details how it rebuilt Appa for Avatar: The Last Airbender season 2", "topic": "vfx", "url": "https://beforesandafters.com/2026/10/15/how-framestore-made-appa/"}, {"date": "2026-10-21", "id": "11c8e22143e3", "image": "thumbs/94a8a241baf18cce.webp", "source": "befores \u0026 afters", "summary": "A behind-the-scenes video of the studio\u0027s effects work on the series.", "title": "Framestore shares its VFX breakdown for East of Eden", "topic": "vfx", "url": "https://beforesandafters.com/2026/10/21/watch-framestores-vfx-breakdown-for-east-of-eden/"}, {"date": "2026-10-20", "id": "face936d68c2", "image": "thumbs/347180d31f034655.webp", "source": "Art of VFX", "summary": "The VFX supervisor and animation director explain DNEG\u0027s work blending a cartoon character into live action.", "title": "DNEG\u0027s Seaman and Roberts discuss the animation and VFX of Coyote vs. Acme", "topic": "vfx", "url": "https://www.artofvfx.com/coyote-vs-acme-alexander-seaman-vfx-supervisor-and-keith-roberts-animation-director-dneg/"}, {"date": "2026-10-19", "id": "37db142393ba", "image": "thumbs/b6377ef07d52c924.webp", "source": "Cartoon Brew", "summary": "McKenna Harris explains how Pixar paused production to rework Jessie\u0027s motivation after judging the film merely okay.", "title": "Toy Story 5 director says a two-week shutdown rescued the film", "topic": "vfx", "url": "https://www.cartoonbrew.com/feature-film/toy-story-5-mckenna-harris-view-conference-268055.html"}, {"date": "2026-10-15", "id": "a6d28b91348d", "image": "thumbs/f2a43787440fe8c0.webp", "source": "Cartoon Brew", "summary": "Executives from Sony, ILM and Skydance discuss changing pipelines and incentives, while directors debate the box office and AI. Job security is the unspoken tension.", "title": "View Conference: studio chiefs and directors wrestle with AI, jobs and distribution", "topic": "vfx", "url": "https://www.cartoonbrew.com/events/studio-executive-roundtable-view-conference-267928.html"}, {"date": "2026-10-17", "id": "7a0e5062698d", "image": "thumbs/59cbf5cc7cd13245.webp", "source": "Cartoon Brew", "summary": "After a 13-year run, Dean hands over an organization of nearly 18,000 members amid industry upheaval.", "title": "Jinko Gotoh to succeed Marge Dean as Women in Animation president", "topic": "vfx", "url": "https://www.cartoonbrew.com/artist-rights/wia-jinko-gotoh-marge-dean-268021.html"}, {"date": "2026-10-20", "id": "57ced6f68be6", "source": "CG Channel", "summary": "The studio\u0027s breakdown covers a full-CG city for an Apple TV action comedy.", "title": "Raynault recreates Washington D.C. in CG for Mayday\u0027s aerial shot", "topic": "vfx", "url": "https://www.cgchannel.com/2026/10/watch-raynaults-vfx-breakdown-for-mayday/"}, {"date": "2026-10-18", "id": "a79e782aa34d", "source": "CG Channel", "summary": "A breakdown of the studio\u0027s environment work and water amplification for the series.", "title": "Magic Dust VFX turns a real river into a torrent for Outlander: Blood of My Blood", "topic": "vfx", "url": "https://www.cgchannel.com/2026/10/see-magic-dust-vfxs-breakdown-for-outlander-blood-of-my-blood/"}, {"date": "2026-10-20", "id": "46e3cb698915", "image": "thumbs/d4ea38bf1b6cc8de.webp", "source": "Art of VFX", "summary": "The studio built digital animals, including wild boars, designed to keep the film\u0027s rural realism.", "title": "The Mill delivers 35 subtle CG wildlife shots for Too Many Beasts", "topic": "vfx", "url": "https://www.artofvfx.com/too-many-beasts-lespece-explosive-the-mill-unleashes-cg-wildlife/"}, {"date": "2026-10-14", "id": "e996ee79b901", "image": "thumbs/7091d8b7d6cb653f.webp", "source": "Art of VFX", "summary": "The studio describes creature animation, FX water and digital environments on a limited-resource feature.", "title": "Magic Dust VFX builds a CG hippo and water sims for Hungry", "topic": "vfx", "url": "https://www.artofvfx.com/hungry-how-magic-dust-vfx-brought-a-cg-hippopotamus-to-life/"}, {"date": "2026-10-15", "id": "a1f346ba69d9", "image": "thumbs/e9f82fc9a6186f76.webp", "source": "befores \u0026 afters", "summary": "A look back at the X-24 clone work on Logan.", "title": "How Image Engine made Logan\u0027s younger Hugh Jackman clone", "topic": "vfx", "url": "https://beforesandafters.com/2026/10/16/turning-hugh-jackman-into-his-younger-clone/"}, {"date": "2026-10-12", "id": "68e010af14a1", "image": "thumbs/47a5c4b1a0c60d0f.webp", "source": "befores \u0026 afters", "summary": "A look at how the dinosaur was made by blending physical and CG work.", "title": "Practical and digital effects combine for the Spinosaurus in The End of Oak Street", "topic": "vfx", "url": "https://beforesandafters.com/2026/10/12/creating-the-spinosaurus-for-the-end-of-oak-street/"}, {"date": "2026-10-16", "id": "3b7609367c2b", "image": "thumbs/4bdf1d63bf05c9a9.webp", "source": "Cartoon Brew", "summary": "Producer Yvett Merino introduces the film\u0027s teenage witch, villainous queen and mother-daughter story.", "title": "Disney shows 30 minutes of Hexed, with magic VFX and a witch-world setting", "topic": "vfx", "url": "https://www.cartoonbrew.com/feature-film/disney-hexed-30-minutes-footage-view-conference-267989.html"}, {"date": "2026-10-20", "id": "f1c384cc0ea0", "source": "OpenUSD releases", "summary": "Pixar tagged the new OpenUSD release on GitHub. Check the release notes for pipeline-impacting changes before updating.", "title": "OpenUSD v26.11.0 is released", "topic": "pipeline", "url": "https://github.com/PixarAnimationStudios/OpenUSD/releases/tag/v26.11.0"}, {"date": "2026-10-18", "id": "e02c3e9f20a0", "source": "CG Channel", "summary": "Maxon\u0027s GPU renderer also updates Redshift Live. ACES 2 support matters for colour-managed lookdev.", "title": "Redshift 2027.0 adds a fur procedural and ACES 2 support", "topic": "pipeline", "url": "https://www.cgchannel.com/2026/10/maxon-releases-redshift-2027-0/"}, {"date": "2026-10-15", "id": "ac009111aa15", "source": "CG Channel", "summary": "Maxon\u0027s release brings a new scattering system and improvements to its liquid simulation.", "title": "Cinema 4D 2027.0 adds an object scattering system and liquid sim updates", "topic": "pipeline", "url": "https://www.cgchannel.com/2026/10/maxon-releases-cinema-4d-2027-0/"}, {"date": "2026-10-15", "id": "f4f8f419ffd6", "source": "CG Channel", "summary": "Maxon\u0027s sculpting tool adds a UV Editor on desktop, and the iPad version gets projection painting.", "title": "ZBrush 2027.0 gains a desktop UV Editor, plus projection painting on iPad", "topic": "pipeline", "url": "https://www.cgchannel.com/2026/10/maxon-releases-zbrush-2027-0-and-zbrush-for-ipad-2027-0/"}, {"date": "2026-10-20", "id": "7b5af40d271d", "source": "CG Channel", "summary": "The 3D design tool gets a system for building reusable asset libraries.", "title": "Plasticity 2026.2 adds reusable asset libraries and a curvature analysis shader", "topic": "pipeline", "url": "https://www.cgchannel.com/2026/10/plasticity-2026-2-is-out/"}, {"id": "a0d69c1eb14d", "image": "thumbs/85672c4e0e653668.webp", "source": "SideFX", "summary": "The LA studio\u0027s campaign follows a CG artist sculpting a volcanic landscape and rigging a hyper sports car.", "title": "Frame48 uses Houdini and CG for Lenovo\u0027s Yoga Pro 7a spot", "topic": "pipeline", "url": "https://www.sidefx.com/community/frame48-lenovo/"}]</script>
 </main>
 
 <footer><div class="wrap">
-<p>Edition compiled 2026-10-21 at 21:10 (Pacific/Auckland) from 24 of 30 sources, summaries written by claude-sonnet-5-5. Summaries are paraphrased; tap a headline for the original. Pictures are thumbnails of each article's own preview image.</p>  <p>Read stories and votes are remembered on this device. <a href="https://github.com/Alt-Py/PLINE">How Pline works</a></p>
+<p>Edition compiled 2026-10-21 at 21:10 (Pacific/Auckland) from 24 of 30 sources, summaries written by claude-sonnet-5-5. Summaries are paraphrased; tap a headline for the original. Pictures are thumbnails of each article's own preview image.</p>  <p>Read stories, votes and saves are remembered on this device, and synced through GitHub once a device is connected under Likes. <a href="https://github.com/Alt-Py/PLINE">How Pline works</a></p>
 </div></footer>
 
 <dialog id="likesDialog" aria-labelledby="likesTitle">
   <form method="dialog" class="sheet" id="likesForm">
-    <h2 id="likesTitle">Teach Pline your taste</h2>
-    <p>Tap <b>More like this</b> or <b>Less like this</b> on any story. Each morning Pline favours what you liked and shows less of what you didn't, by source and by subject.</p>
-    <p id="likesCount">No votes yet.</p>
-    <p>Votes are kept on this device until they're sent to Pline. To send them, connect a GitHub token once on each device:</p>
+    <h2 id="likesTitle">Likes, saves and sync</h2>
+    <p>Tap <b>More like this</b> or <b>Less like this</b> on any story and Pline learns your taste, by source and by subject. Tap the <b>bookmark</b> to keep a story on your <a href="saved.html">Saved</a> page.</p>
+    <p id="likesCount">No votes or saves yet.</p>
+    <p>Everything is kept on this device. To share it with your other devices and with tomorrow's edition, connect a GitHub token once on each device:</p>
     <ol>
       <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub › Fine-grained tokens › Generate new token</a>.</li>
       <li>Repository access: <b>Only select repositories › PLINE</b>.</li>
@@ -1205,7 +1269,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
     </div>
     <div class="status" id="likesStatus" role="status"></div>
     <div class="row">
-      <button class="pill" id="sendNow" type="button">Send votes now</button>
+      <button class="pill" id="sendNow" type="button">Send now</button>
       <button class="pill" id="forgetToken" type="button">Disconnect this device</button>
       <button class="pill" value="close" style="margin-left:auto">Done</button>
     </div>

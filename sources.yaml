@@ -3,11 +3,14 @@
 # type:
 #   rss        — RSS or Atom feed (GitHub release/commit feeds included)
 #   html_list  — a news listing page; every link whose URL matches `link_pattern` is a story
-#   reddit     — top posts of the day from a subreddit, via the official Reddit API when the
-#                REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET secrets are set (public RSS otherwise);
-#                posts under `min_score` upvotes are ignored
+#   reddit     — top posts from a subreddit, no account needed: Reddit's public feed first,
+#                then the Arctic Shift archive (posts 1.5–3.5 days old, ranked by real upvotes,
+#                under `min_score` ignored). REDDIT_CLIENT_ID / _SECRET secrets, if ever added,
+#                switch to the official API.
 #   youtube_channel — a channel's latest videos (free RSS, no key), shorts excluded
-#   youtube_search  — recent videos matching `query` via the YouTube Data API (YOUTUBE_API_KEY)
+#   youtube_search  — recent videos matching `query`, no key needed: public Invidious / Piped
+#                servers (community front-ends that relay YouTube search). A YOUTUBE_API_KEY
+#                secret, if ever added, switches to the official YouTube Data API.
 # topics: the first topic is the default; when several are listed, Claude decides per story.
 # lang: "ja" marks Japanese sources (titles are translated, the original is kept).
 # weight: 0.5 (background noise) … 2 (always worth showing). Used for ranking.
@@ -205,8 +208,7 @@ sources:
     weight: 0.8
     optional: true
 
-  # ── YouTube search (YouTube Data API; needs the YOUTUBE_API_KEY secret) ──
-  # Each search costs 101 of the 10,000 free daily quota units.
+  # ── YouTube search (public Invidious / Piped servers; no key) ──
   - name: YouTube · Obsidian
     type: youtube_search
     query: "obsidian.md workflow OR plugin OR bases"

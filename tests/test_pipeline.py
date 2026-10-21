@@ -230,14 +230,51 @@ class SocialSourceTests(unittest.TestCase):
         self.assertEqual(it.image_url, "https://preview.redd.it/a.jpg?w=1&s=2")
         self.assertIn("250 upvotes", it.excerpt)
 
-    def test_youtube_search_skipped_without_key(self):
-        import os
-        from pline.collect import SKIPPED, collect_source
+    def test_invidious_and_piped_parsing(self):
+        import time as _t
+        from pline.collect import days_ago, parse_invidious, parse_piped
 
-        os.environ.pop("YOUTUBE_API_KEY", None)
-        items, err = collect_source(None, {"name": "yt", "type": "youtube_search", "query": "x", "topics": ["vfx"]})
-        self.assertEqual(items, [])
-        self.assertTrue(err.startswith(SKIPPED))
+        src = {"topics": ["pipeline"], "lang": "en"}
+        now = int(_t.time())
+        inv = [
+            {"type": "video", "videoId": "abcdefghijk", "title": "Solaris &amp; Karma", "author": "Entagma", "published": now - 2 * 86400,
+             "lengthSeconds": 900, "viewCount": 12345, "description": "Lighting in Solaris"},
+            {"type": "video", "videoId": "shortshort1", "title": "short", "author": "x", "published": now, "lengthSeconds": 40},
+            {"type": "video", "videoId": "oldoldoldol", "title": "old", "author": "x", "published": now - 90 * 86400, "lengthSeconds": 600},
+            {"type": "channel", "author": "x"},
+        ]
+        items = parse_invidious(inv, src, 7)
+        self.assertEqual([i.url for i in items], ["https://www.youtube.com/watch?v=abcdefghijk"])
+        self.assertEqual(items[0].title, "Solaris & Karma")
+        self.assertEqual(items[0].image_url, "https://i.ytimg.com/vi/abcdefghijk/hqdefault.jpg")
+        self.assertIn("12,345 views", items[0].excerpt)
+        self.assertEqual(items[0].kind, "video")
+
+        piped = [
+            {"url": "/watch?v=ZYXWVUTSRQP", "title": "Obsidian Bases", "uploaderName": "Nicole", "uploaded": -1, "uploadedDate": "3 days ago", "duration": 700, "isShort": False, "views": 900},
+            {"url": "/watch?v=AAAAAAAAAAA", "title": "too old", "uploaderName": "n", "uploaded": -1, "uploadedDate": "1 year ago", "duration": 700},
+            {"url": "/watch?v=BBBBBBBBBBB", "title": "short", "uploaderName": "n", "uploaded": now * 1000, "duration": 50, "isShort": True},
+        ]
+        self.assertEqual([i.title for i in parse_piped(piped, src, 7)], ["Obsidian Bases"])
+        self.assertEqual(days_ago("2 weeks ago"), 14)
+        self.assertIsNone(days_ago("Streamed"))
+
+    def test_arctic_shift_ranks_by_score(self):
+        from unittest import mock
+        from pline.collect import arctic_shift
+
+        posts = [{"title": "small", "score": 70, "num_comments": 3, "permalink": "/r/fountainpens/comments/1/a/", "created_utc": 1792500000, "subreddit": "fountainpens"},
+                 {"title": "big", "score": 871, "num_comments": 90, "permalink": "/r/fountainpens/comments/2/b/", "created_utc": 1792500000, "subreddit": "fountainpens"},
+                 {"title": "tiny", "score": 4, "permalink": "/r/fountainpens/comments/3/c/", "created_utc": 1792500000, "subreddit": "fountainpens"}]
+        busy = mock.Mock(ok=False, status_code=422, text='{"error":"Timeout. Maybe slow down a bit"}')
+        good = mock.Mock(ok=True, status_code=200)
+        good.json.return_value = {"data": posts}
+        http = mock.Mock()
+        http.session.get.side_effect = [busy, good]
+        with mock.patch("pline.collect.time.sleep"):
+            items = arctic_shift(http, {"subreddit": "fountainpens", "topics": ["stationery"], "min_score": 60})
+        self.assertEqual([i.title for i in items], ["big", "small"])
+        self.assertIn("871 upvotes", items[0].excerpt)
 
 
 class ShowMoreTests(unittest.TestCase):
@@ -268,3 +305,71 @@ class ShowMoreTests(unittest.TestCase):
             self.assertIn("Show 2 more stories", html)
             self.assertIn("3 stories · 2 more in reserve", html)
             self.assertEqual(html.count('class="pill more"'), 1)
+
+
+class SavedTests(unittest.TestCase):
+    def setUp(self):
+        import pline.feedback as fb
+
+        self.fb = fb
+        self.tmp = tempfile.TemporaryDirectory()
+        t = Path(self.tmp.name)
+        fb.VOTES, fb.PREFS, fb.SAVED = t / "votes.json", t / "preferences.json", t / "saved.json"
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_last_writer_wins_and_fields_are_cleaned(self):
+        items = {}
+        story = {"id": "s1", "title": "Honryu", "url": "https://sailor.co.jp/news/20261014/", "image": "thumbs/0123456789abcdef.webp",
+                 "topic": "stationery", "source": "Sailor", "evil": "<script>"}
+        self.fb.apply_save(items, {"id": "s1", "saved": True, "at": "2026-10-22T08:00:00Z", "story": story})
+        self.fb.apply_save(items, {"id": "s1", "saved": False, "at": "2026-10-22T07:00:00Z"})  # older: ignored
+        self.assertTrue(items["s1"]["saved"])
+        self.assertNotIn("evil", items["s1"])
+        self.fb.apply_save(items, {"id": "s1", "saved": False, "at": "2026-10-22T09:00:00Z"})
+        self.assertFalse(items["s1"]["saved"])
+        self.assertEqual(items["s1"]["title"], "Honryu")  # story kept from the earlier event
+        self.fb.apply_save(items, {"id": "s2", "saved": True, "at": "x", "story": {"title": "t", "url": "javascript:alert(1)", "image": "../../etc/passwd"}})
+        self.assertNotIn("url", items["s2"])
+        self.assertNotIn("image", items["s2"])
+
+    def test_saves_read_from_comments_and_count_as_likes(self):
+        from unittest import mock
+
+        body = "x\n```json\n" + json.dumps({"saves": [{"id": "s9", "saved": True, "at": "2026-10-22T08:00:00Z",
+                                                       "story": {"title": "Ebonite pen", "source": "Sailor", "topic": "stationery", "url": "https://a/b"}}]}) + "\n```"
+        resp = mock.Mock(status_code=200, links={})
+        resp.json.return_value = [{"id": 5, "author_association": "OWNER", "created_at": "2026-10-22T08:00:05Z", "body": body}]
+        with mock.patch("pline.feedback.requests.Session") as S:
+            S.return_value.get.return_value = resp
+            self.fb.fetch_votes("Alt-Py/PLINE", 1, "token")
+        lst = self.fb.saved_list()
+        self.assertEqual([i["id"] for i in lst["items"]], ["s9"])
+        self.assertEqual(lst["updated"], "2026-10-22T08:00:05Z")
+        self.assertEqual(self.fb.build_preferences()["likes"], 1)
+
+    def test_saved_page_renders(self):
+        import pline.render as render
+        import pline.state as state
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            state.EDITIONS = tmp / "editions"
+            render.list_editions = state.list_editions
+            state.save_edition({"date": "2026-10-22", "generated_at": "2026-10-22T06:40:00+13:00", "headline": "h", "sources_ok": 1, "sources_total": 1,
+                                "stories": [{"id": "a", "topic": "vfx", "source": "S", "title": "T </script><b>", "url": "https://x/1", "extra": False}]})
+            cfg = {"site": {"title": "Pline", "timezone": "Pacific/Auckland", "greeting": "Hi"}, "feedback": {"repo": "Alt-Py/PLINE", "issue": 1},
+                   "topics": [{"key": "vfx", "name": "VFX", "tagline": "t", "tone": "light"}]}
+            render.render_all(cfg, out=tmp / "docs")
+            page = (tmp / "docs" / "index.html").read_text(encoding="utf-8")
+            saved = (tmp / "docs" / "saved.html").read_text(encoding="utf-8")
+            self.assertIn('id="pline-stories"', page)
+            self.assertNotIn("</script><b>", page.split('id="pline-stories"')[1].split("</script>")[0] + "</script>"[:0])
+            self.assertIn('class="vote save"', page)
+            self.assertIn('href="saved.html"', page)
+            self.assertIn('aria-current="page"', page)            # today's pill
+            self.assertIn('data-page="saved"', saved)
+            self.assertIn('id="savedGrid"', saved)
+            self.assertNotIn('id="hideRead"', saved)
+            self.assertTrue((tmp / "docs" / "saved.json").exists())

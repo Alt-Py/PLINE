@@ -1,0 +1,28 @@
+{% extends "base.html.j2" %}
+{% set current_date = None %}
+{% block title %}Saved · {{ site.title }}{% endblock %}
+{% block page %}saved{% endblock %}
+{% block topic_href_prefix %}./{% endblock %}
+{% block subtitle %}Saved{% endblock %}
+{% block saved_current %} aria-current="page"{% endblock %}
+{% block subnav_extra %}{% endblock %}
+{% block main %}
+  <section class="hero"><div class="wrap">
+    <div class="eyebrow">Your reading list</div>
+    <h1>Saved</h1>
+    <p class="lead" id="savedLead">Stories you saved from any edition, newest first.</p>
+    <div class="filters" id="savedFilters" role="group" aria-label="Filter by section">
+      <button class="pill" type="button" data-topic="" aria-pressed="true">All</button>
+      {% for t in topics %}<button class="pill" type="button" data-topic="{{ t.key }}" aria-pressed="false">{{ t.short or t.name }}</button>{% endfor %}
+    </div>
+  </div></section>
+  <section class="tile parchment" id="saved"><div class="wrap">
+    <div class="grid" id="savedGrid" aria-live="polite"></div>
+    <div class="empty-saved" id="savedEmpty">
+      <svg aria-hidden="true"><use href="#i-save"/></svg>
+      <p>Loading your saved stories…</p>
+    </div>
+  </div></section>
+  <script type="application/json" id="pline-topics">{{ topics | map(attribute='key') | list | tojson }}</script>
+{% endblock %}
+{% block footer %}<p>Saved stories keep their picture for as long as they stay saved.</p>{% endblock %}

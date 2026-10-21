@@ -8,7 +8,8 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from . import DOCS, TEMPLATES
-from .state import list_editions
+from .feedback import STORY_FIELDS, saved_list
+from .state import list_editions, save_json
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -38,6 +39,11 @@ def age(item_date: str | None, edition_date: str) -> str:
     return f"{a.day} {MONTHS[a.month - 1][:3]}" + ("" if a.year == b.year else f" {a.year}")
 
 
+def pick_story(s: dict) -> dict:
+    """The fields the page needs to save a story (embedded as JSON)."""
+    return {k: s[k] for k in STORY_FIELDS if s.get(k)}
+
+
 def _env() -> Environment:
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES)),
@@ -45,7 +51,7 @@ def _env() -> Environment:
         trim_blocks=True,
         lstrip_blocks=True,
     )
-    env.filters.update(long_date=long_date, short_day=short_day)
+    env.filters.update(long_date=long_date, short_day=short_day, pick_story=pick_story)
     env.globals.update(age=age)
     return env
 
@@ -75,6 +81,11 @@ def render_all(cfg: dict, out: Path = DOCS) -> list[Path]:
         if i == 0:
             (out / "index.html").write_text(html, encoding="utf-8")
             written.append(out / "index.html")
+    save_json(out / "saved.json", saved_list())
+    (out / "saved.html").write_text(
+        _env().get_template("saved.html.j2").render(site=cfg["site"], topics=cfg["topics"], feedback=cfg.get("feedback", {}), nav=nav, current_date=None),
+        encoding="utf-8",
+    )
     if not editions:
         (out / "index.html").write_text(
             tpl.render(site=cfg["site"], topics=cfg["topics"], feedback=cfg.get("feedback", {}), ed=None, nav=[], latest=True, newer=None, older=None),

@@ -27,6 +27,8 @@ log = logging.getLogger("pline.feedback")
 
 VOTES = STATE / "votes.json"
 PREFS = STATE / "preferences.json"
+SAVED = STATE / "saved.json"
+STORY_FIELDS = ("id", "topic", "source", "title", "title_ja", "url", "summary", "image", "date", "kind")
 TRUSTED = {"OWNER", "MEMBER", "COLLABORATOR"}
 BLOCK = re.compile(r"```json\s*(.*?)```", re.S)
 
@@ -41,6 +43,7 @@ STOP = set(
 def fetch_votes(repo: str, issue: int, token: str | None) -> int:
     """Pull new vote comments into state/votes.json. Returns how many votes were read."""
     store = load_json(VOTES, {"last_comment_id": 0, "votes": {}})
+    saved = load_json(SAVED, {"updated": None, "items": {}})
     if not token or not repo or not issue:
         return 0
     s = requests.Session()
@@ -62,6 +65,9 @@ def fetch_votes(repo: str, issue: int, token: str | None) -> int:
                     payload = json.loads(block)
                 except ValueError:
                     continue
+                for e in payload.get("saves", []) if isinstance(payload, dict) else []:
+                    apply_save(saved["items"], e)
+                    saved["updated"] = max(saved["updated"] or "", c.get("created_at", ""))
                 for v in payload.get("votes", []) if isinstance(payload, dict) else []:
                     if not isinstance(v, dict) or not isinstance(v.get("id"), str):
                         continue
@@ -80,8 +86,36 @@ def fetch_votes(repo: str, issue: int, token: str | None) -> int:
     store["last_comment_id"] = last
     store["votes"] = {k: v for k, v in store["votes"].items() if v["vote"] != 0}
     save_json(VOTES, store)
+    saved["items"] = {k: v for k, v in saved["items"].items() if v.get("saved")}
+    save_json(SAVED, saved)
     log.info("read %d new votes; %d stories rated in total", read, len(store["votes"]))
     return read
+
+
+def apply_save(items: dict, e) -> None:
+    """Last writer wins, by the event's own timestamp."""
+    if not isinstance(e, dict) or not isinstance(e.get("id"), str):
+        return
+    sid, at = e["id"][:40], str(e.get("at", ""))[:25]
+    prev = items.get(sid)
+    if prev and prev.get("at", "") > at:
+        return
+    story = e.get("story") if isinstance(e.get("story"), dict) else (prev or {})
+    clean = {k: str(story[k])[:600] for k in STORY_FIELDS if story.get(k)}
+    url = clean.get("url", "")
+    if not url.startswith(("https://", "http://")):
+        clean.pop("url", None)
+    img = clean.get("image", "")
+    if img and not re.fullmatch(r"thumbs/[0-9a-f]{16}\.webp", img):
+        clean.pop("image", None)
+    clean["id"] = sid
+    items[sid] = {**clean, "saved": bool(e.get("saved")), "at": at}
+
+
+def saved_list() -> dict:
+    data = load_json(SAVED, {"updated": None, "items": {}})
+    items = sorted((v for v in data["items"].values() if v.get("saved")), key=lambda v: v.get("at", ""), reverse=True)
+    return {"updated": data.get("updated"), "items": items}
 
 
 def words(text: str) -> set[str]:
@@ -89,7 +123,12 @@ def words(text: str) -> set[str]:
 
 
 def build_preferences() -> dict:
-    votes = list(load_json(VOTES, {"votes": {}})["votes"].values())
+    votes_by_id = dict(load_json(VOTES, {"votes": {}})["votes"])
+    for sid, it in load_json(SAVED, {"items": {}})["items"].items():
+        if it.get("saved") and sid not in votes_by_id:
+            votes_by_id[sid] = {"vote": 1, "source": it.get("source", ""), "topic": it.get("topic", ""),
+                                "title": it.get("title", ""), "at": it.get("at", "")}
+    votes = list(votes_by_id.values())
     by_source: Counter = Counter()
     terms: Counter = Counter()
     for v in votes:
