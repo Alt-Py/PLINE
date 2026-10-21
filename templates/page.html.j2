@@ -126,6 +126,11 @@ img { max-width: 100%; display: block; }
 .card.read { opacity: .5; }
 .card.read:hover, .card.read:focus-within { opacity: .9; }
 .hide-read .card.read { display: none; }
+[hidden] { display: none !important; }
+.more-row { display: flex; justify-content: center; }
+.pill.more { padding: 12px 22px; min-height: 44px; font-size: 15px; }
+.card.extra.revealed { animation: rise .35s ease both; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 .allread { display: none; text-align: center; color: var(--muted); font-size: 14px; margin: 0; }
 .hide-read .grid.all-read + .allread { display: block; }
 
@@ -165,7 +170,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
   .subnav h2 { display: none; }
   .likes-label { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 </head>
 <body data-repo="{{ feedback.repo }}" data-issue="{{ feedback.issue }}">
@@ -211,24 +216,26 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
     {% if ed.headline %}<p class="lead">{{ ed.headline }}</p>{% endif %}
     <div class="stats">
       {% for t in topics %}
-      <a class="stat" href="#{{ t.key }}"><b>{{ stories | selectattr('topic', 'equalto', t.key) | list | length }}</b>{{ t.name }}</a>
+      <a class="stat" href="#{{ t.key }}"><b>{{ stories | selectattr('topic', 'equalto', t.key) | rejectattr('extra') | list | length }}</b>{{ t.name }}</a>
       {% endfor %}
     </div>
   </div></section>
 
   {% for t in topics %}
   {% set list = stories | selectattr('topic', 'equalto', t.key) | list %}
+  {% set more = list | selectattr('extra') | list %}
   <section class="tile {{ t.tone }} {{ t.key }}" id="{{ t.key }}"><div class="wrap">
     <div class="tile-head">
       {% if t.jp %}<div class="jp" lang="ja">{{ t.jp }}</div>{% endif %}
       <h2>{{ t.name }}</h2>
       <p>{{ t.tagline }}</p>
-      <div class="count">{% if list %}{{ list | length }} {{ 'story' if list | length == 1 else 'stories' }}{% else %}Quiet morning. Nothing new here.{% endif %}</div>
+      {% set main_n = list | length - more | length %}
+      <div class="count">{% if list %}{{ main_n }} {{ 'story' if main_n == 1 else 'stories' }}{% if more %} · {{ more | length }} more in reserve{% endif %}{% else %}Quiet morning. Nothing new here.{% endif %}</div>
     </div>
     <div class="grid">
       {% for s in list %}
       {% set when = age(s.date, ed.date) %}
-      <article class="card{% if loop.first %} lead{% endif %}{% if s.image %} has-img{% endif %}" data-id="{{ s.id }}" data-topic="{{ s.topic }}" data-source="{{ s.source }}" data-title="{{ s.title }}">
+      <article class="card{% if loop.first %} lead{% endif %}{% if s.image %} has-img{% endif %}{% if s.extra %} extra{% endif %}"{% if s.extra %} hidden{% endif %} data-id="{{ s.id }}" data-topic="{{ s.topic }}" data-source="{{ s.source }}" data-title="{{ s.title }}">
         {% if s.image %}
         <a class="media" href="{{ s.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
           <img src="{{ s.image }}" alt="" loading="{{ 'eager' if loop.first else 'lazy' }}" decoding="async">
@@ -258,6 +265,9 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur
       </article>
       {% endfor %}
     </div>
+    {% if more %}
+    <div class="more-row"><button class="pill more" type="button" aria-expanded="false">Show {{ more | length }} more {{ 'story' if more | length == 1 else 'stories' }}</button></div>
+    {% endif %}
     <p class="allread">You're all caught up here.</p>
   </div></section>
   {% endfor %}

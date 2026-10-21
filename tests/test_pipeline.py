@@ -238,3 +238,33 @@ class SocialSourceTests(unittest.TestCase):
         items, err = collect_source(None, {"name": "yt", "type": "youtube_search", "query": "x", "topics": ["vfx"]})
         self.assertEqual(items, [])
         self.assertTrue(err.startswith(SKIPPED))
+
+
+class ShowMoreTests(unittest.TestCase):
+    def test_extras_marked_per_section_and_rendered_hidden(self):
+        from pline.model import Story
+        from pline.select import mark_extras
+        import pline.render as render
+        import pline.state as state
+
+        stories = [Story(id=f"v{i}", topic="vfx", source="s", title=f"t{i}", url=f"https://x/{i}") for i in range(5)]
+        stories.append(Story(id="o1", topic="obsidian", source="s", title="o", url="https://x/o"))
+        mark_extras(stories, 3)
+        self.assertEqual([s.extra for s in stories], [False, False, False, True, True, False])
+        self.assertNotIn("extra", stories[0].to_dict())
+
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            state.EDITIONS = tmp / "editions"
+            render.list_editions = state.list_editions
+            state.save_edition({"date": "2026-10-21", "generated_at": "2026-10-21T06:40:00+13:00", "headline": "h",
+                                "sources_ok": 1, "sources_total": 1, "stories": [s.to_dict() for s in stories]})
+            cfg = {"site": {"title": "Pline", "timezone": "Pacific/Auckland", "greeting": "Hi"},
+                   "topics": [{"key": "vfx", "name": "VFX", "tagline": "t", "tone": "light"},
+                              {"key": "obsidian", "name": "Obsidian", "tagline": "t", "tone": "dark"}]}
+            render.render_all(cfg, out=tmp / "docs")
+            html = (tmp / "docs" / "index.html").read_text(encoding="utf-8")
+            self.assertEqual(html.count('extra" hidden'), 2)
+            self.assertIn("Show 2 more stories", html)
+            self.assertIn("3 stories · 2 more in reserve", html)
+            self.assertEqual(html.count('class="pill more"'), 1)

@@ -17,7 +17,7 @@ from .enrich import enrich, image_for
 from .feedback import build_preferences, fetch_votes, settings as feedback_settings
 from .net import Http
 from .render import render_all
-from .select import plain, shortlist, with_claude
+from .select import mark_extras, plain, shortlist, with_claude
 from .state import THUMBS, list_editions, load_shown, prune, save_edition, save_shown
 from .thumbs import fetch_thumbnail
 
@@ -68,9 +68,11 @@ def cmd_run(args) -> int:
             print(f"{it.topics[0]:10} {it.date or '----------'} {it.source:24} {it.title[:90]}")
         return 0
 
-    result = None if args.no_llm else with_claude(cands, topics, cfg["llm"], ed_cfg["max_per_topic"], prefs)
+    per_topic = ed_cfg["max_per_topic"] + ed_cfg.get("extra_per_topic", 0)
+    result = None if args.no_llm else with_claude(cands, topics, cfg["llm"], per_topic, prefs, ed_cfg["max_per_topic"])
     writer = cfg["llm"].get("model") if result else None
-    headline, stories = result or plain(cands, topics, ed_cfg["max_per_topic"])
+    headline, stories = result or plain(cands, topics, per_topic)
+    mark_extras(stories, ed_cfg["max_per_topic"])
 
     for st in stories:
         url = getattr(st, "_image_url", None) or image_for(http, st.url)

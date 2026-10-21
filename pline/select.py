@@ -79,7 +79,9 @@ with nothing specific, and low-effort forum posts. Prefer substance.
 in your own words (max ~45 words) that says what is new and, when useful, why it matters to a \
 production/rendering person. Never copy sentences from the excerpts.
 4. For Japanese-language candidates, put the original Japanese title in "title_ja".
-5. Within each section, order by importance (the first one becomes the large lead card), at most {max_per_topic} per section.
+5. Within each section, order by importance (the first one becomes the large lead card). Return up to \
+{max_per_topic} per section: the first {shown} are shown at once and the rest sit behind a "Show more" button, \
+so keep weaker but still relevant stories for the end rather than dropping them.
 6. Write a "headline": one sentence (max 25 words) naming the 2–3 biggest stories of the day across sections.
 
 Reply with JSON only, no prose, in exactly this shape:
@@ -111,7 +113,7 @@ def _parse_json(text: str) -> dict:
     return json.loads(text[start : end + 1])
 
 
-def with_claude(cands: list[Item], topics: list[str], cfg: dict, max_per_topic: int, prefs: dict | None = None) -> tuple[str, list[Story]] | None:
+def with_claude(cands: list[Item], topics: list[str], cfg: dict, max_per_topic: int, prefs: dict | None = None, shown: int | None = None) -> tuple[str, list[Story]] | None:
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key or not cands:
         return None
@@ -123,7 +125,7 @@ def with_claude(cands: list[Item], topics: list[str], cfg: dict, max_per_topic: 
         msg = client.messages.create(
             model=cfg.get("model", "claude-sonnet-5-5"),
             max_tokens=cfg.get("max_tokens", 12000),
-            system=SYSTEM.format(max_per_topic=max_per_topic) + taste_prompt(prefs or {}),
+            system=SYSTEM.format(max_per_topic=max_per_topic, shown=shown or max_per_topic) + taste_prompt(prefs or {}),
             messages=[{"role": "user", "content": prompt}],
         )
         text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
@@ -196,3 +198,11 @@ def plain(cands: list[Item], topics: list[str], max_per_topic: int) -> tuple[str
         stories.append(_story(group, topic, lead.title, summary))
     sources = len({s.source for s in stories})
     return f"{len(stories)} stories from {sources} sources.", stories
+
+
+def mark_extras(stories: list[Story], shown: int) -> None:
+    """Stories past the first `shown` of each section go behind the "Show more" button."""
+    seen: dict[str, int] = {}
+    for st in stories:
+        seen[st.topic] = seen.get(st.topic, 0) + 1
+        st.extra = seen[st.topic] > shown

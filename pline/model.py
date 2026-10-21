@@ -46,9 +46,10 @@ class Story:
     image: str | None = None         # local thumbnail path relative to docs/
     also: list[dict] = field(default_factory=list)
     kind: str | None = None          # "video" or "reddit"; None for articles
+    extra: bool = False              # held back behind the section's "Show more" button
 
     def to_dict(self) -> dict:
-        return {k: v for k, v in asdict(self).items() if v not in (None, "", [])}
+        return {k: v for k, v in asdict(self).items() if v not in (None, "", [], False)}
 
 
 _TRACKING = re.compile(r"^(utm_|fbclid|gclid|mc_)")
