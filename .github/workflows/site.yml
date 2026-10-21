@@ -1,7 +1,8 @@
 name: Test and republish
 
 # Runs when code, design or sources change. Re-renders the stored editions
-# without fetching news or calling Claude.
+# without fetching news or calling Claude, and deploys them. It never commits:
+# the daily run is the only writer, so the two can't race.
 on:
   push:
     branches: [main]
@@ -12,7 +13,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -33,13 +34,6 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -v
       - run: python -m pline render
-      - name: Save re-rendered pages
-        run: |
-          git config user.name "pline-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A docs
-          git diff --cached --quiet || git commit -m "Re-render pages"
-          git push
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
