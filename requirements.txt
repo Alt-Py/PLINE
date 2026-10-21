@@ -1,0 +1,8 @@
+anthropic>=0.40,<2
+beautifulsoup4>=4.12,<5
+charset-normalizer>=3,<4
+feedparser>=6.0,<7
+Jinja2>=3.1,<4
+Pillow>=11,<13
+PyYAML>=6,<7
+requests>=2.32,<3

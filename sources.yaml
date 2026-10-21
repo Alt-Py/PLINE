@@ -1,0 +1,145 @@
+# Pline sources.
+#
+# type:
+#   rss        — RSS or Atom feed (GitHub release/commit feeds included)
+#   html_list  — a news listing page; every link whose URL matches `link_pattern` is a story
+# topics: the first topic is the default; when several are listed, Claude decides per story.
+# lang: "ja" marks Japanese sources (titles are translated, the original is kept).
+# weight: 0.5 (background noise) … 2 (always worth showing). Used for ranking.
+# optional: true — failures are expected now and then and don't fail validation.
+
+sources:
+  # ── Obsidian ─────────────────────────────────────────────
+  - name: Obsidian changelog
+    type: html_list
+    url: https://obsidian.md/changelog/
+    link_pattern: 'obsidian\.md/changelog/\d{4}-\d{2}-\d{2}-[a-z]+-v[\d.]+/?$'
+    topics: [obsidian]
+    weight: 2
+  - name: Obsidian blog
+    type: html_list
+    url: https://obsidian.md/blog/
+    link_pattern: 'obsidian\.md/blog/[a-z0-9-]+/?$'
+    topics: [obsidian]
+    weight: 2
+  - name: Obsidian community plugins
+    type: rss
+    url: https://github.com/obsidianmd/obsidian-releases/commits/master.atom
+    title_filter: '(?i)\b(add|new)\b.*\b(plugin|theme)\b|\b(plugin|theme)\b.*\b(add|new)\b'
+    topics: [obsidian]
+    weight: 0.7
+  - name: r/ObsidianMD
+    type: rss
+    url: https://www.reddit.com/r/ObsidianMD/top/.rss?t=day
+    topics: [obsidian]
+    weight: 0.6
+    optional: true
+
+  # ── Japanese stationery ──────────────────────────────────
+  - name: Sailor
+    type: html_list
+    url: https://sailor.co.jp/news/
+    link_pattern: 'sailor\.co\.jp/news/\d{8}(-\d+)?/?$'
+    topics: [stationery]
+    lang: ja
+    weight: 2
+  - name: Pilot
+    type: html_list
+    url: https://www.pilot.co.jp/press_release/
+    link_pattern: 'pilot\.co\.jp/press_release/\d{4}/\d{2}/\d{2}/[^/]+\.html$'
+    topics: [stationery]
+    lang: ja
+    weight: 2
+  - name: The Pen Addict
+    type: rss
+    url: https://www.penaddict.com/blog?format=rss
+    topics: [stationery]
+    weight: 1.2
+  - name: The Well-Appointed Desk
+    type: rss
+    url: https://www.wellappointeddesk.com/feed/
+    topics: [stationery]
+    weight: 1
+  - name: Gourmet Pens
+    type: rss
+    url: https://www.gourmetpens.com/feeds/posts/default
+    topics: [stationery]
+    weight: 1
+    optional: true
+  - name: r/fountainpens
+    type: rss
+    url: https://www.reddit.com/r/fountainpens/top/.rss?t=day
+    topics: [stationery]
+    weight: 0.5
+    optional: true
+  - name: r/stationery
+    type: rss
+    url: https://www.reddit.com/r/stationery/top/.rss?t=day
+    topics: [stationery]
+    weight: 0.5
+    optional: true
+
+  # ── VFX industry ─────────────────────────────────────────
+  - name: befores & afters
+    type: rss
+    url: https://beforesandafters.com/feed/
+    topics: [vfx]
+    weight: 1.5
+  - name: fxguide
+    type: rss
+    url: https://www.fxguide.com/feed/
+    topics: [vfx, pipeline]
+    weight: 1.5
+  - name: Cartoon Brew
+    type: rss
+    url: https://www.cartoonbrew.com/feed
+    topics: [vfx]
+    weight: 1.2
+  - name: Art of VFX
+    type: rss
+    url: https://www.artofvfx.com/feed/
+    topics: [vfx]
+    weight: 1
+    optional: true
+  - name: r/vfx
+    type: rss
+    url: https://www.reddit.com/r/vfx/top/.rss?t=day
+    topics: [vfx]
+    weight: 0.6
+    optional: true
+
+  # ── Houdini, RenderMan & USD (plus the wider DCC world) ──
+  - name: CG Channel
+    type: rss
+    url: https://feeds.feedburner.com/cgchannel/nHpU
+    topics: [pipeline, vfx]
+    weight: 1.2
+  - name: SideFX
+    type: html_list
+    url: https://www.sidefx.com/news/
+    link_pattern: 'sidefx\.com/(news|community)/[a-z0-9-]+/?$'
+    exclude_pattern: '/(news|community)/?$'
+    topics: [pipeline]
+    weight: 2
+  - name: RenderMan
+    type: html_list
+    url: https://renderman.pixar.com/news
+    link_pattern: 'renderman\.pixar\.com/news/[a-z0-9-]+/?$'
+    topics: [pipeline]
+    weight: 2
+  - name: Alliance for OpenUSD
+    type: html_list
+    url: https://aousd.org/news/
+    link_pattern: 'aousd\.org/news/[a-z0-9-]+/?$'
+    topics: [pipeline]
+    weight: 1.5
+  - name: OpenUSD releases
+    type: rss
+    url: https://github.com/PixarAnimationStudios/OpenUSD/releases.atom
+    topics: [pipeline]
+    weight: 2
+  - name: MaterialX releases
+    type: rss
+    url: https://github.com/AcademySoftwareFoundation/MaterialX/releases.atom
+    topics: [pipeline]
+    weight: 0.8

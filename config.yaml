@@ -1,0 +1,50 @@
+# Pline — site and pipeline settings.
+site:
+  title: Pline
+  base_url: https://alt-py.github.io/PLINE/
+  timezone: Pacific/Auckland        # decides which day an edition belongs to
+  greeting: Good morning, Thomas
+
+edition:
+  window_days: 10      # stories older than this are dropped (except "current release" references)
+  max_per_topic: 8
+  keep_days: 30        # editions, and the thumbnails they use, are pruned after this
+
+llm:
+  # Used only when the ANTHROPIC_API_KEY secret is set. Without it Pline still
+  # publishes, using the feeds' own titles and excerpts (no translation).
+  model: claude-sonnet-5-5
+  max_candidates: 140
+  max_tokens: 12000
+
+thumbs:
+  max_bytes: 6000000   # larger source images are skipped
+  max_pixels: 40000000 # decompression-bomb guard
+  width: 960           # thumbnails are re-encoded to WebP at most this wide
+  quality: 78
+
+http:
+  timeout: 20
+  user_agent: "PlineBot/1.0 (+https://github.com/Alt-Py/PLINE)"
+  max_page_bytes: 4000000
+  enrich_limit: 90     # article pages fetched per run to find images and dates
+
+topics:
+  - key: obsidian
+    name: Obsidian
+    tagline: Releases, plugins and the community.
+    tone: light
+  - key: stationery
+    name: Japanese stationery
+    jp: 文房具
+    tagline: Pens, inks and paper from Japan.
+    tone: dark
+  - key: vfx
+    name: VFX industry
+    tagline: Studios, shows and the business.
+    tone: parchment
+  - key: pipeline
+    name: Houdini, RenderMan & USD
+    short: Houdini · USD
+    tagline: The tools in the pipeline.
+    tone: dark

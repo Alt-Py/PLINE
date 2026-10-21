@@ -1,0 +1,63 @@
+name: Daily edition
+
+on:
+  schedule:
+    # 17:40 UTC = 06:40 in Wellington during NZ daylight time (05:40 in NZ winter).
+    - cron: "40 17 * * *"
+  workflow_dispatch:
+    inputs:
+      fresh:
+        description: "Rebuild today's edition from scratch"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pline-publish
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Compile today's edition
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m pline run ${{ inputs.fresh && '--fresh' || '' }}
+
+      - name: Save the edition to the repository
+        run: |
+          git config user.name "pline-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A docs state
+          git diff --cached --quiet || git commit -m "Edition $(TZ=Pacific/Auckland date +%F)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

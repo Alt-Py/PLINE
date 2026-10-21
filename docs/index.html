@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<title>Pline</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M22 50V14h12a11 11 0 0 1 0 22h-6' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;600&display=swap">
+<style>
+/* Apple-style full-bleed tiles, one per topic, alternating light and dark; frosted sticky day bar. */
+:root {
+  --primary: #0066cc; --primary-focus: #0071e3; --on-dark-link: #2997ff;
+  --ink: #1d1d1f; --ink-80: #333336; --ink-48: #6e6e73;
+  --canvas: #ffffff; --parchment: #f5f5f7; --hairline: #e0e0e0;
+  --nav: #000000; --nav-fg: #f5f5f7;
+  --tile-dark: #272729; --tile-dark-card: #333336; --dark-fg: #ffffff; --dark-muted: #c7c7cc;
+  --frost: rgba(245, 245, 247, 0.8); --chip: rgba(0, 0, 0, 0.05); --img-bg: #e8e8ed;
+  --font-display: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-text: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-jp: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #2997ff; --primary-focus: #4aa8ff;
+    --ink: #f5f5f7; --ink-80: #d2d2d7; --ink-48: #8e8e93;
+    --canvas: #000000; --parchment: #161617; --hairline: #2c2c2e;
+    --tile-dark: #1d1d1f; --tile-dark-card: #2a2a2c; --dark-fg: #f5f5f7; --dark-muted: #a1a1a6;
+    --frost: rgba(22, 22, 23, 0.8); --chip: rgba(255, 255, 255, 0.1); --img-bg: #2a2a2c;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--parchment); color: var(--ink);
+  font-family: var(--font-text); font-size: 17px; line-height: 1.47; letter-spacing: -0.374px;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--nav); }
+a { color: var(--primary); text-decoration: none; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--primary-focus); outline-offset: 2px; border-radius: 8px; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.gnav { background: var(--nav); color: var(--nav-fg); padding-top: env(safe-area-inset-top, 0px); }
+.gnav .wrap { height: 44px; display: flex; align-items: center; gap: 24px; }
+.brand { font-family: var(--font-display); font-weight: 600; font-size: 17px; letter-spacing: -0.2px; color: var(--nav-fg); }
+.gnav nav { display: flex; gap: 20px; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
+.gnav nav::-webkit-scrollbar { display: none; }
+.gnav nav a { color: var(--nav-fg); opacity: .8; font-size: 12px; letter-spacing: -0.12px; white-space: nowrap; }
+.gnav nav a:hover { opacity: 1; }
+
+.subnav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--frost); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--hairline); }
+.subnav .wrap { min-height: 52px; display: flex; align-items: center; gap: 16px; padding-block: 8px; }
+.subnav h2 { margin: 0; font-family: var(--font-display); font-size: 21px; font-weight: 600; letter-spacing: 0.231px; line-height: 1.19; white-space: nowrap; }
+.days { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+.days::-webkit-scrollbar { display: none; }
+.pill { font: inherit; font-size: 14px; letter-spacing: -0.224px; line-height: 1; border: 0; border-radius: 9999px; padding: 10px 14px; cursor: pointer; background: var(--chip); color: var(--ink); white-space: nowrap; display: inline-flex; align-items: center; min-height: 34px; transition: transform .12s ease; }
+.pill:active { transform: scale(0.95); }
+.pill[aria-current="page"], .pill[aria-pressed="true"] { background: var(--primary); color: #fff; }
+.toggle { margin-left: auto; }
+
+.hero { background: var(--parchment); text-align: center; }
+.hero .wrap { padding-block: 64px 48px; display: grid; gap: 12px; justify-items: center; }
+.eyebrow { font-size: 14px; letter-spacing: -0.224px; color: var(--ink-48); font-weight: 600; }
+.hero h1 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 56px; line-height: 1.07; letter-spacing: -0.28px; text-wrap: balance; }
+.hero .lead { margin: 0; font-size: 21px; line-height: 1.38; color: var(--ink-80); max-width: 42ch; text-wrap: balance; }
+.stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 12px; }
+.stat { display: inline-flex; align-items: baseline; gap: 6px; background: var(--canvas); border-radius: 9999px; padding: 8px 16px; font-size: 14px; color: var(--ink-80); font-variant-numeric: tabular-nums; }
+.stat b { font-weight: 600; color: var(--ink); }
+
+.tile { --t-bg: var(--canvas); --t-fg: var(--ink); --t-muted: var(--ink-48); --t-body: var(--ink-80); --t-link: var(--primary); --c-bg: var(--parchment); background: var(--t-bg); color: var(--t-fg); scroll-margin-top: 60px; }
+.tile.parchment { --t-bg: var(--parchment); --c-bg: var(--canvas); }
+.tile.dark { --t-bg: var(--tile-dark); --t-fg: var(--dark-fg); --t-muted: var(--dark-muted); --t-body: var(--dark-muted); --t-link: var(--on-dark-link); --c-bg: var(--tile-dark-card); }
+.tile > .wrap { padding-block: 72px; display: grid; gap: 32px; }
+.tile-head { display: grid; gap: 6px; text-align: center; justify-items: center; }
+.tile-head h2 { margin: 0; font-family: var(--font-display); font-size: 40px; line-height: 1.1; font-weight: 600; text-wrap: balance; }
+.tile-head .jp { font-family: var(--font-jp); font-size: 14px; color: var(--t-muted); letter-spacing: 0.2em; }
+.tile-head p { margin: 0; font-size: 21px; line-height: 1.38; color: var(--t-body); }
+.tile-head .count { font-size: 14px; color: var(--t-muted); font-variant-numeric: tabular-nums; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 20px; }
+.card { background: var(--c-bg); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; transition: opacity .2s ease; }
+.card .media { display: block; aspect-ratio: 16 / 10; background: var(--img-bg); overflow: hidden; }
+.card .media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.card .media:hover img { transform: scale(1.03); }
+.body { padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
+.card.lead { grid-column: 1 / -1; }
+.card.lead .body { padding: 28px 32px 32px; justify-content: center; }
+.card.lead h3 { font-family: var(--font-display); font-size: 28px; line-height: 1.14; letter-spacing: -0.2px; }
+.card.lead .sum { font-size: 17px; line-height: 1.47; max-width: 62ch; }
+@media (min-width: 834px) {
+  .card.lead.has-img { flex-direction: row; }
+  .card.lead.has-img .media { flex: 0 0 56%; aspect-ratio: auto; min-height: 340px; }
+}
+/* Stationery: product photos earn more room, the Apple way (photography first). */
+.tile.stationery .card .media { aspect-ratio: 4 / 3; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 12px; letter-spacing: -0.12px; color: var(--t-muted); }
+.meta .src { font-weight: 600; color: var(--t-fg); }
+.badge { background: var(--t-link); color: #fff; border-radius: 9999px; padding: 3px 8px; font-weight: 600; font-size: 11px; letter-spacing: 0; }
+.card h3 { margin: 0; font-size: 17px; line-height: 1.29; font-weight: 600; letter-spacing: -0.374px; text-wrap: pretty; }
+.card h3 a { color: var(--t-fg); }
+.card h3 a:hover { color: var(--t-link); }
+.jp-title { font-family: var(--font-jp); font-size: 13px; color: var(--t-muted); letter-spacing: 0; line-height: 1.5; }
+.sum { margin: 0; font-size: 14px; line-height: 1.43; letter-spacing: -0.224px; color: var(--t-body); overflow-wrap: anywhere; }
+.links { margin-top: auto; padding-top: 4px; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; letter-spacing: -0.224px; }
+.links a { color: var(--t-link); }
+.links .also { color: var(--t-muted); }
+.card.read { opacity: .5; }
+.card.read:hover { opacity: .85; }
+.hide-read .card.read { display: none; }
+.allread { display: none; text-align: center; color: var(--t-muted); font-size: 14px; margin: 0; }
+.hide-read .grid.all-read + .allread { display: block; }
+
+.pager { background: var(--parchment); }
+.pager .wrap { padding-block: 32px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.empty { background: var(--canvas); text-align: center; }
+.empty .wrap { padding-block: 80px; display: grid; gap: 10px; justify-items: center; }
+.empty h2 { margin: 0; font-family: var(--font-display); font-size: 34px; font-weight: 600; }
+.empty p { margin: 0; color: var(--ink-80); max-width: 46ch; }
+footer { background: var(--parchment); color: var(--ink-48); font-size: 12px; letter-spacing: -0.12px; }
+footer .wrap { padding-block: 32px 56px; display: grid; gap: 8px; border-top: 1px solid var(--hairline); }
+footer p { margin: 0; line-height: 1.6; max-width: 90ch; }
+footer a { color: var(--ink-48); text-decoration: underline; }
+
+@media (max-width: 734px) {
+  .hero h1 { font-size: 34px; }
+  .hero .lead, .tile-head p { font-size: 17px; }
+  .tile-head h2 { font-size: 28px; }
+  .tile > .wrap { padding-block: 48px; gap: 24px; }
+  .hero .wrap { padding-block: 40px 32px; }
+  .card.lead .body { padding: 20px 24px 24px; }
+  .card.lead h3 { font-size: 21px; }
+  .subnav h2 { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="gnav">
+  <div class="wrap">
+    <a class="brand" href="./">Pline</a>
+    <nav aria-label="Topics">
+<a href="#obsidian">Obsidian</a><a href="#stationery">Japanese stationery</a><a href="#vfx">VFX industry</a><a href="#pipeline">Houdini · USD</a>    </nav>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="wrap">
+    <h2>Today</h2>
+    <nav class="days" aria-label="Editions">
+    </nav>
+    <button class="pill toggle" id="hideRead" type="button" aria-pressed="false">Hide read</button>
+  </div>
+</div>
+
+<main>
+  <section class="empty"><div class="wrap">
+    <h2>No edition yet</h2>
+    <p>The first edition appears here after the next morning run.</p>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Read stories are remembered on this device only. <a href="https://github.com/Alt-Py/PLINE">How Pline works</a></p>
+</div></footer>
+
+<script>
+(function () {
+  var KEY = "pline.read", HIDE = "pline.hideRead", read = {};
+  try { (JSON.parse(localStorage.getItem(KEY) || "[]")).forEach(function (id) { read[id] = 1; }); } catch (e) {}
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(Object.keys(read).slice(-2000))); } catch (e) {} }
+  function sync(grid) {
+    var cards = grid.querySelectorAll(".card"), unread = 0;
+    cards.forEach(function (c) { if (!c.classList.contains("read")) unread++; });
+    grid.classList.toggle("all-read", cards.length > 0 && unread === 0);
+  }
+  document.querySelectorAll(".card").forEach(function (card) {
+    var id = card.getAttribute("data-id");
+    if (read[id]) card.classList.add("read");
+    card.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        if (!read[id]) { read[id] = 1; save(); card.classList.add("read"); sync(card.closest(".grid")); }
+      });
+    });
+  });
+  document.querySelectorAll(".grid").forEach(sync);
+  var btn = document.getElementById("hideRead"), hide = false;
+  try { hide = localStorage.getItem(HIDE) === "1"; } catch (e) {}
+  function apply() { document.body.classList.toggle("hide-read", hide); btn.setAttribute("aria-pressed", String(hide)); }
+  btn.addEventListener("click", function () { hide = !hide; try { localStorage.setItem(HIDE, hide ? "1" : "0"); } catch (e) {} apply(); });
+  apply();
+})();
+</script>
+</body>
+</html>
