@@ -1,0 +1,306 @@
+{
+ "date": "2026-10-21",
+ "generated_at": "2026-10-21T20:57:57+13:00",
+ "headline": "Netflix's layoffs cost animation-friendly film chief Dan Lin his job, OpenUSD 26.11.0 and Redshift 2027.0 ship, and Obsidian's Pele renders Mermaid diagrams in 0.2 ms.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 23,
+ "sources_total": 30,
+ "source_errors": {
+  "Obsidian community plugins": "no stories found",
+  "Gourmet Pens": "SSLError: HTTPSConnectionPool(host='www.gourmetpens.com', port=443): Max retries exceeded with url: /feeds/posts/default (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occ",
+  "r/fountainpens": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/fountainpens/top/.rss?t=day",
+  "r/stationery": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/stationery/top/.rss?t=day",
+  "r/vfx": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/vfx/top/.rss?t=day",
+  "r/Houdini": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/Houdini/top/.rss?t=day",
+  "r/GraphicsProgramming": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/GraphicsProgramming/top/.rss?t=day"
+ },
+ "taste": {
+  "likes": 0,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "f8ce0e6e79f9",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Obsidian team open-sources Pele, a dependency-free Mermaid-to-SVG renderer",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xaqlcg/pele_from_the_obsidian_team_mermaid_diagrams/",
+   "summary": "Pele turns Mermaid syntax into SVG in about 0.2 ms, versus roughly 43 ms for Mermaid.js in the team's playground. Users are asking whether it will replace the in-app Mermaid renderer.",
+   "date": "2026-10-21",
+   "image": "thumbs/e0959968c7466f33.webp",
+   "also": [
+    {
+     "source": "r/ObsidianMD",
+     "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbafpa/pele_finally_makes_mermaid_feel_like_2026_and_not/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "427594395e18",
+   "topic": "obsidian",
+   "source": "Obsidian blog",
+   "title": "Obsidian unveils a new Community site and developer dashboard for plugins",
+   "url": "https://obsidian.md/blog/future-of-plugins/",
+   "summary": "Obsidian is reworking how plugins and themes are published and discovered, with a dedicated community site and a dashboard for developers. Theme authors are already linking to listings there.",
+   "image": "thumbs/f9b48989cd33cf58.webp"
+  },
+  {
+   "id": "b3a4084e97f7",
+   "topic": "obsidian",
+   "source": "Obsidian blog",
+   "title": "Two independent security audits of Obsidian Sync are published",
+   "url": "https://obsidian.md/blog/cure53-tob-sync-audits/",
+   "summary": "Cure53 and Trail of Bits audited Obsidian Sync. All findings have been remediated and validated by the auditors, which matters if you sync a vault holding work notes.",
+   "image": "thumbs/f9b48989cd33cf58.webp"
+  },
+  {
+   "id": "f63403f4fe5c",
+   "topic": "obsidian",
+   "source": "Obsidian blog",
+   "title": "Obsidian October 2026 invites the community to build and take the survey",
+   "url": "https://obsidian.md/blog/2026-obsidian-october/",
+   "summary": "This year's Obsidian October encourages people to ship plugin, theme and vault projects, and to fill in the State of Obsidian survey.",
+   "image": "thumbs/f9b48989cd33cf58.webp"
+  },
+  {
+   "id": "256c8f5385a3",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Home Cards plugin 1.32 adds multiple home pages, pins and cover images",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xb9h1w/home_cards_plugin_132_is_out_with_multiple_home/",
+   "summary": "The update builds home pages from note properties, tags and folders and inherits your theme's fonts and colours. It also adds several new customisable sections.",
+   "date": "2026-10-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "8d5a34f5a0e9",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "S-Charts plugin turns markdown tables into theme-coloured charts",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xanpvj/i_made_scharts_type_a_markdown_table_in_a_code/",
+   "summary": "A code block holding a plain markdown table renders as a bar chart in your theme's colours, with no Dataview scripting. Charts can also be built from note properties in a folder. It is still in development.",
+   "date": "2026-10-20",
+   "image": "thumbs/cf8b72d18d60c056.webp",
+   "also": [
+    {
+     "source": "r/ObsidianMD",
+     "url": "https://www.reddit.com/r/ObsidianMD/comments/1xan8mz/stress_testing_my_new_plugin_that_i_am_working_on/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "8aab575d9872",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Stretchtext plugin brings Ted Nelson's expandable text to Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xaofzj/stretchtext_plugin/",
+   "summary": "Inspired by a Claude Code plugin, it lets phrases expand into extra detail and collapse back on demand. An interesting experiment in progressive-disclosure notes.",
+   "date": "2026-10-20",
+   "kind": "reddit"
+  },
+  {
+   "id": "7901ef74927b",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Zen UI plugin adds toggles to hide interface clutter",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbg581/made_a_little_plugin_to_make_obsidian_even_more/",
+   "summary": "A small plugin that collapses sidebar and file-explorer elements and other UI chrome for distraction-free writing, replacing a pile of CSS snippets.",
+   "date": "2026-10-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "2cb7213f041b",
+   "topic": "stationery",
+   "source": "Sailor",
+   "title": "Sailor launches 450-piece ebonite fountain pen 'Enryu' with long-blade-ground nib",
+   "url": "https://sailor.co.jp/news/20261014/",
+   "summary": "Sailor's limited run of 450 pens worldwide (225 domestic, 225 overseas) goes on sale 24 October. It pairs an ebonite body with a long-blade-ground nib, aimed at calligraphy-minded collectors.",
+   "date": "2026-10-14",
+   "title_ja": "『長刀研ぎエボナイト万年筆 焔龍』 2026年10月24日（土）より世界450本限定発売",
+   "image": "thumbs/0b7cd63af3cfba0c.webp"
+  },
+  {
+   "id": "d06f02d6a292",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Pen Addict finds Sailor's steel-nib Pro Gear Regular hard to justify at $200",
+   "url": "https://www.penaddict.com/blog/2026/10/19/sailor-pro-gear-regular-fountain-pen-review",
+   "summary": "The reviewer says the pen writes fine but feels underwhelming for the price, and regrets buying it. A useful counterpoint to Sailor's gold-nib reputation.",
+   "date": "2026-10-19",
+   "image": "thumbs/f7838f6663b6214b.webp"
+  },
+  {
+   "id": "3d37e2ceb4f3",
+   "topic": "stationery",
+   "source": "Pilot",
+   "title": "Pilot releases limited 'Christmas Market in Blue World' Acro 300 ballpoint",
+   "url": "https://www.pilot.co.jp/press_release/2026/10/21/_in_blue_world.html",
+   "summary": "A seasonal limited edition of Pilot's smooth, dark-writing Acro 300 oil-based ballpoint, on sale in limited quantities.",
+   "date": "2026-10-21",
+   "title_ja": "油性ボールペン『アクロ クリスマスマーケット in Blue World 』限定発売",
+   "image": "thumbs/21ec62ea380a76bf.webp"
+  },
+  {
+   "id": "e8c352731c7c",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Netflix ousts animation-friendly film chief Dan Lin amid 1,000 layoffs",
+   "url": "https://www.cartoonbrew.com/executives/netflix-dan-lin-fired-mass-layoffs-268061.html",
+   "summary": "Lin, who backed animation and wider theatrical windows for family films, leaves as Netflix cuts about 6% of staff. His exit raises questions about the studio's animation priorities.",
+   "date": "2026-10-20",
+   "image": "thumbs/70ed175ec5188d95.webp",
+   "also": [
+    {
+     "source": "Cartoon Brew",
+     "url": "https://www.cartoonbrew.com/newsletter/dan-lin-out-at-netflix-ai-staff-in-at-disney-jinko-gotoh-to-lead-wia-268167.html"
+    },
+    {
+     "source": "Cartoon Brew",
+     "url": "https://www.cartoonbrew.com/artist-rights/netflix-layoff-1000-dan-evans-aaron-davidson-267939.html"
+    }
+   ]
+  },
+  {
+   "id": "71104b699e32",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Disney spends $180M to hire most of bankrupt Character.AI's staff",
+   "url": "https://www.cartoonbrew.com/artificial-intelligence/disney-character-ai-employee-hires-268139.html",
+   "summary": "After a year of job cuts, Disney is bringing in the chatbot startup's workforce. The move deepens its AI ties and sits awkwardly with ongoing worries about animation jobs.",
+   "date": "2026-10-20",
+   "image": "thumbs/80a6a02502d2c36f.webp"
+  },
+  {
+   "id": "7b308ac170fb",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Digital Domain breaks down 418 shots on Spielberg's 'Disclosure Day'",
+   "url": "https://www.artofvfx.com/disclosure-day-digital-domain-creates-aliens-epic-action-and-cg-environments/",
+   "summary": "The work includes a CG-rebuilt New Jersey train chase, aliens, and animals built with DD's new three-tier muscle system. A good watch for creature-rigging ideas.",
+   "date": "2026-10-20",
+   "image": "thumbs/c917203140283e1c.webp",
+   "also": [
+    {
+     "source": "befores & afters",
+     "url": "https://beforesandafters.com/2026/10/20/digital-domains-vfx-breakdown-for-disclosure-day-is-here/"
+    },
+    {
+     "source": "CG Channel",
+     "url": "https://www.cgchannel.com/2026/10/check-out-digital-domains-vfx-breakdown-for-disclosure-day/"
+    }
+   ]
+  },
+  {
+   "id": "a6d28b91348d",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "View Conference: studio and ILM executives debate AI, pipelines and jobs",
+   "url": "https://www.cartoonbrew.com/events/studio-executive-roundtable-view-conference-267928.html",
+   "summary": "Executives from Sony, ILM and Skydance discussed AI-driven pipeline change and incentives, with workforce protection looming large. Directors on a separate panel debated AI and distribution.",
+   "date": "2026-10-15",
+   "image": "thumbs/f2a43787440fe8c0.webp",
+   "also": [
+    {
+     "source": "Cartoon Brew",
+     "url": "https://www.cartoonbrew.com/events/view-conference-joel-crawford-januel-mercado-mckenna-harris-tyree-dillihay-267957.html"
+    }
+   ]
+  },
+  {
+   "id": "11c8e22143e3",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Framestore shares VFX breakdown for 'East of Eden'",
+   "url": "https://beforesandafters.com/2026/10/21/watch-framestores-vfx-breakdown-for-east-of-eden/",
+   "summary": "A behind-the-scenes reel from Framestore covering its visual effects work on the series.",
+   "date": "2026-10-21",
+   "image": "thumbs/94a8a241baf18cce.webp"
+  },
+  {
+   "id": "6a64a709af2d",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Framestore upgrades Appa's fur, skin and eyes for 'Avatar: The Last Airbender' S2",
+   "url": "https://www.artofvfx.com/avatar-the-last-airbender-season-2-framestore-brings-appas-family-to-life/",
+   "summary": "With the camera closer to Appa, Framestore rebuilt his asset for higher fidelity and added sky-bison relatives. The VFX supervisors also discuss how the approach evolved from season one.",
+   "date": "2026-10-16",
+   "image": "thumbs/9579cbd0855975f0.webp",
+   "also": [
+    {
+     "source": "befores & afters",
+     "url": "https://beforesandafters.com/2026/10/15/how-framestore-made-appa/"
+    },
+    {
+     "source": "Art of VFX",
+     "url": "https://www.artofvfx.com/avatar-the-last-airbender-season-2-marion-spates-production-vfx-supervisor-adam-chaszen-production-vfx-producer/"
+    }
+   ]
+  },
+  {
+   "id": "37db142393ba",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Toy Story 5 director describes a two-week production pause that reshaped Jessie's arc",
+   "url": "https://www.cartoonbrew.com/feature-film/toy-story-5-mckenna-harris-view-conference-268055.html",
+   "summary": "McKenna Harris says Pixar halted production to rethink Jessie's motivation after deciding the film 'wasn't good'. It is a candid look at story-driven course correction in feature animation.",
+   "date": "2026-10-19",
+   "image": "thumbs/b6377ef07d52c924.webp"
+  },
+  {
+   "id": "57ced6f68be6",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "Raynault shows its CG Washington D.C. aerial for 'Mayday'",
+   "url": "https://www.cgchannel.com/2026/10/watch-raynaults-vfx-breakdown-for-mayday/",
+   "summary": "The studio's breakdown covers a full CG recreation of the city for an aerial shot in the Apple TV action comedy.",
+   "date": "2026-10-20"
+  },
+  {
+   "id": "f1c384cc0ea0",
+   "topic": "pipeline",
+   "source": "OpenUSD releases",
+   "title": "OpenUSD v26.11.0 is released",
+   "url": "https://github.com/PixarAnimationStudios/OpenUSD/releases/tag/v26.11.0",
+   "summary": "Pixar has tagged version 26.11.0 of OpenUSD on GitHub. Check the release notes for changes that may affect USD-based pipelines.",
+   "date": "2026-10-20"
+  },
+  {
+   "id": "e02c3e9f20a0",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Redshift 2027.0 adds fur procedural and ACES 2 support",
+   "url": "https://www.cgchannel.com/2026/10/maxon-releases-redshift-2027-0/",
+   "summary": "Maxon's GPU renderer gains a new fur procedural, ACES 2 colour support and updates to Redshift Live. ACES 2 support is relevant for colour-managed pipelines.",
+   "date": "2026-10-18"
+  },
+  {
+   "id": "ac009111aa15",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Cinema 4D 2027.0 brings a new object scattering system",
+   "url": "https://www.cgchannel.com/2026/10/maxon-releases-cinema-4d-2027-0/",
+   "summary": "Maxon's release adds a scattering system for objects and improved liquid simulations.",
+   "date": "2026-10-15"
+  },
+  {
+   "id": "f4f8f419ffd6",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "ZBrush 2027.0 adds a desktop UV Editor and iPad projection painting",
+   "url": "https://www.cgchannel.com/2026/10/maxon-releases-zbrush-2027-0-and-zbrush-for-ipad-2027-0/",
+   "summary": "Maxon's sculpting update brings a new UV Editor on desktop and projection painting on the iPad version.",
+   "date": "2026-10-15"
+  },
+  {
+   "id": "a0d69c1eb14d",
+   "topic": "pipeline",
+   "source": "SideFX",
+   "title": "Frame48's Lenovo spot follows a CG artist sculpting terrain and rigging a car",
+   "url": "https://www.sidefx.com/community/frame48-lenovo/",
+   "summary": "The LA studio's Yoga Pro 7a campaign is a meta-story about CG creation, from a volcanic landscape to a hyper car, showcased on SideFX's site.",
+   "image": "thumbs/85672c4e0e653668.webp"
+  }
+ ]
+}
