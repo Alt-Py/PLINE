@@ -1,16 +1,12 @@
 {
  "date": "2026-10-22",
- "generated_at": "2026-10-22T10:19:21+13:00",
- "headline": "Netflix's record buybacks ahead of 1,000 layoffs lead the VFX news; CorridorKey 2.0 lands for pipelines, and Ramayana's trailer VFX draws scrutiny.",
+ "generated_at": "2026-10-22T10:22:42+13:00",
+ "headline": "Netflix's record buybacks before 1,000 layoffs lead the day, with Framestore's East of Eden breakdown, CorridorKey 2.0 and Inkpad for iPad close behind.",
  "writer": "claude-sonnet-5-5",
- "sources_ok": 29,
+ "sources_ok": 33,
  "sources_total": 34,
  "source_errors": {
-  "r/fountainpens": "RuntimeError: Arctic Shift: HTTP 400: {\"data\":null,\"error\":\"'permalink' is not a valid field\"}",
-  "r/stationery": "RuntimeError: Arctic Shift: HTTP 400: {\"data\":null,\"error\":\"'permalink' is not a valid field\"}",
-  "r/vfx": "RuntimeError: Arctic Shift: HTTP 400: {\"data\":null,\"error\":\"'permalink' is not a valid field\"}",
-  "r/Houdini": "RuntimeError: Arctic Shift: HTTP 400: {\"data\":null,\"error\":\"'permalink' is not a valid field\"}",
-  "r/GraphicsProgramming": "RuntimeError: Arctic Shift: HTTP 400: {\"data\":null,\"error\":\"'permalink' is not a valid field\"}"
+  "YouTube · 万年筆": "no stories found"
  },
  "taste": {
   "likes": 2,
@@ -18,22 +14,12 @@
  },
  "stories": [
   {
-   "id": "b5eefd828601",
-   "topic": "obsidian",
-   "source": "r/ObsidianMD",
-   "title": "Envoy syncs Obsidian vaults via Git with encrypted, never-expiring history",
-   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbhwja/i_needed_git_history_an_iphone_with_no_extra_apps/",
-   "summary": "A new plugin gives iPhone and Windows users unlimited Git-based version history without companion apps. Notes stay encrypted before upload, an alternative to Obsidian Sync's vault and history caps.",
-   "date": "2026-10-21",
-   "kind": "reddit"
-  },
-  {
    "id": "86c6055b0119",
    "topic": "obsidian",
    "source": "r/ObsidianMD",
-   "title": "Inkpad brings a low-latency infinite handwriting canvas to Obsidian on iPad",
+   "title": "Inkpad adds a low-latency infinite handwriting canvas to Obsidian on iPad",
    "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbjxnu/i_built_inkpad_a_lowlatency_infinite_canvas_for/",
-   "summary": "Built for Apple Pencil study notes, the plugin keeps every drawing inside the vault and works with third-party sync. A useful option for sketch-heavy note-taking.",
+   "summary": "A new plugin built for Apple Pencil study notes on an infinite canvas. Drawings stay inside the vault and work with third-party sync, so handwriting remains portable plain files.",
    "date": "2026-10-21",
    "kind": "reddit"
   },
@@ -41,30 +27,20 @@
    "id": "bea2b61c866a",
    "topic": "obsidian",
    "source": "r/ObsidianMD",
-   "title": "Plugin puts a Garmin Connect dashboard inside your vault",
+   "title": "Garmin Connect dashboard plugin brings your fitness data into the vault",
    "url": "https://www.reddit.com/r/ObsidianMD/comments/1xby32d/garmin_connect_dashboard_inside_your_vault/",
-   "summary": "Headless SSO login stores only a refresh token in the keychain, and activity data syncs as plain JSON files in the vault. That makes it easy to query or chart in Obsidian.",
+   "summary": "Headless SSO login keeps your password unsaved and stores only a refresh token. Activity data syncs into the vault as JSON files, so you can query and link it like any other notes.",
    "date": "2026-10-21",
    "image": "thumbs/d71bab861d2ebe09.webp",
    "kind": "reddit"
   },
   {
-   "id": "c7d0100dc799",
+   "id": "b5eefd828601",
    "topic": "obsidian",
    "source": "r/ObsidianMD",
-   "title": "Community asks why so many top Obsidian plugins look abandoned",
-   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbo6bf/why_so_many_main_obsidian_pluginstemplates_are/",
-   "summary": "A newcomer notes that popular plugins and templates haven't been updated in over a year. The thread raises questions about plugin maintenance and how to judge long-term reliability.",
-   "date": "2026-10-21",
-   "kind": "reddit"
-  },
-  {
-   "id": "c796335d1d6f",
-   "topic": "obsidian",
-   "source": "r/ObsidianMD",
-   "title": "Feature idea: card-style group headers for Obsidian Bases views",
-   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xba9cw/bases_option_for_group_by_group_cards/",
-   "summary": "A user proposes clickable group cards with icons built on Bases' Group by function, to make database views more visual. It's a small but interesting take on where Bases could go.",
+   "title": "Envoy syncs vaults through Git with encrypted notes and no iPhone helper app",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbhwja/i_needed_git_history_an_iphone_with_no_extra_apps/",
+   "summary": "Aims at unlimited version history and no cap on vaults, working on Windows and iPhone without extra tooling. Notes are encrypted before upload, a possible alternative to paid sync for people who want Git history.",
    "date": "2026-10-21",
    "kind": "reddit"
   },
@@ -72,82 +48,42 @@
    "id": "dd5ec9123104",
    "topic": "obsidian",
    "source": "ViktorKav",
-   "title": "Video walkthrough: building a second brain with Obsidian and AI",
+   "title": "Walkthrough: building a second brain in Obsidian with AI",
    "url": "https://www.youtube.com/watch?v=jKwevOnJAL0",
-   "summary": "A popular tutorial on combining Obsidian with AI tools for knowledge management. It's broad in scope but gives a feel for current community workflows.",
+   "summary": "A popular video, with over 26,000 views, on combining Obsidian with AI tools for a personal knowledge system. It's a useful look at how others structure AI-assisted vault workflows.",
    "date": "2026-10-19",
    "image": "thumbs/36333a1310a97056.webp",
    "kind": "video"
   },
   {
-   "id": "d1c71ca56d5d",
-   "topic": "stationery",
-   "source": "The Pen Addict",
-   "title": "Pen Addict podcast: Sailor TUZU verdict and a stationery trip to Japan",
-   "url": "https://www.penaddict.com/blog/2026/10/21/the-pen-addict-podcast-episode-739-accidental-stationery",
-   "summary": "The hosts ask whether the Sailor TUZU is Sailor's best steel-nib pen, then plan a two-week Japan stationery trip.",
+   "id": "c7d0100dc799",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Community debates why many top Obsidian plugins haven't been updated in a year",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbo6bf/why_so_many_main_obsidian_pluginstemplates_are/",
+   "summary": "A newcomer asks whether stale plugins signal a dying ecosystem. The thread is worth a skim if you rely on plugins and want to judge the maintenance risk.",
    "date": "2026-10-21",
-   "image": "thumbs/6e6a02cc95d67d42.webp"
+   "kind": "reddit"
   },
   {
-   "id": "cff1e728617f",
-   "topic": "stationery",
-   "source": "もともとTV",
-   "title": "uni Zent gets new limited-edition colors in a big release roundup",
-   "url": "https://www.youtube.com/watch?v=qtpoqVM3MJg",
-   "summary": "A popular video covers fresh limited-color uni Zent models among a wave of new Japanese stationery releases, and why the host wants the new one.",
-   "date": "2026-10-14",
-   "image": "thumbs/e1b25345857ec005.webp",
-   "kind": "video"
+   "id": "c796335d1d6f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Request: Bases 'group cards' that turn Group By into a visual layer",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xba9cw/bases_option_for_group_by_group_cards/",
+   "summary": "A user shows mock-ups of Bases groups displayed as clickable cards with icons, which would make dashboards more visual. It's a concrete feature idea for the Bases view.",
+   "date": "2026-10-21",
+   "kind": "reddit"
   },
   {
-   "id": "02037a605a76",
-   "topic": "stationery",
-   "source": "ヤキツの小物箱",
-   "title": "Orenz gets a modern limited color in weekly stationery news",
-   "url": "https://www.youtube.com/watch?v=tarl-YHg3rg",
-   "summary": "This week's Japanese stationery roundup features a new modern limited colorway of the Pentel Orenz mechanical pencil, plus other new releases.",
-   "date": "2026-10-18",
-   "title_ja": "オレンズにモダンな限定カラーが登場【第166回 今週の文房具新情報】",
-   "image": "thumbs/ac8709951a964c58.webp",
-   "kind": "video"
-  },
-  {
-   "id": "ebebb65de875",
-   "topic": "stationery",
-   "source": "Platinum",
-   "title": "Platinum #3776 Century features in Japanese letter-writing documentary series",
-   "url": "https://www.platinum-pen.co.jp/news/13590/",
-   "summary": "The #3776 Century is used in a TV series where people write letters to the benefactors of their hometowns. The second episode airs on October 17.",
-   "title_ja": "TSKさんいん中央テレビ制作のドキュメンタリー番組「越境エコレター」第２回目放送日をお知らせします。 | プラチナ万年筆",
-   "image": "thumbs/85fa8015f0294c56.webp",
-   "also": [
-    {
-     "source": "Platinum",
-     "url": "https://www.platinum-pen.co.jp/news/13508/"
-    }
-   ]
-  },
-  {
-   "id": "4e0b1fa44106",
-   "topic": "stationery",
-   "source": "Platinum",
-   "title": "Platinum #3776 Century gets a feature in MONOQLO magazine",
-   "url": "https://www.platinum-pen.co.jp/news/13596/",
-   "summary": "Platinum's flagship fountain pen appears in the November issue of the Japanese product magazine.",
-   "title_ja": "（株）晋遊舎発行 モノ情報雑誌『MONOQLO 11月号』にて「#3776センチュリー」が掲載になりました。 | プラチナ万年筆",
-   "image": "thumbs/cc624308a7204cbc.webp"
-  },
-  {
-   "id": "af1b64417bf0",
-   "topic": "stationery",
-   "source": "やまだはなこ・HanakoYamada",
-   "title": "Planning a Seoul trip in a Traveler's Notebook with a fountain pen",
-   "url": "https://www.youtube.com/watch?v=CAsmWCosxEs",
-   "summary": "A relaxed look at using a Traveler's Notebook and fountain pen for trip planning, for those who like seeing the notebook in use.",
-   "date": "2026-10-16",
-   "title_ja": "トラベラーズノート｜万年筆で書きながら立てる、4回目のソウル旅行の計画",
-   "image": "thumbs/8d27bf4cbf4e83f0.webp",
+   "id": "78ef5191f32d",
+   "topic": "obsidian",
+   "source": "The Self Discovery Channel | Creativity",
+   "title": "Randomness plugin rolls on complex random tables inside Obsidian",
+   "url": "https://www.youtube.com/watch?v=aoqjEs4hasE",
+   "summary": "A short demo of a plugin for rolling on nested tables, useful for games and generative writing. Niche, but a neat example of what the plugin API allows.",
+   "date": "2026-10-21",
+   "image": "thumbs/7abd8463c522f684.webp",
    "kind": "video"
   },
   {
@@ -156,7 +92,7 @@
    "source": "Cartoon Brew",
    "title": "Netflix posted record $4.8B in buybacks before laying off 1,000 staff",
    "url": "https://www.cartoonbrew.com/business/netflix-spends-billions-on-buybacks-before-layoffs-268185.html",
-   "summary": "Profits are growing while billions go to share buybacks and jobs are cut. Coverage of the View Conference also highlights a divide over animation's future, relevant to anyone watching studio labour and budgets.",
+   "summary": "Profits are growing while billions go to share repurchases and jobs disappear. A weekly roundup also covers the same layoffs, alongside a split at View Conference over animation's creative future.",
    "date": "2026-10-21",
    "image": "thumbs/fc92eb284bebcbcd.webp",
    "also": [
@@ -167,12 +103,21 @@
    ]
   },
   {
+   "id": "726babbd38ce",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "Framestore breaks down its CG recreation of 1900s California for East of Eden",
+   "url": "https://www.cgchannel.com/2026/10/watch-framestores-vfx-breakdown-for-period-drama-east-of-eden/",
+   "summary": "The studio shows how it built period-accurate environments for Netflix's Steinbeck adaptation. It's a good case study in large-scale invisible environment work.",
+   "date": "2026-10-21"
+  },
+  {
    "id": "00d33adfe047",
    "topic": "vfx",
    "source": "Art of VFX",
-   "title": "Ramayana: Rise of a Legend trailer prompts VFX breakdowns and scrutiny",
+   "title": "Ramayana: Rise of a Legend trailer prompts two big VFX breakdowns",
    "url": "https://www.artofvfx.com/ramayana/",
-   "summary": "The new trailer for the Indian epic has drawn several VFX breakdown videos with millions of views, which dissect the CG and how finished it looks.",
+   "summary": "A new trailer for the epic has drawn widely watched breakdown videos, one with over a million views, picking apart its effects. They show how closely audiences now scrutinise large-scale VFX work.",
    "date": "2026-10-19",
    "image": "thumbs/b0f2ed709274c7b1.webp",
    "also": [
@@ -183,26 +128,6 @@
     {
      "source": "BnfTV",
      "url": "https://www.youtube.com/watch?v=BPLRB4OtRJk"
-    },
-    {
-     "source": "vfx world",
-     "url": "https://www.youtube.com/watch?v=G9HZClfXZOY"
-    }
-   ]
-  },
-  {
-   "id": "726babbd38ce",
-   "topic": "vfx",
-   "source": "CG Channel",
-   "title": "Framestore shows its VFX breakdown for Netflix's East of Eden",
-   "url": "https://www.cgchannel.com/2026/10/watch-framestores-vfx-breakdown-for-period-drama-east-of-eden/",
-   "summary": "Framestore explains how it recreated early 20th-century California in CG for the Steinbeck adaptation. A War Horse breakdown from the studio also surfaced.",
-   "date": "2026-10-21",
-   "image": "thumbs/b5d3e87c3e323761.webp",
-   "also": [
-    {
-     "source": "Framestore",
-     "url": "https://www.youtube.com/watch?v=KDKYtXjTULY"
     }
    ]
   },
@@ -210,49 +135,40 @@
    "id": "79ff94fc17e1",
    "topic": "vfx",
    "source": "Art of VFX",
-   "title": "ILM shows how it built the Spinosaurus sequence in The End of Oak Street",
+   "title": "ILM details how its Spinosaurus sequence in The End of Oak Street came together",
    "url": "https://www.artofvfx.com/the-end-of-oak-street/",
-   "summary": "A featurette with production VFX supervisor Jay Cooper explains how ILM created the dinosaur set piece.",
+   "summary": "The production VFX supervisor explains the creature sequence in a new featurette. It's a look at ILM's approach to integrating a large dinosaur into a suburban setting.",
    "date": "2026-10-13",
    "image": "thumbs/e3c755bf3560d27e.webp"
   },
   {
-   "id": "bd9652f0cfec",
+   "id": "35c0602316a8",
    "topic": "vfx",
-   "source": "Cartoon Brew",
-   "title": "Aardman animator Loyd Price, mentor to its feature team, dies",
-   "url": "https://www.cartoonbrew.com/rip/loyd-price-aardman-animator-dies-268049.html",
-   "summary": "Price shaped Gromit's performances and trained a generation of Aardman artists, helping lay the foundation of the studio's feature animation team.",
+   "source": "Framestore",
+   "title": "Framestore's War Horse VFX breakdown video",
+   "url": "https://www.youtube.com/watch?v=KDKYtXjTULY",
+   "summary": "The studio shares a reel of its work on the film. It's a useful reference for how invisible and creature-adjacent effects are layered in a period production.",
    "date": "2026-10-19",
-   "image": "thumbs/0e9ab5ab777915bb.webp"
+   "image": "thumbs/b5d3e87c3e323761.webp",
+   "kind": "video"
   },
   {
    "id": "0937f100ae22",
    "topic": "vfx",
    "source": "Art of VFX",
-   "title": "beloFX details invisible crowd and enhancement work on Mother Mary",
+   "title": "beloFX shows invisible crowd and concert work on Mother Mary",
    "url": "https://www.artofvfx.com/mother-mary-the-invisible-visual-effects-work-of-belofx/",
-   "summary": "The studio breaks down its crowd and concert-venue work plus subtle digital enhancements for the film.",
+   "summary": "The studio walks through packed venue crowds and subtle digital fixes. It shows how much of the film's atmosphere comes from unnoticed VFX.",
    "date": "2026-10-15",
    "image": "thumbs/06a11b6fce51ce5e.webp"
-  },
-  {
-   "id": "a3af6e2a0842",
-   "topic": "vfx",
-   "source": "Art of VFX",
-   "title": "Roxel Creative breaks down environment extensions for Backrooms",
-   "url": "https://www.artofvfx.com/backrooms-explore-the-visual-effects-created-by-roxel-creative/",
-   "summary": "A look at how the Vancouver studio created and extended the film's environments from original footage.",
-   "date": "2026-10-14",
-   "image": "thumbs/70fad3e001f68d42.webp"
   },
   {
    "id": "522edd795307",
    "topic": "vfx",
    "source": "Art of VFX",
-   "title": "Magic Dust VFX shows 300+ shots for Outlander: Blood of My Blood",
+   "title": "Magic Dust VFX details 300+ shots on Outlander: Blood of My Blood",
    "url": "https://www.artofvfx.com/magic-dust-vfx-reveals-its-work-on-outlander-blood-of-my-blood/",
-   "summary": "The work consists mostly of digital matte paintings and environment extensions across the series.",
+   "summary": "The studio created digital matte paintings and environment extensions to support the series' locations. A practical example of environment-focused TV work.",
    "date": "2026-10-21",
    "image": "thumbs/c163505cf3dd9da2.webp"
   },
@@ -260,37 +176,53 @@
    "id": "73ea8bf9e833",
    "topic": "vfx",
    "source": "Art of VFX",
-   "title": "Chop Shop Post shows its digital gnome creatures for Gnomes",
+   "title": "Chop Shop Post shows how it built the digital gnomes of Gnomes",
    "url": "https://www.artofvfx.com/gnomes-chop-shop-post-brings-the-creatures-to-life/",
-   "summary": "The Melbourne studio's showcase covers character creation, animation and integration of individual and crowd gnomes into live action.",
+   "summary": "The Melbourne studio covers character creation, animation and integration of single and grouped creatures into live-action plates.",
    "date": "2026-10-16",
-   "image": "thumbs/7ff6f91d9196c592.webp",
+   "image": "thumbs/7ff6f91d9196c592.webp"
+  },
+  {
+   "id": "a3af6e2a0842",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Roxel Creative breaks down Backrooms environment creation and extensions",
+   "url": "https://www.artofvfx.com/backrooms-explore-the-visual-effects-created-by-roxel-creative/",
+   "summary": "The Vancouver studio shows how set extensions and digital enhancements turned the original footage into the film's unsettling spaces.",
+   "date": "2026-10-14",
+   "image": "thumbs/70fad3e001f68d42.webp",
    "extra": true
   },
   {
-   "id": "ad44e695bd61",
+   "id": "bd9652f0cfec",
    "topic": "vfx",
    "source": "Cartoon Brew",
-   "title": "Animation Is Film and Oscar-short season: Clara and the Below, The End",
-   "url": "https://www.cartoonbrew.com/series/clara-and-the-below-animation-is-film-268203.html",
-   "summary": "Matt Braly unveils his gothic series art, and director Niki Lindroth von Bahr discusses her stop-motion Oscar-contender short.",
-   "date": "2026-10-21",
-   "image": "thumbs/c3d2dac4c142854f.webp",
-   "also": [
-    {
-     "source": "Cartoon Brew",
-     "url": "https://www.cartoonbrew.com/awards/the-end-niki-lindroth-von-bahr-268194.html"
-    }
-   ],
+   "title": "Aardman animator Loyd Price, who helped build its feature team, has died",
+   "url": "https://www.cartoonbrew.com/rip/loyd-price-aardman-animator-dies-268049.html",
+   "summary": "Price shaped Gromit's performances and trained and championed many of the artists who built Aardman's feature animation craft and culture.",
+   "date": "2026-10-19",
+   "image": "thumbs/0e9ab5ab777915bb.webp",
+   "extra": true
+  },
+  {
+   "id": "20c586b25bee",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Compositing Academy releases 150+ free professional greenscreen plates",
+   "url": "https://www.reddit.com/r/vfx/comments/1x99agr/new_150_free_professional_greenscreen_plates_for/",
+   "summary": "Free 2K ProRes 4444 clips in S-Log3 are available for demo reels and practice under a non-commercial licence. Useful for compositors building keying and comp samples.",
+   "date": "2026-10-18",
+   "image": "thumbs/d9500d362608d35e.webp",
+   "kind": "reddit",
    "extra": true
   },
   {
    "id": "b47036e01660",
    "topic": "vfx",
    "source": "Cartoon Brew",
-   "title": "The unusual history of PG-13 animation, from Cool World to Wildwood",
+   "title": "A history of PG-13 animation, from Cool World to Wildwood",
    "url": "https://www.cartoonbrew.com/cartoon-study/pg-13-animated-feature-history-268220.html",
-   "summary": "A historical look at how adult-leaning animation pushed into CG and box-office hits, including The Spirits Within and The Simpsons Movie.",
+   "summary": "Cartoon Brew traces how films from Bebe's Kids to Final Fantasy: The Spirits Within and The Simpsons Movie pushed animation toward older audiences.",
    "date": "2026-10-21",
    "image": "thumbs/293a4a70aebe478e.webp",
    "extra": true
@@ -299,70 +231,175 @@
    "id": "f556d3c6206d",
    "topic": "pipeline",
    "source": "Corridor Crew",
-   "title": "Corridor Crew releases CorridorKey 2.0, a much-improved green screen keyer",
+   "title": "Corridor Crew releases CorridorKey 2.0, a much-improved green screen keying tool",
    "url": "https://www.youtube.com/watch?v=svrdRAoIlxM",
-   "summary": "The team claims a big step up for its AI-based keying tool, with a free version on GitHub and an official plugin. It is worth testing against traditional compositing keyers.",
+   "summary": "The team says the tool is far better than before and offers a free version and an official plugin. It's worth testing against your usual keyers, though the video is sponsored by hardware makers.",
    "date": "2026-10-21",
+   "image": "thumbs/60edf66feeafd800.webp",
    "kind": "video"
+  },
+  {
+   "id": "e81c11be2721",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Developer previews a GPU-accelerated bubble solver for Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xa7b1z/im_working_on_gpu_accelerated_bubble_solver/",
+   "summary": "The solver is nearing beta testing, and the post drew strong interest on r/Houdini. A GPU path for bubble sims could speed up fluid iteration.",
+   "date": "2026-10-19",
+   "kind": "reddit"
+  },
+  {
+   "id": "0ec6d9c93f42",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "2D radiance cascades implemented for a game with five cascades",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xandij/implemented_radiance_cascades_for_my_game/",
+   "summary": "A developer shows day/night lighting built on radiance cascades with SDF-based tracing and bloom. It's a hands-on example of a global illumination technique that's popular in real-time graphics circles.",
+   "date": "2026-10-20",
+   "kind": "reddit"
   },
   {
    "id": "0ba207d71135",
    "topic": "pipeline",
    "source": "Bryan Holt ",
-   "title": "Tutorial: wedge your Houdini sims instead of running one giant sim",
+   "title": "Houdini wedging tutorial: splitting big sims into manageable chunks",
    "url": "https://www.youtube.com/watch?v=6Epfcz5yprQ",
-   "summary": "A practical walkthrough of wedging for iterating on simulations faster and more reliably, a useful pipeline habit for FX work.",
+   "summary": "A walkthrough on dividing heavy simulations into smaller wedged runs. It's a practical technique for taming memory and iteration time on large FX setups.",
    "date": "2026-10-21",
    "image": "thumbs/a006c521e3689afb.webp",
    "kind": "video"
   },
   {
-   "id": "d321013ecd52",
+   "id": "d138e31ec29b",
    "topic": "pipeline",
-   "source": "KosmoAI",
-   "title": "KosmoAI shows a RenderMan integration for real-world capture",
-   "url": "https://www.youtube.com/watch?v=fzQZ90OMuVo",
-   "summary": "A short demo of connecting Pixar's RenderMan with Kosmo to bring real-world material into a creative pipeline.",
-   "date": "2026-10-15",
-   "image": "thumbs/b1d5ec99ff99081b.webp",
+   "source": "Kamran Waziir",
+   "title": "Houdini tutorial builds a procedural pen effect",
+   "url": "https://www.youtube.com/watch?v=Toscxk565jQ",
+   "summary": "A step-by-step procedural FX exercise that's useful for practising node-based setups.",
+   "date": "2026-10-17",
+   "image": "thumbs/7767e702b25252a3.webp",
+   "kind": "video"
+  },
+  {
+   "id": "97953ef45468",
+   "topic": "pipeline",
+   "source": "Nexttut",
+   "title": "Houdini sword arc lightning tutorial covers trails, noise and procedural workflow",
+   "url": "https://www.youtube.com/watch?v=MYZfKMZBtX4",
+   "summary": "A procedural VFX walkthrough showing how to build lightning trails driven by a sword swing.",
+   "date": "2026-10-19",
+   "image": "thumbs/126bbf7adffa168a.webp",
    "kind": "video"
   },
   {
    "id": "3557b145a2a4",
    "topic": "pipeline",
    "source": "CG Channel",
-   "title": "CG software roundup: Autograph, LiquiGen, Moho, ComfyUI and Nomad Sculpt updates",
+   "title": "CG software roundup: Autograph, IlluGen, LiquiGen, Moho, ComfyUI and Nomad Sculpt updates",
    "url": "https://www.cgchannel.com/2026/10/new-cg-software-you-may-have-missed-18-october-2026/",
-   "summary": "A weekly digest of ten tool releases, including new motion-graphics and procedural liquid tools.",
+   "summary": "A weekly digest of ten recent tool releases across compositing, sculpting and animation, handy for catching updates you missed.",
    "date": "2026-10-19"
   },
   {
-   "id": "97953ef45468",
-   "topic": "pipeline",
-   "source": "Nexttut",
-   "title": "Houdini tutorial: procedural sword-arc lightning with trails and noise",
-   "url": "https://www.youtube.com/watch?v=MYZfKMZBtX4",
-   "summary": "A VFX workflow covering trails and noise to build procedural lightning effects in Houdini.",
-   "date": "2026-10-19",
-   "image": "thumbs/126bbf7adffa168a.webp",
-   "kind": "video"
-  },
-  {
-   "id": "54b3ece7fda7",
+   "id": "fe60f96d1244",
    "topic": "pipeline",
    "source": "Rohan Dalvi",
-   "title": "Houdini 'Spaghetti' project documented from modeling to render",
-   "url": "https://www.youtube.com/watch?v=3nHVKL8LqeM",
-   "summary": "A two-part project log covering the modeling stage and the final render of a procedural spaghetti scene.",
+   "title": "Houdini 'Spaghetti' project series covers modeling and rendering",
+   "url": "https://www.youtube.com/watch?v=QoiBoltVDjs",
+   "summary": "A two-part personal project takes a procedural spaghetti scene from modeling through to the final render.",
    "date": "2026-10-19",
-   "image": "thumbs/b3c559db96981d39.webp",
+   "image": "thumbs/9ad5ea9a9f493aea.webp",
    "also": [
     {
      "source": "Rohan Dalvi",
-     "url": "https://www.youtube.com/watch?v=QoiBoltVDjs"
+     "url": "https://www.youtube.com/watch?v=3nHVKL8LqeM"
     }
    ],
    "kind": "video"
+  },
+  {
+   "id": "2e2992705d1a",
+   "topic": "pipeline",
+   "source": "Kamran Waziir",
+   "title": "Building a fluffy simulation in Houdini",
+   "url": "https://www.youtube.com/watch?v=H9zHItSetQc",
+   "summary": "A short tutorial on creating a fur-like simulated look procedurally.",
+   "date": "2026-10-21",
+   "image": "thumbs/493fe466c096138f.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "d1c71ca56d5d",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Pen Addict podcast: Sailor TUZU as best steel nib, plus Japan trip prep",
+   "url": "https://www.penaddict.com/blog/2026/10/21/the-pen-addict-podcast-episode-739-accidental-stationery",
+   "summary": "The hosts ask whether Sailor's TUZU is the company's best steel-nib fountain pen, then plan a two-week stationery trip to Japan.",
+   "date": "2026-10-21",
+   "image": "thumbs/6e6a02cc95d67d42.webp"
+  },
+  {
+   "id": "c77832682227",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Nonble x Platinum Ice Cream Collection Strawberry pen arrives from Japan",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xagzqp/nonble_x_platinum_ice_cream_collection_strawberry/",
+   "summary": "An owner's first Platinum pen is a collaboration with a bold pink nib house, bought through an Instagram seller. The post drew strong interest.",
+   "date": "2026-10-20",
+   "kind": "reddit"
+  },
+  {
+   "id": "1859265b14f6",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Collector shows six pink Platinum 3776 variants",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xai7gx/pink_platinum_3776/",
+   "summary": "A lineup includes Sakuragozen, Strawberry Icecream, Milky Way and Strawberry Kingdom editions, a good visual survey of the 3776's colourways.",
+   "date": "2026-10-20",
+   "image": "thumbs/89e1c06d82da0126.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "42e8b6716e5d",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Teacher marks 30 years in the classroom with a Pilot Custom Urushi",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xa4mgt/celebrating_30_years_of_teaching_with_a_prussian/",
+   "summary": "A Prussian Blue Custom Urushi with a first FM nib is praised for its feel and feedback. The post was one of the community's most upvoted today.",
+   "date": "2026-10-19",
+   "image": "thumbs/0480092bf932ccf7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "7a49c2e37a2e",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Inktober drawing with a Platinum Balance EF and Robert Oster Hemp ink",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xaglnq/capyhero_does_inktober_day_19/",
+   "summary": "An artist praises the Balance's crisp, very fine lines and hand-extension feel. It's a good demonstration of a Japanese nib in drawing use.",
+   "date": "2026-10-20",
+   "image": "thumbs/a7a4c20991641f14.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "1b70a4e64412",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens guide to the best white drawing, calligraphy and correction inks",
+   "url": "https://www.jetpens.com/blog/The-Best-White-Drawing-Inks/pt/841",
+   "summary": "A buying guide with test results and picks for accents, calligraphy and corrections. Useful if you mix white inks into lettering work.",
+   "date": "2026-10-13"
+  },
+  {
+   "id": "77486c850ee8",
+   "topic": "stationery",
+   "source": "r/stationery",
+   "title": "BunguLA Vol 2 haul and review, after a chaotic first edition",
+   "url": "https://www.reddit.com/r/stationery/comments/1xahec2/bungula_vol_2_haul_review/",
+   "summary": "A visitor compares the second Japanese stationery event in Los Angeles with the poorly organised inaugural one and shares what they bought.",
+   "date": "2026-10-20",
+   "kind": "reddit"
   }
  ]
 }
