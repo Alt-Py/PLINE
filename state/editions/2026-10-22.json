@@ -1,0 +1,248 @@
+{
+ "date": "2026-10-22",
+ "generated_at": "2026-10-22T09:52:15+13:00",
+ "headline": "Netflix's record $4.8B buybacks ahead of 1,000 layoffs lead the day, with Framestore's East of Eden breakdown and Corridor Crew's CorridorKey 2.0 green-screen tool.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 25,
+ "sources_total": 30,
+ "source_errors": {
+  "r/fountainpens": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/fountainpens/top/.rss?t=day",
+  "r/stationery": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/stationery/top/.rss?t=day",
+  "r/vfx": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/vfx/top/.rss?t=day",
+  "r/Houdini": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/Houdini/top/.rss?t=day",
+  "r/GraphicsProgramming": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/GraphicsProgramming/top/.rss?t=day"
+ },
+ "taste": {
+  "likes": 0,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "3c858eab6d93",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Netflix spent a record $4.8B on buybacks before cutting 1,000 jobs",
+   "url": "https://www.cartoonbrew.com/business/netflix-spends-billions-on-buybacks-before-layoffs-268185.html",
+   "summary": "Netflix's profits keep growing, yet billions went to share buybacks while roughly a thousand employees were laid off. View Conference panels also contrasted animation's possible futures, which matters for anyone watching studio labour and spending.",
+   "date": "2026-10-21",
+   "image": "thumbs/fc92eb284bebcbcd.webp",
+   "also": [
+    {
+     "source": "Cartoon Brew",
+     "url": "https://www.cartoonbrew.com/newsletter/animations-creative-divide-netflixs-layoffs-zaslavs-millions-268012.html"
+    }
+   ]
+  },
+  {
+   "id": "726babbd38ce",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "Framestore breaks down its CG recreation of early-1900s California for East of Eden",
+   "url": "https://www.cgchannel.com/2026/10/watch-framestores-vfx-breakdown-for-period-drama-east-of-eden/",
+   "summary": "Framestore shows how it built period California environments digitally for Netflix's Steinbeck adaptation. It is a useful look at invisible environment work on a prestige drama.",
+   "date": "2026-10-21"
+  },
+  {
+   "id": "79ff94fc17e1",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "ILM explains how its Spinosaurus sequence came together in The End of Oak Street",
+   "url": "https://www.artofvfx.com/the-end-of-oak-street/",
+   "summary": "A featurette with production VFX supervisor Jay Cooper walks through ILM's creature sequence, in which a Spinosaurus appears in a suburban street.",
+   "date": "2026-10-13",
+   "image": "thumbs/e3c755bf3560d27e.webp"
+  },
+  {
+   "id": "0937f100ae22",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "beloFX details the invisible effects and crowd work on Mother Mary",
+   "url": "https://www.artofvfx.com/mother-mary-the-invisible-visual-effects-work-of-belofx/",
+   "summary": "The studio shows its subtle digital enhancements and large concert-crowd work. Useful reading on crowd extension and unobtrusive VFX.",
+   "date": "2026-10-15",
+   "image": "thumbs/06a11b6fce51ce5e.webp"
+  },
+  {
+   "id": "a3af6e2a0842",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Roxel Creative shows how Backrooms environments were built and extended",
+   "url": "https://www.artofvfx.com/backrooms-explore-the-visual-effects-created-by-roxel-creative/",
+   "summary": "A breakdown from the Vancouver studio, with Calvin Romeyn, shows how set extensions and digital enhancement turned the original footage into the finished environments.",
+   "date": "2026-10-14",
+   "image": "thumbs/70fad3e001f68d42.webp"
+  },
+  {
+   "id": "522edd795307",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Magic Dust VFX reveals 300-plus shots on Outlander: Blood of My Blood",
+   "url": "https://www.artofvfx.com/magic-dust-vfx-reveals-its-work-on-outlander-blood-of-my-blood/",
+   "summary": "The studio's reel focuses on digital matte paintings and environment extensions used to support the period story across the series.",
+   "date": "2026-10-21",
+   "image": "thumbs/c163505cf3dd9da2.webp"
+  },
+  {
+   "id": "73ea8bf9e833",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Chop Shop Post shows the digital gnome creatures of Gnomes",
+   "url": "https://www.artofvfx.com/gnomes-chop-shop-post-brings-the-creatures-to-life/",
+   "summary": "The Melbourne studio covers character creation and animation for its gnomes, from single characters to groups interacting with live-action plates.",
+   "date": "2026-10-16",
+   "image": "thumbs/7ff6f91d9196c592.webp"
+  },
+  {
+   "id": "bd9652f0cfec",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Aardman animator Loyd Price, who helped shape its feature team, has died",
+   "url": "https://www.cartoonbrew.com/rip/loyd-price-aardman-animator-dies-268049.html",
+   "summary": "Price is remembered for Gromit's silent performances and for training and championing the artists who built Aardman's feature animation craft and culture.",
+   "date": "2026-10-19",
+   "image": "thumbs/0e9ab5ab777915bb.webp"
+  },
+  {
+   "id": "e31c635f55ce",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Marvel shows the Mindspace behind the scenes in a VisionQuest featurette",
+   "url": "https://www.artofvfx.com/visionquest/",
+   "summary": "A new featurette and first trailer give a glimpse of the Mindspace environments and the series' visual approach.",
+   "date": "2026-10-16",
+   "image": "thumbs/72958b96073af5e1.webp",
+   "extra": true
+  },
+  {
+   "id": "ba2a96f7fdbb",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Stop-motion airport satire The End joins the 2027 Oscar short contenders",
+   "url": "https://www.cartoonbrew.com/awards/the-end-niki-lindroth-von-bahr-268194.html",
+   "summary": "Director Niki Lindroth von Bahr discusses her animal-populated, Dante-inspired airport limbo. It is a handmade counterpoint to CG-heavy production.",
+   "date": "2026-10-21",
+   "image": "thumbs/acfa36f95d379b5d.webp",
+   "extra": true
+  },
+  {
+   "id": "f556d3c6206d",
+   "topic": "pipeline",
+   "source": "Corridor Crew",
+   "title": "Corridor Crew release CorridorKey 2.0, a much-improved AI green-screen keyer",
+   "url": "https://www.youtube.com/watch?v=svrdRAoIlxM",
+   "summary": "The new version of their keying tool is a free build plus an official plugin, and the video shows it handling difficult screen work. Worth testing against your own compositing keys.",
+   "date": "2026-10-21",
+   "kind": "video"
+  },
+  {
+   "id": "3557b145a2a4",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "CG Channel roundup of ten new tools, from Autograph to ComfyUI and Nomad Sculpt",
+   "url": "https://www.cgchannel.com/2026/10/new-cg-software-you-may-have-missed-18-october-2026/",
+   "summary": "A quick scan of recent releases across compositing, procedural and sculpting software, including Autograph, LiquiGen, Red Giant, Moho and ComfyUI.",
+   "date": "2026-10-19"
+  },
+  {
+   "id": "c0ebed8856b8",
+   "topic": "pipeline",
+   "source": "RenderMan",
+   "title": "RenderMan 27 makes XPU a final-frame renderer for feature animation and VFX",
+   "url": "https://renderman.pixar.com/news/pixar-animation-studios-releases-renderman-27",
+   "summary": "Pixar's release moves the hybrid CPU/GPU XPU renderer out of preview into production-ready territory. It is the most notable recent change for light-transport work in RenderMan.",
+   "image": "thumbs/177a7f5216b846e7.webp"
+  },
+  {
+   "id": "c80d284d522e",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Gnomon tutorial builds a character burn-away effect with Unreal's Niagara",
+   "url": "https://www.cgchannel.com/2026/10/tutorial-creating-incendiary-burn-fx-for-game-characters/",
+   "summary": "An introductory lesson on character destruction FX in UE5. It is game-oriented, but the particle and material techniques carry over to real-time VFX.",
+   "date": "2026-10-20"
+  },
+  {
+   "id": "86c6055b0119",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Inkpad brings a low-latency infinite handwriting canvas to Obsidian on iPad",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbjxnu/i_built_inkpad_a_lowlatency_infinite_canvas_for/",
+   "summary": "The new plugin targets Apple Pencil study notes on an infinite canvas and keeps all drawings inside the vault. It also works with third-party sync.",
+   "date": "2026-10-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "b5eefd828601",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Envoy adds Git-backed history and encrypted sync for Obsidian vaults, including iPhone",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbhwja/i_needed_git_history_an_iphone_with_no_extra_apps/",
+   "summary": "A community-built sync option offering unlimited version history without extra companion apps on iOS, and encrypted notes that never upload unlocked. It is an alternative to Obsidian Sync's vault and history limits.",
+   "date": "2026-10-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "bea2b61c866a",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Plugin puts a Garmin Connect dashboard inside your vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xby32d/garmin_connect_dashboard_inside_your_vault/",
+   "summary": "The plugin signs in through Garmin's SSO portal, stores only a refresh token in the keychain, and saves activity data as JSON files in the vault.",
+   "date": "2026-10-21",
+   "image": "thumbs/d71bab861d2ebe09.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c7d0100dc799",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Community asks why many top Obsidian plugins haven't been updated in over a year",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbo6bf/why_so_many_main_obsidian_pluginstemplates_are/",
+   "summary": "A newcomer's thread raises plugin maintenance and the ecosystem's long-term health. It is worth reading before you rely on a plugin.",
+   "date": "2026-10-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "4e0b1fa44106",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum's #3776 Century features in MONOQLO's November issue",
+   "url": "https://www.platinum-pen.co.jp/news/13596/",
+   "summary": "The Japanese product magazine, released September 19, includes the Platinum #3776 Century fountain pen.",
+   "image": "thumbs/cc624308a7204cbc.webp"
+  },
+  {
+   "id": "ebebb65de875",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum's #3776 Century used in TV letter-writing documentary Ecological Letter",
+   "url": "https://www.platinum-pen.co.jp/news/13590/",
+   "summary": "A TSK San-in Chuo TV documentary follows people writing letters of thanks to hometown benefactors, and the series features the #3776 Century pen. A second episode aired on October 17.",
+   "image": "thumbs/85fa8015f0294c56.webp",
+   "also": [
+    {
+     "source": "Platinum",
+     "url": "https://www.platinum-pen.co.jp/news/13508/"
+    }
+   ]
+  },
+  {
+   "id": "1b70a4e64412",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens compares white drawing inks for art, calligraphy and corrections",
+   "url": "https://www.jetpens.com/blog/The-Best-White-Drawing-Inks/pt/841",
+   "summary": "A guide with test results to what to look for in white inks. It is handy for calligraphy and accent work.",
+   "date": "2026-10-13"
+  },
+  {
+   "id": "4f8c422e19fa",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum holds a nib-adjustment event at Maruzen Nihonbashi's autumn pen fair",
+   "url": "https://www.platinum-pen.co.jp/news/13565/",
+   "summary": "Platinum staff offered nib adjustments at the Tokyo store on September 25–26 as part of the 2026 autumn fountain pen fair.",
+   "image": "thumbs/f2c685e7b7efe36b.webp"
+  }
+ ]
+}
