@@ -54,6 +54,7 @@ def render_all(cfg: dict, out: Path = DOCS) -> list[Path]:
     editions = list_editions()
     out.mkdir(parents=True, exist_ok=True)
     (out / ".nojekyll").write_text("")
+    (out / "app.js").write_text((TEMPLATES / "app.js").read_text(encoding="utf-8"), encoding="utf-8")
     tpl = _env().get_template("page.html.j2")
     written = []
     nav = [{"date": e["date"], "file": f"{e['date']}.html"} for e in editions[:14]]
@@ -61,6 +62,7 @@ def render_all(cfg: dict, out: Path = DOCS) -> list[Path]:
         html = tpl.render(
             site=cfg["site"],
             topics=cfg["topics"],
+            feedback=cfg.get("feedback", {}),
             ed=ed,
             nav=nav,
             latest=(i == 0),
@@ -75,7 +77,7 @@ def render_all(cfg: dict, out: Path = DOCS) -> list[Path]:
             written.append(out / "index.html")
     if not editions:
         (out / "index.html").write_text(
-            tpl.render(site=cfg["site"], topics=cfg["topics"], ed=None, nav=[], latest=True, newer=None, older=None),
+            tpl.render(site=cfg["site"], topics=cfg["topics"], feedback=cfg.get("feedback", {}), ed=None, nav=[], latest=True, newer=None, older=None),
             encoding="utf-8",
         )
     return written

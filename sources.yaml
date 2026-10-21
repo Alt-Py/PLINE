@@ -3,6 +3,11 @@
 # type:
 #   rss        — RSS or Atom feed (GitHub release/commit feeds included)
 #   html_list  — a news listing page; every link whose URL matches `link_pattern` is a story
+#   reddit     — top posts of the day from a subreddit, via the official Reddit API when the
+#                REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET secrets are set (public RSS otherwise);
+#                posts under `min_score` upvotes are ignored
+#   youtube_channel — a channel's latest videos (free RSS, no key), shorts excluded
+#   youtube_search  — recent videos matching `query` via the YouTube Data API (YOUTUBE_API_KEY)
 # topics: the first topic is the default; when several are listed, Claude decides per story.
 # lang: "ja" marks Japanese sources (titles are translated, the original is kept).
 # weight: 0.5 (background noise) … 2 (always worth showing). Used for ranking.
@@ -29,8 +34,9 @@ sources:
     topics: [obsidian]
     weight: 0.7
   - name: r/ObsidianMD
-    type: rss
-    url: https://www.reddit.com/r/ObsidianMD/top/.rss?t=day
+    type: reddit
+    subreddit: ObsidianMD
+    min_score: 40
     topics: [obsidian]
     weight: 0.6
     optional: true
@@ -67,14 +73,16 @@ sources:
     weight: 1
     optional: true
   - name: r/fountainpens
-    type: rss
-    url: https://www.reddit.com/r/fountainpens/top/.rss?t=day
+    type: reddit
+    subreddit: fountainpens
+    min_score: 60
     topics: [stationery]
     weight: 0.5
     optional: true
   - name: r/stationery
-    type: rss
-    url: https://www.reddit.com/r/stationery/top/.rss?t=day
+    type: reddit
+    subreddit: stationery
+    min_score: 30
     topics: [stationery]
     weight: 0.5
     optional: true
@@ -102,8 +110,9 @@ sources:
     weight: 1
     optional: true
   - name: r/vfx
-    type: rss
-    url: https://www.reddit.com/r/vfx/top/.rss?t=day
+    type: reddit
+    subreddit: vfx
+    min_score: 40
     topics: [vfx]
     weight: 0.6
     optional: true
@@ -143,3 +152,83 @@ sources:
     url: https://github.com/AcademySoftwareFoundation/MaterialX/releases.atom
     topics: [pipeline]
     weight: 0.8
+  - name: r/Houdini
+    type: reddit
+    subreddit: Houdini
+    min_score: 40
+    topics: [pipeline]
+    weight: 0.6
+    optional: true
+  - name: r/GraphicsProgramming
+    type: reddit
+    subreddit: GraphicsProgramming
+    min_score: 60
+    topics: [pipeline]
+    weight: 0.5
+    optional: true
+
+  # ── YouTube channels (free RSS, no key needed) ───────────
+  - name: Nicole van der Hoeven
+    type: youtube_channel
+    channel_id: UCrmQZ9HHnJ2qpd6udc8iYYw
+    topics: [obsidian]
+    weight: 0.8
+    optional: true
+  - name: Linking Your Thinking
+    type: youtube_channel
+    channel_id: UC85D7ERwhke7wVqskV_DZUA
+    topics: [obsidian]
+    weight: 0.7
+    optional: true
+  - name: The Goulet Pen Company
+    type: youtube_channel
+    channel_id: UCPdFDFTd6P1a__tAr8CrpCQ
+    topics: [stationery]
+    weight: 0.6
+    optional: true
+  - name: Corridor Crew
+    type: youtube_channel
+    channel_id: UCSpFnDQr88xCZ80N-X7t0nQ
+    topics: [vfx]
+    weight: 0.7
+    optional: true
+  - name: fxguide (YouTube)
+    type: youtube_channel
+    channel_id: UC6X0ojW_DYnVwiP5tKnMFDA
+    topics: [vfx, pipeline]
+    weight: 0.8
+    optional: true
+  - name: Entagma
+    type: youtube_channel
+    channel_id: UCWu6SQmC6nAZ-reuj3lF2eQ
+    topics: [pipeline]
+    weight: 0.8
+    optional: true
+
+  # ── YouTube search (YouTube Data API; needs the YOUTUBE_API_KEY secret) ──
+  # Each search costs 101 of the 10,000 free daily quota units.
+  - name: YouTube · Obsidian
+    type: youtube_search
+    query: "obsidian.md workflow OR plugin OR bases"
+    topics: [obsidian]
+    weight: 0.7
+    optional: true
+  - name: YouTube · 万年筆
+    type: youtube_search
+    query: "万年筆 新作 OR インク 新色"
+    lang: ja
+    topics: [stationery]
+    weight: 0.7
+    optional: true
+  - name: YouTube · VFX breakdowns
+    type: youtube_search
+    query: "VFX breakdown"
+    topics: [vfx]
+    weight: 0.7
+    optional: true
+  - name: YouTube · Houdini & USD
+    type: youtube_search
+    query: "Houdini OR Solaris OR OpenUSD OR RenderMan"
+    topics: [pipeline]
+    weight: 0.7
+    optional: true

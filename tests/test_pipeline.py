@@ -154,3 +154,87 @@ class RenderTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FeedbackTests(unittest.TestCase):
+    def setUp(self):
+        import pline.feedback as fb
+
+        self.fb = fb
+        self.tmp = tempfile.TemporaryDirectory()
+        fb.VOTES = Path(self.tmp.name) / "votes.json"
+        fb.PREFS = Path(self.tmp.name) / "preferences.json"
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def _comments(self):
+        def body(votes):
+            return "Pline votes\n\n```json\n" + json.dumps({"votes": votes}) + "\n```"
+
+        return [
+            {"id": 10, "author_association": "OWNER", "created_at": "2026-10-21T08:00:00Z", "body": body([
+                {"id": "a1", "vote": 1, "source": "Sailor", "topic": "stationery", "title": "Sailor ebonite fountain pen nagamaki"},
+                {"id": "a2", "vote": 1, "source": "Sailor", "topic": "stationery", "title": "New ebonite fountain pen from Platinum"},
+                {"id": "a3", "vote": -1, "source": "r/vfx", "topic": "vfx", "title": "Layoffs rumour thread"},
+                {"id": "a4", "vote": -1, "source": "r/vfx", "topic": "vfx", "title": "Another layoffs rumour"},
+            ])},
+            {"id": 11, "author_association": "NONE", "created_at": "2026-10-21T09:00:00Z", "body": body([
+                {"id": "a3", "vote": 1, "source": "r/vfx", "topic": "vfx", "title": "stranger tries to steer"},
+            ])},
+        ]
+
+    def test_only_trusted_votes_count_and_shape_preferences(self):
+        from unittest import mock
+
+        resp = mock.Mock(status_code=200, links={})
+        resp.json.return_value = self._comments()
+        with mock.patch("pline.feedback.requests.Session") as S:
+            S.return_value.get.return_value = resp
+            self.fb.fetch_votes("Alt-Py/PLINE", 1, "token")
+        votes = json.loads(self.fb.VOTES.read_text())["votes"]
+        self.assertEqual(votes["a3"]["vote"], -1)  # the stranger's comment was ignored
+        prefs = self.fb.build_preferences()
+        self.assertEqual((prefs["likes"], prefs["dislikes"]), (2, 2))
+        self.assertGreater(prefs["source_weight"]["Sailor"], 1)
+        self.assertLess(prefs["source_weight"]["r/vfx"], 1)
+        self.assertIn("ebonite", prefs["liked_terms"])
+        self.assertIn("layoffs", prefs["disliked_terms"])
+        self.assertGreater(self.fb.taste_score("Pilot ebonite fountain pen", "Pilot", prefs), 1)
+        self.assertLess(self.fb.taste_score("layoffs rumour", "r/vfx", prefs), 1)
+        self.assertIn("Sailor ebonite", self.fb.taste_prompt(prefs))
+
+    def test_no_votes_is_neutral(self):
+        prefs = self.fb.build_preferences()
+        self.assertEqual(self.fb.taste_prompt(prefs), "")
+        self.assertEqual(self.fb.taste_score("anything", "x", {}), 1.0)
+
+
+class SocialSourceTests(unittest.TestCase):
+    def test_reddit_listing(self):
+        from pline.collect import parse_reddit_listing
+
+        data = {"data": {"children": [
+            {"data": {"title": "My Sailor &amp; Pilot inks", "permalink": "/r/fountainpens/comments/x/y/", "score": 250,
+                      "num_comments": 40, "subreddit": "fountainpens", "created_utc": 1792560000,
+                      "preview": {"images": [{"source": {"url": "https://preview.redd.it/a.jpg?w=1&amp;s=2"}}]}}},
+            {"data": {"title": "low score", "permalink": "/r/x/2", "score": 3, "subreddit": "fountainpens", "created_utc": 1792560000}},
+            {"data": {"title": "pinned", "permalink": "/r/x/3", "score": 999, "stickied": True, "subreddit": "fountainpens", "created_utc": 1792560000}},
+        ]}}
+        items = parse_reddit_listing(data, {"subreddit": "fountainpens", "topics": ["stationery"], "min_score": 60})
+        self.assertEqual(len(items), 1)
+        it = items[0]
+        self.assertEqual(it.title, "My Sailor & Pilot inks")
+        self.assertEqual(it.kind, "reddit")
+        self.assertEqual(it.source, "r/fountainpens")
+        self.assertEqual(it.image_url, "https://preview.redd.it/a.jpg?w=1&s=2")
+        self.assertIn("250 upvotes", it.excerpt)
+
+    def test_youtube_search_skipped_without_key(self):
+        import os
+        from pline.collect import SKIPPED, collect_source
+
+        os.environ.pop("YOUTUBE_API_KEY", None)
+        items, err = collect_source(None, {"name": "yt", "type": "youtube_search", "query": "x", "topics": ["vfx"]})
+        self.assertEqual(items, [])
+        self.assertTrue(err.startswith(SKIPPED))

@@ -19,6 +19,7 @@ class Item:
     lang: str = "en"
     image_url: str | None = None     # remote image found in the feed or page
     weight: float = 1.0
+    kind: str = "article"            # article | video | reddit
 
     @property
     def id(self) -> str:
@@ -44,6 +45,7 @@ class Story:
     title_ja: str | None = None
     image: str | None = None         # local thumbnail path relative to docs/
     also: list[dict] = field(default_factory=list)
+    kind: str | None = None          # "video" or "reddit"; None for articles
 
     def to_dict(self) -> dict:
         return {k: v for k, v in asdict(self).items() if v not in (None, "", [])}

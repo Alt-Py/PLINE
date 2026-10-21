@@ -8,6 +8,7 @@ import os
 import re
 from datetime import date, timedelta
 
+from .feedback import taste_prompt, taste_score
 from .model import Item, Story, canonical_url, norm_title
 
 log = logging.getLogger("pline.select")
@@ -18,7 +19,7 @@ PIPELINE_WORDS = re.compile(
 )
 
 
-def shortlist(items: list[Item], shown: dict[str, str], today: date, window_days: int, limit: int) -> list[Item]:
+def shortlist(items: list[Item], shown: dict[str, str], today: date, window_days: int, limit: int, prefs: dict | None = None) -> list[Item]:
     """Drop stories already published, too old, or duplicated; rank the rest."""
     oldest = (today - timedelta(days=window_days)).isoformat()
     by_url: dict[str, Item] = {}
@@ -33,7 +34,7 @@ def shortlist(items: list[Item], shown: dict[str, str], today: date, window_days
 
     def score(it: Item) -> float:
         age = (today - date.fromisoformat(it.date)).days if it.date else window_days / 2
-        return it.weight * (1.0 - 0.6 * max(0, age) / max(1, window_days))
+        return it.weight * (1.0 - 0.6 * max(0, age) / max(1, window_days)) * taste_score(it.title, it.source, prefs or {})
 
     ranked = sorted(by_url.values(), key=score, reverse=True)
     # Keep every topic represented before the cap trims the list.
@@ -65,6 +66,11 @@ Reviews or news about Japanese products from English blogs count. Non-Japanese b
 - pipeline: Houdini, RenderMan, USD/OpenUSD, MaterialX and the wider DCC/rendering tool world \
 (renderers, Nuke, Maya, Katana, Blender…), plus graphics research relevant to production rendering.
 
+Candidates include articles, Reddit posts (kind "reddit", with upvotes and comment counts) and YouTube \
+videos (kind "video", with views when known). Keep a Reddit post or a video only when it has real substance \
+for that section: a notable showcase, a tutorial or technique worth learning, a release walkthrough, or an \
+insightful discussion. Skip memes, purchase questions, "what pen should I buy", generic vlogs and shorts.
+
 From the numbered candidates, build today's edition:
 1. Keep only stories that genuinely fit a section. Drop giveaways, sponsored posts, sales, link roundups \
 with nothing specific, and low-effort forum posts. Prefer substance.
@@ -90,6 +96,7 @@ def _candidate_line(i: int, it: Item) -> str:
             "sections": it.topics,
             "date": it.date,
             "lang": it.lang,
+            "kind": it.kind,
             "title": it.title[:200],
             "excerpt": it.excerpt[:420],
         },
@@ -104,7 +111,7 @@ def _parse_json(text: str) -> dict:
     return json.loads(text[start : end + 1])
 
 
-def with_claude(cands: list[Item], topics: list[str], cfg: dict, max_per_topic: int) -> tuple[str, list[Story]] | None:
+def with_claude(cands: list[Item], topics: list[str], cfg: dict, max_per_topic: int, prefs: dict | None = None) -> tuple[str, list[Story]] | None:
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key or not cands:
         return None
@@ -116,7 +123,7 @@ def with_claude(cands: list[Item], topics: list[str], cfg: dict, max_per_topic: 
         msg = client.messages.create(
             model=cfg.get("model", "claude-sonnet-5-5"),
             max_tokens=cfg.get("max_tokens", 12000),
-            system=SYSTEM.format(max_per_topic=max_per_topic),
+            system=SYSTEM.format(max_per_topic=max_per_topic) + taste_prompt(prefs or {}),
             messages=[{"role": "user", "content": prompt}],
         )
         text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
@@ -162,6 +169,7 @@ def _story(group: list[Item], topic: str, title: str, summary: str, title_ja: st
         date=max(dates) if dates else None,
         title_ja=(str(title_ja).strip() or None) if title_ja else None,
         also=also,
+        kind=lead.kind if lead.kind != "article" else None,
     )
     st._image_url = imaged.image_url if imaged else None  # type: ignore[attr-defined]
     st._members = [it.id for it in group]  # type: ignore[attr-defined]

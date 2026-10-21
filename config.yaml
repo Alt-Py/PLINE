@@ -17,6 +17,12 @@ llm:
   max_candidates: 140
   max_tokens: 12000
 
+feedback:
+  # Likes from the page are posted as comments on this locked issue; the daily
+  # run reads them with the workflow's own GITHUB_TOKEN.
+  repo: Alt-Py/PLINE
+  issue: 1
+
 thumbs:
   max_bytes: 6000000   # larger source images are skipped
   max_pixels: 40000000 # decompression-bomb guard

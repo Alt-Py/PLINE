@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  issues: read
   pages: write
   id-token: write
 
@@ -37,6 +38,10 @@ jobs:
       - name: Compile today's edition
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python -m pline run ${{ inputs.fresh && '--fresh' || '' }}
 
       - name: Save the edition to the repository

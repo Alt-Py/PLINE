@@ -20,4 +20,16 @@ python -m unittest discover -s tests -v
 
 - **Sources:** edit [`sources.yaml`](sources.yaml). `weight` raises or lowers a source; `optional: true` sources may fail without turning the Monday check red.
 - **Sections, timezone, limits, model:** [`config.yaml`](config.yaml).
-- **Design:** [`templates/page.html.j2`](templates/page.html.j2), styled after Apple's web design language: full-width tiles alternating light and dark, one blue accent, system fonts.
+- **Design:** [`templates/page.html.j2`](templates/page.html.j2) and [`templates/app.js`](templates/app.js), styled after Apple's web design language in a single dark palette.
+
+## Likes
+
+The 👍 / 👎 buttons on each card post votes to the locked [issue #1](https://github.com/Alt-Py/PLINE/issues/1) using a fine-grained token (PLINE only, Issues read/write) kept in each browser. The daily run counts only comments from the repo owner or collaborators and learns source weights, liked and disliked subjects, and example titles for Claude ([`pline/feedback.py`](pline/feedback.py)).
+
+## Optional secrets
+
+| Secret | Enables |
+|---|---|
+| `ANTHROPIC_API_KEY` | Story choice, translation and summaries by Claude |
+| `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET` | Reddit top posts through the official API (a "script" app at reddit.com/prefs/apps) |
+| `YOUTUBE_API_KEY` | YouTube search by subject (YouTube Data API v3). Channel feeds work without it |

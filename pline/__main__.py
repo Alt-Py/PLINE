@@ -12,8 +12,9 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from . import ROOT
-from .collect import collect_all
+from .collect import SKIPPED, collect_all
 from .enrich import enrich
+from .feedback import build_preferences, fetch_votes, settings as feedback_settings
 from .net import Http
 from .render import render_all
 from .select import plain, shortlist, with_claude
@@ -38,9 +39,18 @@ def cmd_run(args) -> int:
     ed_cfg = cfg["edition"]
     http = Http(cfg["http"])
 
+    repo, issue, gh_token = feedback_settings(cfg)
+    try:
+        fetch_votes(repo, issue, gh_token)
+    except Exception as exc:
+        log.warning("could not read likes: %s", exc)
+    prefs = build_preferences()
+    log.info("taste: %d likes, %d dislikes", prefs.get("likes", 0), prefs.get("dislikes", 0))
+
     items, report = collect_all(http, sources)
-    ok = sum(1 for e in report.values() if e is None)
-    log.info("collected %d stories from %d/%d sources", len(items), ok, len(sources))
+    active = {k: v for k, v in report.items() if not (v or "").startswith(SKIPPED)}
+    ok = sum(1 for e in active.values() if e is None)
+    log.info("collected %d stories from %d/%d sources", len(items), ok, len(active))
 
     shown = load_shown()
     if args.fresh:
@@ -48,9 +58,9 @@ def cmd_run(args) -> int:
         shown = {k: v for k, v in shown.items() if v != today.isoformat()}
         (ROOT / "state" / "editions" / f"{today.isoformat()}.json").unlink(missing_ok=True)
     # Rank once without dates to choose which article pages to read, then again with them.
-    pre = shortlist(items, shown, today, ed_cfg["window_days"], limit=10_000)
+    pre = shortlist(items, shown, today, ed_cfg["window_days"], limit=10_000, prefs=prefs)
     enrich(http, pre, cfg["http"].get("enrich_limit", 90))
-    cands = shortlist(pre, shown, today, ed_cfg["window_days"], limit=cfg["llm"].get("max_candidates", 140))
+    cands = shortlist(pre, shown, today, ed_cfg["window_days"], limit=cfg["llm"].get("max_candidates", 140), prefs=prefs)
     log.info("shortlisted %d candidates", len(cands))
 
     if args.dry:
@@ -58,7 +68,7 @@ def cmd_run(args) -> int:
             print(f"{it.topics[0]:10} {it.date or '----------'} {it.source:24} {it.title[:90]}")
         return 0
 
-    result = None if args.no_llm else with_claude(cands, topics, cfg["llm"], ed_cfg["max_per_topic"])
+    result = None if args.no_llm else with_claude(cands, topics, cfg["llm"], ed_cfg["max_per_topic"], prefs)
     writer = cfg["llm"].get("model") if result else None
     headline, stories = result or plain(cands, topics, ed_cfg["max_per_topic"])
 
@@ -74,8 +84,9 @@ def cmd_run(args) -> int:
         "headline": headline,
         "writer": writer,
         "sources_ok": ok,
-        "sources_total": len(sources),
-        "source_errors": {k: v for k, v in report.items() if v},
+        "sources_total": len(active),
+        "source_errors": {k: v for k, v in active.items() if v},
+        "taste": {"likes": prefs.get("likes", 0), "dislikes": prefs.get("dislikes", 0)},
         "stories": [s.to_dict() for s in stories],
     }
     # A second run on the same day keeps what the first run already published.
@@ -106,18 +117,22 @@ def cmd_validate(args) -> int:
     cfg, sources = load_config()
     http = Http(cfg["http"])
     _, report = collect_all(http, sources)
-    required_broken = [s["name"] for s in sources if report.get(s["name"]) and not s.get("optional")]
+    def failed(name):
+        err = report.get(name)
+        return bool(err) and not err.startswith(SKIPPED)
+
+    required_broken = [s["name"] for s in sources if failed(s["name"]) and not s.get("optional")]
     print("\nSource check")
     for s in sources:
         err = report.get(s["name"])
-        flag = "ok " if not err else ("opt" if s.get("optional") else "BAD")
+        flag = "ok " if not err else ("off" if err.startswith(SKIPPED) else ("opt" if s.get("optional") else "BAD"))
         print(f"  [{flag}] {s['name']:28} {err or ''}")
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
             f.write("| Source | Status |\n|---|---|\n")
             for s in sources:
                 err = report.get(s["name"])
-                f.write(f"| {s['name']} | {'✅' if not err else ('⚠️ optional: ' if s.get('optional') else '❌ ') + str(err)} |\n")
+                f.write(f"| {s['name']} | {'✅' if not err else ('⏸ ' if err.startswith(SKIPPED) else '⚠️ optional: ' if s.get('optional') else '❌ ') + str(err)} |\n")
     return 1 if required_broken else 0
 
 
