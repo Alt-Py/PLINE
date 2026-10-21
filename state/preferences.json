@@ -1,10 +1,15 @@
 {
- "updated": "2026-10-21T20:52:15+00:00",
- "likes": 0,
+ "updated": "2026-10-21T21:19:22+00:00",
+ "likes": 2,
  "dislikes": 0,
- "source_weight": {},
+ "source_weight": {
+  "r/ObsidianMD": 1.24
+ },
  "liked_terms": [],
  "disliked_terms": [],
- "liked_titles": [],
+ "liked_titles": [
+  "[obsidian] Plugin puts a Garmin Connect dashboard inside your vault",
+  "[obsidian] Inkpad brings a low-latency infinite handwriting canvas to Obsidian on iPad"
+ ],
  "disliked_titles": []
 }

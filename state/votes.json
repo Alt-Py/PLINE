@@ -1,4 +1,19 @@
 {
- "last_comment_id": 0,
- "votes": {}
+ "last_comment_id": 6326674666,
+ "votes": {
+  "86c6055b0119": {
+   "vote": 1,
+   "source": "r/ObsidianMD",
+   "topic": "obsidian",
+   "title": "Inkpad brings a low-latency infinite handwriting canvas to Obsidian on iPad",
+   "at": "2026-10-21T21:12:33.311Z"
+  },
+  "bea2b61c866a": {
+   "vote": 1,
+   "source": "r/ObsidianMD",
+   "topic": "obsidian",
+   "title": "Plugin puts a Garmin Connect dashboard inside your vault",
+   "at": "2026-10-21T21:12:49.429Z"
+  }
+ }
 }
