@@ -27,12 +27,6 @@ sources:
     link_pattern: 'obsidian\.md/blog/[a-z0-9-]+/?$'
     topics: [obsidian]
     weight: 2
-  - name: Obsidian community plugins
-    type: rss
-    url: https://github.com/obsidianmd/obsidian-releases/commits/master.atom
-    title_filter: '(?i)\b(add|new)\b.*\b(plugin|theme)\b|\b(plugin|theme)\b.*\b(add|new)\b'
-    topics: [obsidian]
-    weight: 0.7
   - name: r/ObsidianMD
     type: reddit
     subreddit: ObsidianMD
@@ -56,6 +50,18 @@ sources:
     topics: [stationery]
     lang: ja
     weight: 2
+  - name: Platinum
+    type: html_list
+    url: https://www.platinum-pen.co.jp/news/
+    link_pattern: 'platinum-pen\.co\.jp/news/\d+/?$'
+    topics: [stationery]
+    lang: ja
+    weight: 2
+  - name: JetPens blog
+    type: rss
+    url: https://www.jetpens.com/blog/feed
+    topics: [stationery]
+    weight: 1.2
   - name: The Pen Addict
     type: rss
     url: https://www.penaddict.com/blog?format=rss
@@ -66,12 +72,6 @@ sources:
     url: https://www.wellappointeddesk.com/feed/
     topics: [stationery]
     weight: 1
-  - name: Gourmet Pens
-    type: rss
-    url: https://www.gourmetpens.com/feeds/posts/default
-    topics: [stationery]
-    weight: 1
-    optional: true
   - name: r/fountainpens
     type: reddit
     subreddit: fountainpens

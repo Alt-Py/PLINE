@@ -81,3 +81,13 @@ def enrich(http: Http, items: list[Item], limit: int) -> None:
             if meta["description"] and not it.excerpt:
                 it.excerpt = meta["description"]
     log.info("enriched %d article pages", len(todo))
+
+
+def image_for(http: Http, url: str) -> str | None:
+    """Preview image of one article page, for a chosen story that still has none."""
+    try:
+        if not http.allowed(url):
+            return None
+        return page_meta(http.get_text(url), url)["image"]
+    except Exception:
+        return None

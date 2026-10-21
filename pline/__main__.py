@@ -13,7 +13,7 @@ import yaml
 
 from . import ROOT
 from .collect import SKIPPED, collect_all
-from .enrich import enrich
+from .enrich import enrich, image_for
 from .feedback import build_preferences, fetch_votes, settings as feedback_settings
 from .net import Http
 from .render import render_all
@@ -73,7 +73,7 @@ def cmd_run(args) -> int:
     headline, stories = result or plain(cands, topics, ed_cfg["max_per_topic"])
 
     for st in stories:
-        url = getattr(st, "_image_url", None)
+        url = getattr(st, "_image_url", None) or image_for(http, st.url)
         name = fetch_thumbnail(http, url, THUMBS, cfg["thumbs"]) if url else None
         st.image = f"thumbs/{name}" if name else None
     log.info("%d of %d stories have a picture", sum(1 for s in stories if s.image), len(stories))
