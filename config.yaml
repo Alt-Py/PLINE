@@ -37,21 +37,22 @@ http:
   enrich_limit: 90     # article pages fetched per run to find images and dates
 
 topics:
-  - key: obsidian
-    name: Obsidian
-    tagline: Releases, plugins and the community.
-    tone: light
-  - key: stationery
-    name: Japanese stationery
-    jp: 文房具
-    tagline: Pens, inks and paper from Japan.
-    tone: dark
+  # Order on the page, top to bottom. Tones alternate so neighbouring sections differ.
   - key: vfx
     name: VFX industry
     tagline: Studios, shows and the business.
-    tone: parchment
+    tone: light
   - key: pipeline
     name: Houdini, RenderMan & USD
     short: Houdini · USD
     tagline: The tools in the pipeline.
+    tone: dark
+  - key: obsidian
+    name: Obsidian
+    tagline: Releases, plugins and the community.
+    tone: parchment
+  - key: stationery
+    name: Japanese stationery
+    jp: 文房具
+    tagline: Pens, inks and paper from Japan.
     tone: dark
