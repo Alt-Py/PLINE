@@ -164,6 +164,7 @@ class FeedbackTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         fb.VOTES = Path(self.tmp.name) / "votes.json"
         fb.PREFS = Path(self.tmp.name) / "preferences.json"
+        fb.SAVED = Path(self.tmp.name) / "saved.json"
 
     def tearDown(self):
         self.tmp.cleanup()
