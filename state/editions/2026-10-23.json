@@ -1,0 +1,372 @@
+{
+ "date": "2026-10-23",
+ "generated_at": "2026-10-23T09:46:39+13:00",
+ "headline": "OpenUSD 26.11.1 lands, EA closes BioWare, and a Houdini COPs and Vellum reaction-diffusion trick turns a dodecahedron into a brain.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 31,
+ "sources_total": 34,
+ "source_errors": {
+  "YouTube · Obsidian": "no stories found",
+  "YouTube · 万年筆": "no stories found",
+  "YouTube · Houdini & USD": "no stories found"
+ },
+ "taste": {
+  "likes": 5,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "44331294584f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Plugin renders charts, sheet music and maps from Observable Plot code",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcihck/i_am_building_a_rendering_plugin_for_sheet_music/",
+   "summary": "A community developer is building a plugin that draws many chart types and more from Observable Plot syntax, after Dataview and chart.js plugins slowed startup. It's an interesting take on visualisation inside a vault.",
+   "date": "2026-10-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "2799c7684688",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Motif plugin tracks every character's whereabouts and knowledge while you write a novel",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcqyl2/i_made_a_plugin_that_keeps_track_of_your/",
+   "summary": "After each chapter you sync, and Motif updates a note per character with location, companions and what they know. It spares long-form writers from re-reading old chapters to check continuity.",
+   "date": "2026-10-22",
+   "image": "thumbs/551fd4c896cf0fa7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d39788bd591c",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Calendar plugin FCR 0.13.7 adds a Calendar Cockpit sidebar and CalDAV discovery",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcmibo/fcr_version_0137_now_brings_calendar_cockpit/",
+   "summary": "The update brings a sidebar with a mini month, agenda, weather and drag-and-drop timeblocking, plus an optional bring-your-own-key AI agent. It also adds CalDAV auto-discovery and faster startup.",
+   "date": "2026-10-22",
+   "image": "thumbs/ea7a84bf07a1fbc7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9d3885e33c1e",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Diagrammo plugin shows live countdowns, world clocks and trip maps from code blocks",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcgus4/countdowns_that_tick_a_clock_for_someone_abroad_a/",
+   "summary": "The authors show less obvious chart types for personal notes, built around a family trip to Japan. Fenced code blocks produce ticking countdowns, a clock for someone abroad and a route map.",
+   "date": "2026-10-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "019447cf76ce",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Relate plugin gives notes durable two-way relationships",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcekm6/new_plugin_relate_gives_your_notes_durable_twoway/",
+   "summary": "When a project lists notes in a property, each of those notes now links back to the project. You can browse and search the vault by relationship, date or optional semantic similarity.",
+   "date": "2026-10-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "59e9dc2ef4ec",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Starmap 2.0 adds PlanetView close-ups of planets, moons and rings",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xck1p1/xyls_starmap_20_planetview/",
+   "summary": "The worldbuilding plugin passes 2k downloads and adds fully customisable planet views, with distant stars and adjustable moons and rings. It's handy for sci-fi and tabletop campaign vaults.",
+   "date": "2026-10-22",
+   "image": "thumbs/9a4e7eeae0d7c95b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "64304b3eadbc",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "TextFold adds five-level semantic zoom to long text in Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcsx3v/i_built_textfold_to_make_obsidian_text/",
+   "summary": "Pinch or press 1–5 to move from a one-screen section map down to verbatim text without losing your place. It aims to cut the cognitive load of long AI output, papers and documents.",
+   "date": "2026-10-22",
+   "image": "thumbs/5b7b5837683ab9e7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "12691c043fe2",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Portals 1.5.0 adds auto-collapsing folders, emoji icons and multi-property sorting",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xc0kll/portals_150_update_autocollapse_folders_reminders/",
+   "summary": "The navigation plugin gains an auto-collapse tree, a bulk preview toggle, 300+ emoji icons and dynamic portal commands. It also adds reminders and sorting by several properties at once.",
+   "date": "2026-10-21",
+   "image": "thumbs/4e2bbf69697d1097.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "6c987393f8ff",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Discussion: what is Dataview still needed for now that Bases exists?",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xc23i8/for_those_using_bases_what_are_you_still_relying/",
+   "summary": "Users compare the native Bases feature with Dataview for task dashboards, libraries and project tracking. The thread is useful for judging where queries still win.",
+   "date": "2026-10-21",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "f5098cd784cd",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "New Reading List plugin helps manage read-later pages with the Web Viewer",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcre4r/just_published_my_2nd_plugin_hope_its_useful_for/",
+   "summary": "A second community plugin for read-later links, designed to work with the core Web Viewer so pages open inside Obsidian. It installs straight from the community store.",
+   "date": "2026-10-22",
+   "image": "thumbs/f94a97075acbc06a.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "bc6fc12c2889",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Hexagon-mapping plugin for Obsidian shown in a quick demo video",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcmdi4/hexagon_mapping_with_obsidian_plugin_update/",
+   "summary": "A non-coder built a hexagon-based note-mapping plugin with AI help and posted a hasty walkthrough. It is an early but interesting spatial approach to organising notes.",
+   "date": "2026-10-22",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "dcc9c5281967",
+   "topic": "pipeline",
+   "source": "OpenUSD releases",
+   "title": "OpenUSD 26.11.1 released",
+   "url": "https://github.com/PixarAnimationStudios/OpenUSD/releases/tag/v26.11.1",
+   "summary": "A new point release of the OpenUSD library is out. It's worth a look if your pipeline tracks USD versions closely.",
+   "date": "2026-10-21",
+   "image": "thumbs/42836c1b0710bbec.webp"
+  },
+  {
+   "id": "aa9f487dca0b",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini COPs reaction-diffusion drives Vellum growth to fold a dodecahedron into a brain",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xaogk1/turning_a_dodecahedron_into_a_brain_with_cops/",
+   "summary": "A reaction-diffusion pattern seeded from one point in COPs drives Vellum rest length and pressure. The cloth can't expand freely, so it buckles into brain-like folds. It's a neat procedural recipe to borrow.",
+   "date": "2026-10-20",
+   "image": "thumbs/c015a25ab9271dcb.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "2f4c65b5c18f",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Spherical harmonics explained through an optimisation approach",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1x9yl1m/demystifying_spherical_harmonics_an_optimization/",
+   "summary": "A graphics-programming write-up on understanding spherical harmonics as an optimisation problem. It's useful background for anyone working on lighting representation and light transport.",
+   "date": "2026-10-19",
+   "image": "thumbs/0b994f6523d30f58.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "277f57901ba3",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "One grass system tuned across three very different environments",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xarow7/one_grass_system_three_different_environments/",
+   "summary": "A developer reuses the same grass implementation in three scenes, changing only density, scale, wind and draw distance. It's a useful look at how far one system can stretch.",
+   "date": "2026-10-20",
+   "image": "thumbs/62875fb8cc132fd7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "dbbc36fc6471",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Game builds all sprites from string lists baked into textures at load",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xa2jpt/my_game_has_no_sprite_images_every_hero_monster/",
+   "summary": "Heroes, monsters and bullets are text grids with programmatic lighting ramps, converted to textures at startup. It's a quirky procedural-asset technique that drew plenty of discussion.",
+   "date": "2026-10-19",
+   "image": "thumbs/8298e1c00c83bab0.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c80d284d522e",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Gnomon tutorial covers character burn and destruction FX in Unreal's Niagara",
+   "url": "https://www.cgchannel.com/2026/10/tutorial-creating-incendiary-burn-fx-for-game-characters/",
+   "summary": "An introductory course walks through building a character incineration effect with UE5 Niagara. It's game-focused, but the effects thinking carries over to VFX work.",
+   "date": "2026-10-20"
+  },
+  {
+   "id": "a9961a1b304e",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "How ILM's Dykstraflex motion-control camera changed visual effects",
+   "url": "https://beforesandafters.com/2026/10/23/how-the-dykstraflex-changed-vfx/",
+   "summary": "A look at the camera rig that made A New Hope's space combat possible and reshaped filmmaking. It's good history for anyone interested in where modern VFX workflows come from.",
+   "date": "2026-10-22",
+   "image": "thumbs/2c605431dcfe32be.webp"
+  },
+  {
+   "id": "b7d4b0cad8b8",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "Accenture Song breaks down hard-light energy constructs for DC's Lanterns",
+   "url": "https://www.cgchannel.com/2026/10/check-out-accenture-songs-vfx-breakdown-for-lanterns/",
+   "summary": "A breakdown of how the glowing energy constructs were built, including a huge tunnel-boring machine. Light-emitting CG elements like these raise interesting rendering and lighting questions.",
+   "date": "2026-10-22"
+  },
+  {
+   "id": "834b3a10daff",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Framestore's New York team rebuilds period California for East of Eden",
+   "url": "https://www.artofvfx.com/east-of-eden-how-framestore-recreated-california-with-invisible-vfx/",
+   "summary": "Led by VFX supervisor John Kilshaw, the team built digital landscapes, extended San Francisco's Chinatown and added period details to real locations. Much of the work is deliberately invisible.",
+   "date": "2026-10-22",
+   "image": "thumbs/95fd3466dad9f712.webp"
+  },
+  {
+   "id": "2ab2548ae656",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "EA closes BioWare and cancels Mass Effect after $55B takeover",
+   "url": "https://www.cartoonbrew.com/business/electronic-arts-bioware-shutdown-mass-effect-268247.html",
+   "summary": "Following the Saudi-led buyout, EA is shutting down BioWare and cancelling the next Mass Effect. It is a major jobs and consolidation story for the wider digital-art industry.",
+   "date": "2026-10-22",
+   "image": "thumbs/2be55a101d0ef781.webp"
+  },
+  {
+   "id": "7d0d4a9609ab",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Inside Laika's studio: how artists crafted the stop-motion world of Wildwood",
+   "url": "https://www.cartoonbrew.com/feature-film/wildwood-laika-studio-visit-268246.html",
+   "summary": "Craftspeople describe building bespoke puppet faces and hand-applying feathers for the feature. It's a reminder of how much physical detail goes into stop-motion.",
+   "date": "2026-10-22",
+   "image": "thumbs/db757048a90de01c.webp"
+  },
+  {
+   "id": "05ed99be32fd",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Mayday's VFX supervisor and producer discuss the film's visual effects",
+   "url": "https://www.artofvfx.com/mayday-james-e-price-production-vfx-supervisor-and-randy-starr-production-vfx-producer/",
+   "summary": "James E. Price and Randy Starr go behind the scenes of the production's effects work. The interview covers the challenges involved in the film.",
+   "date": "2026-10-22",
+   "image": "thumbs/17964bf74dbe21d5.webp"
+  },
+  {
+   "id": "ab07f896996c",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Tangles and Paper Trail win top prizes at Animation Is Film",
+   "url": "https://www.cartoonbrew.com/festivals/animation-is-film-winners-highlights-268279.html",
+   "summary": "Iron Boy took the audience and special jury awards, and Please also won a shorts prize. The festival results show which independent animation is gaining attention.",
+   "date": "2026-10-22",
+   "image": "thumbs/39fde09e7815e67f.webp"
+  },
+  {
+   "id": "b6d5e4a30811",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Infinity Festival 2026 lineup includes Brad Bird, Travis Knight and an ASIFA showcase",
+   "url": "https://www.cartoonbrew.com/animators/infinity-festival-lineup-asifa-showcase-268263.html",
+   "summary": "A new awards-season event with ASIFA-Hollywood will feature Pixar, Netflix, DreamWorks and Cartoon Saloon. It adds another venue for studio screenings and talks.",
+   "date": "2026-10-22",
+   "image": "thumbs/35f0fa48c6015501.webp"
+  },
+  {
+   "id": "ad44e695bd61",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Matt Braly shows gothic color scripts and designs for Clara and the Below",
+   "url": "https://www.cartoonbrew.com/series/clara-and-the-below-animation-is-film-268203.html",
+   "summary": "Exclusive artwork from the Animation Is Film presentation, including color scripts, backgrounds and character designs. A good source of look-development inspiration.",
+   "date": "2026-10-21",
+   "image": "thumbs/c3d2dac4c142854f.webp",
+   "extra": true
+  },
+  {
+   "id": "060952a4445b",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "2027 Oscar short contenders: hand-painted Once In A Body and stop-motion The End",
+   "url": "https://www.cartoonbrew.com/awards/once-in-a-body-maria-cristina-perez-gonzalez-268251.html",
+   "summary": "Directors María Cristina Pérez González and Niki Lindroth von Bahr discuss their films, one hand-painted and one a stop-motion satire set in an airport.",
+   "date": "2026-10-22",
+   "image": "thumbs/2df601c31f2f95c6.webp",
+   "also": [
+    {
+     "source": "Cartoon Brew",
+     "url": "https://www.cartoonbrew.com/awards/the-end-niki-lindroth-von-bahr-268194.html"
+    }
+   ],
+   "extra": true
+  },
+  {
+   "id": "d484a1c0b460",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Behind the scenes of War Horse: animation used for complex jumps",
+   "url": "https://www.reddit.com/r/vfx/comments/1xao7ep/bts_of_war_horse_huge_production_with_vfx/",
+   "summary": "A BTS clip shows how VFX animation supported the film's difficult horse jumps. It's a small but instructive look at blending animation with live action.",
+   "date": "2026-10-20",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "650e1b7c1452",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Dune: Part Three teaser returns to Arrakis",
+   "url": "https://www.artofvfx.com/dune-part-three/",
+   "summary": "The first teaser sets a solemn tone for the next chapter, set nearly two decades after Paul takes the Imperium. It's one to watch for large-scale environment and effects work.",
+   "date": "2026-10-22",
+   "image": "thumbs/02ad1373465b6dcc.webp",
+   "extra": true
+  },
+  {
+   "id": "86b145560874",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "First fountain pen: a Platinum #3776 Century in Chartres Blue",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xbat86/my_first_ever_fountain_pen_platinum_3776_century/",
+   "summary": "A newcomer bought a second-hand Platinum #3776 Century with a 14k soft-fine nib, choosing it for its colour and reputation. The post drew nearly 350 upvotes.",
+   "date": "2026-10-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "481b0a9aeddf",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Inktober day 20: flex-nib drawing with Iroshizuku Ama-iro",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xbb4as/capyhero_does_inktober_day_20/",
+   "summary": "A daily Inktober piece for the \"lounge\" prompt, drawn with a Gravitas Ultemate Vac EF flex nib and Pilot's Iroshizuku Ama-iro ink.",
+   "date": "2026-10-21",
+   "image": "thumbs/1cf18f64afcaea8c.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "fa12a47da0de",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "New Sailor Shikiori Shimoyo pen day",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xb6uzy/npd_sailor_shikiori_shimoyo/",
+   "summary": "A recent convert shows off their first Sailor, the Shikiori Shimoyo, and enjoys the nib's feedback. The post includes a photo of the rest of their collection.",
+   "date": "2026-10-20",
+   "kind": "reddit"
+  },
+  {
+   "id": "72410e941999",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Accidentally dipping Diamine Crimson into a Pilot Kakuno gives a striking colour mix",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xbejq4/diamine_crimson_happy_accident/",
+   "summary": "A fountain pen user dipped a new ink into a pen already filled with another. The result is an unexpectedly interesting colour combination.",
+   "date": "2026-10-21",
+   "image": "thumbs/f2012783a19b03ae.webp",
+   "kind": "reddit"
+  }
+ ]
+}

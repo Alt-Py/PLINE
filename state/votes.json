@@ -1,5 +1,5 @@
 {
- "last_comment_id": 6326674666,
+ "last_comment_id": 6328118113,
  "votes": {
   "86c6055b0119": {
    "vote": 1,
@@ -14,6 +14,20 @@
    "topic": "obsidian",
    "title": "Plugin puts a Garmin Connect dashboard inside your vault",
    "at": "2026-10-21T21:12:49.429Z"
+  },
+  "7a49c2e37a2e": {
+   "vote": 1,
+   "source": "r/fountainpens",
+   "topic": "stationery",
+   "title": "Inktober drawing with a Platinum Balance EF and Robert Oster Hemp ink",
+   "at": "2026-10-21T21:44:54.489Z"
+  },
+  "d138e31ec29b": {
+   "vote": 1,
+   "source": "Kamran Waziir",
+   "topic": "pipeline",
+   "title": "Houdini tutorial builds a procedural pen effect",
+   "at": "2026-10-21T22:38:40.253Z"
   }
  }
 }

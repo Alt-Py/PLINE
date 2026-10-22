@@ -1,4 +1,56 @@
 {
- "updated": null,
- "items": []
+ "updated": "2026-10-21T22:38:44Z",
+ "items": [
+  {
+   "id": "d138e31ec29b",
+   "topic": "pipeline",
+   "source": "Kamran Waziir",
+   "title": "Houdini tutorial builds a procedural pen effect",
+   "url": "https://www.youtube.com/watch?v=Toscxk565jQ",
+   "summary": "A step-by-step procedural FX exercise that's useful for practising node-based setups.",
+   "image": "thumbs/7767e702b25252a3.webp",
+   "date": "2026-10-17",
+   "kind": "video",
+   "saved": true,
+   "at": "2026-10-21T22:38:40.891Z"
+  },
+  {
+   "id": "42e8b6716e5d",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Teacher marks 30 years in the classroom with a Pilot Custom Urushi",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xa4mgt/celebrating_30_years_of_teaching_with_a_prussian/",
+   "summary": "A Prussian Blue Custom Urushi with a first FM nib is praised for its feel and feedback. The post was one of the community's most upvoted today.",
+   "image": "thumbs/0480092bf932ccf7.webp",
+   "date": "2026-10-19",
+   "kind": "reddit",
+   "saved": true,
+   "at": "2026-10-21T21:44:50.492Z"
+  },
+  {
+   "id": "bea2b61c866a",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Garmin Connect dashboard plugin brings your fitness data into the vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xby32d/garmin_connect_dashboard_inside_your_vault/",
+   "summary": "Headless SSO login keeps your password unsaved and stores only a refresh token. Activity data syncs into the vault as JSON files, so you can query and link it like any other notes.",
+   "image": "thumbs/d71bab861d2ebe09.webp",
+   "date": "2026-10-21",
+   "kind": "reddit",
+   "saved": true,
+   "at": "2026-10-21T21:44:40.353Z"
+  },
+  {
+   "id": "86c6055b0119",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Inkpad adds a low-latency infinite handwriting canvas to Obsidian on iPad",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xbjxnu/i_built_inkpad_a_lowlatency_infinite_canvas_for/",
+   "summary": "A new plugin built for Apple Pencil study notes on an infinite canvas. Drawings stay inside the vault and work with third-party sync, so handwriting remains portable plain files.",
+   "date": "2026-10-21",
+   "kind": "reddit",
+   "saved": true,
+   "at": "2026-10-21T21:44:32.156Z"
+  }
+ ]
 }

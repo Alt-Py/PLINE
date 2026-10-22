@@ -1,13 +1,18 @@
 {
- "updated": "2026-10-21T21:22:43+00:00",
- "likes": 2,
+ "updated": "2026-10-22T20:46:39+00:00",
+ "likes": 5,
  "dislikes": 0,
  "source_weight": {
-  "r/ObsidianMD": 1.24
+  "r/ObsidianMD": 1.24,
+  "r/fountainpens": 1.24,
+  "Kamran Waziir": 1.12
  },
  "liked_terms": [],
  "disliked_terms": [],
  "liked_titles": [
+  "[pipeline] Houdini tutorial builds a procedural pen effect",
+  "[stationery] Inktober drawing with a Platinum Balance EF and Robert Oster Hemp ink",
+  "[stationery] Teacher marks 30 years in the classroom with a Pilot Custom Urushi",
   "[obsidian] Plugin puts a Garmin Connect dashboard inside your vault",
   "[obsidian] Inkpad brings a low-latency infinite handwriting canvas to Obsidian on iPad"
  ],
