@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T22:38:44Z",
+ "updated": "2026-10-22T21:19:11Z",
  "items": {
   "86c6055b0119": {
    "id": "86c6055b0119",
@@ -51,6 +51,32 @@
    "kind": "video",
    "saved": true,
    "at": "2026-10-21T22:38:40.891Z"
+  },
+  "2f4c65b5c18f": {
+   "id": "2f4c65b5c18f",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Spherical harmonics explained through an optimisation approach",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1x9yl1m/demystifying_spherical_harmonics_an_optimization/",
+   "summary": "A graphics-programming write-up on understanding spherical harmonics as an optimisation problem. It's useful background for anyone working on lighting representation and light transport.",
+   "image": "thumbs/0b994f6523d30f58.webp",
+   "date": "2026-10-19",
+   "kind": "reddit",
+   "saved": true,
+   "at": "2026-10-22T21:18:41.672Z"
+  },
+  "12691c043fe2": {
+   "id": "12691c043fe2",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Portals 1.5.0 adds auto-collapsing folders, emoji icons and multi-property sorting",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xc0kll/portals_150_update_autocollapse_folders_reminders/",
+   "summary": "The navigation plugin gains an auto-collapse tree, a bulk preview toggle, 300+ emoji icons and dynamic portal commands. It also adds reminders and sorting by several properties at once.",
+   "image": "thumbs/4e2bbf69697d1097.webp",
+   "date": "2026-10-21",
+   "kind": "reddit",
+   "saved": true,
+   "at": "2026-10-22T21:19:07.526Z"
   }
  }
 }

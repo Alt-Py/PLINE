@@ -1,0 +1,306 @@
+{
+ "date": "2026-10-24",
+ "generated_at": "2026-10-24T09:37:37+13:00",
+ "headline": "Obsidian 1.15 early access brings Pele, a much faster Mermaid renderer; Accenture Song shows its Lanterns constructs; a Kakuno eyedropper mod tops r/fountainpens.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 31,
+ "sources_total": 34,
+ "source_errors": {
+  "YouTube · 万年筆": "no stories found",
+  "YouTube · VFX breakdowns": "no stories found",
+  "YouTube · Houdini & USD": "no stories found"
+ },
+ "taste": {
+  "likes": 7,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "2af981cecb56",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Obsidian 1.15 early access: faster Mermaid, iOS voice capture, mobile PDF export",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcvwh7/obsidian_1150_early_access_for_desktop_and_mobile/",
+   "summary": "The new Pele engine renders Mermaid diagrams up to 500× faster, using your theme's colours and fonts. The release also adds voice notes from the iOS Lock Screen, reorderable Bases filters, smarter list editing and new URI/CLI commands.",
+   "date": "2026-10-22",
+   "image": "thumbs/9147b233567420c8.webp",
+   "also": [
+    {
+     "source": "Obsidian changelog",
+     "url": "https://obsidian.md/changelog/2026-10-22-desktop-v1.15.0/"
+    },
+    {
+     "source": "Obsidian changelog",
+     "url": "https://obsidian.md/changelog/2026-10-22-mobile-v1.15.0/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "97aad1aab139",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Anatomed plugin renders rotatable 3D anatomy models inside notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xd9izo/3d_anatomy_inside_your_notes_anatomed/",
+   "summary": "A code block such as `region: median nerve` produces an inline 3D model with toggleable structures. Clicking a structure creates or opens a linked note. A neat example of real-time 3D embedded in a vault.",
+   "date": "2026-10-23",
+   "image": "thumbs/5abcc9684d2bc86f.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c6c2ab347469",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Obsidian 1.14.5 ships Electron security fixes; reinstall required",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xcvclk/obsidian_1145_public_is_now_available_for_desktop/",
+   "summary": "The public desktop build moves Electron from 43.7.5 to 43.8.3 to pick up several important security patches. Because it is an installer update, you need to download and reinstall the app.",
+   "date": "2026-10-22",
+   "image": "thumbs/f9b48989cd33cf58.webp",
+   "also": [
+    {
+     "source": "Obsidian changelog",
+     "url": "https://obsidian.md/changelog/2026-10-22-desktop-v1.14.5/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "dbb46834d03b",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Theme Autoupdater plugin keeps themes current, with backup and rollback",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xdk2h6/i_made_a_plugin_that_keeps_your_community_themes/",
+   "summary": "Obsidian doesn't update community themes automatically. This plugin checks installed themes at startup, installs new versions and keeps a backup, so a bad update can be rolled back in one click.",
+   "date": "2026-10-23",
+   "kind": "reddit"
+  },
+  {
+   "id": "31a16c4dd1f1",
+   "topic": "obsidian",
+   "source": "Linking Your Thinking",
+   "title": "Nick Milo's 'Maps of the Ideaverse' plugin pitches a Graph View 2.0",
+   "url": "https://www.youtube.com/watch?v=TaMHh9ki114",
+   "summary": "Linking Your Thinking walks through a new plugin that reworks how vault maps are explored, aiming to fix the shortcomings of the built-in graph view.",
+   "date": "2026-10-23",
+   "image": "thumbs/2fdfc9f9fff8fce9.webp",
+   "kind": "video"
+  },
+  {
+   "id": "c7d221aad052",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Home Cards plugin replaces the blank start tab with a vault home screen",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xddmds/your_vault_needs_a_fabulous_new_front_door/",
+   "summary": "After install, Obsidian opens on a card-based Home tab that acts as a front door to your vault. It's a small interface polish for people who like a dashboard landing page.",
+   "date": "2026-10-23",
+   "kind": "reddit"
+  },
+  {
+   "id": "57043dbf9f62",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Medical student shows five-year vault of linked notes and Anki exports",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xd4rq7/over_5_years_of_notes_in_medical_school_thank_you/",
+   "summary": "After passing physician licensing exams, a user shares the graph of more than a thousand linked notes built up over years of study. It's a good example of long-term vault growth.",
+   "date": "2026-10-23",
+   "image": "thumbs/7bd5f7d35d0c4c71.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9c9c93dacc53",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "A Sunday at BunguLA, Los Angeles's stationery expo",
+   "url": "https://www.penaddict.com/blog/2026/10/23/2026-bungula-a-brief-sunday-visit",
+   "summary": "A Pen Addict guest writer reports on the second BunguLA expo, which she attended on the only day with tickets left. It's a good look at the Japanese-stationery scene in the US.",
+   "date": "2026-10-23",
+   "image": "thumbs/5afcdbeed5d41fbb.webp"
+  },
+  {
+   "id": "8ce85fb5faa1",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Kakuno converted to an eyedropper, holes sealed with gel nail polish",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xc4e5d/kakuno_eyedropper/",
+   "summary": "A cheap Kakuno becomes a high-capacity ink holder after the user seals the openings with nail polish. The post drew more than a thousand upvotes and is a handy mod to know.",
+   "date": "2026-10-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "bf48aebe7a41",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "First gold-nib pen: a Platinum-class Custom 823 hauled from Taobao",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xby28t/npd_my_first_brand_new_gold_nib_custom_823/",
+   "summary": "A collector shares impressions of the Pilot Custom 823's writing feel after bringing one back from China. The post praises the pen's smooth, generous ink flow.",
+   "date": "2026-10-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "de62fbf04bf6",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Iroshizuku Kon-peki finally joins the ink collection",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xc4pwj/finally_caved_on_the_konpeki_hype/",
+   "summary": "A user gives in to the hype and buys the popular blue Iroshizuku bottle after community praise.",
+   "date": "2026-10-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "d86a619fe90d",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Vanishing Point in 'stripes' becomes a first retractable",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xc6c8n/shes_beautiful/",
+   "summary": "The owner prefers the Vanishing Point's grip to an off-brand version she tried first. She notes it is heavy and that medium nibs are hard to find.",
+   "date": "2026-10-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "9b6780990981",
+   "topic": "stationery",
+   "source": "r/stationery",
+   "title": "Zebra G750 and Pentel rollerballs fill a Japanese-pen haul",
+   "url": "https://www.reddit.com/r/stationery/comments/1xbd7ex/first_haul_ive_had_in_a_while/",
+   "summary": "A user fits the Zebra G750 with a 0.4 mm refill and compares it with the Sarasa Grand. It's a practical look at Japanese metal gel pens.",
+   "date": "2026-10-21",
+   "image": "thumbs/72e0556ddcc24b55.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "8f26c66a0fb8",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Kakuno becomes the gateway pen for a planner convert",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xc59j4/i_have_resisted_the_sirens_call_for_a_fountain/",
+   "summary": "A planner user, put off by the thought of an expensive and fiddly hobby, finds the Kakuno an easy entry point.",
+   "date": "2026-10-22",
+   "image": "thumbs/e014ca552aa9b940.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "ebebb65de875",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum #3776 Century features in Japanese letter-writing documentary",
+   "url": "https://www.platinum-pen.co.jp/news/13590/",
+   "summary": "TSK Sanin Chuo TV's documentary 'Cross-border Eco Letter' follows letters exchanged between a person and a hometown benefactor, and features the Platinum #3776 Century. Platinum has posted the broadcast dates.",
+   "title_ja": "越境エコレター 第２回放送のお知らせ／＃3776センチュリー使用",
+   "image": "thumbs/85fa8015f0294c56.webp",
+   "also": [
+    {
+     "source": "Platinum",
+     "url": "https://www.platinum-pen.co.jp/news/13508/"
+    }
+   ]
+  },
+  {
+   "id": "0608dcadb890",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Accenture Song details Green Lantern energy constructs in 'Lanterns'",
+   "url": "https://www.artofvfx.com/lanterns-accenture-song-showcases-the-vfx-behind-the-green-lantern-powers/",
+   "summary": "The studio shows how it built the Lanterns' constructs, from the fine detail of a dollar bill to a bottle opener. It's a useful look at energy-based FX design.",
+   "date": "2026-10-23"
+  },
+  {
+   "id": "6f70041302ea",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "'Moonfish' director on making a Venice sci-fi feature with three animators",
+   "url": "https://www.cartoonbrew.com/feature-film/moonfish-director-daniel-zvereff-268286.html",
+   "summary": "Daniel Zvereff describes the ambition and personal cost of a feature animated by three artists in nine months. It's a striking case study of lean production.",
+   "date": "2026-10-23",
+   "image": "thumbs/06298fa463db9a35.webp"
+  },
+  {
+   "id": "84b230ef98ba",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Cartoon Brew visits Laika's studio for the puppets and sets of 'Wildwood'",
+   "url": "https://www.cartoonbrew.com/newsletter/laika-studio-visit-netflixs-buyback-billions-daniel-zvereff-on-moonfish-268320.html",
+   "summary": "A studio tour shows the puppets, costumes and sets behind Laika's most ambitious film. The same episode covers Netflix's buyback spending.",
+   "date": "2026-10-23",
+   "image": "thumbs/4218e90cb8013d01.webp"
+  },
+  {
+   "id": "7d9298314223",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "'Saba' short: hand-drawn continuous shot led by animator James Baxter",
+   "url": "https://www.cartoonbrew.com/awards/saba-director-liron-topaz-268294.html",
+   "summary": "Director Liron Topaz discusses a 2027 Oscar short contender about a boy mourning his grandfather, animated by an international team led by James Baxter.",
+   "date": "2026-10-23",
+   "image": "thumbs/d7bce0015b3163f1.webp"
+  },
+  {
+   "id": "f7c3b95c31db",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Blender, After Effects and Resolve breakdown of a two-year music video, no AI",
+   "url": "https://www.reddit.com/r/vfx/comments/1xbnarx/city_limit_south_vfx_breakdown_blender_after/",
+   "summary": "An indie artist shows how real footage and fully CG scenes were combined in Blender and After Effects. It's a good compositing reference.",
+   "date": "2026-10-21",
+   "image": "thumbs/a1cd1291681bda16.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "78c7f893c67d",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Sony explains how Aniplex, Crunchyroll and its studios fit together",
+   "url": "https://www.cartoonbrew.com/anime/sony-crunchyroll-aniplex-cloverworks-hayate-268302.html",
+   "summary": "Sony has published a rare overview of how it links Japanese anime production to global distribution, games and merchandise.",
+   "date": "2026-10-23",
+   "image": "thumbs/946bc0d1b02cc940.webp"
+  },
+  {
+   "id": "ffb73a5d63bd",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Tokyo International Film Festival animation lineup includes career talks and women directors",
+   "url": "https://www.cartoonbrew.com/sponsored-by-tokyo-international-film-festival/tiff-animation-lineup-ryota-fujitsu-268228.html",
+   "summary": "The programme mixes international premieres and original anime with discussions on creative careers and opportunities for women directors.",
+   "date": "2026-10-23",
+   "image": "thumbs/bb8eade522b715f7.webp"
+  },
+  {
+   "id": "fcc97f52e5db",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "British Animation Awards to return in 2028 under new leadership",
+   "url": "https://www.cartoonbrew.com/awards/british-animation-awards-return-tracy-shaw-anna-lord-268289.html",
+   "summary": "Tracy Shaw and Anna Lord take over and are planning new categories, including some open to international animation.",
+   "date": "2026-10-23",
+   "image": "thumbs/30dbc5b5bd39a9d9.webp"
+  },
+  {
+   "id": "08e74acd855b",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Aaron Blabey's 'Game of Pets' gets an animated feature adaptation",
+   "url": "https://www.cartoonbrew.com/feature-film/game-of-pets-aaron-blabey-animated-movie-amazon-mgm-268292.html",
+   "summary": "Rideback and Foundation Media are producing the film of the book by the creator of 'The Bad Guys'.",
+   "date": "2026-10-23",
+   "image": "thumbs/72536b6f6680bc68.webp",
+   "extra": true
+  },
+  {
+   "id": "1478deb03fd3",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Knitted BB-8 fan art built with a Houdini fabric HDA",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xbpvk6/knitted_bb8_finds_a_lightsaber/",
+   "summary": "A small team made a knitted BB-8 scene using a Houdini HDA for fabric and knit assets. The artist handled environments, FX, lookdev and lighting. It's worth a look for procedural-asset ideas.",
+   "date": "2026-10-21",
+   "image": "thumbs/a13c2f5535f7b88c.webp",
+   "also": [
+    {
+     "source": "r/vfx",
+     "url": "https://www.reddit.com/r/vfx/comments/1xbpvia/knitted_bb8_finds_a_lightsaber_fan_art/"
+    }
+   ],
+   "kind": "reddit"
+  }
+ ]
+}
