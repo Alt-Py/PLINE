@@ -1,0 +1,292 @@
+{
+ "date": "2026-10-25",
+ "generated_at": "2026-10-25T08:44:41+13:00",
+ "headline": "Digital Domain breaks down Disclosure Day, a new WebGPU path tracer tops r/GraphicsProgramming, and AI assistants learn to drive Houdini.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 33,
+ "sources_total": 34,
+ "source_errors": {
+  "The Well-Appointed Desk": "ConnectTimeout: HTTPSConnectionPool(host='www.wellappointeddesk.com', port=443): Max retries exceeded with url: /feed/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.wellappointeddesk.com',"
+ },
+ "taste": {
+  "likes": 7,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "f3b46783e763",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "D&D 5e character sheet plugin heads toward public beta",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xec9vs/note_linked_automated_dnd_character_sheets_beta/",
+   "summary": "A year-long project, this plugin builds full 2014 and 2024 rules characters inside a vault, from class and spell management to inventory and resources. The developer is asking for beta testers and feedback.",
+   "date": "2026-10-24",
+   "kind": "reddit"
+  },
+  {
+   "id": "ae3aa35ec005",
+   "topic": "obsidian",
+   "source": "Eric Michaud",
+   "title": "Video argues for treating your vault as a backend, not a second brain",
+   "url": "https://www.youtube.com/watch?v=4z2i6UsQG1k",
+   "summary": "A popular walkthrough reframes Obsidian as structured data infrastructure that other tools and automations can build on, rather than a place to hoard notes. It suits anyone wiring scripts or AI into their vault.",
+   "date": "2026-10-22",
+   "image": "thumbs/d5ba0255888fabec.webp",
+   "kind": "video"
+  },
+  {
+   "id": "d6a62513d69a",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Running a full software spec inside Obsidian with templates and Excalidraw",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xe1wah/used_obsidian_for_my_software_requirements_and/",
+   "summary": "A developer manages an entire product's requirements, schema, user stories and wireframes in one templated note with properties. It is a practical template-driven documentation workflow that carries over to production tooling notes.",
+   "date": "2026-10-24",
+   "image": "thumbs/c0c1c241dced0837.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "4ffd57d2f61b",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Canvas users debate its gaps, starting with missing PDF export",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xef1js/love_for_canvas/",
+   "summary": "Two threads ask why Canvas adoption feels quiet and whether boards can be exported to PDF. Together they show where the core feature still falls short and which plugin workarounds people want.",
+   "date": "2026-10-24",
+   "also": [
+    {
+     "source": "r/ObsidianMD",
+     "url": "https://www.reddit.com/r/ObsidianMD/comments/1xdwyto/obsidian_canvas_pdf/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "43fda36ecfc6",
+   "topic": "obsidian",
+   "source": "Alex Hitt",
+   "title": "Atlas VTT keeps tabletop map and game state local inside Obsidian",
+   "url": "https://www.youtube.com/watch?v=O31J6TJmcF0",
+   "summary": "A walkthrough of an offline-first, vault-based virtual tabletop that stores maps and game state as local files. It is a niche but interesting example of Obsidian as a platform.",
+   "date": "2026-10-21",
+   "image": "thumbs/0435638ed135e401.webp",
+   "kind": "video"
+  },
+  {
+   "id": "e0a3729eb91c",
+   "topic": "obsidian",
+   "source": "Obsidian blog",
+   "title": "Obsidian explains how its minimal-dependency design limits supply chain attack risk",
+   "url": "https://obsidian.md/blog/less-is-safer/",
+   "summary": "The team describes how keeping third-party code to a minimum helps protect a private notes app from malicious upstream updates. Worth a read if you run many community plugins.",
+   "image": "thumbs/f9b48989cd33cf58.webp"
+  },
+  {
+   "id": "57e4f3761cfc",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Collector shows a floral-themed trio of Platinum, Namiki and Pilot pens",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xcxt2c/i_have_a_type/",
+   "summary": "A 3776 Peony, a Namiki Emperor Chinkin Peony and a Pilot Elite Chrysanthemum sit together in one flower-themed set. The photos show the maki-e and chinkin decoration up close.",
+   "date": "2026-10-22",
+   "image": "thumbs/63494fdc1cb77e5e.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "be4510838dfd",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Japan and Taipei pen-shopping haul covers Pilot, Kakimori, Traveler's Company and Sailor",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xcsm4h/fountain_pens_and_related_items_i_bought_from/",
+   "summary": "A traveller lists where he found Pilot capless raden pens, Kakimori brass and copper nibs and pens, Traveler's brass pens and Sailor inks. A useful shop guide for anyone planning a stationery trip.",
+   "date": "2026-10-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "467f366c4132",
+   "topic": "stationery",
+   "source": "集まれ文具ラバーズ【文具店勤務13年目】",
+   "title": "October 2026 Japanese stationery releases: clear-colour pencils and uni-ball ONE P",
+   "url": "https://www.youtube.com/watch?v=WxiCEPV6xNI",
+   "summary": "A Japanese shop employee runs through this month's new releases, including clear-colour mechanical pencils and fresh uni-ball ONE P variants. A quick way to catch up on new products from Japan.",
+   "date": "2026-10-24",
+   "image": "thumbs/d192a9030f1442b4.webp",
+   "kind": "video"
+  },
+  {
+   "id": "c5ae61fdc9d5",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Fountain pen collector moves to pencils but keeps a Pilot Kakuno EF",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xcq3s7/nonconsumerist_approach/",
+   "summary": "After years of buying more pens and inks than he used, the writer shifted to pencils and kept one Kakuno inked with waterproof black. The thread on practicality and over-collecting drew 42 comments.",
+   "date": "2026-10-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "53d793fc4a85",
+   "topic": "stationery",
+   "source": "maimai＊手帳と文具で楽しくLife Log＊",
+   "title": "Seria, Daiso and Can Do show early Christmas stickers, stamps and memo pads",
+   "url": "https://www.youtube.com/watch?v=Jsq8hEJpl5c",
+   "summary": "A Japanese planner fan shows this season's 100-yen shop finds for journaling and decoration. It is light but gives a look at the budget end of Japanese stationery.",
+   "date": "2026-10-23",
+   "image": "thumbs/86017983b02a76e1.webp",
+   "kind": "video"
+  },
+  {
+   "id": "15a613ef773d",
+   "topic": "vfx",
+   "source": "Digital Domain",
+   "title": "Digital Domain shares its VFX breakdown for Disclosure Day",
+   "url": "https://www.youtube.com/watch?v=NnvEbvZsDdU",
+   "summary": "The studio's own breakdown reel shows how the film's shots were built up layer by layer. Official studio breakdowns like this are good for seeing how a production approaches complex compositing.",
+   "date": "2026-10-19",
+   "image": "thumbs/de2e5ae2552ab1ed.webp",
+   "kind": "video"
+  },
+  {
+   "id": "bb3653220719",
+   "topic": "vfx",
+   "source": "Bad Decisions Studio ",
+   "title": "Ramayana Trailer 2 sparks VFX breakdowns and artist reactions",
+   "url": "https://www.youtube.com/watch?v=Df-GUneu8yg",
+   "summary": "Artists and channels dissect the second trailer, comparing before-and-after changes and judging the scale of the CG work. The reactions show where audiences and professionals see the film's VFX ambitions.",
+   "date": "2026-10-23",
+   "image": "thumbs/e0376293ffe19c11.webp",
+   "also": [
+    {
+     "source": "The Cinema Land ",
+     "url": "https://www.youtube.com/watch?v=dy_ltdPRnII"
+    },
+    {
+     "source": "DipFlixx",
+     "url": "https://www.youtube.com/watch?v=zIoE1Akrvs8"
+    }
+   ],
+   "kind": "video"
+  },
+  {
+   "id": "82af64483461",
+   "topic": "vfx",
+   "source": "Movie VFX",
+   "title": "LUGUNDTRUG releases VFX breakdown for The Physician 2",
+   "url": "https://www.youtube.com/watch?v=3_2qxD-kIJI",
+   "summary": "A short reel shows the compositing and CG work behind the sequel. A good look at a mid-sized studio's shot construction.",
+   "date": "2026-10-22",
+   "image": "thumbs/b3a9456e8a6f6f8f.webp",
+   "kind": "video"
+  },
+  {
+   "id": "551e8eaedd0b",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Crew members look back on When the Wind Blows at 40",
+   "url": "https://www.cartoonbrew.com/feature-film/meltdown-memories-when-the-wind-blows-at-40-268317.html",
+   "summary": "Art director Richard Fawdry and former assistant Paul Donnellon recall making Raymond Briggs' nuclear-war animation. A rare account of hand-crafted production from an earlier era.",
+   "date": "2026-10-24",
+   "image": "thumbs/72e23e1e0a449741.webp"
+  },
+  {
+   "id": "a2ba3f1e42af",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Glitch orders a full season of Gameoverse after a 31M-view pilot",
+   "url": "https://www.cartoonbrew.com/series/gameoverse-full-season-glitch-productions-may-return-268390.html",
+   "summary": "Ross O'Donovan's YouTube-born animated series returns in May 2027. It is another sign of online-first animation turning into full productions.",
+   "date": "2026-10-24",
+   "image": "thumbs/f877eebc1d5ed562.webp"
+  },
+  {
+   "id": "e31c635f55ce",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Marvel's VisionQuest featurette goes behind the scenes of the Mindspace",
+   "url": "https://www.artofvfx.com/visionquest/",
+   "summary": "A new featurette shows how the series builds its Mindspace sequences. It gives a glimpse of the visual approach for the upcoming show.",
+   "date": "2026-10-16",
+   "image": "thumbs/72958b96073af5e1.webp"
+  },
+  {
+   "id": "ad391d8943ff",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Rings of Power Season 3 featurette goes behind the scenes",
+   "url": "https://www.artofvfx.com/the-lord-of-the-rings-the-rings-of-power-season-3/",
+   "summary": "Cast and filmmakers discuss the upcoming season in a featurette released after the new trailer. It is light on technique but shows the scale of the production.",
+   "date": "2026-10-23",
+   "image": "thumbs/22f862a613a622bb.webp"
+  },
+  {
+   "id": "19ff3b9d9e3d",
+   "topic": "vfx",
+   "source": "Corridor Crew",
+   "title": "Corridor Crew's VFX artists react to bad and great CGI at ILM",
+   "url": "https://www.youtube.com/watch?v=OD0xBGaoqbY",
+   "summary": "The first gauntlet-style episode of the react series, filmed at ILM, has working artists judging good and bad CG shots. Entertaining and occasionally instructive.",
+   "date": "2026-10-24",
+   "image": "thumbs/549f62133b53386d.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ae403b28d40b",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Developer builds a universal WebGPU path tracer with Claude's help",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xcobow/the_raytracer_to_end_all_my_other_raytracers/",
+   "summary": "After years of one-off raytracers for art projects, the author finished a general-purpose WebGPU toolkit and renderer. The thread drew 335 upvotes and is worth reading if you follow real-time and path-traced rendering.",
+   "date": "2026-10-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "71c995000992",
+   "topic": "pipeline",
+   "source": "Radu Cius",
+   "title": "AI assistants learn to build and explain Houdini node networks",
+   "url": "https://www.youtube.com/watch?v=pOeuG24PUZ8",
+   "summary": "Houdini AI Assistant 0.3.0 can generate and describe networks, while a separate Houdini MCP with Codex demo lets an AI drive the application directly. Both are early looks at LLM-assisted procedural work.",
+   "date": "2026-10-23",
+   "image": "thumbs/ea5c3ff22c4c97fe.webp",
+   "also": [
+    {
+     "source": "IndyZone チャンネル",
+     "url": "https://www.youtube.com/watch?v=GE4DH4N2D0c"
+    }
+   ],
+   "kind": "video"
+  },
+  {
+   "id": "8daf09e20f98",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Reallusion Rigger HDA builds ready-to-animate APEX rigs from Character Creator characters",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xcyokv/character_creatoriclone_to_apex_rig_in_houdini/",
+   "summary": "The updated HDA imports iClone and Character Creator characters with materials, dynamic wrinkles and lookdev controls, then generates a full APEX rig. A practical bridge into Houdini's newer character tools.",
+   "date": "2026-10-22",
+   "image": "thumbs/a4a6451dc9139f99.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "fd8e495f4e53",
+   "topic": "pipeline",
+   "source": "r/vfx",
+   "title": "Updated hard matte and previz keyer released on r/vfx",
+   "url": "https://www.reddit.com/r/vfx/comments/1xbuhsu/20_better_hard_matte_and_previz_keyer/",
+   "summary": "Version 2.0 of a keyer aimed at hard mattes and previz work drew 126 comments of feedback. It is useful for compositors looking for quick tools.",
+   "date": "2026-10-21",
+   "image": "thumbs/d4d80875b9d1f396.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "fa8c8486129a",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini and Nuke shot posted for critique draws 42 comments",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xcq4a0/anything_i_can_do_to_improve_this_shot/",
+   "summary": "An artist shares a shot built in Houdini and Nuke and asks how to improve it. The comments give practical feedback on realism and compositing.",
+   "date": "2026-10-22",
+   "image": "thumbs/e87c7c351d1dc212.webp",
+   "kind": "reddit"
+  }
+ ]
+}
