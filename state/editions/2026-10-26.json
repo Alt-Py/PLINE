@@ -1,0 +1,291 @@
+{
+ "date": "2026-10-26",
+ "generated_at": "2026-10-26T08:55:33+13:00",
+ "headline": "Image Engine's Mandalorian & Grogu breakdown and Corridor Key 2.0 lead VFX, while Houdini viscosity tricks and Pilot and Sailor collaboration pens lead pipeline and stationery.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 34,
+ "sources_total": 34,
+ "source_errors": {},
+ "taste": {
+  "likes": 7,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "8b7947b867a6",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Image Engine shows how its Mandalorian & Grogu shots were made",
+   "url": "https://beforesandafters.com/2026/10/25/watch-image-engines-vfx-breakdown-for-the-mandalorian-grogu/",
+   "summary": "Image Engine's VFX breakdown for The Mandalorian & Grogu shows the work behind its shots. It's a useful look at how a major studio handles creature and environment work.",
+   "date": "2026-10-25",
+   "image": "thumbs/3fca43a0b45709d0.webp"
+  },
+  {
+   "id": "e39f78c14877",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Corridor Key 2.0 offers standalone AI keying that works out of the box",
+   "url": "https://www.reddit.com/r/vfx/comments/1xdq35v/game_changer_corridor_key_20/",
+   "summary": "Artists are impressed by the standalone app's quick, clean keys, and see it helping postvis and indie compositing. The 111-comment thread is worth reading for how pros judge the results.",
+   "date": "2026-10-23",
+   "image": "thumbs/0b393b28490c61d1.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "4fcae4ae6d50",
+   "topic": "vfx",
+   "source": "Patrick Lawler and Polyphia",
+   "title": "VFX breakdown released for Polyphia's 'With Eyes to See' video",
+   "url": "https://www.youtube.com/watch?v=ny0BUmOraTw",
+   "summary": "A shot-by-shot breakdown of the effects in Polyphia's music video, showing how the visuals were assembled.",
+   "date": "2026-10-21",
+   "image": "thumbs/2a24b950d6e2e5aa.webp",
+   "kind": "video"
+  },
+  {
+   "id": "953eb6459b25",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Engineer releases IllusionFX, a subscription-free node and layer compositing app",
+   "url": "https://www.reddit.com/r/vfx/comments/1xdh0i8/ive_spent_3_years_building_a_subscriptionfree/",
+   "summary": "After three years of development, a solo developer ships a compositor that combines a node graph with a keyframed layer timeline. It is a possible low-cost alternative to Nuke-style tools for small teams.",
+   "date": "2026-10-23",
+   "image": "thumbs/690f53a4980f0d5e.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "aeb90aa54dbe",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Veteran VFX artist with 10 years' experience wants out over AI fears",
+   "url": "https://www.reddit.com/r/vfx/comments/1xdra51/10_years_of_experience_desperately_want_to_leave/",
+   "summary": "A candid thread on career exit strategies as AI threatens VFX roles. The comments give a useful pulse on labour anxiety in the industry.",
+   "date": "2026-10-23",
+   "kind": "reddit"
+  },
+  {
+   "id": "dafd8953821e",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Art of VFX weekend picks: cartoon chaos and aerial sequences",
+   "url": "https://www.artofvfx.com/weekend-spotlight-october-24th-2026/",
+   "summary": "A curated roundup of the week's best interviews and breakdowns, handy for catching up on shot work.",
+   "date": "2026-10-24",
+   "image": "thumbs/a5be6c5056cbd73c.webp"
+  },
+  {
+   "id": "0c4d421c6c4e",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Netflix's Disney deal pushes five Ice Age films into its Top 10",
+   "url": "https://www.cartoonbrew.com/distribution/ice-age-netflix-disney-top-10-268176.html",
+   "summary": "The new licensing deal is building buzz for the franchise ahead of its February sequel. It's a small example of how streaming licensing affects animation business.",
+   "date": "2026-10-21",
+   "image": "thumbs/cea3164e2f8b55a9.webp"
+  },
+  {
+   "id": "ef333675d5da",
+   "topic": "vfx",
+   "source": "Celebration of life",
+   "title": "CGI and VFX breakdown released for Tamil feature 'Oh Butterfly'",
+   "url": "https://www.youtube.com/watch?v=dhueDmIkF9c",
+   "summary": "A short breakdown reel of the effects work on an independent Tamil film.",
+   "date": "2026-10-23",
+   "image": "thumbs/f4810ae173506fe1.webp",
+   "kind": "video"
+  },
+  {
+   "id": "993370973ffb",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini FLIP gel uses local viscosity changes and randomized normals for sparkle",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xdgr45/flip_sim_with_local_viscosity_changes_and_the/",
+   "summary": "A collider thickens the fluid as it passes, then the viscosity relaxes back. The sparkle is faked by randomizing normals instead of adding geometry, a cheap shading trick.",
+   "date": "2026-10-23",
+   "image": "thumbs/05e2ca7b45ad9df7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "bdbd6ff13815",
+   "topic": "pipeline",
+   "source": "Radu Cius",
+   "title": "Houdini AI Assistant builds a rigged mecha and hangar from references",
+   "url": "https://www.youtube.com/watch?v=PeeAvnOyaa4",
+   "summary": "A walkthrough of using the AI assistant inside Houdini to go from reference images to a rigged model and environment. It shows how far assisted procedural workflows have come.",
+   "date": "2026-10-24",
+   "image": "thumbs/0ccd58f405b8ed56.webp",
+   "kind": "video"
+  },
+  {
+   "id": "3668149ebb2a",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Vulkan renderer draws procedural plants with billboarded non-triangle primitives",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xd8lpm/some_scenes_with_my_vulkan_rendering_framework/",
+   "summary": "Branches are rendered as analytic cylinders instead of triangles, which cuts vertex counts and makes GPU wind animation cheaper. It's an interesting geometry-representation trade-off for foliage.",
+   "date": "2026-10-23",
+   "image": "thumbs/1e6c33acb17a1dce.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "92bc9aba589d",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini crowd of 100 archers with sticking arrows and ragdolls, rendered in UE5",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xde3q4/100_crowd_agents_vs_archers_sticky_arrows/",
+   "summary": "A crowd sim with live aiming, arrows that stick, and a collapsing floor. The author moved from Karma to Unreal to avoid long render times.",
+   "date": "2026-10-23",
+   "image": "thumbs/cf74db02d83f619d.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "8cb8098c88c8",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Rust CPU renderer now handles skinning and rasterization in a browser stream",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xd60e1/cpurendered_3d_engine_update/",
+   "summary": "An update to a fully CPU-based 3D engine running at 960×840 with four workers. It's a good read for anyone who likes software rendering.",
+   "date": "2026-10-23",
+   "image": "thumbs/0ae67b3fca60ed87.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c1c43ee327e7",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Lifein theme 1.1.0 adds customizable text selection and highlights",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xetqb2/lifein_v110_customizable_text_selection_and/",
+   "summary": "The update brings community-suggested fixes and styling options for selections and highlights. It's worth a look if you like trying new themes.",
+   "date": "2026-10-25",
+   "kind": "reddit"
+  },
+  {
+   "id": "3ac9ecb17ec8",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Nav Dock plugin keeps key notes a hover away from the ribbon",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xf8ren/nav_dock_keep_your_goto_notes_just_a_hover_away/",
+   "summary": "Pins homepage, navigation and quick-reference notes in a hover panel, so you don't need a dedicated tab.",
+   "date": "2026-10-25",
+   "image": "thumbs/447a1c7614a654d7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "79b414c7bfd3",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Calendar Blocks plugin draws a simple inline month view from text dates",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xfbrq9/calendar_blocks_a_basic_inline_month_overview/",
+   "summary": "With no configuration needed, it turns dates in a note into a month overview. This is handy for seeing how a trip falls across weekends.",
+   "date": "2026-10-25",
+   "kind": "reddit"
+  },
+  {
+   "id": "875118d32877",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "CLI syncs an Obsidian vault two-way with the self-hosted OpenTodo task app",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xewqy0/twoway_sync_between_an_obsidian_vault_and_an/",
+   "summary": "Tasks stay as plain Obsidian Tasks syntax in Markdown, with Dataview fields, and also appear on your phone with reminders and shared lists.",
+   "date": "2026-10-25",
+   "kind": "reddit"
+  },
+  {
+   "id": "00f562239a3b",
+   "topic": "obsidian",
+   "source": "Paul's Obsidian Systems",
+   "title": "Video builds an Obsidian system for book notes, ideas and habits",
+   "url": "https://www.youtube.com/watch?v=qETQz00cTAo",
+   "summary": "A walkthrough of a vault setup that keeps reading notes and related habits together.",
+   "date": "2026-10-25",
+   "image": "thumbs/23edbbe02c40daf7.webp",
+   "kind": "video"
+  },
+  {
+   "id": "4ac408ad0382",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Taskloops plugin update lets standalone tasks go to the daily note",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xfb41p/taskloops_update/",
+   "summary": "A new setting sends standalone tasks to either the daily note or a preselected note.",
+   "date": "2026-10-25",
+   "image": "thumbs/757cd4ec6925e2cc.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "37c35bdd325c",
+   "topic": "obsidian",
+   "source": "LuixBits",
+   "title": "Comparison of Obsidian and Neorg from a Neovim note-taker",
+   "url": "https://www.youtube.com/watch?v=Hx2kY5pTuQc",
+   "summary": "The creator explains why they chose a Neovim-based workflow, useful if you are weighing different note-taking approaches.",
+   "date": "2026-10-24",
+   "image": "thumbs/ccaed14462386f2a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "2b7f774dbf06",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Hachimonjiya x Pilot Decimo 'Cafe Latte' pen and matching shimmer ink arrive",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xdo5ns/npd_hachimonjiya_cafe_latte/",
+   "summary": "A new-pen post shows the Cafe Latte Decimo, an EF nib, next to a Vanishing Point Whiskey, along with the matching ink.",
+   "date": "2026-10-23",
+   "image": "thumbs/a2c952430c6840f2.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "b63487fe1e2b",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Sailor x Pentonote Yonomori Sakura 1911S in medium-fine lands as a grail pen",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xdxfzb/npd_grail_pen_obtained/",
+   "summary": "A collector shows off the sought-after Sailor and Pentonote collaboration pen with a medium-fine nib.",
+   "date": "2026-10-24",
+   "kind": "reddit"
+  },
+  {
+   "id": "79d27ed7deec",
+   "topic": "stationery",
+   "source": "isnull_手帳とせいかつ",
+   "title": "Customizing a Rollbahn Slim into a three-year diary, plus fountain pen tweaks",
+   "url": "https://www.youtube.com/watch?v=RudQwg8gAeg",
+   "summary": "A Japanese notebook video modifies a Midori-style Rollbahn Slim for multi-year journaling and also shows fountain pen customization.",
+   "date": "2026-10-25",
+   "title_ja": "ロルバーンスリムをカスタムして3年連用日記をつくる⌇モニター協力のお礼🙏⌇万年筆カスタムもしたよꕀ✒️",
+   "image": "thumbs/72f1c19b29fe9e35.webp",
+   "kind": "video"
+  },
+  {
+   "id": "4f8c422e19fa",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum to run nib adjustment event at Maruzen Nihonbashi autumn fountain pen fair",
+   "url": "https://www.platinum-pen.co.jp/news/13565/",
+   "summary": "Platinum's staff will tune nibs at the fair on 25 and 26 September, a rare chance for hands-on adjustment.",
+   "title_ja": "丸善 日本橋店（東京都中央区）にて開催の「2026 秋の万年筆フェア」でプラチナ万年筆の ペン先調整イベントを開催いたします。",
+   "image": "thumbs/f2c685e7b7efe36b.webp"
+  },
+  {
+   "id": "4e0b1fa44106",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum #3776 Century featured in MONOQLO's November issue",
+   "url": "https://www.platinum-pen.co.jp/news/13596/",
+   "summary": "The magazine's November issue, on sale 19 September, covers the pen.",
+   "title_ja": "（株）晋遊舎発行 モノ情報雑誌『MONOQLO 11月号』にて「#3776センチュリー」が掲載になりました。",
+   "image": "thumbs/cc624308a7204cbc.webp"
+  },
+  {
+   "id": "0e7975797cf5",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Pen Addict link roundup includes a Bungu LA stationery event report",
+   "url": "https://www.penaddict.com/blog/2026/10/25/misfill-la-la-land-edition",
+   "summary": "This weekly misc list points to a Bungu LA write-up and a retrospective on running a first stationery event.",
+   "date": "2026-10-25",
+   "image": "thumbs/1592cffbf61a7ff7.webp"
+  }
+ ]
+}
