@@ -1,0 +1,264 @@
+{
+ "date": "2026-10-27",
+ "generated_at": "2026-10-27T09:46:32+13:00",
+ "headline": "Entagma shows how to get Gaussian splats from a single photo in Houdini, Image Engine breaks down its Mandalorian and Grogu creatures, and The Loud House moves production to Canada.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/bulletjournal": "no stories found"
+ },
+ "taste": {
+  "likes": 7,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "c0ca0ba4bab2",
+   "topic": "pipeline",
+   "source": "Entagma",
+   "title": "Free Houdini tutorial turns a single photo into Gaussian splats",
+   "url": "https://www.youtube.com/watch?v=VDIsRIsVgsw",
+   "summary": "Entagma shows how to bring the MoGe-2 and SHARP models into Houdini to get splats from one image, avoiding the usual 100-photo capture and long training. Scene file is free to download.",
+   "date": "2026-10-26",
+   "image": "thumbs/32a896748d3f591c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "753bcbeffc49",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "CG Channel's weekly round-up: texturing apps, a Blender animation add-on and a real-time AI renderer",
+   "url": "https://www.cgchannel.com/2026/10/new-cg-software-you-may-have-missed-25-october-2026/",
+   "summary": "This week's new-tools list covers new texturing software, a Blender animation add-on and a real-time AI-based renderer. Worth a skim for anything that could slot into a look-dev or layout workflow.",
+   "date": "2026-10-26"
+  },
+  {
+   "id": "d93d57f01e6e",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "Image Engine breaks down the Mandalorian and Grogu creatures",
+   "url": "https://www.cgchannel.com/2026/10/watch-image-engines-vfx-breakdown-for-the-mandalorian-and-grogu/",
+   "summary": "A breakdown reel shows how Image Engine built the CG creatures, including the fisherman Gatori and the giant frog that spits out Grogu. Useful for seeing how creature work holds up in a Star Wars film.",
+   "date": "2026-10-26"
+  },
+  {
+   "id": "4b02e70dde49",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Rodeo FX shows how it brought Silverwing back for House of the Dragon S3",
+   "url": "https://www.artofvfx.com/house-of-the-dragon-season-3-rodeo-fx-reveals-the-vfx-behind-silverwing/",
+   "summary": "VFX supervisor Sébastien Francoeur walks through two Silverwing dragon shots. The studio had already worked on the dragon, so this is a look at revisiting a hero creature across seasons.",
+   "date": "2026-10-26",
+   "image": "thumbs/24951cae1d97a03d.webp"
+  },
+  {
+   "id": "166a623ac1c4",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Loud House director questions Hollywood's future as season 10 moves to Canada",
+   "url": "https://www.cartoonbrew.com/series/loud-house-production-canada-jessica-borutski-268452.html",
+   "summary": "Jessica Borutski and Maxwell Atoms discuss lost jobs, AI and whether animation artists can still build careers in Hollywood. It is another data point on production flight.",
+   "date": "2026-10-26",
+   "image": "thumbs/69fe00caa8a982fc.webp"
+  },
+  {
+   "id": "7c731fd26f29",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Union VFX built Jane Austen's world with invisible environment work for Sense and Sensibility",
+   "url": "https://www.artofvfx.com/sense-and-sensibility-how-union-vfx-recreated-jane-austens-world/",
+   "summary": "Across 83 shots, Union used digital matte paintings and set extensions for Norland Park and Barton Cottage, plus subtle seasonal changes. It is a good example of period VFX meant to go unnoticed.",
+   "date": "2026-10-26",
+   "image": "thumbs/b8549f8b23748911.webp"
+  },
+  {
+   "id": "2e38f42c2fc9",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "China's first AI feature flops after the scrappy Niu Lai hit",
+   "url": "https://www.cartoonbrew.com/box-office-report/chinese-ai-film-sanxingdui-future-past-box-office-flop-268426.html",
+   "summary": "Bona Film Group's AI-made movie failed to draw an audience, months after the humble Niu Lai turned online ridicule into nearly $10M in sales. It is a useful reality check on AI-generated features.",
+   "date": "2026-10-26",
+   "image": "thumbs/9516d76e18103aa7.webp"
+  },
+  {
+   "id": "c2e1afd00a60",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Stoopid Buddy gave The Simpsons a handmade Nightmare Before Christmas opening",
+   "url": "https://www.cartoonbrew.com/series/the-simpsons-treehouse-of-horror-nightmare-before-christmas-268442.html",
+   "summary": "Tim Long and John Harvatine describe the puppets, costumes and clay worms behind this year's Treehouse of Horror intro. It is a stop-motion craft story inside a CG-dominated medium.",
+   "date": "2026-10-26",
+   "image": "thumbs/343d9b5180a4d38a.webp"
+  },
+  {
+   "id": "b3136eb1bfd0",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Eric Bauza, Looney Tunes voice actor and animation advocate, dies at 46",
+   "url": "https://www.cartoonbrew.com/rip/eric-bauza-looney-tunes-voice-actor-dies-268416.html",
+   "summary": "Cartoon Brew remembers Bauza's career from a drawing desk to voicing Looney Tunes characters, and his advocacy for the medium.",
+   "date": "2026-10-26",
+   "image": "thumbs/5eb50fd954254bfb.webp"
+  },
+  {
+   "id": "0a5ed47eaf06",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Starlight PDF 2.0 adds image annotation to pen-first PDF markup",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xg54k5/starlight_pdf_200/",
+   "summary": "The ink-focused PDF annotation plugin gets a major release with image annotation support, better annotation compatibility and quality-of-life fixes. Handy if you mark up papers with a stylus.",
+   "date": "2026-10-26",
+   "image": "thumbs/6c6f4510fa55a2b5.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "89ca98da8bae",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Media Hub plugin adds a gallery for vault images, video, audio and PDFs",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xfrlm0/media_hub_a_gallery_for_your_images_videos/",
+   "summary": "A new community plugin gathers a vault's media into a browsable gallery with previews, tags, collections and downloads. It is aimed at people who miss Anytype-style media management.",
+   "date": "2026-10-26",
+   "kind": "reddit"
+  },
+  {
+   "id": "883ef7df3918",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Weekly plugin stats: 15 new plugins, including Masonry and Cool Bases for Bases users",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xfxqp2/obsidian_plugin_stats_weekly_plugin_updates_oct/",
+   "summary": "This week's roundup ranks new plugins by download velocity. Bases-related additions include Masonry and Cool Bases, and Grid Note offers another way to work with long notes.",
+   "date": "2026-10-26",
+   "kind": "reddit"
+  },
+  {
+   "id": "5da1892cfa10",
+   "topic": "obsidian",
+   "source": "Daniel Agrici",
+   "title": "Popular Obsidian second-brain setup reaches v3 with a /save wizard",
+   "url": "https://www.youtube.com/watch?v=tgVUYC3l4UQ",
+   "summary": "A video walks through version 3 of a 15.7k-star Obsidian-based second-brain project and its new save wizard. It is a look at an AI-assisted vault workflow.",
+   "date": "2026-10-22",
+   "image": "thumbs/298447d7aeb00878.webp",
+   "kind": "video"
+  },
+  {
+   "id": "3fc330e58352",
+   "topic": "obsidian",
+   "source": "Md Al Mamun",
+   "title": "Video shows how to connect Codex to an Obsidian vault",
+   "url": "https://www.youtube.com/watch?v=wFvqj5HvZh4",
+   "summary": "A short walkthrough of hooking an AI coding agent up to your notes. Of interest if you are experimenting with agent workflows over a vault.",
+   "date": "2026-10-25",
+   "image": "thumbs/71e4122990baee76.webp",
+   "kind": "video"
+  },
+  {
+   "id": "3e660cf920a7",
+   "topic": "stationery",
+   "source": "The Well-Appointed Desk",
+   "title": "Review: Kobe Hummingbird, a Vanness Pen Shop and Nagasawa Kobe ink collaboration",
+   "url": "https://www.wellappointeddesk.com/2026/10/ink-review-vannes-pen-shop-x-kobe-ink-hummingbird/",
+   "summary": "A $35 collaboration ink from Kobe's Nagasawa team, inspired by Arkansas hummingbird plumage. The Well-Appointed Desk reviews the colour of this Japanese-made ink.",
+   "date": "2026-10-26",
+   "image": "thumbs/93fb62d47e0e9104.webp"
+  },
+  {
+   "id": "08f93372b14c",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Using Hobonichi's thin paper to trace photos for rough sketches",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xelqrm/taking_advantage_of_thin_paper_when_sketching/",
+   "summary": "A Hobonichi user shows how the thin pages let a photo show through for sketching and doodling. It is a practical technique for people who don't draw much.",
+   "date": "2026-10-24",
+   "kind": "reddit"
+  },
+  {
+   "id": "92467a395b5d",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Autumn 'currently inked' lineup of fountain pen and ink combos",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xeqo4m/currently_inked_autumn_edition/",
+   "summary": "A fountain pen fan shares a curated week of seasonal pen and ink pairings and asks for others' favourites. It is a good source of colour ideas.",
+   "date": "2026-10-25",
+   "kind": "reddit"
+  },
+  {
+   "id": "c622b64e3759",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A 2027 Hobonichi dressed up with minimal strawberry stickers",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xem6k2/my_2027/",
+   "summary": "A simple customisation of next year's planner using only mini strawberry stickers. It shows how little decoration you need for a cohesive look.",
+   "date": "2026-10-24",
+   "kind": "reddit"
+  },
+  {
+   "id": "1fb29d14fd49",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "A new orange Pilot Kakuno prompts a hunt for the right ink",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xeu86z/got_myself_a_ink_recs_please/",
+   "summary": "The owner of a fresh Kakuno wants an orange or peach ink and asks for suggestions. The thread is a handy source of ink and pen pairing ideas.",
+   "date": "2026-10-25",
+   "image": "thumbs/1ab0d045fee4eb9c.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "60af7e6ca919",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A Hobonichi Weeks Mega cover made from a dollar-store pencil case for under $5",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xekw38/i_made_a_weeks_mega_cover_for_less_than_5/",
+   "summary": "A DIY cover cut from a pencil case, with a slip-in front and a flap to protect pages in a bag. It is a cheap fix for the limited Mega cover choices.",
+   "date": "2026-10-24",
+   "image": "thumbs/893d33aefdf510b6.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "6184e8d39228",
+   "topic": "stationery",
+   "source": "3柴ママの手帳",
+   "title": "Making a super-simple little notebook by hand",
+   "url": "https://www.youtube.com/watch?v=a5MYtvh0d60",
+   "summary": "A Japanese notebook creator shows a quick DIY mini notebook build in an easygoing, improvised style.",
+   "date": "2026-10-26",
+   "image": "thumbs/a7000fd9c1e0775b.webp",
+   "kind": "video"
+  },
+  {
+   "id": "4f8c422e19fa",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum offers nib adjustment at Maruzen Nihonbashi's autumn fountain pen fair",
+   "url": "https://www.platinum-pen.co.jp/news/13565/",
+   "summary": "Platinum staff held a nib-tuning event at Maruzen's Tokyo fair. It shows the kind of hands-on service Japanese makers offer at retail pen shows.",
+   "title_ja": "丸善 日本橋店（東京都中央区）にて開催の「2026 秋の万年筆フェア」でプラチナ万年筆の ペン先調整イベントを開催いたします。 | プラチナ万年筆",
+   "image": "thumbs/f2c685e7b7efe36b.webp"
+  },
+  {
+   "id": "203642932c12",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A Techo Kaigi starter kit gifted to a digital-only graphic designer",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xdxhxt/giving_my_husband_his_first_techo_kaigi_for_our/",
+   "summary": "A thoughtfully assembled planner kit meant to ease a screen-bound artist back into physical journaling and art mediums.",
+   "date": "2026-10-24",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "6a6b31a73c8d",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Foil washi tape and gem stickers dress up a 2027 Hobonichi cover",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xesxmd/2027/",
+   "summary": "Inspired by other users' washi covers, this setup shows a sparkly take on customising a planner cover.",
+   "date": "2026-10-25",
+   "kind": "reddit",
+   "extra": true
+  }
+ ]
+}
