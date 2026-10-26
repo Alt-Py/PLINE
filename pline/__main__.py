@@ -52,6 +52,10 @@ def cmd_run(args) -> int:
     ok = sum(1 for e in active.values() if e is None)
     log.info("collected %d stories from %d/%d sources", len(items), ok, len(active))
 
+    if args.if_missing and (ROOT / "state" / "editions" / f"{today.isoformat()}.json").exists():
+        log.info("today's edition (%s) is already published; nothing to do", today.isoformat())
+        return 0
+
     shown = load_shown()
     if args.fresh:
         # Rebuild today's edition from scratch, e.g. after adding the Claude key.
@@ -146,6 +150,7 @@ def main(argv=None) -> int:
     r.add_argument("--dry", action="store_true", help="print the shortlist and stop")
     r.add_argument("--no-llm", action="store_true", help="skip Claude even if a key is set")
     r.add_argument("--fresh", action="store_true", help="rebuild today's edition from scratch")
+    r.add_argument("--if-missing", action="store_true", help="do nothing if today's edition already exists (scheduled retries)")
     sub.add_parser("render", help="re-render every stored edition (no network)")
     sub.add_parser("validate", help="check that every source still answers")
     args = p.parse_args(argv)
