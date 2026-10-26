@@ -90,6 +90,49 @@ sources:
     weight: 0.5
     optional: true
 
+  # Journaling: tips and community examples (kept in the stationery section)
+  - name: r/Hobonichi
+    type: reddit
+    subreddit: Hobonichi
+    min_score: 25
+    topics: [stationery]
+    weight: 0.7
+    optional: true
+  - name: r/midori
+    type: reddit
+    subreddit: midori
+    min_score: 15
+    topics: [stationery]
+    weight: 0.6
+    optional: true
+  - name: r/journaling
+    type: reddit
+    subreddit: journaling
+    min_score: 60
+    topics: [stationery]
+    weight: 0.5
+    optional: true
+  - name: r/bulletjournal
+    type: reddit
+    subreddit: bulletjournal
+    min_score: 100
+    topics: [stationery]
+    weight: 0.5
+    optional: true
+  - name: YouTube · journaling
+    type: youtube_search
+    query: "hobonichi OR \"traveler's notebook\" journal with me OR journaling tips"
+    topics: [stationery]
+    weight: 0.6
+    optional: true
+  - name: YouTube · 手帳
+    type: youtube_search
+    query: "ほぼ日手帳 OR トラベラーズノート 使い方 OR 手帳タイム"
+    lang: ja
+    topics: [stationery]
+    weight: 0.6
+    optional: true
+
   # ── VFX industry ─────────────────────────────────────────
   - name: befores & afters
     type: rss

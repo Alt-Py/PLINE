@@ -61,7 +61,12 @@ The page has four sections:
 - obsidian: Obsidian app releases, notable community plugins/themes, company news.
 - stationery: Japanese stationery — fountain pens, inks, paper, notebooks and pens from Japanese makers \
 (Sailor, Pilot, Platinum, Mitsubishi Pencil/uni, Zebra, Pentel, Tombow, Kokuyo, Midori, Traveler's Company…). \
-Reviews or news about Japanese products from English blogs count. Non-Japanese brands only if very notable.
+Reviews or news about Japanese products from English blogs count. Non-Japanese brands only if very notable. \
+This section also covers JOURNALING: practical tips and techniques (layouts, habits, lettering, ink and paper \
+pairings, how people use a Hobonichi Techo, Traveler's Notebook, Midori MD or bullet journal) and inspiring \
+community examples (a well-photographed spread, a year-in-review flip-through, a clever setup). Aim for a mix: \
+roughly half news and reviews, half journaling tips and examples. Prefer posts that teach something or show \
+real pages; skip "which planner should I buy" questions and plain hauls.
 - vfx: the VFX and animation industry — studios, shot breakdowns, people, business, labour, awards.
 - pipeline: Houdini, RenderMan, USD/OpenUSD, MaterialX and the wider DCC/rendering tool world \
 (renderers, Nuke, Maya, Katana, Blender…), plus graphics research relevant to production rendering.
