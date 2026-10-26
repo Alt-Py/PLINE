@@ -84,10 +84,11 @@ with nothing specific, and low-effort forum posts. Prefer substance.
 in your own words (max ~45 words) that says what is new and, when useful, why it matters to a \
 production/rendering person. Never copy sentences from the excerpts.
 4. For Japanese-language candidates, put the original Japanese title in "title_ja".
-5. Within each section, order by importance (the first one becomes the large lead card). Return up to \
+5. Keep sources varied: at most 3 stories from the same source among a section's first {shown}.
+6. Within each section, order by importance (the first one becomes the large lead card). Return up to \
 {max_per_topic} per section: the first {shown} are shown at once and the rest sit behind a "Show more" button, \
 so keep weaker but still relevant stories for the end rather than dropping them.
-6. Write a "headline": one sentence (max 25 words) naming the 2–3 biggest stories of the day across sections.
+7. Write a "headline": one sentence (max 25 words) naming the 2–3 biggest stories of the day across sections.
 
 Reply with JSON only, no prose, in exactly this shape:
 {{"headline": "...", "stories": [{{"topic": "obsidian|stationery|vfx|pipeline", "ids": [3, 17], \
@@ -211,3 +212,23 @@ def mark_extras(stories: list[Story], shown: int) -> None:
     for st in stories:
         seen[st.topic] = seen.get(st.topic, 0) + 1
         st.extra = seen[st.topic] > shown
+
+
+def diversify(stories: list[Story], per_source: int, shown: int) -> list[Story]:
+    """Within each section, keep at most `per_source` stories from one source among the
+    first `shown`; the rest move behind "Show more" in their original order."""
+    by_topic: dict[str, list[Story]] = {}
+    for st in stories:
+        by_topic.setdefault(st.topic, []).append(st)
+    out: list[Story] = []
+    for topic, group in by_topic.items():
+        front, back, count = [], [], {}
+        for st in group:
+            key = st.source.lower()
+            if len(front) < shown and count.get(key, 0) < per_source:
+                count[key] = count.get(key, 0) + 1
+                front.append(st)
+            else:
+                back.append(st)
+        out.extend(front + back)
+    return out

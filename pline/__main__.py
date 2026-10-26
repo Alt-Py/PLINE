@@ -17,7 +17,7 @@ from .enrich import enrich, image_for
 from .feedback import build_preferences, fetch_votes, settings as feedback_settings
 from .net import Http
 from .render import render_all
-from .select import mark_extras, plain, shortlist, with_claude
+from .select import diversify, mark_extras, plain, shortlist, with_claude
 from .state import THUMBS, list_editions, load_shown, prune, save_edition, save_shown
 from .thumbs import fetch_thumbnail
 
@@ -72,6 +72,7 @@ def cmd_run(args) -> int:
     result = None if args.no_llm else with_claude(cands, topics, cfg["llm"], per_topic, prefs, ed_cfg["max_per_topic"])
     writer = cfg["llm"].get("model") if result else None
     headline, stories = result or plain(cands, topics, per_topic)
+    stories = diversify(stories, ed_cfg.get("per_source", 3), ed_cfg["max_per_topic"])
     mark_extras(stories, ed_cfg["max_per_topic"])
 
     for st in stories:

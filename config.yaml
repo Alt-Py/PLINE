@@ -9,6 +9,7 @@ edition:
   window_days: 10      # stories older than this are dropped (except "current release" references)
   max_per_topic: 8      # shown at once
   extra_per_topic: 8    # kept in reserve behind each section's "Show more" button
+  per_source: 3         # at most this many visible stories from one source per section
   keep_days: 30        # editions, and the thumbnails they use, are pruned after this
 
 llm:

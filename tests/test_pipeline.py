@@ -374,3 +374,18 @@ class SavedTests(unittest.TestCase):
             self.assertIn('id="savedGrid"', saved)
             self.assertNotIn('id="hideRead"', saved)
             self.assertTrue((tmp / "docs" / "saved.json").exists())
+
+
+class DiversityTests(unittest.TestCase):
+    def test_one_source_cannot_fill_a_section(self):
+        from pline.model import Story
+        from pline.select import diversify, mark_extras
+
+        st = [Story(id=f"h{i}", topic="stationery", source="r/hobonichi", title=f"h{i}", url=f"https://h/{i}") for i in range(6)]
+        st += [Story(id="s1", topic="stationery", source="Sailor", title="s", url="https://s/1"),
+               Story(id="p1", topic="stationery", source="Pilot", title="p", url="https://p/1")]
+        out = diversify(st, per_source=3, shown=4)
+        mark_extras(out, 4)
+        visible = [s.id for s in out if not s.extra]
+        self.assertEqual(visible, ["h0", "h1", "h2", "s1"])
+        self.assertEqual([s.id for s in out if s.extra], ["h3", "h4", "h5", "p1"])

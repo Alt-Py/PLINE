@@ -304,9 +304,7 @@ def collect_source(http: Http, src: dict) -> tuple[list[Item], str | None]:
             body, _ = http.get_bytes(src["url"], accept="application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.5")
             items = parse_feed(body, src)
         elif src["type"] == "youtube_channel":
-            url = f"https://www.youtube.com/feeds/videos.xml?channel_id={src['channel_id']}"
-            body, _ = http.get_bytes(url)
-            items = [it for it in parse_feed(body, {**src, "kind": "video"}) if "/shorts/" not in it.url]
+            items = youtube_channel(http, src)
         elif src["type"] == "youtube_search":
             items = youtube_search(http, src) if os.environ.get("YOUTUBE_API_KEY") else youtube_keyless(http, src)
         elif src["type"] == "reddit":
@@ -455,3 +453,34 @@ def youtube_keyless(http: Http, src: dict) -> list[Item]:
         _yt_state["good"] = (kind, host)
         return items[: src.get("max", 10)]
     raise RuntimeError("no public YouTube server answered: " + ", ".join(tried[:6]))
+
+
+def youtube_channel(http: Http, src: dict) -> list[Item]:
+    """A channel's latest videos: YouTube's own feed, or a public mirror when the feed is down."""
+    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={src['channel_id']}"
+    try:
+        body, _ = http.get_bytes(url)
+        return [it for it in parse_feed(body, {**src, "kind": "video"}) if "/shorts/" not in it.url]
+    except Exception as exc:
+        log.info("%s: YouTube feed unavailable (%s), trying public mirrors", src["name"], type(exc).__name__)
+    cid, days, tried = src["channel_id"], src.get("days", 14), []
+    for kind, host in [("invidious", h) for h in _invidious_hosts(http)] + [("piped", h) for h in PIPED_HOSTS]:
+        try:
+            if kind == "invidious":
+                r = http.session.get(f"{host}/api/v1/channels/{cid}/videos", timeout=15)
+                data = r.json() if r.ok and "json" in r.headers.get("content-type", "") else None
+                videos = data.get("videos") if isinstance(data, dict) else data if isinstance(data, list) else None
+                items = parse_invidious([{**v, "type": v.get("type", "video")} for v in videos], src, days) if videos is not None else None
+            else:
+                r = http.session.get(f"{host}/channel/{cid}", timeout=15)
+                data = r.json() if r.ok and "json" in r.headers.get("content-type", "") else None
+                items = parse_piped(data.get("relatedStreams", []), src, days) if isinstance(data, dict) else None
+        except Exception as exc:
+            tried.append(f"{host.split('//')[-1]} {type(exc).__name__}")
+            continue
+        if items is not None:
+            for it in items:
+                it.source = src["name"]
+            return items
+        tried.append(f"{host.split('//')[-1]} HTTP {r.status_code}")
+    raise RuntimeError("YouTube feed down and no mirror answered: " + ", ".join(tried[:5]))
