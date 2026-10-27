@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Pline</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M22 50V14h12a11 11 0 0 1 0 22h-6' fill='none' stroke='%23f5f5f7' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;600&display=swap">
+<style>
+/* Apple-style full-bleed tiles in one dark palette: true-black and near-black bands alternate,
+   cards sit one step lighter, a single blue carries every action. */
+:root {
+  color-scheme: dark;
+  --bg: #000000;
+  --band: #0e0e0f;          /* alternate tile */
+  --band-2: #161617;        /* third tile tone */
+  --card: #1c1c1e;
+  --card-2: #232325;
+  --ink: #f5f5f7;
+  --body: #c7c7cc;          /* summaries: softer than headlines for long reads */
+  --muted: #8e8e93;
+  --hairline: #2c2c2e;
+  --accent: #2997ff;
+  --accent-focus: #4aa8ff;
+  --like: #2997ff;
+  --less: #ff9f0a;
+  --chip: rgba(255, 255, 255, 0.10);
+  --frost: rgba(16, 16, 18, 0.78);
+  --img-bg: #2a2a2c;
+  --font-display: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-text: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-jp: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-text); font-size: 17px; line-height: 1.47; letter-spacing: -0.374px;
+  -webkit-font-smoothing: antialiased; padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); text-decoration: none; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; border-radius: 8px; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.gnav { background: var(--bg); padding-top: env(safe-area-inset-top, 0px); border-bottom: 1px solid var(--hairline); }
+.gnav .wrap { height: 44px; display: flex; align-items: center; gap: 24px; }
+.brand { font-family: var(--font-display); font-weight: 600; font-size: 17px; letter-spacing: -0.2px; color: var(--ink); }
+.gnav nav { display: flex; gap: 20px; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
+.gnav nav::-webkit-scrollbar { display: none; }
+.gnav nav a { color: var(--ink); opacity: .75; font-size: 12px; letter-spacing: -0.12px; white-space: nowrap; }
+.gnav nav a:hover { opacity: 1; }
+
+.subnav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--frost); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--hairline); }
+.subnav .wrap { min-height: 52px; display: flex; align-items: center; gap: 12px; padding-block: 8px; }
+.subnav h2 { margin: 0; font-family: var(--font-display); font-size: 21px; font-weight: 600; letter-spacing: 0.231px; line-height: 1.19; white-space: nowrap; }
+.days { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+.days::-webkit-scrollbar { display: none; }
+.pill { font: inherit; font-size: 14px; letter-spacing: -0.224px; line-height: 1; border: 0; border-radius: 9999px; padding: 10px 14px; cursor: pointer; background: var(--chip); color: var(--ink); white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; min-height: 34px; transition: transform .12s ease; }
+.pill:active { transform: scale(0.95); }
+.pill[aria-current="page"], .pill[aria-pressed="true"], .pill.primary { background: var(--accent); color: #fff; }
+.pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--less); }
+.pill .dot[hidden] { display: none; }
+
+.hero { background: var(--bg); text-align: center; }
+.hero .wrap { padding-block: 64px 48px; display: grid; gap: 12px; justify-items: center; }
+.eyebrow { font-size: 14px; letter-spacing: -0.224px; color: var(--muted); font-weight: 600; }
+.hero h1 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 56px; line-height: 1.07; letter-spacing: -0.28px; text-wrap: balance; }
+.hero .lead { margin: 0; font-size: 21px; line-height: 1.38; color: var(--body); max-width: 42ch; text-wrap: balance; }
+.stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 12px; }
+.stat { display: inline-flex; align-items: baseline; gap: 6px; background: var(--card); border-radius: 9999px; padding: 8px 16px; font-size: 14px; color: var(--body); font-variant-numeric: tabular-nums; }
+.stat b { font-weight: 600; color: var(--ink); }
+
+.tile { --t-bg: var(--bg); --c-bg: var(--card); background: var(--t-bg); scroll-margin-top: 60px; }
+.tile.parchment { --t-bg: var(--band); --c-bg: var(--card); }
+.tile.dark { --t-bg: var(--band-2); --c-bg: var(--card-2); }
+.tile > .wrap { padding-block: 72px; display: grid; gap: 32px; }
+.tile-head { display: grid; gap: 6px; text-align: center; justify-items: center; }
+.tile-head h2 { margin: 0; font-family: var(--font-display); font-size: 40px; line-height: 1.1; font-weight: 600; text-wrap: balance; }
+.tile-head .jp { font-family: var(--font-jp); font-size: 14px; color: var(--muted); letter-spacing: 0.2em; }
+.tile-head p { margin: 0; font-size: 21px; line-height: 1.38; color: var(--body); }
+.tile-head .count { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 20px; }
+.card { background: var(--c-bg); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; transition: opacity .2s ease; }
+.card .media { display: block; position: relative; aspect-ratio: 16 / 10; background: var(--img-bg); overflow: hidden; }
+.card .media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.card .media:hover img { transform: scale(1.03); }
+.card .media .play { position: absolute; left: 14px; bottom: 14px; width: 44px; height: 44px; border-radius: 50%; background: rgba(0,0,0,.6); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); display: grid; place-items: center; }
+.body { padding: 20px 24px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
+.card.lead { grid-column: 1 / -1; }
+.card.lead .body { padding: 28px 32px 24px; justify-content: center; }
+.card.lead h3 { font-family: var(--font-display); font-size: 28px; line-height: 1.14; letter-spacing: -0.2px; }
+.card.lead .sum { font-size: 17px; line-height: 1.47; max-width: 62ch; }
+@media (min-width: 834px) {
+  .card.lead.has-img { flex-direction: row; }
+  .card.lead.has-img .media { flex: 0 0 56%; aspect-ratio: auto; min-height: 340px; }
+}
+.tile.stationery .card .media { aspect-ratio: 4 / 3; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 12px; letter-spacing: -0.12px; color: var(--muted); }
+.meta .src { font-weight: 600; color: var(--ink); }
+.badge { background: var(--accent); color: #fff; border-radius: 9999px; padding: 3px 8px; font-weight: 600; font-size: 11px; letter-spacing: 0; }
+.kind { border: 1px solid var(--hairline); color: var(--body); border-radius: 9999px; padding: 2px 8px; font-size: 11px; letter-spacing: 0; }
+.card h3 { margin: 0; font-size: 17px; line-height: 1.29; font-weight: 600; letter-spacing: -0.374px; text-wrap: pretty; }
+.card h3 a { color: var(--ink); }
+.card h3 a:hover { color: var(--accent); }
+.jp-title { font-family: var(--font-jp); font-size: 13px; color: var(--muted); letter-spacing: 0; line-height: 1.5; }
+.sum { margin: 0; font-size: 15px; line-height: 1.5; letter-spacing: -0.24px; color: var(--body); overflow-wrap: anywhere; }
+.foot { margin-top: auto; padding-top: 6px; display: flex; align-items: center; gap: 12px; }
+.links { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; letter-spacing: -0.224px; flex: 1; min-width: 0; }
+.links .also { color: var(--muted); }
+.votes { display: flex; gap: 6px; flex: none; }
+.vote { width: 36px; height: 36px; border-radius: 50%; border: 0; background: var(--chip); color: var(--body); display: grid; place-items: center; cursor: pointer; transition: transform .12s ease, background .15s ease, color .15s ease; }
+.vote:active { transform: scale(0.92); }
+.vote svg { width: 18px; height: 18px; }
+.vote.up[aria-pressed="true"] { background: var(--like); color: #fff; }
+.vote.down[aria-pressed="true"] { background: var(--less); color: #000; }
+.card.read { opacity: .5; }
+.card.read:hover, .card.read:focus-within { opacity: .9; }
+.hide-read .card.read { display: none; }
+[hidden] { display: none !important; }
+.more-row { display: flex; justify-content: center; }
+.pill.more { padding: 12px 22px; min-height: 44px; font-size: 15px; }
+.card.extra.revealed { animation: rise .35s ease both; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.allread { display: none; text-align: center; color: var(--muted); font-size: 14px; margin: 0; }
+.hide-read .grid.all-read + .allread { display: block; }
+
+.pager { background: var(--bg); }
+.pager .wrap { padding-block: 32px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.empty { background: var(--bg); text-align: center; }
+.empty .wrap { padding-block: 80px; display: grid; gap: 10px; justify-items: center; }
+.empty h2 { margin: 0; font-family: var(--font-display); font-size: 34px; font-weight: 600; }
+.empty p { margin: 0; color: var(--body); max-width: 46ch; }
+footer { background: var(--bg); color: var(--muted); font-size: 12px; letter-spacing: -0.12px; }
+footer .wrap { padding-block: 32px 56px; display: grid; gap: 8px; border-top: 1px solid var(--hairline); }
+footer p { margin: 0; line-height: 1.6; max-width: 90ch; }
+footer a { color: var(--muted); text-decoration: underline; }
+
+/* Likes panel */
+dialog { border: 0; padding: 0; border-radius: 18px; background: var(--card); color: var(--ink); width: min(520px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); overflow: auto; }
+dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.sheet { padding: 28px; display: grid; gap: 14px; }
+.sheet h2 { margin: 0; font-family: var(--font-display); font-size: 24px; font-weight: 600; }
+.sheet p, .sheet li { margin: 0; font-size: 15px; line-height: 1.5; color: var(--body); }
+.sheet ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.sheet b { color: var(--ink); font-weight: 600; }
+.sheet .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.sheet input { flex: 1; min-width: 0; font: inherit; font-size: 15px; color: var(--ink); background: var(--bg); border: 1px solid var(--hairline); border-radius: 9999px; padding: 10px 16px; min-height: 44px; }
+.status { font-size: 14px; color: var(--muted); min-height: 1.4em; }
+.status.ok { color: #30d158; }
+.status.err { color: #ff6961; }
+
+@media (max-width: 734px) {
+  .hero h1 { font-size: 34px; }
+  .hero .lead, .tile-head p { font-size: 17px; }
+  .tile-head h2 { font-size: 28px; }
+  .tile > .wrap { padding-block: 48px; gap: 24px; }
+  .hero .wrap { padding-block: 40px 32px; }
+  .card.lead .body { padding: 20px 24px 20px; }
+  .card.lead h3 { font-size: 21px; }
+  .subnav h2 { display: none; }
+  .likes-label { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Save + Saved page */
+.vote.save[aria-pressed="true"] { background: var(--ink); color: #000; }
+.vote.save[aria-pressed="true"] .ic-off, .vote.save[aria-pressed="false"] .ic-on { display: none; }
+.pill .num { font-variant-numeric: tabular-nums; color: var(--muted); }
+.pill[aria-current="page"] .num { color: #fff; }
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.filters .pill[aria-pressed="true"] { background: var(--ink); color: #000; }
+.saved-at { color: var(--muted); }
+.card.unsaved { opacity: .45; }
+.empty-saved { text-align: center; color: var(--body); display: grid; gap: 8px; justify-items: center; padding-block: 24px 8px; }
+.empty-saved svg { width: 28px; height: 28px; color: var(--muted); }
+</style>
+</head>
+<body data-repo="Alt-Py/PLINE" data-issue="1" data-page="edition">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2.5 2.5 0 0 1 2.5 2.5V9h5.2a2 2 0 0 1 2 2.3l-1.2 8A2 2 0 0 1 17.5 21H7"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M17 14V3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-3Zm0 0-4 7a2.5 2.5 0 0 1-2.5-2.5V15H5.3a2 2 0 0 1-2-2.3l1.2-8A2 2 0 0 1 6.5 3H17"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="#fff" d="M8 5.5v13a1 1 0 0 0 1.5.9l10.4-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5Z"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1v16l-6.5-4.2-6.5 4.2v-16a1 1 0 0 1 1-1Z"/></symbol>
+  <symbol id="i-saved" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 3h11A1.5 1.5 0 0 1 19 4.5V21l-7-4.5L5 21V4.5A1.5 1.5 0 0 1 6.5 3Z"/></symbol>
+</svg>
+
+<header class="gnav">
+  <div class="wrap">
+    <a class="brand" href="./">Pline</a>
+    <nav aria-label="Topics">
+<a href="#vfx">VFX industry</a><a href="#pipeline">Houdini · USD</a><a href="#obsidian">Obsidian</a><a href="#stationery">Japanese stationery</a>    </nav>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="wrap">
+    <h2>Today</h2>
+    <nav class="days" aria-label="Editions">
+      <a class="pill" href="./" aria-current="page">Today</a>
+      <a class="pill" href="2026-10-27.html">Tue 27</a>
+      <a class="pill" href="2026-10-26.html">Mon 26</a>
+      <a class="pill" href="2026-10-25.html">Sun 25</a>
+      <a class="pill" href="2026-10-24.html">Sat 24</a>
+      <a class="pill" href="2026-10-23.html">Fri 23</a>
+      <a class="pill" href="2026-10-22.html">Thu 22</a>
+    </nav>
+    <a class="pill" href="saved.html" id="savedLink" aria-label="Saved stories"><svg width="16" height="16" aria-hidden="true"><use href="#i-saved"/></svg><span class="likes-label">Saved</span><span class="num" id="savedCount"></span></a>
+    <button class="pill" id="likesBtn" type="button" aria-haspopup="dialog" aria-label="Likes and sync"><svg width="16" height="16" aria-hidden="true"><use href="#i-up"/></svg><span class="likes-label">Likes</span><span class="dot" id="pendingDot" hidden></span></button>
+<button class="pill" id="hideRead" type="button" aria-pressed="false">Hide read</button>  </div>
+</div>
+
+<main>
+  <section class="hero"><div class="wrap">
+    <div class="eyebrow">Good morning, Thomas</div>
+    <h1>Wednesday 28 October</h1>
+<p class="lead">Obsidian 1.15 brings PDF export to mobile, Framestore details Project Hail Mary virtual production, and Pixar shows Katana, Nuke and USD on Toy Story 5.</p>    <div class="stats">
+      <a class="stat" href="#vfx"><b>8</b>VFX industry</a>
+      <a class="stat" href="#pipeline"><b>8</b>Houdini, RenderMan &amp; USD</a>
+      <a class="stat" href="#obsidian"><b>8</b>Obsidian</a>
+      <a class="stat" href="#stationery"><b>8</b>Japanese stationery</a>
+    </div>
+  </div></section>
+
+  <section class="tile light vfx" id="vfx"><div class="wrap">
+    <div class="tile-head">
+      <h2>VFX industry</h2>
+      <p>Studios, shows and the business.</p>
+      <div class="count">8 stories · 3 more in reserve</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="9286863d907b" data-topic="vfx" data-source="fxguide" data-title="Framestore&#39;s virtual production team put cameras and lighting in Greig Fraser&#39;s hands on Project Hail Mary">
+        <a class="media" href="https://www.fxguide.com/fxpodcasts/project-hail-mary-fps-giving-greig-fraser-the-controls/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/424e58cc44db0f2e.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">fxguide</span><span>2 days ago</span>
+          </div>
+          <h3><a href="https://www.fxguide.com/fxpodcasts/project-hail-mary-fps-giving-greig-fraser-the-controls/" target="_blank" rel="noopener">Framestore&#39;s virtual production team put cameras and lighting in Greig Fraser&#39;s hands on Project Hail Mary</a></h3>
+<p class="sum">Framestore Pre-production Services built virtual cameras, lighting and live composites for the cinematographer. The article and podcast cover what a year of embedded work looked like and how real-time tools sit alongside conventional pipelines.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.fxguide.com/fxpodcasts/project-hail-mary-fps-giving-greig-fraser-the-controls/" target="_blank" rel="noopener">Read on fxguide ›</a>
+<a class="also" href="https://www.youtube.com/watch?v=Aa7UvqgMDKM" target="_blank" rel="noopener">Also on fxguide (YouTube)</a><a class="also" href="https://www.youtube.com/watch?v=dfQPgpVH8pM" target="_blank" rel="noopener">Also on fxguide (YouTube)</a>            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="cb0f8cef393b" data-topic="vfx" data-source="Art of VFX" data-title="Image Engine&#39;s 154 shots on The Mandalorian and Grogu">
+        <a class="media" href="https://www.artofvfx.com/the-mandalorian-and-grogu-behind-the-visual-effects-created-by-image-engine/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/95524d64e2496432.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Art of VFX</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.artofvfx.com/the-mandalorian-and-grogu-behind-the-visual-effects-created-by-image-engine/" target="_blank" rel="noopener">Image Engine&#39;s 154 shots on The Mandalorian and Grogu</a></h3>
+<p class="sum">A breakdown of the studio&#39;s creature, environment and action work for the film, a look at how a mid-sized house handles a large Star Wars share.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.artofvfx.com/the-mandalorian-and-grogu-behind-the-visual-effects-created-by-image-engine/" target="_blank" rel="noopener">Read on Art of VFX ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="1297db3ba84f" data-topic="vfx" data-source="CG Channel" data-title="All the Lanterns VFX breakdowns collected in one place">
+        <div class="body">
+          <div class="meta">
+            <span class="src">CG Channel</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.cgchannel.com/2026/10/check-out-vfx-breakdowns-for-lanterns/" target="_blank" rel="noopener">All the Lanterns VFX breakdowns collected in one place</a></h3>
+<p class="sum">A roundup of breakdown reels for the DC series, from CoSA VFX&#39;s invisible work to Accenture Song&#39;s CG constructs.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.cgchannel.com/2026/10/check-out-vfx-breakdowns-for-lanterns/" target="_blank" rel="noopener">Read on CG Channel ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="0f0f6be8a3fe" data-topic="vfx" data-source="Art of VFX" data-title="Resident Evil&#39;s production VFX supervisor on the new adaptation">
+        <a class="media" href="https://www.artofvfx.com/resident-evil-alessandro-ongaro-production-vfx-supervisor/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/4d437a1ca204e8fe.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Art of VFX</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.artofvfx.com/resident-evil-alessandro-ongaro-production-vfx-supervisor/" target="_blank" rel="noopener">Resident Evil&#39;s production VFX supervisor on the new adaptation</a></h3>
+<p class="sum">Alessandro Ongaro explains how he got on the film and the challenges of its visuals, after his earlier work on Captain America: Brave New World.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.artofvfx.com/resident-evil-alessandro-ongaro-production-vfx-supervisor/" target="_blank" rel="noopener">Read on Art of VFX ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="4bd1b68e3f91" data-topic="vfx" data-source="Cartoon Brew" data-title="Laika&#39;s Wildwood opens to $12.2M, with good audience scores">
+        <a class="media" href="https://www.cartoonbrew.com/feature-film/wildwood-opening-weekend-box-office-laika-268464.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/95d538e608ded55e.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Cartoon Brew</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.cartoonbrew.com/feature-film/wildwood-opening-weekend-box-office-laika-268464.html" target="_blank" rel="noopener">Laika&#39;s Wildwood opens to $12.2M, with good audience scores</a></h3>
+<p class="sum">The stop-motion studio&#39;s latest more than doubled Missing Link&#39;s opening and shows early signs of staying power, as the studio&#39;s record and international rollout add context.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.cartoonbrew.com/feature-film/wildwood-opening-weekend-box-office-laika-268464.html" target="_blank" rel="noopener">Read on Cartoon Brew ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="bc7b83caf5c9" data-topic="vfx" data-source="Cartoon Brew" data-title="Ketchup starts its Oscar campaign for Coyote Vs. Acme after Academy approval">
+        <a class="media" href="https://www.cartoonbrew.com/awards/coyote-vs-acme-oscars-eligable-268527.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/7eb7ff30ed847024.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Cartoon Brew</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.cartoonbrew.com/awards/coyote-vs-acme-oscars-eligable-268527.html" target="_blank" rel="noopener">Ketchup starts its Oscar campaign for Coyote Vs. Acme after Academy approval</a></h3>
+<p class="sum">Once shelved by Warner Bros., the hybrid film is now eligible for the animated feature race. An awards push could embarrass the studio that buried it.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.cartoonbrew.com/awards/coyote-vs-acme-oscars-eligable-268527.html" target="_blank" rel="noopener">Read on Cartoon Brew ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="2d430fc8dbc7" data-topic="vfx" data-source="Cartoon Brew" data-title="Animation community mourns voice actor Eric Bauza, dead at 46">
+        <a class="media" href="https://www.cartoonbrew.com/rip/animation-industry-pays-tribute-to-eric-bauza-268488.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/956dea833f2104ce.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Cartoon Brew</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.cartoonbrew.com/rip/animation-industry-pays-tribute-to-eric-bauza-268488.html" target="_blank" rel="noopener">Animation community mourns voice actor Eric Bauza, dead at 46</a></h3>
+<p class="sum">Friends and collaborators remember him as a versatile performer and generous advocate for animation. The week&#39;s news round-up also covers Wildwood&#39;s debut and the 40th anniversary of When The Wind Blows.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.cartoonbrew.com/rip/animation-industry-pays-tribute-to-eric-bauza-268488.html" target="_blank" rel="noopener">Read on Cartoon Brew ›</a>
+<a class="also" href="https://www.cartoonbrew.com/newsletter/wildwood-debuts-when-the-wind-blows-turns-40-remembering-eric-bauza-268513.html" target="_blank" rel="noopener">Also on Cartoon Brew</a>            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="f7a6e8fc5cde" data-topic="vfx" data-source="befores &amp; afters" data-title="How the Dykstraflex motion-control rig changed VFX on Star Wars">
+        <a class="media" href="https://www.youtube.com/watch?v=CdgKzgcjzoY" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/ca054c92715abe96.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">befores &amp; afters</span><span>6 days ago</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=CdgKzgcjzoY" target="_blank" rel="noopener">How the Dykstraflex motion-control rig changed VFX on Star Wars</a></h3>
+<p class="sum">A video looks back at the camera system built for A New Hope. It is a good history lesson for anyone interested in the roots of repeatable VFX photography.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=CdgKzgcjzoY" target="_blank" rel="noopener">Watch on befores &amp; afters ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="c4d6befb88ae" data-topic="vfx" data-source="r/vfx" data-title="Artist iterates on a Barad-dûr bridge shot after community feedback">
+        <a class="media" href="https://www.reddit.com/r/vfx/comments/1xf392p/barad_dur_entrance_bridge_segment_feedback/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/74372cc7950ff5b5.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/vfx</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/vfx/comments/1xf392p/barad_dur_entrance_bridge_segment_feedback/" target="_blank" rel="noopener">Artist iterates on a Barad-dûr bridge shot after community feedback</a></h3>
+<p class="sum">A personal VFX project returns with colour correction, lightning sequences and extra volumetrics after critique on darks and contrast. It shows the feedback loop at work.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/vfx/comments/1xf392p/barad_dur_entrance_bridge_segment_feedback/" target="_blank" rel="noopener">Read on r/vfx ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="a153cbd4137a" data-topic="vfx" data-source="Cartoon Brew" data-title="Animation Showcase 2026 shorts collection streams free to industry professionals">
+        <a class="media" href="https://www.cartoonbrew.com/shorts/animation-showcase-2026-shorts-collection-268495.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/d26626d582beef9d.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Cartoon Brew</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.cartoonbrew.com/shorts/animation-showcase-2026-shorts-collection-268495.html" target="_blank" rel="noopener">Animation Showcase 2026 shorts collection streams free to industry professionals</a></h3>
+<p class="sum">Fifteen shorts plus curated selections from Miyu and the National Film Board of Canada are now available to watch.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.cartoonbrew.com/shorts/animation-showcase-2026-shorts-collection-268495.html" target="_blank" rel="noopener">Read on Cartoon Brew ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="a279378fe3c5" data-topic="vfx" data-source="Cartoon Brew" data-title="Oscar short contender What We Leave Behind: hand-drawn story of trauma and healing">
+        <a class="media" href="https://www.cartoonbrew.com/awards/what-we-leave-behind-alexandra-myotte-jean-sebastien-hamel-268476.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/95ad3f78e36018c2.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Cartoon Brew</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.cartoonbrew.com/awards/what-we-leave-behind-alexandra-myotte-jean-sebastien-hamel-268476.html" target="_blank" rel="noopener">Oscar short contender What We Leave Behind: hand-drawn story of trauma and healing</a></h3>
+<p class="sum">The directors discuss their hand-drawn film about a man returning to his childhood hockey rink and the difficult path toward healing.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.cartoonbrew.com/awards/what-we-leave-behind-alexandra-myotte-jean-sebastien-hamel-268476.html" target="_blank" rel="noopener">Read on Cartoon Brew ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="more-row"><button class="pill more" type="button" aria-expanded="false">Show 3 more stories</button></div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+  <section class="tile dark pipeline" id="pipeline"><div class="wrap">
+    <div class="tile-head">
+      <h2>Houdini, RenderMan &amp; USD</h2>
+      <p>The tools in the pipeline.</p>
+      <div class="count">8 stories</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="6c52dffc62a8" data-topic="pipeline" data-source="befores &amp; afters" data-title="Foundry video shows Pixar&#39;s use of Katana, Nuke and USD on Toy Story 5">
+        <a class="media" href="https://beforesandafters.com/2026/10/28/new-foundry-video-looks-at-use-of-katana-nuke-and-usd-by-pixar-in-toy-story-5/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/998038ef7ccc9625.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">befores &amp; afters</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://beforesandafters.com/2026/10/28/new-foundry-video-looks-at-use-of-katana-nuke-and-usd-by-pixar-in-toy-story-5/" target="_blank" rel="noopener">Foundry video shows Pixar&#39;s use of Katana, Nuke and USD on Toy Story 5</a></h3>
+<p class="sum">VFX supervisor Thomas Jordan discusses how Pixar uses Foundry&#39;s lighting and compositing tools together with USD. It is a rare production-level view of the pipeline behind a feature animation.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://beforesandafters.com/2026/10/28/new-foundry-video-looks-at-use-of-katana-nuke-and-usd-by-pixar-in-toy-story-5/" target="_blank" rel="noopener">Read on befores &amp; afters ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="e971d94083f4" data-topic="pipeline" data-source="r/GraphicsProgramming" data-title="Spectral surface-field renderer runs on an iPhone">
+        <a class="media" href="https://www.reddit.com/r/GraphicsProgramming/comments/1xfgjxe/spectral_surfacefield_renderer_on_the_iphone/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/420e1523361bf9b6.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/GraphicsProgramming</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/GraphicsProgramming/comments/1xfgjxe/spectral_surfacefield_renderer_on_the_iphone/" target="_blank" rel="noopener">Spectral surface-field renderer runs on an iPhone</a></h3>
+<p class="sum">An experimental renderer stores light leaving surface patches by direction and wavelength, then passes it between patches to build bounced lighting. It is a neat take on radiosity-style global illumination with spectral output.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/GraphicsProgramming/comments/1xfgjxe/spectral_surfacefield_renderer_on_the_iphone/" target="_blank" rel="noopener">Read on r/GraphicsProgramming ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="ba39f8166827" data-topic="pipeline" data-source="r/Houdini" data-title="OpenCL fractal generator in Houdini, with a tutorial">
+        <a class="media" href="https://www.reddit.com/r/Houdini/comments/1xeyvsv/fractal_generator_with_opencl/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/8cd2e9561ef579b5.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/Houdini</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/Houdini/comments/1xeyvsv/fractal_generator_with_opencl/" target="_blank" rel="noopener">OpenCL fractal generator in Houdini, with a tutorial</a></h3>
+<p class="sum">An artist ray-marches fractals from random positions in all directions inside Houdini using OpenCL, and walks through the build on YouTube.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/Houdini/comments/1xeyvsv/fractal_generator_with_opencl/" target="_blank" rel="noopener">Read on r/Houdini ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="28cd6e15899b" data-topic="pipeline" data-source="CG Channel" data-title="Material Maker 1.8 adds trim sheet export">
+        <div class="body">
+          <div class="meta">
+            <span class="src">CG Channel</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.cgchannel.com/2026/10/open-source-material-authoring-software-material-maker-1-8-is-out/" target="_blank" rel="noopener">Material Maker 1.8 adds trim sheet export</a></h3>
+<p class="sum">The free, open-source alternative to Substance 3D Designer gains new features, including the option to export trim sheets for games.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.cgchannel.com/2026/10/open-source-material-authoring-software-material-maker-1-8-is-out/" target="_blank" rel="noopener">Read on CG Channel ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="3bb7c5c4186c" data-topic="pipeline" data-source="DanCortesVfx" data-title="Houdini tutorial builds cinematic explosions, with project files">
+        <a class="media" href="https://www.youtube.com/watch?v=kn2qLoSBQnM" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/9ba59e400709ab47.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">DanCortesVfx</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=kn2qLoSBQnM" target="_blank" rel="noopener">Houdini tutorial builds cinematic explosions, with project files</a></h3>
+<p class="sum">A walkthrough of an explosion setup in Houdini, with downloadable scenes to pick apart.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=kn2qLoSBQnM" target="_blank" rel="noopener">Watch on DanCortesVfx ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="2394d17c7afb" data-topic="pipeline" data-source="r/Houdini" data-title="Procedural 3D wood grain experiment in Houdini">
+        <a class="media" href="https://www.reddit.com/r/Houdini/comments/1xexvg0/3d_wood_grain_experiment/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/89bbc72a846b7d12.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/Houdini</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/Houdini/comments/1xexvg0/3d_wood_grain_experiment/" target="_blank" rel="noopener">Procedural 3D wood grain experiment in Houdini</a></h3>
+<p class="sum">An artist builds a volumetric wood grain system and plans to add knots next, a nice procedural-texturing study.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/Houdini/comments/1xexvg0/3d_wood_grain_experiment/" target="_blank" rel="noopener">Read on r/Houdini ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="c9c78fa44779" data-topic="pipeline" data-source="r/GraphicsProgramming" data-title="Very realistic marbling simulation shared on r/GraphicsProgramming">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/GraphicsProgramming</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/GraphicsProgramming/comments/1xfnncd/ive_made_a_very_realistic_marbling_simulation/" target="_blank" rel="noopener">Very realistic marbling simulation shared on r/GraphicsProgramming</a></h3>
+<p class="sum">A developer posts a convincing paper-marbling fluid simulation that drew strong interest from the graphics community.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/GraphicsProgramming/comments/1xfnncd/ive_made_a_very_realistic_marbling_simulation/" target="_blank" rel="noopener">Read on r/GraphicsProgramming ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="abb9b80003d8" data-topic="pipeline" data-source="r/GraphicsProgramming" data-title="3D ocean rendered as pixel art in LOVE2D with snapped probes">
+        <a class="media" href="https://www.reddit.com/r/GraphicsProgramming/comments/1xeyybk/made_a_3d_ocean_slice_look_like_pixel_art_in/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/0d91ba36706bf3c4.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/GraphicsProgramming</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/GraphicsProgramming/comments/1xeyybk/made_a_3d_ocean_slice_look_like_pixel_art_in/" target="_blank" rel="noopener">3D ocean rendered as pixel art in LOVE2D with snapped probes</a></h3>
+<p class="sum">One ray per art pixel is refracted at the water, with probes snapped to avoid shimmer and quads drawn in world space. It is a good example of stylised rendering technique.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/GraphicsProgramming/comments/1xeyybk/made_a_3d_ocean_slice_look_like_pixel_art_in/" target="_blank" rel="noopener">Read on r/GraphicsProgramming ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+  <section class="tile parchment obsidian" id="obsidian"><div class="wrap">
+    <div class="tile-head">
+      <h2>Obsidian</h2>
+      <p>Releases, plugins and the community.</p>
+      <div class="count">8 stories · 3 more in reserve</div>
+    </div>
+    <div class="grid">
+      <article class="card lead" data-id="8f2c843ec0b5" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Obsidian 1.15 early-access build adds PDF export on mobile">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xgipow/115_pdf_export_on_mobile/" target="_blank" rel="noopener">Obsidian 1.15 early-access build adds PDF export on mobile</a></h3>
+<p class="sum">The Catalyst build of 1.15 lets you export notes to PDF straight from the phone app. It fills a long-standing gap for anyone who shares or prints vault notes away from a desktop.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xgipow/115_pdf_export_on_mobile/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="c454480747c1" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Notebook Navigator finally gets manual sorting in subfolders">
+        <a class="media" href="https://www.reddit.com/r/ObsidianMD/comments/1xh0vwi/the_most_requested_feature_of_notebook_navigator/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/1d567a202a0e1f0b.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xh0vwi/the_most_requested_feature_of_notebook_navigator/" target="_blank" rel="noopener">Notebook Navigator finally gets manual sorting in subfolders</a></h3>
+<p class="sum">The long-requested drag-to-order feature arrives after the developer first built the tag browser, property browser and rainbow colours. It makes the navigator much more usable for hand-curated project folders.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xh0vwi/the_most_requested_feature_of_notebook_navigator/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="9670f8d20157" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Jupyter Notebook plugin 0.7.2 makes notebooks behave like native notes">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xgt4um/jupyter_notebook_072_update/" target="_blank" rel="noopener">Jupyter Notebook plugin 0.7.2 makes notebooks behave like native notes</a></h3>
+<p class="sum">YAML frontmatter in the first Markdown cell now appears as editable properties that Dataview can query. Backlinks, tag search and graph connections also work, so notebooks fit better into a research vault.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xgt4um/jupyter_notebook_072_update/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="9a67d044ab6c" data-topic="obsidian" data-source="Beomsu Koh | 고범수" data-title="A working turntable music player built inside Obsidian">
+        <a class="media" href="https://www.youtube.com/watch?v=NRmxPPhhu1c" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/57e744f2d8a622c0.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Beomsu Koh | 고범수</span><span>2 days ago</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=NRmxPPhhu1c" target="_blank" rel="noopener">A working turntable music player built inside Obsidian</a></h3>
+<p class="sum">A creator shows a turntable-style music player running inside the vault. It is a small demo, but it shows how far plugin UI can go beyond notes.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=NRmxPPhhu1c" target="_blank" rel="noopener">Watch on Beomsu Koh | 고범수 ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="cc18b286c23d" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Media Hub 0.5.0 adds a full-screen viewer and faster thumbnails">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xgz2ps/the_biggest_update_for_media_hub_plugin_so_far/" target="_blank" rel="noopener">Media Hub 0.5.0 adds a full-screen viewer and faster thumbnails</a></h3>
+<p class="sum">The gallery plugin now opens images full screen with swipe, pinch-zoom and drag-to-close, and loads thumbnails more efficiently so big folders scroll smoothly.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xgz2ps/the_biggest_update_for_media_hub_plugin_so_far/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="9f26f56a3089" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Plugin makes handwriting from a reMarkable searchable inside Obsidian">
+        <a class="media" href="https://www.reddit.com/r/ObsidianMD/comments/1xgx4rn/i_can_now_cmdf_my_handwriting_right_on_the/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/cea73111df8facf4.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xgx4rn/i_can_now_cmdf_my_handwriting_right_on_the/" target="_blank" rel="noopener">Plugin makes handwriting from a reMarkable searchable inside Obsidian</a></h3>
+<p class="sum">Tagged Sync for reMarkable embeds the page you drew as a PDF above its transcript, and Cmd+F can now find the handwriting on the page itself. The author discloses that a paid tier exists.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xgx4rn/i_can_now_cmdf_my_handwriting_right_on_the/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="ffc8691c4211" data-topic="obsidian" data-source="r/ObsidianMD" data-title="TaskLoops adds repeating tasks that respawn under the completed one">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xgw1v4/update_for_taskloops/" target="_blank" rel="noopener">TaskLoops adds repeating tasks that respawn under the completed one</a></h3>
+<p class="sum">Tasks can recur daily, weekly, monthly, yearly or on set weekdays. Ticking one off creates the next occurrence below it and keeps the history, and late completions skip ahead rather than building a backlog.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xgw1v4/update_for_taskloops/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="0547820af17b" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Google Docs and Drive now handle Markdown files natively">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xglfta/markdown_support_in_google_docs_and_drive/" target="_blank" rel="noopener">Google Docs and Drive now handle Markdown files natively</a></h3>
+<p class="sum">Google follows Microsoft OneDrive in letting you preview and edit .md files directly. Vault folders synced through these services become easier to touch from a phone or a work machine.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xglfta/markdown_support_in_google_docs_and_drive/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card extra" hidden data-id="96bc314546d7" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Discussion: Obsidian works better when you stop chasing plugins">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xgeq1o/obsidian_gets_more_useful_when_you_stop_chasing/" target="_blank" rel="noopener">Discussion: Obsidian works better when you stop chasing plugins</a></h3>
+<p class="sum">A popular reminder that endlessly tuning dashboards and galleries can displace actual thinking and note-taking. It prompts a useful check on whether your setup serves your work.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xgeq1o/obsidian_gets_more_useful_when_you_stop_chasing/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card extra" hidden data-id="cbcac0f3e984" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Concept plugin turns your notes into a walkable 3D library">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xglkq8/the_archive_concept3d_library_plugin/" target="_blank" rel="noopener">Concept plugin turns your notes into a walkable 3D library</a></h3>
+<p class="sum">A developer previews a grand-hall library where notes become books you can open and edit, and asks whether people would want it. It is early, but a fun idea for the graphics-minded.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xglkq8/the_archive_concept3d_library_plugin/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card extra" hidden data-id="1cb809edbcf3" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Long-time users share which AI plugins actually last">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>Yesterday</span>
+<span class="kind">Discussion</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1xgi3xy/long_time_users_3_years_is_there_an_ai_plugin_you/" target="_blank" rel="noopener">Long-time users share which AI plugins actually last</a></h3>
+<p class="sum">A thread asks veterans which AI plugin they have stuck with, given how many redundant or poorly maintained ones have appeared. It is useful for sorting durable tools from hype.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1xgi3xy/long_time_users_3_years_is_there_an_ai_plugin_you/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="more-row"><button class="pill more" type="button" aria-expanded="false">Show 3 more stories</button></div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+  <section class="tile dark stationery" id="stationery"><div class="wrap">
+    <div class="tile-head">
+<div class="jp" lang="ja">文房具</div>      <h2>Japanese stationery</h2>
+      <p>Pens, inks, paper and journaling.</p>
+      <div class="count">8 stories · 4 more in reserve</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="9b74692c52cc" data-topic="stationery" data-source="JetPens blog" data-title="JetPens picks fountain pen inks that behave on ordinary paper">
+        <a class="media" href="https://www.jetpens.com/blog/The-Best-Fountain-Pen-Inks-for-Ordinary-Paper/pt/971" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/e8ddfd21d373f7bb.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">JetPens blog</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.jetpens.com/blog/The-Best-Fountain-Pen-Inks-for-Ordinary-Paper/pt/971" target="_blank" rel="noopener">JetPens picks fountain pen inks that behave on ordinary paper</a></h3>
+<p class="sum">A practical guide to inks that stay crisp on printer and notebook paper, led by Platinum Carbon Black. It is handy if you use fountain pens at work or school without fancy paper.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.jetpens.com/blog/The-Best-Fountain-Pen-Inks-for-Ordinary-Paper/pt/971" target="_blank" rel="noopener">Read on JetPens blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="ef3c4e77e5f1" data-topic="stationery" data-source="r/fountainpens" data-title="Watercolour scene drawn with a Platinum Century 3776 and DeAtramentis ink">
+        <a class="media" href="https://www.reddit.com/r/fountainpens/comments/1xfqmfk/small_talk_platinum_century_3667_deatramentis_ink/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/45c08eb2ffe79e3f.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/fountainpens</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/fountainpens/comments/1xfqmfk/small_talk_platinum_century_3667_deatramentis_ink/" target="_blank" rel="noopener">Watercolour scene drawn with a Platinum Century 3776 and DeAtramentis ink</a></h3>
+<p class="sum">A large 26x21 cm illustration shows how well a Japanese gold-nib pen works with ink washes. It is a good example of fountain pens used for painting as well as writing.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/fountainpens/comments/1xfqmfk/small_talk_platinum_century_3667_deatramentis_ink/" target="_blank" rel="noopener">Read on r/fountainpens ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="c56f69517ad3" data-topic="stationery" data-source="Ancolo" data-title="Getting a head start on Hobonichi Weeks 2027 memo pages">
+        <a class="media" href="https://www.youtube.com/watch?v=19JGQZWVxz4" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/00f22b49d4970088.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Ancolo</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=19JGQZWVxz4" target="_blank" rel="noopener">Getting a head start on Hobonichi Weeks 2027 memo pages</a></h3>
+<div class="jp-title" lang="ja">ほぼ日weeks2027｜ひと足早く楽しむメモページの使い方</div><p class="sum">A Japanese walkthrough shows ways to use the memo pages in the 2027 Weeks before the year starts, with ideas you can borrow for your own layouts.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=19JGQZWVxz4" target="_blank" rel="noopener">Watch on Ancolo ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="d748f5671252" data-topic="stationery" data-source="r/hobonichi" data-title="Using a Hobonichi Weeks as a music and language commonplace book">
+        <a class="media" href="https://www.reddit.com/r/hobonichi/comments/1xfg8gw/using_my_weeks_as_a_commonplace_book_for_my_music/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/6bce0df9edb8c4ca.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1xfg8gw/using_my_weeks_as_a_commonplace_book_for_my_music/" target="_blank" rel="noopener">Using a Hobonichi Weeks as a music and language commonplace book</a></h3>
+<p class="sum">A journaler keeps a commonplace book on musical interests and the language learning that comes with it. It is a concrete example of the Weeks working as a focused topic journal.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1xfg8gw/using_my_weeks_as_a_commonplace_book_for_my_music/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="5078bade6345" data-topic="stationery" data-source="r/hobonichi" data-title="Inktober drawings filling the pages of a Hobonichi Weeks">
+        <a class="media" href="https://www.reddit.com/r/hobonichi/comments/1xf2h7i/inktober_in_my_weeks/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/2abeb840413df070.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1xf2h7i/inktober_in_my_weeks/" target="_blank" rel="noopener">Inktober drawings filling the pages of a Hobonichi Weeks</a></h3>
+<p class="sum">A month of Inktober artwork on the Weeks pages, showing the paper takes pen drawing well and that the planner works as a sketchbook.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1xf2h7i/inktober_in_my_weeks/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="bec5536022b2" data-topic="stationery" data-source="r/hobonichi" data-title="Hobonichi&#39;s CEO visits the San Francisco pop-up">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1xfkdca/met_the_lovely_ceo_of_hobonichi_at_the_sf_popup/" target="_blank" rel="noopener">Hobonichi&#39;s CEO visits the San Francisco pop-up</a></h3>
+<p class="sum">A fan met the company&#39;s CEO at the US pop-up, and the post became one of the community&#39;s most-upvoted. It is a snapshot of Hobonichi&#39;s growing presence in the US.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1xfkdca/met_the_lovely_ceo_of_hobonichi_at_the_sf_popup/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="bec54b9272ec" data-topic="stationery" data-source="集まれ文具ラバーズ【文具店勤務13年目】" data-title="Autumn 2026 Japanese writing instrument releases, including limited editions">
+        <a class="media" href="https://www.youtube.com/watch?v=q-ytOudCOm4" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/c06ec20d04a21036.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">集まれ文具ラバーズ【文具店勤務13年目】</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=q-ytOudCOm4" target="_blank" rel="noopener">Autumn 2026 Japanese writing instrument releases, including limited editions</a></h3>
+<p class="sum">A Japanese stationery-shop worker runs through the new pens arriving in October 2026, a quick way to see what is coming from the major makers.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=q-ytOudCOm4" target="_blank" rel="noopener">Watch on 集まれ文具ラバーズ【文具店勤務13年目】 ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="d9badab6f863" data-topic="stationery" data-source="mimiのてちよう日☺︎" data-title="How one user sets up her 2027 Hobonichi Cousin">
+        <a class="media" href="https://www.youtube.com/watch?v=NW6znAg9v0s" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/88f35f18ca9f9041.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">mimiのてちよう日☺︎</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=NW6znAg9v0s" target="_blank" rel="noopener">How one user sets up her 2027 Hobonichi Cousin</a></h3>
+<p class="sum">A Japanese video tour of how a user plans to use the 2027 Cousin techo, with layout and habit ideas.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=NW6znAg9v0s" target="_blank" rel="noopener">Watch on mimiのてちよう日☺︎ ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card extra" hidden data-id="c9cdb68f8d10" data-topic="stationery" data-source="r/fountainpens" data-title="Infrared photography of resin pens with a full-spectrum DSLR">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/fountainpens</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/fountainpens/comments/1xfirde/get_in_losers_were_going_infraredding/" target="_blank" rel="noopener">Infrared photography of resin pens with a full-spectrum DSLR</a></h3>
+<p class="sum">A hobbyist shoots resin fountain pens in infrared with a modified Canon and a macro lens, showing how materials look different outside visible light. It is a nice link between pens and light behaviour.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/fountainpens/comments/1xfirde/get_in_losers_were_going_infraredding/" target="_blank" rel="noopener">Read on r/fountainpens ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card extra" hidden data-id="19a05416197c" data-topic="stationery" data-source="r/hobonichi" data-title="First Hobonichi Weeks, with weekly printed stickers and daily photos">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1xfpzu1/my_first_hobonichi_weeks/" target="_blank" rel="noopener">First Hobonichi Weeks, with weekly printed stickers and daily photos</a></h3>
+<p class="sum">A new user combines a photo-a-day habit, printed stickers and short daily notes in the weekly layout, a simple template for getting started.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1xfpzu1/my_first_hobonichi_weeks/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="4761700c52ba" data-topic="stationery" data-source="r/hobonichi" data-title="Stacking Hobonichi A5, a wellness journal and a Traveler&#39;s cover">
+        <a class="media" href="https://www.reddit.com/r/hobonichi/comments/1xfa22o/my_chonky_setup/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/3391885b1c7fc145.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1xfa22o/my_chonky_setup/" target="_blank" rel="noopener">Stacking Hobonichi A5, a wellness journal and a Traveler&#39;s cover</a></h3>
+<p class="sum">A user shows a thick Traveler&#39;s-style setup holding a Hobonichi A5 techo and a goal-tracking journal in one cover, a practical idea for combining notebooks.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1xfa22o/my_chonky_setup/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="a6ad0262c059" data-topic="stationery" data-source="r/fountainpens" data-title="Debate: a Jinhao 9019 versus the Pilot Custom 74">
+        <a class="media" href="https://www.reddit.com/r/fountainpens/comments/1xfmku8/love_my_jinhao_9019_over_pilot_c74/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/87cccc8a6b4f77a3.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/fountainpens</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/fountainpens/comments/1xfmku8/love_my_jinhao_9019_over_pilot_c74/" target="_blank" rel="noopener">Debate: a Jinhao 9019 versus the Pilot Custom 74</a></h3>
+<p class="sum">One owner prefers the cheaper Jinhao for smoothness and comfort, and the thread weighs it against Pilot&#39;s Custom 74 and 823 for large hands. It is mostly subjective but sparks useful comparisons.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/fountainpens/comments/1xfmku8/love_my_jinhao_9019_over_pilot_c74/" target="_blank" rel="noopener">Read on r/fountainpens ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="more-row"><button class="pill more" type="button" aria-expanded="false">Show 4 more stories</button></div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+
+  <nav class="pager" aria-label="Other editions"><div class="wrap">
+<a class="pill" href="2026-10-27.html">‹ Tuesday 27 October</a>  </div></nav>
+<script type="application/json" id="pline-stories">[{"date": "2026-10-27", "id": "8f2c843ec0b5", "kind": "reddit", "source": "r/ObsidianMD", "summary": "The Catalyst build of 1.15 lets you export notes to PDF straight from the phone app. It fills a long-standing gap for anyone who shares or prints vault notes away from a desktop.", "title": "Obsidian 1.15 early-access build adds PDF export on mobile", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xgipow/115_pdf_export_on_mobile/"}, {"date": "2026-10-27", "id": "c454480747c1", "image": "thumbs/1d567a202a0e1f0b.webp", "kind": "reddit", "source": "r/ObsidianMD", "summary": "The long-requested drag-to-order feature arrives after the developer first built the tag browser, property browser and rainbow colours. It makes the navigator much more usable for hand-curated project folders.", "title": "Notebook Navigator finally gets manual sorting in subfolders", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xh0vwi/the_most_requested_feature_of_notebook_navigator/"}, {"date": "2026-10-27", "id": "9670f8d20157", "kind": "reddit", "source": "r/ObsidianMD", "summary": "YAML frontmatter in the first Markdown cell now appears as editable properties that Dataview can query. Backlinks, tag search and graph connections also work, so notebooks fit better into a research vault.", "title": "Jupyter Notebook plugin 0.7.2 makes notebooks behave like native notes", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xgt4um/jupyter_notebook_072_update/"}, {"date": "2026-10-26", "id": "9a67d044ab6c", "image": "thumbs/57e744f2d8a622c0.webp", "kind": "video", "source": "Beomsu Koh | \uace0\ubc94\uc218", "summary": "A creator shows a turntable-style music player running inside the vault. It is a small demo, but it shows how far plugin UI can go beyond notes.", "title": "A working turntable music player built inside Obsidian", "topic": "obsidian", "url": "https://www.youtube.com/watch?v=NRmxPPhhu1c"}, {"date": "2026-10-27", "id": "cc18b286c23d", "kind": "reddit", "source": "r/ObsidianMD", "summary": "The gallery plugin now opens images full screen with swipe, pinch-zoom and drag-to-close, and loads thumbnails more efficiently so big folders scroll smoothly.", "title": "Media Hub 0.5.0 adds a full-screen viewer and faster thumbnails", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xgz2ps/the_biggest_update_for_media_hub_plugin_so_far/"}, {"date": "2026-10-27", "id": "9f26f56a3089", "image": "thumbs/cea73111df8facf4.webp", "kind": "reddit", "source": "r/ObsidianMD", "summary": "Tagged Sync for reMarkable embeds the page you drew as a PDF above its transcript, and Cmd+F can now find the handwriting on the page itself. The author discloses that a paid tier exists.", "title": "Plugin makes handwriting from a reMarkable searchable inside Obsidian", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xgx4rn/i_can_now_cmdf_my_handwriting_right_on_the/"}, {"date": "2026-10-27", "id": "ffc8691c4211", "kind": "reddit", "source": "r/ObsidianMD", "summary": "Tasks can recur daily, weekly, monthly, yearly or on set weekdays. Ticking one off creates the next occurrence below it and keeps the history, and late completions skip ahead rather than building a backlog.", "title": "TaskLoops adds repeating tasks that respawn under the completed one", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xgw1v4/update_for_taskloops/"}, {"date": "2026-10-27", "id": "0547820af17b", "kind": "reddit", "source": "r/ObsidianMD", "summary": "Google follows Microsoft OneDrive in letting you preview and edit .md files directly. Vault folders synced through these services become easier to touch from a phone or a work machine.", "title": "Google Docs and Drive now handle Markdown files natively", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xglfta/markdown_support_in_google_docs_and_drive/"}, {"date": "2026-10-27", "id": "96bc314546d7", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A popular reminder that endlessly tuning dashboards and galleries can displace actual thinking and note-taking. It prompts a useful check on whether your setup serves your work.", "title": "Discussion: Obsidian works better when you stop chasing plugins", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xgeq1o/obsidian_gets_more_useful_when_you_stop_chasing/"}, {"date": "2026-10-27", "id": "cbcac0f3e984", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A developer previews a grand-hall library where notes become books you can open and edit, and asks whether people would want it. It is early, but a fun idea for the graphics-minded.", "title": "Concept plugin turns your notes into a walkable 3D library", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xglkq8/the_archive_concept3d_library_plugin/"}, {"date": "2026-10-27", "id": "1cb809edbcf3", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A thread asks veterans which AI plugin they have stuck with, given how many redundant or poorly maintained ones have appeared. It is useful for sorting durable tools from hype.", "title": "Long-time users share which AI plugins actually last", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1xgi3xy/long_time_users_3_years_is_there_an_ai_plugin_you/"}, {"date": "2026-10-27", "id": "9b74692c52cc", "image": "thumbs/e8ddfd21d373f7bb.webp", "source": "JetPens blog", "summary": "A practical guide to inks that stay crisp on printer and notebook paper, led by Platinum Carbon Black. It is handy if you use fountain pens at work or school without fancy paper.", "title": "JetPens picks fountain pen inks that behave on ordinary paper", "topic": "stationery", "url": "https://www.jetpens.com/blog/The-Best-Fountain-Pen-Inks-for-Ordinary-Paper/pt/971"}, {"date": "2026-10-26", "id": "ef3c4e77e5f1", "image": "thumbs/45c08eb2ffe79e3f.webp", "kind": "reddit", "source": "r/fountainpens", "summary": "A large 26x21 cm illustration shows how well a Japanese gold-nib pen works with ink washes. It is a good example of fountain pens used for painting as well as writing.", "title": "Watercolour scene drawn with a Platinum Century 3776 and DeAtramentis ink", "topic": "stationery", "url": "https://www.reddit.com/r/fountainpens/comments/1xfqmfk/small_talk_platinum_century_3667_deatramentis_ink/"}, {"date": "2026-10-27", "id": "c56f69517ad3", "image": "thumbs/00f22b49d4970088.webp", "kind": "video", "source": "Ancolo", "summary": "A Japanese walkthrough shows ways to use the memo pages in the 2027 Weeks before the year starts, with ideas you can borrow for your own layouts.", "title": "Getting a head start on Hobonichi Weeks 2027 memo pages", "title_ja": "\u307b\u307c\u65e5weeks2027\uff5c\u3072\u3068\u8db3\u65e9\u304f\u697d\u3057\u3080\u30e1\u30e2\u30da\u30fc\u30b8\u306e\u4f7f\u3044\u65b9", "topic": "stationery", "url": "https://www.youtube.com/watch?v=19JGQZWVxz4"}, {"date": "2026-10-25", "id": "d748f5671252", "image": "thumbs/6bce0df9edb8c4ca.webp", "kind": "reddit", "source": "r/hobonichi", "summary": "A journaler keeps a commonplace book on musical interests and the language learning that comes with it. It is a concrete example of the Weeks working as a focused topic journal.", "title": "Using a Hobonichi Weeks as a music and language commonplace book", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1xfg8gw/using_my_weeks_as_a_commonplace_book_for_my_music/"}, {"date": "2026-10-25", "id": "5078bade6345", "image": "thumbs/2abeb840413df070.webp", "kind": "reddit", "source": "r/hobonichi", "summary": "A month of Inktober artwork on the Weeks pages, showing the paper takes pen drawing well and that the planner works as a sketchbook.", "title": "Inktober drawings filling the pages of a Hobonichi Weeks", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1xf2h7i/inktober_in_my_weeks/"}, {"date": "2026-10-26", "id": "bec5536022b2", "kind": "reddit", "source": "r/hobonichi", "summary": "A fan met the company\u0027s CEO at the US pop-up, and the post became one of the community\u0027s most-upvoted. It is a snapshot of Hobonichi\u0027s growing presence in the US.", "title": "Hobonichi\u0027s CEO visits the San Francisco pop-up", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1xfkdca/met_the_lovely_ceo_of_hobonichi_at_the_sf_popup/"}, {"date": "2026-10-27", "id": "bec54b9272ec", "image": "thumbs/c06ec20d04a21036.webp", "kind": "video", "source": "\u96c6\u307e\u308c\u6587\u5177\u30e9\u30d0\u30fc\u30ba\u3010\u6587\u5177\u5e97\u52e4\u52d913\u5e74\u76ee\u3011", "summary": "A Japanese stationery-shop worker runs through the new pens arriving in October 2026, a quick way to see what is coming from the major makers.", "title": "Autumn 2026 Japanese writing instrument releases, including limited editions", "topic": "stationery", "url": "https://www.youtube.com/watch?v=q-ytOudCOm4"}, {"date": "2026-10-27", "id": "d9badab6f863", "image": "thumbs/88f35f18ca9f9041.webp", "kind": "video", "source": "mimi\u306e\u3066\u3061\u3088\u3046\u65e5\u263a\ufe0e", "summary": "A Japanese video tour of how a user plans to use the 2027 Cousin techo, with layout and habit ideas.", "title": "How one user sets up her 2027 Hobonichi Cousin", "topic": "stationery", "url": "https://www.youtube.com/watch?v=NW6znAg9v0s"}, {"date": "2026-10-26", "id": "c9cdb68f8d10", "kind": "reddit", "source": "r/fountainpens", "summary": "A hobbyist shoots resin fountain pens in infrared with a modified Canon and a macro lens, showing how materials look different outside visible light. It is a nice link between pens and light behaviour.", "title": "Infrared photography of resin pens with a full-spectrum DSLR", "topic": "stationery", "url": "https://www.reddit.com/r/fountainpens/comments/1xfirde/get_in_losers_were_going_infraredding/"}, {"date": "2026-10-26", "id": "19a05416197c", "kind": "reddit", "source": "r/hobonichi", "summary": "A new user combines a photo-a-day habit, printed stickers and short daily notes in the weekly layout, a simple template for getting started.", "title": "First Hobonichi Weeks, with weekly printed stickers and daily photos", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1xfpzu1/my_first_hobonichi_weeks/"}, {"date": "2026-10-25", "id": "4761700c52ba", "image": "thumbs/3391885b1c7fc145.webp", "kind": "reddit", "source": "r/hobonichi", "summary": "A user shows a thick Traveler\u0027s-style setup holding a Hobonichi A5 techo and a goal-tracking journal in one cover, a practical idea for combining notebooks.", "title": "Stacking Hobonichi A5, a wellness journal and a Traveler\u0027s cover", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1xfa22o/my_chonky_setup/"}, {"date": "2026-10-26", "id": "a6ad0262c059", "image": "thumbs/87cccc8a6b4f77a3.webp", "kind": "reddit", "source": "r/fountainpens", "summary": "One owner prefers the cheaper Jinhao for smoothness and comfort, and the thread weighs it against Pilot\u0027s Custom 74 and 823 for large hands. It is mostly subjective but sparks useful comparisons.", "title": "Debate: a Jinhao 9019 versus the Pilot Custom 74", "topic": "stationery", "url": "https://www.reddit.com/r/fountainpens/comments/1xfmku8/love_my_jinhao_9019_over_pilot_c74/"}, {"date": "2026-10-26", "id": "9286863d907b", "image": "thumbs/424e58cc44db0f2e.webp", "source": "fxguide", "summary": "Framestore Pre-production Services built virtual cameras, lighting and live composites for the cinematographer. The article and podcast cover what a year of embedded work looked like and how real-time tools sit alongside conventional pipelines.", "title": "Framestore\u0027s virtual production team put cameras and lighting in Greig Fraser\u0027s hands on Project Hail Mary", "topic": "vfx", "url": "https://www.fxguide.com/fxpodcasts/project-hail-mary-fps-giving-greig-fraser-the-controls/"}, {"date": "2026-10-27", "id": "cb0f8cef393b", "image": "thumbs/95524d64e2496432.webp", "source": "Art of VFX", "summary": "A breakdown of the studio\u0027s creature, environment and action work for the film, a look at how a mid-sized house handles a large Star Wars share.", "title": "Image Engine\u0027s 154 shots on The Mandalorian and Grogu", "topic": "vfx", "url": "https://www.artofvfx.com/the-mandalorian-and-grogu-behind-the-visual-effects-created-by-image-engine/"}, {"date": "2026-10-27", "id": "1297db3ba84f", "source": "CG Channel", "summary": "A roundup of breakdown reels for the DC series, from CoSA VFX\u0027s invisible work to Accenture Song\u0027s CG constructs.", "title": "All the Lanterns VFX breakdowns collected in one place", "topic": "vfx", "url": "https://www.cgchannel.com/2026/10/check-out-vfx-breakdowns-for-lanterns/"}, {"date": "2026-10-27", "id": "0f0f6be8a3fe", "image": "thumbs/4d437a1ca204e8fe.webp", "source": "Art of VFX", "summary": "Alessandro Ongaro explains how he got on the film and the challenges of its visuals, after his earlier work on Captain America: Brave New World.", "title": "Resident Evil\u0027s production VFX supervisor on the new adaptation", "topic": "vfx", "url": "https://www.artofvfx.com/resident-evil-alessandro-ongaro-production-vfx-supervisor/"}, {"date": "2026-10-27", "id": "4bd1b68e3f91", "image": "thumbs/95d538e608ded55e.webp", "source": "Cartoon Brew", "summary": "The stop-motion studio\u0027s latest more than doubled Missing Link\u0027s opening and shows early signs of staying power, as the studio\u0027s record and international rollout add context.", "title": "Laika\u0027s Wildwood opens to $12.2M, with good audience scores", "topic": "vfx", "url": "https://www.cartoonbrew.com/feature-film/wildwood-opening-weekend-box-office-laika-268464.html"}, {"date": "2026-10-27", "id": "bc7b83caf5c9", "image": "thumbs/7eb7ff30ed847024.webp", "source": "Cartoon Brew", "summary": "Once shelved by Warner Bros., the hybrid film is now eligible for the animated feature race. An awards push could embarrass the studio that buried it.", "title": "Ketchup starts its Oscar campaign for Coyote Vs. Acme after Academy approval", "topic": "vfx", "url": "https://www.cartoonbrew.com/awards/coyote-vs-acme-oscars-eligable-268527.html"}, {"date": "2026-10-27", "id": "2d430fc8dbc7", "image": "thumbs/956dea833f2104ce.webp", "source": "Cartoon Brew", "summary": "Friends and collaborators remember him as a versatile performer and generous advocate for animation. The week\u0027s news round-up also covers Wildwood\u0027s debut and the 40th anniversary of When The Wind Blows.", "title": "Animation community mourns voice actor Eric Bauza, dead at 46", "topic": "vfx", "url": "https://www.cartoonbrew.com/rip/animation-industry-pays-tribute-to-eric-bauza-268488.html"}, {"date": "2026-10-22", "id": "f7a6e8fc5cde", "image": "thumbs/ca054c92715abe96.webp", "kind": "video", "source": "befores \u0026 afters", "summary": "A video looks back at the camera system built for A New Hope. It is a good history lesson for anyone interested in the roots of repeatable VFX photography.", "title": "How the Dykstraflex motion-control rig changed VFX on Star Wars", "topic": "vfx", "url": "https://www.youtube.com/watch?v=CdgKzgcjzoY"}, {"date": "2026-10-25", "id": "c4d6befb88ae", "image": "thumbs/74372cc7950ff5b5.webp", "kind": "reddit", "source": "r/vfx", "summary": "A personal VFX project returns with colour correction, lightning sequences and extra volumetrics after critique on darks and contrast. It shows the feedback loop at work.", "title": "Artist iterates on a Barad-d\u00fbr bridge shot after community feedback", "topic": "vfx", "url": "https://www.reddit.com/r/vfx/comments/1xf392p/barad_dur_entrance_bridge_segment_feedback/"}, {"date": "2026-10-27", "id": "a153cbd4137a", "image": "thumbs/d26626d582beef9d.webp", "source": "Cartoon Brew", "summary": "Fifteen shorts plus curated selections from Miyu and the National Film Board of Canada are now available to watch.", "title": "Animation Showcase 2026 shorts collection streams free to industry professionals", "topic": "vfx", "url": "https://www.cartoonbrew.com/shorts/animation-showcase-2026-shorts-collection-268495.html"}, {"date": "2026-10-27", "id": "a279378fe3c5", "image": "thumbs/95ad3f78e36018c2.webp", "source": "Cartoon Brew", "summary": "The directors discuss their hand-drawn film about a man returning to his childhood hockey rink and the difficult path toward healing.", "title": "Oscar short contender What We Leave Behind: hand-drawn story of trauma and healing", "topic": "vfx", "url": "https://www.cartoonbrew.com/awards/what-we-leave-behind-alexandra-myotte-jean-sebastien-hamel-268476.html"}, {"date": "2026-10-27", "id": "6c52dffc62a8", "image": "thumbs/998038ef7ccc9625.webp", "source": "befores \u0026 afters", "summary": "VFX supervisor Thomas Jordan discusses how Pixar uses Foundry\u0027s lighting and compositing tools together with USD. It is a rare production-level view of the pipeline behind a feature animation.", "title": "Foundry video shows Pixar\u0027s use of Katana, Nuke and USD on Toy Story 5", "topic": "pipeline", "url": "https://beforesandafters.com/2026/10/28/new-foundry-video-looks-at-use-of-katana-nuke-and-usd-by-pixar-in-toy-story-5/"}, {"date": "2026-10-25", "id": "e971d94083f4", "image": "thumbs/420e1523361bf9b6.webp", "kind": "reddit", "source": "r/GraphicsProgramming", "summary": "An experimental renderer stores light leaving surface patches by direction and wavelength, then passes it between patches to build bounced lighting. It is a neat take on radiosity-style global illumination with spectral output.", "title": "Spectral surface-field renderer runs on an iPhone", "topic": "pipeline", "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xfgjxe/spectral_surfacefield_renderer_on_the_iphone/"}, {"date": "2026-10-25", "id": "ba39f8166827", "image": "thumbs/8cd2e9561ef579b5.webp", "kind": "reddit", "source": "r/Houdini", "summary": "An artist ray-marches fractals from random positions in all directions inside Houdini using OpenCL, and walks through the build on YouTube.", "title": "OpenCL fractal generator in Houdini, with a tutorial", "topic": "pipeline", "url": "https://www.reddit.com/r/Houdini/comments/1xeyvsv/fractal_generator_with_opencl/"}, {"date": "2026-10-27", "id": "28cd6e15899b", "source": "CG Channel", "summary": "The free, open-source alternative to Substance 3D Designer gains new features, including the option to export trim sheets for games.", "title": "Material Maker 1.8 adds trim sheet export", "topic": "pipeline", "url": "https://www.cgchannel.com/2026/10/open-source-material-authoring-software-material-maker-1-8-is-out/"}, {"date": "2026-10-27", "id": "3bb7c5c4186c", "image": "thumbs/9ba59e400709ab47.webp", "kind": "video", "source": "DanCortesVfx", "summary": "A walkthrough of an explosion setup in Houdini, with downloadable scenes to pick apart.", "title": "Houdini tutorial builds cinematic explosions, with project files", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=kn2qLoSBQnM"}, {"date": "2026-10-25", "id": "2394d17c7afb", "image": "thumbs/89bbc72a846b7d12.webp", "kind": "reddit", "source": "r/Houdini", "summary": "An artist builds a volumetric wood grain system and plans to add knots next, a nice procedural-texturing study.", "title": "Procedural 3D wood grain experiment in Houdini", "topic": "pipeline", "url": "https://www.reddit.com/r/Houdini/comments/1xexvg0/3d_wood_grain_experiment/"}, {"date": "2026-10-26", "id": "c9c78fa44779", "kind": "reddit", "source": "r/GraphicsProgramming", "summary": "A developer posts a convincing paper-marbling fluid simulation that drew strong interest from the graphics community.", "title": "Very realistic marbling simulation shared on r/GraphicsProgramming", "topic": "pipeline", "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xfnncd/ive_made_a_very_realistic_marbling_simulation/"}, {"date": "2026-10-25", "id": "abb9b80003d8", "image": "thumbs/0d91ba36706bf3c4.webp", "kind": "reddit", "source": "r/GraphicsProgramming", "summary": "One ray per art pixel is refracted at the water, with probes snapped to avoid shimmer and quads drawn in world space. It is a good example of stylised rendering technique.", "title": "3D ocean rendered as pixel art in LOVE2D with snapped probes", "topic": "pipeline", "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xeyybk/made_a_3d_ocean_slice_look_like_pixel_art_in/"}]</script>
+</main>
+
+<footer><div class="wrap">
+<p>Edition compiled 2026-10-28 at 09:39 (Pacific/Auckland) from 38 of 40 sources, summaries written by claude-sonnet-5-5, tuned by 7 likes and 0 “less like this”. Summaries are paraphrased; tap a headline for the original. Pictures are thumbnails of each article's own preview image.</p>  <p>Read stories, votes and saves are remembered on this device, and synced through GitHub once a device is connected under Likes. <a href="https://github.com/Alt-Py/PLINE">How Pline works</a></p>
+</div></footer>
+
+<dialog id="likesDialog" aria-labelledby="likesTitle">
+  <form method="dialog" class="sheet" id="likesForm">
+    <h2 id="likesTitle">Likes, saves and sync</h2>
+    <p>Tap <b>More like this</b> or <b>Less like this</b> on any story and Pline learns your taste, by source and by subject. Tap the <b>bookmark</b> to keep a story on your <a href="saved.html">Saved</a> page.</p>
+    <p id="likesCount">No votes or saves yet.</p>
+    <p>Everything is kept on this device. To share it with your other devices and with tomorrow's edition, connect a GitHub token once on each device:</p>
+    <ol>
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub › Fine-grained tokens › Generate new token</a>.</li>
+      <li>Repository access: <b>Only select repositories › PLINE</b>.</li>
+      <li>Permissions: <b>Issues › Read and write</b>. Nothing else.</li>
+      <li>Paste the token below. It stays in this browser only.</li>
+    </ol>
+    <div class="row">
+      <input id="tokenInput" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…" aria-label="GitHub token">
+      <button class="pill primary" id="saveToken" type="button">Connect</button>
+    </div>
+    <div class="status" id="likesStatus" role="status"></div>
+    <div class="row">
+      <button class="pill" id="sendNow" type="button">Send now</button>
+      <button class="pill" id="forgetToken" type="button">Disconnect this device</button>
+      <button class="pill" value="close" style="margin-left:auto">Done</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>
