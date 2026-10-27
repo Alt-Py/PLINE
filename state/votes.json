@@ -1,5 +1,5 @@
 {
- "last_comment_id": 6351546768,
+ "last_comment_id": 6453544266,
  "votes": {
   "86c6055b0119": {
    "vote": 1,
@@ -28,6 +28,34 @@
    "topic": "pipeline",
    "title": "Houdini tutorial builds a procedural pen effect",
    "at": "2026-10-21T22:38:40.253Z"
+  },
+  "6c52dffc62a8": {
+   "vote": 1,
+   "source": "befores & afters",
+   "topic": "pipeline",
+   "title": "Foundry video shows Pixar's use of Katana, Nuke and USD on Toy Story 5",
+   "at": "2026-10-27T21:04:21.017Z"
+  },
+  "ba39f8166827": {
+   "vote": 1,
+   "source": "r/Houdini",
+   "topic": "pipeline",
+   "title": "OpenCL fractal generator in Houdini, with a tutorial",
+   "at": "2026-10-27T21:04:50.051Z"
+  },
+  "e971d94083f4": {
+   "vote": 1,
+   "source": "r/GraphicsProgramming",
+   "topic": "pipeline",
+   "title": "Spectral surface-field renderer runs on an iPhone",
+   "at": "2026-10-27T21:05:00.305Z"
+  },
+  "8f2c843ec0b5": {
+   "vote": 1,
+   "source": "r/ObsidianMD",
+   "topic": "obsidian",
+   "title": "Obsidian 1.15 early-access build adds PDF export on mobile",
+   "at": "2026-10-27T21:05:32.913Z"
   }
  }
 }
