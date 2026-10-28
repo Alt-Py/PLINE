@@ -1,0 +1,344 @@
+{
+ "date": "2026-10-29",
+ "generated_at": "2026-10-29T10:00:15+13:00",
+ "headline": "Foundry opens the Nuke 18.0 beta with a Griptape AI bridge, Sailor announces a Damascus Clad Art fountain pen, and Obsidian's open-sourced pele diagram renderer gets a speed test.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 31,
+ "sources_total": 40,
+ "source_errors": {
+  "r/fountainpens": "RuntimeError: Arctic Shift: HTTP 530: <!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <!",
+  "r/stationery": "RuntimeError: Arctic Shift: HTTP 530: <!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <!",
+  "r/Hobonichi": "RuntimeError: Arctic Shift: HTTP 530: <!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <!",
+  "r/midori": "RuntimeError: Arctic Shift: HTTP 530: <!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <!",
+  "r/journaling": "RuntimeError: Arctic Shift: HTTP 530: <!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <!",
+  "r/bulletjournal": "RuntimeError: Arctic Shift: HTTP 530: <!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <!",
+  "r/vfx": "RuntimeError: Arctic Shift: HTTP 530: <!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <!",
+  "r/Houdini": "RuntimeError: Arctic Shift: HTTP 530: <!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <!",
+  "r/GraphicsProgramming": "RuntimeError: Arctic Shift: HTTP 530: <!doctype html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <!"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "dbc48a5ff241",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Blogger swaps Mermaid for Obsidian's open-sourced pele and sees ~20x faster diagrams",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xhqnql/swapped_mermaid_for_pele_the_diagram_lib_obsidian/",
+   "summary": "A site owner replaced Mermaid with pele, the diagram library Obsidian released as open source, and measured much faster renders and a cleaner look. The write-up covers setup and benchmarks, useful for anyone publishing diagrams from a vault.",
+   "date": "2026-10-28",
+   "image": "thumbs/c97ba93ab3b98d57.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "8ca034615c14",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Fast Find 10K plugin merges fuzzy, telescope-style and semantic search for huge vaults",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xhhjzp/search_plugin_fast_find_10k_combination_of_fzf/",
+   "summary": "A new search plugin combines ideas from Fzf, Telescope, OmniSearch and Smart Connections. It targets vaults beyond 10,000 notes, where file-name-only switching and keyword-order sensitivity start to fail.",
+   "date": "2026-10-28",
+   "image": "thumbs/5fec891afc84f77f.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "317e2f9a1273",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Kairos plugin asks when and where you'll do each task",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xha78t/kairos_a_plugin_to_turn_intentions_into_actions/",
+   "summary": "Kairos turns vague intentions into scheduled actions by prompting for a time and place for every task you define. It is a new community plugin built around implementation-intention thinking.",
+   "date": "2026-10-28",
+   "image": "thumbs/2240cb73ba70595e.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "05fa5d3a08f4",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Fix for Obsidian freezing with the Tasks plugin: disable custom searches",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xh8iv7/tasks_freezing_solution_for_dummies/",
+   "summary": "A user traced a sudden Obsidian freeze to the Tasks plugin's custom searches setting. Turning it off cured the hang after cache clearing and plugin toggling had failed. A handy troubleshooting tip.",
+   "date": "2026-10-27",
+   "kind": "reddit"
+  },
+  {
+   "id": "abad4abd2649",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Discussion: don't make daily Obsidian workflows depend on free-tier AI plugins",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xhdl2a/obsidian_ai_plugins_should_improve_your_workflow/",
+   "summary": "A thread argues AI plugins are useful for summarising and organising notes, but a workflow shouldn't collapse when credits run out or a provider disappears. It makes the case for graceful fallbacks.",
+   "date": "2026-10-28",
+   "kind": "reddit"
+  },
+  {
+   "id": "91248520828e",
+   "topic": "stationery",
+   "source": "Sailor",
+   "title": "Sailor to release Clad Art Infinity Damascus fountain pen in January 2027",
+   "url": "https://sailor.co.jp/news/20261028/",
+   "summary": "Sailor has announced a Damascus-steel edition of its Clad Art Infinity fountain pen. It goes on sale through authorised Sailor retailers across Japan on 30 January 2027.",
+   "date": "2026-10-28",
+   "title_ja": "2026.10.28 プレスリリース 『Clad Art Infinity ダマスカス 万年筆』2027年1月30日（土）より全国発売",
+   "image": "thumbs/0b7cd63af3cfba0c.webp"
+  },
+  {
+   "id": "0cd0bfd0ce2e",
+   "topic": "stationery",
+   "source": "Little Coco Studio",
+   "title": "A Midori Hibino planner quietly becomes a commonplace book",
+   "url": "https://www.youtube.com/watch?v=iIX6oity01E",
+   "summary": "A journaler shows how a dated Midori planner turned into a place for quotes, ideas and clippings. It is a practical example of repurposing a planner layout for capture rather than scheduling.",
+   "date": "2026-10-24",
+   "image": "thumbs/bff870bee0be3491.webp",
+   "kind": "video"
+  },
+  {
+   "id": "da38508bb266",
+   "topic": "stationery",
+   "source": "Mariane Cresp",
+   "title": "Passport Traveler's Notebook: setup and full flip-through",
+   "url": "https://www.youtube.com/watch?v=HsZu7Wxz76I",
+   "summary": "A walkthrough of how one person organises a passport-size Traveler's Notebook, with real pages shown. Good for seeing how inserts and layouts work in practice.",
+   "date": "2026-10-23",
+   "image": "thumbs/a417f333e7a1b94a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "c10d96bc5b52",
+   "topic": "stationery",
+   "source": "Sarica Studio",
+   "title": "Card-size and passport-size Traveler's Notebook tours compared",
+   "url": "https://www.youtube.com/watch?v=E7l4AUlVHUk",
+   "summary": "A video tour of two compact Traveler's Notebook formats and what each holds. It helps if you are weighing small-format setups or want ideas for inserts.",
+   "date": "2026-10-23",
+   "image": "thumbs/bfaee588a8511f17.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ce15dd9abb41",
+   "topic": "stationery",
+   "source": "キャパゼロでも手帳が好き",
+   "title": "Filling a Hobonichi Techo daily page with writing only, no decoration",
+   "url": "https://www.youtube.com/watch?v=W9iFVZlhG-Y",
+   "summary": "A calm, no-stickers session showing how to use a Hobonichi daily page for pure handwriting. It suits anyone who wants a clean, text-first journaling habit.",
+   "date": "2026-10-28",
+   "image": "thumbs/f72d42d3dd496c1c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "59c5456b675e",
+   "topic": "stationery",
+   "source": "たつのすけ日記",
+   "title": "How to use the Hobonichi Techo Cousin, plus a four-planner setup for 2027",
+   "url": "https://www.youtube.com/watch?v=1MdrYpB__js",
+   "summary": "A planning-ahead video explaining how the Cousin is used and how it fits into a system of four planners for next year.",
+   "date": "2026-10-21",
+   "image": "thumbs/d3b82c3ef8f4cc97.webp",
+   "kind": "video"
+  },
+  {
+   "id": "2784acc288ae",
+   "topic": "stationery",
+   "source": "Seaweed Kisses",
+   "title": "A well-liked everyday journal setup, shown page by page",
+   "url": "https://www.youtube.com/watch?v=oUrRY28sSkM",
+   "summary": "A popular video walks through an everyday journal setup with real spreads. It offers layout and habit ideas you can borrow.",
+   "date": "2026-10-25",
+   "image": "thumbs/fa1a28ab636be103.webp",
+   "kind": "video"
+  },
+  {
+   "id": "06ad2f00fedc",
+   "topic": "stationery",
+   "source": "Yağmur Kurt",
+   "title": "Comprehensive Hobonichi review covering design, usage and customisation",
+   "url": "https://www.youtube.com/watch?v=XdD-2IBJMAo",
+   "summary": "A long-form look at Hobonichi planners: build and paper, ways people use them, and how to customise them.",
+   "date": "2026-10-28",
+   "image": "thumbs/54c4aa29d9219608.webp",
+   "kind": "video"
+  },
+  {
+   "id": "d9a15baa6039",
+   "topic": "stationery",
+   "source": "the leah way",
+   "title": "Realistic weekly planning in a Hobonichi Cousin",
+   "url": "https://www.youtube.com/watch?v=ET9IwFhJ2YQ",
+   "summary": "A messy-but-honest weekly spread in the Cousin that shows how planning works when the week doesn't go to plan.",
+   "date": "2026-10-28",
+   "image": "thumbs/174e5e7f7b16e7aa.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "f42a6de3d910",
+   "topic": "stationery",
+   "source": "Layle By Mail",
+   "title": "Free class: November 2026 Traveler's Notebook setup",
+   "url": "https://www.youtube.com/watch?v=VvpQOjMnF3g",
+   "summary": "A free class on setting up a Traveler's Notebook for November, with layout and insert ideas for the month ahead.",
+   "date": "2026-10-28",
+   "image": "thumbs/8e231a26c61b9010.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "16498773af2a",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens paper samplers let you test Japanese and other papers",
+   "url": "https://www.jetpens.com/blog/JetPens-Paper-Sampler-Introduction/pt/1015",
+   "summary": "JetPens explains what's in each of its paper sampler packs, including a Japanese paper one. Handy for comparing paper weights and textures with your own pens and inks.",
+   "date": "2026-10-27",
+   "extra": true
+  },
+  {
+   "id": "887c647ad594",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "Lux Aeterna breaks down Brian Cox world-tour opener, mixing lidar scans with Houdini sims",
+   "url": "https://www.cgchannel.com/2026/10/see-lux-aeternas-vfx-breakdown-for-brian-coxs-new-world-tour/",
+   "summary": "The studio shows how it built the animated sequence opening Brian Cox's 2026 live shows from lidar data and Houdini simulations. A good look at scan-to-sim work for a live-event screen.",
+   "date": "2026-10-28"
+  },
+  {
+   "id": "60d4e407f5e5",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "On-set photo: Chalamet and Villeneuve shooting Dune: Part Three in the Liwa Desert",
+   "url": "https://beforesandafters.com/2026/10/27/on-the-set-pic-dune-part-three-2/",
+   "summary": "befores & afters shares a set picture of Timothée Chalamet and Denis Villeneuve filming Dune: Part Three in the Abu Dhabi desert.",
+   "date": "2026-10-27",
+   "image": "thumbs/7ccaaa12995e4c9d.webp"
+  },
+  {
+   "id": "16dba8e892cb",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "CoSA VFX details the invisible effects on Lanterns, from landscapes to a digital beard",
+   "url": "https://www.artofvfx.com/lanterns-discover-cosa-vfxs-invisible-effects-from-digital-landscapes-to-a-beard/",
+   "summary": "CoSA VFX explains its subtle work for season one: building and extending Nebraska landscapes, plus the unexpected digital beard. A reminder that most VFX goes unnoticed.",
+   "date": "2026-10-28",
+   "image": "thumbs/99ad180dad01ee2c.webp"
+  },
+  {
+   "id": "20485c794f00",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Disney and Bluth veterans hand-draw Prada's holiday campaign",
+   "url": "https://www.cartoonbrew.com/advertising/john-pomeroy-prada-campaign-2d-handdrawn-268551.html",
+   "summary": "John Pomeroy leads a team of veteran animators blending 2D woodland creatures with live action. A behind-the-scenes video shows the craft.",
+   "date": "2026-10-28",
+   "image": "thumbs/d4d4047e574430bf.webp"
+  },
+  {
+   "id": "a10823ab7b5a",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Anime director Rintaro warns that animation's fear of risk threatens its future",
+   "url": "https://www.cartoonbrew.com/interviews/rintaro-interview-busan-metropolis-galaxy-express-268512.html",
+   "summary": "At Busan, the director of Galaxy Express 999 and Metropolis talks about remakes, generative AI and why new work matters.",
+   "date": "2026-10-28",
+   "image": "thumbs/a9d478749be6273d.webp"
+  },
+  {
+   "id": "913997ae67a2",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Oscar short contender: Jocelyn Charles on cosmic-horror film God Is Shy",
+   "url": "https://www.cartoonbrew.com/awards/god-is-shy-director-jocelyn-charles-268468.html",
+   "summary": "The director discusses her short, which contrasts saturated colour with unsettling imagery in a train-set story built around exchanged drawings.",
+   "date": "2026-10-28",
+   "image": "thumbs/da51474385a351ad.webp"
+  },
+  {
+   "id": "7df627a2b360",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "First trailer for Jumanji: Open World",
+   "url": "https://www.artofvfx.com/jumanji-open-world/",
+   "summary": "Sony's trailer shows the game's chaos spilling into the real world, with Johnson, Hart, Black and Gillan returning.",
+   "date": "2026-10-28",
+   "image": "thumbs/493af9afa5d890ac.webp"
+  },
+  {
+   "id": "9d367913af62",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "New Avengers: Doomsday teaser brings three worlds' heroes together against Doom",
+   "url": "https://www.artofvfx.com/avengers-doomsday/",
+   "summary": "The teaser hints at a large-scale confrontation with Doctor Doom.",
+   "date": "2026-10-26",
+   "image": "thumbs/7fc63f6db4f1473a.webp"
+  },
+  {
+   "id": "2deb01d30dcf",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "TIFF 2026 puts animation in the spotlight, with a historic competition entry",
+   "url": "https://www.cartoonbrew.com/newsletter/tokyo-international-film-festival-newsletter-one-268519.html",
+   "summary": "Tokyo's festival features a strong animation selection, including Sun Xun's competition entry. TIFFCOM also outlines plans for anime exports and co-production.",
+   "date": "2026-10-28",
+   "image": "thumbs/d91fcc2cb0ceb537.webp",
+   "extra": true
+  },
+  {
+   "id": "fb599a9645fb",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Powerpuff Girls reunion postponed after Eric Bauza's death",
+   "url": "https://www.cartoonbrew.com/events/powerpuff-girls-reunion-postponed-eric-bauza-268588.html",
+   "summary": "Saturday Morning Cartoons United has postponed the event, and ticket money not refunded will go to Bauza's family.",
+   "date": "2026-10-28",
+   "image": "thumbs/7ebda50b94c3f4b0.webp",
+   "extra": true
+  },
+  {
+   "id": "1ec43b9056f5",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Australia's ABC demands One Nation stop using Bluey in political cartoons",
+   "url": "https://www.cartoonbrew.com/politics/abc-australia-one-nation-stop-using-bluey-268541.html",
+   "summary": "The broadcaster is considering legal action over the party's use of the character in its propaganda.",
+   "date": "2026-10-28",
+   "image": "thumbs/6132090d09ff9269.webp",
+   "extra": true
+  },
+  {
+   "id": "94763c0fd4f2",
+   "topic": "vfx",
+   "source": "Schopix Studios",
+   "title": "Artist tests whether AI can beat one of his hardest VFX shots",
+   "url": "https://www.youtube.com/watch?v=4s2G50kqaUM",
+   "summary": "A VFX artist pits an AI tool against a difficult shot from his own work, a small-scale look at where generative tools stand.",
+   "date": "2026-10-28",
+   "image": "thumbs/90e328f0aea5f7c0.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "09d497f9e91c",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Foundry puts Nuke 18.0 in open beta with a Griptape AI bridge",
+   "url": "https://www.cgchannel.com/2026/10/foundry-releases-nuke-18-0-in-open-beta/",
+   "summary": "Nuke 18.0 beta adds a Griptape bridge for running AI workflows from the node graph, alongside other new features. Worth a look for compositing pipelines considering AI steps.",
+   "date": "2026-10-28"
+  },
+  {
+   "id": "a6d881eda377",
+   "topic": "pipeline",
+   "source": "NalouN",
+   "title": "Stylised heal effect built in Aqueduct and Unreal Engine, graph shared",
+   "url": "https://www.youtube.com/watch?v=7govjnLJlMs",
+   "summary": "A breakdown of a stylised healing effect made with the node-based Aqueduct tool and Unreal Engine, with the graph available to inspect.",
+   "date": "2026-10-28",
+   "image": "thumbs/b0eba11d88ee63dc.webp",
+   "kind": "video"
+  }
+ ]
+}
