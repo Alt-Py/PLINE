@@ -1,0 +1,368 @@
+{
+ "date": "2026-10-30",
+ "generated_at": "2026-10-30T10:03:35+13:00",
+ "headline": "Arnold 7.5.4 adds an Imager shader and pausable renders, Dear Upstairs Neighbors enters the 2027 Oscar race, and a Hobonichi user fills pages with manuscript-style calligraphy.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 40,
+ "sources_total": 40,
+ "source_errors": {},
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "24fb9dbbf5eb",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Keep Sorted plugin automatically alphabetises marked lists and tables in your notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xirmln/keep_sorted_a_plugin_that_keeps_marked_lists_and/",
+   "summary": "Wrap a list or table in two comment markers and the plugin re-sorts it once you've paused typing for five seconds. A small but practical way to keep long reference lists tidy without jumping lines mid-edit.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "926ece96a9ab",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Todoist integration Harmony 0.2.11 adds natural-language task entry and four languages",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xigv6x/todoist_in_obsidian_new_update_harmonys_version/",
+   "summary": "The update redesigns task creation with a minimal input, live feedback chips and autocomplete for boards and tags. It also adds full localisation in English, Spanish, German and French.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "17512cd03c60",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Experienced developer asks how people pair Obsidian with a desktop AI agent",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xi54n7/are_you_using_obsidian_with_a_desktop_ai_agent/",
+   "summary": "The author uses an agent to surface missed connections between notes, critique drafts and find orphaned notes. The thread is a useful look at how people split work between a vault and a local agent.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "cca62d75475d",
+   "topic": "obsidian",
+   "source": "Zsolt's Visual Personal Knowledge Management",
+   "title": "K-Plex 0.3.0 demo shows infinite mind map, facets and drag-and-drop linking",
+   "url": "https://www.youtube.com/watch?v=oRUXDwe-x3Q",
+   "summary": "A video walkthrough of the latest release of this visual knowledge-management plugin. It centres on a zoomable mind map and faster ways to link notes by dragging.",
+   "date": "2026-10-29",
+   "image": "thumbs/7c2d2dfe508bf1fb.webp",
+   "kind": "video"
+  },
+  {
+   "id": "cef349bdf015",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Graph view showcase after six months of regular note-taking",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xi1izn/half_a_year_of_active_note_taking/",
+   "summary": "A user colour-codes their graph by diaries, media, and projects to show how a vault grew once they started writing daily. It works as a practical example of structuring a vault by category.",
+   "date": "2026-10-28",
+   "image": "thumbs/d1b45a718d6e6674.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "a5cd4e0f9a8d",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Reminders plugin built on Google Calendar sync seeks testers before release",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1ximftm/reminders_plugin_looking_for_testers/",
+   "summary": "The developer has reworked the plugin to target a wider audience than self-hosters, with a new date-time picker and Google Calendar as the sync backbone. Closed testing comes before publication.",
+   "date": "2026-10-29",
+   "image": "thumbs/890d12b31cf33860.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "f79122d251ac",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Medieval illuminated manuscripts inspire calligraphy-filled Hobonichi A5 pages",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xh88yd/some_past_pages_and_future_layouts_inspired_by/",
+   "summary": "The artist switched from A6 to the larger A5 Techo because the bigger pages suit big calligraphy. The post shows past spreads and planned layouts, and is an excellent example of lettering in a planner.",
+   "date": "2026-10-27",
+   "kind": "reddit"
+  },
+  {
+   "id": "ad786e2a3a0b",
+   "topic": "stationery",
+   "source": "The Well-Appointed Desk",
+   "title": "Pilot Metropolitan Chanomegumi Light Green fine nib reviewed, plus Sailor x Ancora Rainy Day ink",
+   "url": "https://www.wellappointeddesk.com/2026/10/fountain-pen-review-pilot-mr-chanomegumi-light-green-f-nib-bonus-sailor-x-ancora-rainy-day-ink/",
+   "summary": "A hands-on review of the tea-themed Pilot colourway, which is lighter and more citrusy than the standard green Metro Pop. The post also gives a bonus look at a Sailor collaboration ink.",
+   "date": "2026-10-29",
+   "image": "thumbs/8968b074ff477365.webp"
+  },
+  {
+   "id": "555058e84234",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Majohn's new extra-fine flex nib gets calligraphers excited",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xhh0l6/my_new_fav_majohn_extra_fine_flex_nib_testing/",
+   "summary": "The pen has a small iridium tip shaped much like a vintage gold dip nib, which gives thin hairlines at an affordable price. Early testing and a follow-up post cover availability.",
+   "date": "2026-10-28",
+   "image": "thumbs/6f3bb890edef26f6.webp",
+   "also": [
+    {
+     "source": "r/fountainpens",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1xhge4i/re_post_majohn_l1_flexible_nib_now_available/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "c85e2b90daac",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Iroshizuku Chiku-rin shades beautifully on Midori MD paper",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xh99dk/iroshizuku_chiku_rin/",
+   "summary": "A user describes the ink as a powdery sage green with yellow undertones that shades well on Midori MD. It is a good ink-and-paper pairing note.",
+   "date": "2026-10-28",
+   "image": "thumbs/92e0a987092cc92a.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "bf6f85539d10",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Da Nang trip journalled in compact Hobonichi spreads",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xgsggw/journal_entries_about_da_nang/",
+   "summary": "Travel entries laid out in tight, tidy layouts. The poster also asks how Weeks users fill the notes pages at the back, which is a useful thread of layout ideas.",
+   "date": "2026-10-27",
+   "kind": "reddit"
+  },
+  {
+   "id": "e05694cce19d",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Hachimonjiya lottery for the Pilot Decimo 75th anniversary pen sparks reseller debate",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xhinw9/im_furious/",
+   "summary": "A visitor in Japan lost out in the shop's lottery and questions how the 15+ units were distributed. The 133-comment thread shows how limited Japanese releases are sold.",
+   "date": "2026-10-28",
+   "kind": "reddit"
+  },
+  {
+   "id": "e5795e57948b",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Ideas for using the front and back pages of a Hobonichi Weeks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xgdjxh/heres_what_i_did_with_the_back_front_pages_of_my/",
+   "summary": "The poster fills the extras with a monthly museum visit, an 'I spy' photo or doodle page and index stickers. It is a handy source of ways to use the spare pages.",
+   "date": "2026-10-27",
+   "kind": "reddit"
+  },
+  {
+   "id": "e648a030ebd8",
+   "topic": "stationery",
+   "source": "いぐ【いぐのて】",
+   "title": "Planning session with Mini 6 Daily and Hobonichi sneakers, with refill tweaks",
+   "url": "https://www.youtube.com/watch?v=5rLR4KqvVf8",
+   "summary": "A Japanese planner video that works through refill ideas while answering viewer comments. It is a relaxed look at daily Hobonichi habits.",
+   "date": "2026-10-29",
+   "title_ja": "ミニ６デイリー＆ほぼ日スニーカーで手帳タイム｜リフィルを工夫しながらコメントにお答え",
+   "image": "thumbs/430221f6ed90ed1e.webp",
+   "kind": "video"
+  },
+  {
+   "id": "bf0a64c068e1",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Three Hobonichi Weeks dressed up for planner, health diary and tarot journal",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xh5qaq/i_put_their_clothes_on_finally/",
+   "summary": "One owner gives each notebook a separate job and cover colour. The post is a clear example of splitting purposes across several Techos.",
+   "date": "2026-10-27",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "2ea4558e3466",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi My 100 used to record a toddler's first words",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xgm4y4/my_100_first_words/",
+   "summary": "A parent plans to use the My 100 notebook as a running list of everything their 18-month-old can say. It is a simple, touching setup that shows a good use for a themed notebook.",
+   "date": "2026-10-27",
+   "image": "thumbs/a2345df2d0f0a80e.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "f5697826630a",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Platinum Preppy Maki-e pens look better with Prefounte caps",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xhij9t/platinum_preppy_makie_pens_look_much_better_with/",
+   "summary": "A quick modding tip: swapping in caps from the Prefounte gives the affordable maki-e Preppy a more refined look.",
+   "date": "2026-10-28",
+   "image": "thumbs/5efef141e22ff582.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "b3cedd72d57d",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "First Platinum 3776 matches owner's leather journal",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xhfinf/my_first_platinum_3776/",
+   "summary": "A collector shares their first 3776 and praises how it writes. It is a short Japanese-pen ownership post.",
+   "date": "2026-10-28",
+   "image": "thumbs/d7368ceefc717ef7.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "04f14de17101",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Arnold 7.5.4 adds Imager shader for post effects and pause/resume rendering",
+   "url": "https://www.cgchannel.com/2026/10/autodesk-releases-arnold-7-5-4/",
+   "summary": "Autodesk's renderer gets an Imager shader for building post effects inside the renderer. It can also pause and resume renders, which is helpful for long frames and shared farms.",
+   "date": "2026-10-29"
+  },
+  {
+   "id": "8ed16433f150",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "MOPs+ gets floating licenses via a Linux license server",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xg7u3r/mops_floating_licenses_now_available/",
+   "summary": "The commercial Houdini add-on can now share a license pool between machines, which suits studios. The server runs only on Linux for now, with other platforms planned.",
+   "date": "2026-10-26",
+   "image": "thumbs/dab33c744ff38b7a.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "442f46dabd1f",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Software PBR raytracer with L1 spherical-harmonics GI runs in CyberVGA without a GPU",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xgnzeb/software_pbr_raytracer_l1_sh_gi_inside_cybervga/",
+   "summary": "A DOS-era-style engine now has a multi-threaded, tile-based raytracer compiled just-in-time on x64. The L1 SH global illumination makes it a fun case study in lighting maths.",
+   "date": "2026-10-27",
+   "image": "thumbs/cfa3933a725e4261.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c554fd19ec9b",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Nanite-style DX12 renderer gains virtual shadow maps tied to geometry streaming",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xfsn25/i_added_virtual_shadow_maps_to_my_nanitestyle/",
+   "summary": "The project now runs NVIDIA's Zorah scene with virtualised shadows, which is a close look at how dense geometry and shadow resolution can be managed together in real time.",
+   "date": "2026-10-26",
+   "kind": "reddit"
+  },
+  {
+   "id": "a87078bb1b41",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "WebGPU demo adds portals between Gaussian-splat scenes with real-time shadows and reflections",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xg1pc1/realtime_portals_between_gaussian_splat/",
+   "summary": "The pipeline exports as a single offline HTML file. It combines shadows and reflections on splats with a portal system for moving between scenes.",
+   "date": "2026-10-26",
+   "image": "thumbs/66dcb69cbd1f769a.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "51dfaa161ca7",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "MetaWrap Blender add-on converts custom characters into Unreal MetaHumans",
+   "url": "https://www.cgchannel.com/2026/10/metawrap-turns-your-3d-characters-into-metahumans-in-blender/",
+   "summary": "The tool suite takes existing sculpts, scans or generated characters and prepares them as MetaHumans, which could shorten the character-to-engine route.",
+   "date": "2026-10-29"
+  },
+  {
+   "id": "76fa2b29d989",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Dear Upstairs Neighbors director discusses Oscar contender mixing 2D, 3D and generative AI",
+   "url": "https://www.cartoonbrew.com/awards/dear-upstairs-neighbors-connie-qin-he-268607.html",
+   "summary": "Connie Qin He's short follows a sleepless woman's surreal fantasies and uses Google DeepMind tools alongside conventional animation. Its use of AI makes it a notable test case for awards and workflow.",
+   "date": "2026-10-29",
+   "image": "thumbs/3ada0815aae8d6a2.webp"
+  },
+  {
+   "id": "834c3d1ccc3f",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Production VFX supervisor François Dumoulin looks back across Rodeo FX and Framestore work",
+   "url": "https://www.artofvfx.com/heart-of-the-beast-francois-dumoulin-production-vfx-supervisor/",
+   "summary": "The interview follows his path from Valerian and The Sandman to Barbie and Prehistoric Planet at Framestore. It gives a supervisor's view of career and craft.",
+   "date": "2026-10-29",
+   "image": "thumbs/0ffb2aee0509b2e0.webp"
+  },
+  {
+   "id": "0528c175eb06",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "BOT VFX delivers 300+ invisible shots for Young Washington",
+   "url": "https://www.artofvfx.com/young-washington-bot-vfx-recreates-18th-century-america-with-invisible-effects/",
+   "summary": "The studio turned practical footage into 18th-century battlefields and colonial towns, mixing traditional CG with generative AI. It is a good example of where invisible effects work stands now.",
+   "date": "2026-10-29",
+   "image": "thumbs/a7f421dc75159c55.webp"
+  },
+  {
+   "id": "3db7612d504f",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Ervin Han on coordinating four studios for A Banquet for Hungry Ghosts",
+   "url": "https://www.cartoonbrew.com/interviews/banquet-for-hungry-ghosts-ervin-han-268641.html",
+   "summary": "The director talks about adapting Chinese food-themed ghost stories and making animated meals look both delicious and terrifying. It offers insight into multi-studio animation production.",
+   "date": "2026-10-29",
+   "image": "thumbs/d8d8ab6aae09e91e.webp"
+  },
+  {
+   "id": "61af07116da8",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "El Ranchito shows bloody VFX reel for The Boys season five",
+   "url": "https://www.artofvfx.com/the-boys-season-5-el-ranchito-unleashes-a-bloody-vfx-showreel/",
+   "summary": "The studio's showreel collects gore and violent shots from the show's final season, which gives a quick look at effects-heavy episodic work.",
+   "date": "2026-10-29",
+   "image": "thumbs/b187a710520cef8b.webp"
+  },
+  {
+   "id": "fb668196e84f",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Director Travis Knight interviews cinematographer Caleb Deschanel about Wildwood",
+   "url": "https://beforesandafters.com/2026/10/30/caleb-deschanel-interview-on-wildwood/",
+   "summary": "A conversation between the director and his cinematographer on the look of the film, valuable for lighting-minded readers.",
+   "date": "2026-10-29",
+   "image": "thumbs/9146de5a674b387d.webp"
+  },
+  {
+   "id": "0c22020a2266",
+   "topic": "vfx",
+   "source": "FRAME X VFX STUDIO",
+   "title": "FRAME X VFX Studio posts before-and-after breakdown for Nayyi Navelli",
+   "url": "https://www.youtube.com/watch?v=_Yj76JLi5YY",
+   "summary": "A short official breakdown video showing the studio's shot work before and after compositing.",
+   "date": "2026-10-29",
+   "image": "thumbs/700e3c36333377b7.webp",
+   "kind": "video"
+  },
+  {
+   "id": "98f71485d6a1",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Reporter finds View Conference inspiring but AI sales pitches exhausting",
+   "url": "https://www.cartoonbrew.com/events/view-conference-ai-sales-pitches-268698.html",
+   "summary": "Filmmakers shared craft at the Turin event while AI evangelists claimed everyone already uses the tech. A sceptical look at hype in animation and VFX.",
+   "date": "2026-10-29",
+   "image": "thumbs/aa12c316287256bc.webp"
+  },
+  {
+   "id": "b923db13b945",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Living Large and Dog Alone win top Emile Awards",
+   "url": "https://www.cartoonbrew.com/awards/emile-european-animation-awards-living-large-dog-alone-268597.html",
+   "summary": "Arco took two craft prizes at the Krakow ceremony, with Little Amélie and On Weary Wings Go By also winning.",
+   "date": "2026-10-29",
+   "image": "thumbs/a9efe00688fa4bff.webp",
+   "extra": true
+  }
+ ]
+}
