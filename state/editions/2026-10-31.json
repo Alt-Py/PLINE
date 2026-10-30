@@ -1,0 +1,441 @@
+{
+ "date": "2026-10-31",
+ "generated_at": "2026-10-31T09:42:47+13:00",
+ "headline": "Wētā FX shows its Moana Te Kā and Te Fiti work, Patrick Stewart dies at 86, and radiance cascades with ray splitting bring fast GI to Unreal.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 40,
+ "sources_total": 40,
+ "source_errors": {},
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "29c79bcfe994",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Coffer theme publishes an Obsidian vault as a linked digital garden",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xiyz3g/coffer_publish_your_obsidian_vault_as_a_digital/",
+   "summary": "A new Astro theme turns a vault into a notebook of short notes. Links open in side panes, footnotes become margin sidenotes, backlinks sit under each note, and Bases are supported. Useful for publishing course or research notes without changing how you write.",
+   "date": "2026-10-29",
+   "image": "thumbs/b01d88bb15922bd0.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "045b4dc6a719",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Just Simple Planner shows Markdown notes as cards on a visual timeline",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xjbii2/just_simple_planner_a_visual_timeline_where_every/",
+   "summary": "A new plugin lays projects and daily life out on a continuous timeline, with every card stored as a plain Markdown note. It is inspired by the Haftio app and keeps the planning data in your vault.",
+   "date": "2026-10-30",
+   "kind": "reddit"
+  },
+  {
+   "id": "ac4861a8ae99",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Letterboxd Library plugin backs up and browses your film history in Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xizdl8/i_made_a_plugin_to_browse_your_letterboxd_history/",
+   "summary": "The plugin imports your Letterboxd history into the vault, so you keep a local backup, can see richer stats, and can reuse the list elsewhere. It's a handy example of pulling an outside service into your notes.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "aa04cf251df6",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Obsidian home page turned into a Bloomberg-style dashboard with chore reminders",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xjq7od/i_turned_my_obsidian_home_page_into_a_bloomberg/",
+   "summary": "A user built a dense terminal-style home dashboard with the Salamander theme, including reminders such as taking out the trash. It shows how far a vault landing page can go as a personal control panel.",
+   "date": "2026-10-30",
+   "image": "thumbs/89654fdc8b7b0701.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "89e4301f980d",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "One year on: an 822-note vault, almost entirely self-written",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xj6334/obsidian_vault_transformation/",
+   "summary": "A user shares a one-year retrospective of their vault. They keep clippings to a minimum and write nearly every note themselves, which gives a useful look at how a vault's structure evolves.",
+   "date": "2026-10-30",
+   "kind": "reddit"
+  },
+  {
+   "id": "eab7f158f6fd",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "The 'On This Day' plugin has vanished, and users are looking for alternatives",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xjohfi/my_beloved_on_this_day_plugin_is_gone_seeking/",
+   "summary": "A long-time user reports that the plugin showing past diary entries has been removed from the community list. The thread gathers replacements for a daily-review habit.",
+   "date": "2026-10-30",
+   "kind": "reddit"
+  },
+  {
+   "id": "cd9c6f370248",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Four years of Dungeons & Dragons notes as an Obsidian graph",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xjnft2/my_obsidian_graph_after_using_it_for_dungeons/",
+   "summary": "A graph-view showcase of a campaign vault that has grown over four-plus years. It's a good picture of how densely linked worldbuilding notes can become.",
+   "date": "2026-10-30",
+   "kind": "reddit"
+  },
+  {
+   "id": "c56ab04de41c",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Extended MathJax plugin fails to load across desktop and phone",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xja9q7/extended_mathjax_broken_failed_to_load_plugin/",
+   "summary": "Users report that the plugin errors out on enabling, even after reinstalling and in a fresh vault. Anyone writing LaTeX-heavy notes with custom preambles may want to watch this thread for a fix or a replacement.",
+   "date": "2026-10-30",
+   "kind": "reddit"
+  },
+  {
+   "id": "ff77bd2eb2c3",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "A first Pilot Custom Urushi in fine-medium, bought through a friend in Japan",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xi9pwh/grail_pen_acquired_pilot_custom_urushi_fm/",
+   "summary": "A collector shows off the blue Custom Urushi, sourced from Okamotoya and chosen over the red so it won't overlap with a future Namiki vermillion. Photos and a lively thread show how the lacquer finish looks and shifts in the light.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "5d4804309204",
+   "topic": "stationery",
+   "source": "文具専門店うさぎや",
+   "title": "KURASHIKI BNG. launches its first fountain pen",
+   "url": "https://www.youtube.com/watch?v=OgN6VVqGqFs",
+   "summary": "Japanese stationery shop Usagiya walks through the new release from the Kurashiki-based brand, which debuts a carefully supervised first fountain pen. Worth a look if you follow new Japanese makers.",
+   "date": "2026-10-30",
+   "title_ja": "[New Release] KURASHIKI BNG. Finally Launches Its First Fountain Pen! Expertly Supervised and Fea...",
+   "image": "thumbs/ca177d5bfe18d2fc.webp",
+   "kind": "video"
+  },
+  {
+   "id": "dae0b7746190",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Rorschach-style inkblots made with four Pilot Iroshizuku inks on Midori MD paper",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xia2wo/this_inkblot_says_i_have_too_many_iroshizuku_inks/",
+   "summary": "Yama-Budo, Shin-Kai, Hatoru-Bi and Yama Guri were blotted onto Midori MD paper. It's a fun way to compare how the inks shade and blend on a favourite Japanese paper.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "d45a8e712ae2",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Journal pages and layouts inspired by medieval illuminated manuscripts",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xiallh/some_past_pages_and_future_layouts_inspired_by/",
+   "summary": "A fountain-pen user shares finished pages and planned layouts that borrow the look of illuminated manuscripts. It's inspiration for combining calligraphy, decoration and page structure.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "e6fcbaa75cf4",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Setting up a 2027 Hobonichi Weeks with reflection pages, trackers and bucket lists",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xi50p6/setting_up_my_2027_starlight_weeks/",
+   "summary": "A well-liked layout post shows a full-year setup: monthly reflection pages, a vision board and letter to self, music and film trackers, and seasonal bucket lists. A good source of practical ideas for structuring a Weeks.",
+   "date": "2026-10-29",
+   "also": [
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1xi74u1/more_insight_into_my_weeks/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "11160968f407",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi users share their favourite pens for Tomoe River paper",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xht7az/share_your_favorite_pens_to_write_in_your/",
+   "summary": "A busy thread compares pens and inks that work on Hobonichi's thin paper. The poster likes TWSBI Eco pens with Diamine inks, and the comments are a useful guide to pen and ink pairings.",
+   "date": "2026-10-28",
+   "image": "thumbs/26fed45b886d81a8.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "85753a2b10d7",
+   "topic": "stationery",
+   "source": "いぐ【いぐのて】",
+   "title": "Preparing the November refill for a Mini 6 daily and logging notes in a Hobonichi sneaker",
+   "url": "https://www.youtube.com/watch?v=TuicjA1RzuE",
+   "summary": "A Japanese planner video shows how the creator sets up the next month's pages and records other people's notebook ideas in a separate Hobonichi. It's a practical look at an ongoing journaling routine.",
+   "date": "2026-10-30",
+   "title_ja": "ミニ6デイリーの11月リフィルを準備｜ほぼ日スニーカーにみんなの手帳をメモする【手帳タイム】　＃992",
+   "image": "thumbs/0aa5e32a67448e6c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "9a6a39c356ba",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A repurposed 2024 Hobonichi A6 becomes a travel notebook in a new cover",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xhnlqz/put_newly_bought_tragen_in_use_for_my_travel/",
+   "summary": "The owner keeps the main A5 safe at home and uses an old A6 as a travel journal, with a fortune-cookie note on the cover as a keepsake. It's a clever low-risk setup for journaling on the road.",
+   "date": "2026-10-28",
+   "kind": "reddit"
+  },
+  {
+   "id": "b46e7ce2f557",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Diamine Inkvent and Colorverse Colorvent 2026 swatched on Tomoe River paper",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xi5kkl/diamine_inkvent_2026_spoilers/",
+   "summary": "Early swatches of both advent calendars, done on Tomoe River with stamps, a wavy-swatch nib and a Pilot Iro-utsushi dip pen. They show how the new inks behave on the paper and how to present swatches.",
+   "date": "2026-10-29",
+   "also": [
+    {
+     "source": "r/fountainpens",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1xi76lr/colorverse_colorvent_2026_spoilers_pics/"
+    }
+   ],
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "2e0d8bb8dc8f",
+   "topic": "stationery",
+   "source": "The Goulet Pen Company",
+   "title": "Goulet Q&A: what makes paper good, how ink mixing differs from paint, and the TWSBI ECO Jade Jelly",
+   "url": "https://www.youtube.com/watch?v=ZHGsH7nQ2Vc",
+   "summary": "Brian explains what makes paper 'good', compares mixing inks with mixing paints, and covers custom nib grinds and warranty. The episode also shows the new TWSBI ECO Jade Jelly.",
+   "date": "2026-10-30",
+   "image": "thumbs/de8fb5d37f1b7bdf.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "a58fdccfa2fa",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi users show junk-journal pages layered with daily writing",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xi78p2/junk_journal_show_your_pages/",
+   "summary": "One user journals on about two thirds of a Cousin page and decorates the rest, then writes over the art. A small but useful example of mixing junk journaling with daily entries.",
+   "date": "2026-10-29",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "102e857ae8b8",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Making a homemade Traveler's-style cover to replace a pricey Beautiful People original",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xh7vz2/since_the_only_beautiful_people_covers_available/",
+   "summary": "A hobbyist is hand-sewing a notebook cover with a sleeve, pockets, grommets and strings. It's an inspiring DIY project for anyone who wants a custom cover.",
+   "date": "2026-10-27",
+   "image": "thumbs/f1438ec89fbd92eb.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "d16c246fe17f",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Wētā FX breaks down its Moana work, from Te Kā's lava simulations to Te Fiti",
+   "url": "https://www.artofvfx.com/moana-weta-fx-brings-te-ka-and-te-fiti-to-life-in-the-epic-third-act/",
+   "summary": "Wētā FX shares behind-the-scenes material and a highlights reel for Disney's live-action Moana. The work includes the fiery demon Te Kā's smoke, steam and lava simulation, plus the tropical environments, storms and the climactic Te Fiti. Interesting for FX and rendering workflows.",
+   "date": "2026-10-30",
+   "image": "thumbs/34d7a40b9a8befb7.webp",
+   "also": [
+    {
+     "source": "befores & afters",
+     "url": "https://beforesandafters.com/2026/10/30/weta-fx-showcases-moana-work/"
+    },
+    {
+     "source": "CG Channel",
+     "url": "https://www.cgchannel.com/2026/10/check-out-weta-fxs-vfx-highlights-reel-for-moana/"
+    }
+   ]
+  },
+  {
+   "id": "5374c3c7e9ec",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "How the famous mirror shot in 'Contact' was made",
+   "url": "https://beforesandafters.com/2026/10/31/the-making-of-that-shot-in-contact/",
+   "summary": "Befores & afters revisits the practical and visual-effects work behind the film's mirror shot, which still impresses. Good reading on solving reflections and camera tricks before modern CG.",
+   "date": "2026-10-30",
+   "image": "thumbs/00103dc2509e3105.webp"
+  },
+  {
+   "id": "6a1e1ead5770",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "'Coyote vs. Acme' cleared to compete for the animated feature Oscar",
+   "url": "https://www.cartoonbrew.com/newsletter/coyote-vs-acme-launches-oscar-race-halloween-horrors-remembering-patrick-stewart-268751.html",
+   "summary": "The Academy has approved the film for the animated feature race, and Ketchup Entertainment is preparing an awards campaign. It is a notable turnaround for a project once thought lost.",
+   "date": "2026-10-30",
+   "image": "thumbs/84bd98ffaf11624e.webp"
+  },
+  {
+   "id": "668340ae3e84",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Patrick Stewart, veteran of animation voice work, dies at 86",
+   "url": "https://www.cartoonbrew.com/rip/patrick-stewart-dies-at-86-268709.html",
+   "summary": "Cartoon Brew remembers the actor's four decades of voice roles in animation, including Pharaoh Seti in The Prince of Egypt and Avery Bullock in American Dad!.",
+   "date": "2026-10-30",
+   "image": "thumbs/af5e65d4598cba31.webp"
+  },
+  {
+   "id": "dd7e3f671bbb",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Compositors ask for workable ways to integrate client-supplied AI footage",
+   "url": "https://www.reddit.com/r/vfx/comments/1xhn3si/clients_forcing_ai_assets_into_comps_any_actual/",
+   "summary": "An r/vfx thread describes how shifting edges and frame-to-frame mutations break roto tools and force manual masking when AI plates must be tracked into 3D space. It's a useful look at the labour impact of AI footage.",
+   "date": "2026-10-28",
+   "kind": "reddit"
+  },
+  {
+   "id": "4adccd38432b",
+   "topic": "vfx",
+   "source": "Himanshtv",
+   "title": "A VFX artist dissects the final Ramayana trailer",
+   "url": "https://www.youtube.com/watch?v=RhrSq5Ruat8",
+   "summary": "A breakdown video, already at 147k views, looks at the effects work in the trailer for the big-budget Indian epic.",
+   "date": "2026-10-26",
+   "image": "thumbs/8ff474ee9f94c7fd.webp",
+   "kind": "video"
+  },
+  {
+   "id": "34b98c0716e5",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Anime producers weigh co-production, funding models and exports at TIFFCOM",
+   "url": "https://www.cartoonbrew.com/business/tiffcom-co-pro-ervin-han-taiki-sakurai-ilan-urroz-268765.html",
+   "summary": "Producers contrast public funding in Europe with Asia's private investment and discuss how international partnerships could bridge the gap. Coverage also notes Tokyo's animation lineup and plans for anime exports.",
+   "date": "2026-10-30",
+   "image": "thumbs/f2f15aee5eef0b59.webp",
+   "also": [
+    {
+     "source": "Cartoon Brew",
+     "url": "https://www.cartoonbrew.com/festivals/tokyo-international-film-festival-newsletter-one-268519.html"
+    }
+   ]
+  },
+  {
+   "id": "b09ec7d92cc9",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Chernobyl-inspired 3D recreation of the Pripyat Palace of Culture",
+   "url": "https://www.reddit.com/r/vfx/comments/1xi6dxg/3d_abandoned_environment_inspired_from_chernobyl/",
+   "summary": "A personal environment project reconstructs the abandoned Energetik building in 3D, with renders shared on r/vfx. It's a good example of environment art and look development.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "909d1467b194",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Director Atsushi Nishigori discusses the three-part anime omnibus 'Grotesqqque'",
+   "url": "https://www.cartoonbrew.com/feature-film/grotesqqque-atsushi-nishigori-cloverworks-268716.html",
+   "summary": "Nishigori talks about digital animation, deliberately contrasting visual styles and juggling several creative roles across the three segments.",
+   "date": "2026-10-30",
+   "image": "thumbs/f3e54b30d4777a11.webp",
+   "extra": true
+  },
+  {
+   "id": "595abae01eb3",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "'Sulaimani' director on stop-motion food and hand-painted memories",
+   "url": "https://www.cartoonbrew.com/awards/sulaimani-director-vinnie-ann-bose-268745.html",
+   "summary": "Vinnie Ann Bose's Oscar-contender short follows two women from Kerala sharing a meal in Paris. It combines stop-motion food with hand-painted recollections.",
+   "date": "2026-10-30",
+   "image": "thumbs/a2c5f02eefa0edcd.webp",
+   "extra": true
+  },
+  {
+   "id": "6c3c40c3e927",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Mexican stop-motion short 'Dolores' is now online",
+   "url": "https://www.cartoonbrew.com/shorts/dolores-cecilia-andalon-delgadillo-mexico-268717.html",
+   "summary": "Director Cecilia Andalón Delgadillo discusses corn-husk puppets, ancient Mexican influences and the craft behind her haunting debut.",
+   "date": "2026-10-30",
+   "image": "thumbs/1e2e68cb911c6dfb.webp",
+   "extra": true
+  },
+  {
+   "id": "b6e5a3069b6a",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Exclusive trailer for the animated horror-satire 'Pinkooland'",
+   "url": "https://www.cartoonbrew.com/shorts/pinkooland-trailer-luis-uson-268759.html",
+   "summary": "Luis Usón's short mixes sci-fi and corporate satire about the working conditions of cute bears. It is a proof of concept for a feature.",
+   "date": "2026-10-30",
+   "image": "thumbs/8e8e26583ec790b3.webp",
+   "extra": true
+  },
+  {
+   "id": "a4df1284c1cd",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Radiance cascades with ray splitting give ghost-free global illumination in Unreal",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xhrtk0/global_illumination_using_radiance_cascades_with/",
+   "summary": "A developer implements the technique in Unreal and writes an article on it. The GI needs no reprojection and accumulates quickly, so there is little ghosting. It's based on a recent paper and is worth reading for real-time light transport.",
+   "date": "2026-10-28",
+   "image": "thumbs/0d59e0938c8e391f.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d7b60f4aab9c",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "GridMarkets publishes a Houdini feather-animation breakdown with the hip file",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xiarwv/project_breakdown/",
+   "summary": "An artist shares a project showcase and a breakdown of how it was built, and the Houdini scene can be downloaded to explore. A good hands-on study in procedural feathers.",
+   "date": "2026-10-29",
+   "image": "thumbs/1f3b3a9931c82549.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "682f895f24ed",
+   "topic": "pipeline",
+   "source": "MaterialX releases",
+   "title": "MaterialX v1.39.6 release candidate is out",
+   "url": "https://github.com/AcademySoftwareFoundation/MaterialX/releases/tag/v1.39.6-rc1",
+   "summary": "A first release candidate for the next 1.39 point release has been tagged, with its changelog on GitHub. Look at it if your look-dev or USD pipeline depends on MaterialX.",
+   "date": "2026-10-30"
+  },
+  {
+   "id": "ef67248e5951",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "SketchUp 2027.0 adds procedural tools and USDZ support",
+   "url": "https://www.cgchannel.com/2026/10/trimble-releases-sketchup-2027-0/",
+   "summary": "Trimble's architectural modelling package gains new procedural tools and can now handle USDZ files, which is another sign of USD spreading beyond VFX tools.",
+   "date": "2026-10-30"
+  },
+  {
+   "id": "5f307a4c3b67",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Packer-IO 1.5 packs similar UV islands up to twice as fast",
+   "url": "https://www.cgchannel.com/2026/10/free-uv-packing-tool-packer-io-now-integrates-directly-in-blender/",
+   "summary": "The free standalone UV packer speeds up handling sequences of similarly shaped islands and comes with a free Blender plugin. It's a handy utility for asset prep.",
+   "date": "2026-10-30"
+  },
+  {
+   "id": "41bfbad64522",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini APEX animation practice piece asks for feedback",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xhruft/animation_practice/",
+   "summary": "An artist animates a custom-rigged character in APEX in a scene inspired by The Hobbit and invites critique. It is a small look at how APEX rigging and animation are being used in practice.",
+   "date": "2026-10-28",
+   "image": "thumbs/c1003833434f7d5f.webp",
+   "kind": "reddit"
+  }
+ ]
+}
