@@ -1,0 +1,382 @@
+{
+ "date": "2026-11-01",
+ "generated_at": "2026-11-01T08:55:50+13:00",
+ "headline": "Obsidian reportedly gains management of files outside the vault, Laika's 'Wildwood' passes $20M domestically, and the Pilot × Hachimonjiya Decimo resale row grows.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "13d584050a1d",
+   "topic": "obsidian",
+   "source": "Vladimir Campos [EN]",
+   "title": "Video: Obsidian can now manage content outside your vault",
+   "url": "https://www.youtube.com/watch?v=9xFWNEW7BZs",
+   "summary": "A walkthrough of a new Obsidian capability for handling files that live outside the vault folder. It could simplify setups where assets and reference material sit elsewhere on disk.",
+   "date": "2026-10-27",
+   "image": "thumbs/5640803d87a190f6.webp",
+   "kind": "video"
+  },
+  {
+   "id": "c21aeae98bb8",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "TaskNotes plugin's review score drops, with 28 network calls flagged",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xk4xdz/tasknotes_rating_drop_28_network_calls_more/",
+   "summary": "A user points out that TaskNotes' community review score fell from 4 to 3, with the scorecard listing 28 network calls. It's a useful reminder to check what community plugins do offline.",
+   "date": "2026-10-31",
+   "kind": "reddit"
+  },
+  {
+   "id": "cb2b453fe801",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Jupyter Notebook plugin v0.7.6 adds cross-cell search and setup fixes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xk894w/jupyter_notebook_for_obsidian_crosscell_search/",
+   "summary": "The plugin for editing and running .ipynb files in Obsidian now searches across all cells, including offscreen ones. It also gets clearer code cells and fixes for local Python environment problems.",
+   "date": "2026-10-31",
+   "kind": "reddit"
+  },
+  {
+   "id": "5bff92a93188",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Essay on how Obsidian and Typora handle caret navigation",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xk9asy/caret_navigation_in_a_hybrid_markdown_editor/",
+   "summary": "A detailed write-up compares cursor movement in two hybrid Markdown editors and distils design principles. Worth reading if you care about editor feel or build plugins.",
+   "date": "2026-10-31",
+   "kind": "reddit"
+  },
+  {
+   "id": "997fa92141f2",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Task Trellis shows tasks from across your vault as kanban boards",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xjyd88/task_trellis_kanban_boards_for_the_tasks_already/",
+   "summary": "The plugin reads Markdown tasks where they already sit, in daily and meeting notes, and writes board changes back to them. It avoids moving tasks into a separate system.",
+   "date": "2026-10-31",
+   "kind": "reddit"
+  },
+  {
+   "id": "00c25e9a35c3",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Is Excalidraw on iPad still laggy? Users compare handwriting workflows",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xkbnp0/current_state_of_excalidraw_on_ipad/",
+   "summary": "A thread asks whether Excalidraw copes with large files on iPad and which plugins people use for sketching straight into notes. It is relevant for anyone drawing diagrams in Obsidian on a tablet.",
+   "date": "2026-10-31",
+   "kind": "reddit"
+  },
+  {
+   "id": "a3c8c69600a3",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Lifeline plugin backs up YouTube subscriptions and playlists as Markdown",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xk0tjw/lifeline_back_up_your_youtube_subscriptions/",
+   "summary": "A free, open-source desktop plugin saves your subscriptions, playlists and Watch Later list as plain notes in the vault. It protects against account terminations and videos disappearing.",
+   "date": "2026-10-31",
+   "kind": "reddit"
+  },
+  {
+   "id": "d2411edb5c35",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Using Obsidian and AI as a cognitive prosthetic after severe illness",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xkeww6/using_obsidian_and_ai_as_a_cognitive_prosthetic/",
+   "summary": "A user with major memory and working-memory limitations describes how they built an Obsidian-based system to compensate. It's a candid look at note-taking as assistive technology.",
+   "date": "2026-10-31",
+   "kind": "reddit"
+  },
+  {
+   "id": "990c9297835b",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Bookshelf, paper pinboard and constellation views built with Datacore",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xkevcd/book_shelf_paper_pinboard_and/",
+   "summary": "An academic's vault setup combines Meta Bind, Templater and Datacore to manage books and papers with notes attached. The result is a visual, litmaps-style layout.",
+   "date": "2026-10-31",
+   "image": "thumbs/2729383973a62f3f.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "a09496a68a9d",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Tag-driven Obsidian dashboard using light JavaScript",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xkguqc/my_dashboard_obsidian_deserves_all_the_love/",
+   "summary": "A user shows off a dashboard that adds and removes tags with a little JS. It's a simple showcase of dashboard-style vault front pages.",
+   "date": "2026-10-31",
+   "image": "thumbs/9674c93e852855f0.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "e8ab318a0a8e",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Comparing Longform and StoryLine plugins for writing novels in Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xjwnwl/anyone_use_both_longform_and_storyline_for_long/",
+   "summary": "A writer asks how the two long-fiction plugins compare and whether people combine them. The replies cover which handles structure and drafting better.",
+   "date": "2026-10-31",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "7063f52a4d54",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "User praises Obsidian Sync after a total laptop loss",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xk59u9/sync_praise_alert/",
+   "summary": "After losing everything locally, a user restored their vault and plugins from Sync in a morning. It's a short real-world endorsement of the service's recovery flow.",
+   "date": "2026-10-31",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "4ab6008cea27",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot × Hachimonjiya Decimo 'Caffe Latte' lottery stirs a resale controversy",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xj5odt/hachimonjiya_responded/",
+   "summary": "The shop replied to questions about a reseller holding large quantities of a pen supposedly limited to one per person. A lottery winner also shows the pen in hand.",
+   "date": "2026-10-30",
+   "also": [
+    {
+     "source": "r/fountainpens",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1xj6xvh/npd_pilot_hachimonjiya_decimo_caffe_latte/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "15f13127814d",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Four months using only Suatelier stickers in a Hobonichi Weeks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xiwd39/suatelier_stickers_only/",
+   "summary": "The photographed spreads show a consistent look built from a single sticker brand, which the owner will carry into 2027. It's a good example of a coherent decorating system.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "30c433475777",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Candy wrappers turned into a cover-on-cover for an A6 Hobonichi",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xitgl3/finally_decorated_my_a6/",
+   "summary": "A commonplace-book user found that Tony's Chocolonely wrappers fit the A6 size and gave the book a bright, colourful cover. It's a cheap and clever customisation.",
+   "date": "2026-10-29",
+   "image": "thumbs/1a7940856fd8d45d.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "83da9605887f",
+   "topic": "stationery",
+   "source": "maimai＊手帳と文具で楽しくLife Log＊",
+   "title": "November planner setup: Hobonichi, Rollbahn Mini and a system binder",
+   "url": "https://www.youtube.com/watch?v=zcHeihdM7sk",
+   "summary": "A Japanese journaler walks through how she runs several notebooks side by side and prepares a binder for next month. It's useful for seeing how a multi-book system fits together.",
+   "date": "2026-10-31",
+   "title_ja": "【11月の手帳セットアップ🍂】ほぼ日手帳・ロルバーンミニなど手帳の使い方を紹介❣️｜来月に向けてM５のシステム手帳を準備✨",
+   "image": "thumbs/d001da43e541c5aa.webp",
+   "kind": "video"
+  },
+  {
+   "id": "813c4d33f5c0",
+   "topic": "stationery",
+   "source": "うたたね。",
+   "title": "Journaling in a Hobonichi Cousin alongside a vertical planner",
+   "url": "https://www.youtube.com/watch?v=MqJk80ktG68",
+   "summary": "A video session in a Hobonichi Cousin built around a newly found accessory for a vertical-layout planner. It shows a layout workflow in real time.",
+   "date": "2026-10-31",
+   "image": "thumbs/ad1a897120ecb82d.webp",
+   "kind": "video"
+  },
+  {
+   "id": "1e44efad869a",
+   "topic": "stationery",
+   "source": "Mara McGinnis",
+   "title": "Cozy November reset: monthly pages, habit tracker and calendar update",
+   "url": "https://www.youtube.com/watch?v=qAslT15ALZM",
+   "summary": "A planner video sets up monthly journal pages and a habit tracker for the new month. It offers practical layout ideas for a monthly reset routine.",
+   "date": "2026-10-31",
+   "image": "thumbs/5c706d664836db00.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ee151a1a3cad",
+   "topic": "stationery",
+   "source": "lizzuplans",
+   "title": "A full year with a Note For planner as a work system",
+   "url": "https://www.youtube.com/watch?v=lTQKKHmuOBM",
+   "summary": "A year-in-review look at using a Hobonichi Weeks-style planner for work. It's useful for judging how the format holds up over twelve months.",
+   "date": "2026-10-30",
+   "image": "thumbs/f0c76e2b3b7d5da2.webp",
+   "kind": "video"
+  },
+  {
+   "id": "94e626f67e79",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Third attempt at decorating a Hobonichi Cousin finally clicks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xj9a2m/third_times_the_charm_finally_happy_with_how_my/",
+   "summary": "A user shares the setup they settled on after two redesigns, with new stationery pieces as inspiration. It's a good look at iterating on a decoration style.",
+   "date": "2026-10-30",
+   "kind": "reddit"
+  },
+  {
+   "id": "89072b474659",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "New collector shows first eight pens, mostly Namiki and Pilot",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xj5j5z/discovered_fountain_pens_on_accident_and_so_happy/",
+   "summary": "A newcomer shares a starter collection that includes Namiki Nippon Art and Yukari Zodiac pens with different nib sizes. It's a friendly introduction to Pilot's higher-end lines.",
+   "date": "2026-10-30",
+   "image": "thumbs/37ce83712ab68a2c.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "3879177e609d",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Laika's 'Wildwood' tops $20M domestically and heads for a $7–8M second weekend",
+   "url": "https://www.cartoonbrew.com/box-office-report/wildwood-laika-fathom-entertainment-268797.html",
+   "summary": "Travis Knight's stop-motion fantasy is on track to land about in line with earlier Laika releases. The numbers show how the studio's handmade films perform commercially.",
+   "date": "2026-10-31",
+   "image": "thumbs/98fd9cd39a8bfbfb.webp"
+  },
+  {
+   "id": "6fa3129f183c",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Japanese studio leaders argue for a dedicated anime award",
+   "url": "https://www.cartoonbrew.com/awards/new-international-anime-award-tokyo-film-festival-268803.html",
+   "summary": "At TIFFCOM, executives from Studio Chizu, A-1 Pictures and Toho discussed a prize that recognises anime's diversity and develops new creators. It raises the question of who judges the form.",
+   "date": "2026-10-31",
+   "image": "thumbs/f6b5be046e58488b.webp"
+  },
+  {
+   "id": "a2e764822998",
+   "topic": "vfx",
+   "source": "Carolina Jiménez G.",
+   "title": "Breakdown video of the effects in 'Who Framed Roger Rabbit?'",
+   "url": "https://www.youtube.com/watch?v=SOEaCtCht08",
+   "summary": "A short video looks at how the film combined animation with live action. It's a classic example of compositing and lighting integration.",
+   "date": "2026-10-27",
+   "image": "thumbs/9aa8e635b7db2b60.webp",
+   "kind": "video"
+  },
+  {
+   "id": "b1b28422f892",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Exclusive trailer for animated fantasy 'Samhain', from the 'Viva Calavera!' studio",
+   "url": "https://www.cartoonbrew.com/feature-film/samhain-trailer-viva-calavera-arriate-268780.html",
+   "summary": "Based on a graphic novel, the mixed-holiday adventure follows three friends into a world where magic and nature are exploited for profit. It's a Halloween-timed preview of a European animated feature.",
+   "date": "2026-10-31",
+   "image": "thumbs/ff479004caee4ac4.webp"
+  },
+  {
+   "id": "2d17dcdfa423",
+   "topic": "vfx",
+   "source": "Corridor Crew",
+   "title": "Corridor Crew's VFX artists react to bad and great CGI, episode 249",
+   "url": "https://www.youtube.com/watch?v=GIP5MRMVTlQ",
+   "summary": "The latest episode of the recurring series has working artists critique shots. It's light viewing, but their commentary on what breaks the illusion can be useful.",
+   "date": "2026-10-31",
+   "image": "thumbs/9504d0b8bc865c98.webp",
+   "kind": "video"
+  },
+  {
+   "id": "5a007f7c9b4c",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Set photo: Jesse Plemons and Francis Lawrence on 'Hunger Games: Sunrise on the Reaping'",
+   "url": "https://beforesandafters.com/2026/10/29/on-the-set-pic-the-hunger-games-sunrise-on-the-reaping/",
+   "summary": "A behind-the-scenes picture from the upcoming franchise film shows the actor with the director. It's a small item but one of the few production glimpses today.",
+   "date": "2026-10-29",
+   "image": "thumbs/92643ca23a5bb66d.webp"
+  },
+  {
+   "id": "7a42dc9fa7cd",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Six months into graphics programming: material and lighting progress",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xilgyo/six_months_into_learning_graphics_programming/",
+   "summary": "A learner shares a renderer with consistent albedo, roughness, metallic and Fresnel behaviour. Lighting stays in linear HDR until exposure and tone mapping. It's a good sanity check on a basic PBR pipeline.",
+   "date": "2026-10-29",
+   "kind": "reddit"
+  },
+  {
+   "id": "6b3998accd48",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Boris FX releases Continuum 2027 with 3D noise and 2D titling",
+   "url": "https://www.cgchannel.com/2026/10/borisfx-releases-continuum-2027/",
+   "summary": "The effects suite for compositing and editing apps gains a new 3D noise generator and a 2D titling tool. It also updates its masks and particles.",
+   "date": "2026-10-31"
+  },
+  {
+   "id": "6c381142bfc2",
+   "topic": "pipeline",
+   "source": "r/vfx",
+   "title": "KeenFace builds MetaHuman-topology heads with PBR maps from photos",
+   "url": "https://www.reddit.com/r/vfx/comments/1xihge4/productionready_3d_heads_with_metahuman_topology/",
+   "summary": "KeenTools' new web tool generates production-ready head models with clean topology, a likeness and a full set of PBR maps. Worth watching as a quick route to digital doubles and previs.",
+   "date": "2026-10-29",
+   "image": "thumbs/565ee1d63e8a8efc.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "0497239688b8",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Gnomon Workshop offers a two-part Maya course on creature combat animation",
+   "url": "https://www.cgchannel.com/2026/10/master-creature-animation-for-games/",
+   "summary": "The masterclass covers animating a combat movement set for a AAA game boss in Maya. It's relevant for creature animators looking for structured training.",
+   "date": "2026-10-31"
+  },
+  {
+   "id": "f3513d2a4664",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini artist adds on-top simulation to 'grapy baseballs' piece",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xifw0v/update_on_my_grapy_baseballs/",
+   "summary": "An update on a stylised Houdini sim now includes an extra simulation layer on top. It's a quick look at layered FX work.",
+   "date": "2026-10-29",
+   "image": "thumbs/0af263f4c2e08e68.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "2084c5476a4e",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Former VFX artist shares Houdini commission work from five years ago",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xiub5n/quit_vfx_5_years_ago_thought_i_might_upload_my/",
+   "summary": "A look back at a past commission piece, posted to the Houdini community. It shows the kind of FX work freelancers delivered.",
+   "date": "2026-10-29",
+   "image": "thumbs/2145b1cf5101d362.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "a96f29ea1dd7",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Halloween artwork rendered with Karma in Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xhmhge/hello_halloween/",
+   "summary": "A quick seasonal piece produced with Houdini's Karma renderer. It's a small showcase of Karma output.",
+   "date": "2026-10-28",
+   "image": "thumbs/ba27499e08ef31b6.webp",
+   "kind": "reddit"
+  }
+ ]
+}
