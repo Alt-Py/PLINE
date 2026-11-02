@@ -1,0 +1,418 @@
+{
+ "date": "2026-11-03",
+ "generated_at": "2026-11-03T12:28:03+13:00",
+ "headline": "Obsidian 1.15 lands with a faster Mermaid engine, voice capture and mobile PDF export, while Weta FX's Resident Evil work gets an interview and Laika's Wildwood beats projections.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 40,
+ "sources_total": 40,
+ "source_errors": {},
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "3fcb93fd9995",
+   "topic": "obsidian",
+   "source": "Obsidian changelog",
+   "title": "Obsidian 1.15 ships faster Mermaid, mobile PDF export and voice capture",
+   "url": "https://obsidian.md/changelog/2026-11-02-desktop-v1.15.0/",
+   "summary": "The new Pele engine renders Mermaid diagrams far faster in your theme's colours. The release also adds reorderable Bases filters, new URI and CLI commands, voice capture on mobile and smarter list editing.",
+   "date": "2026-11-02",
+   "image": "thumbs/f9b48989cd33cf58.webp",
+   "also": [
+    {
+     "source": "Obsidian changelog",
+     "url": "https://obsidian.md/changelog/2026-11-02-mobile-v1.15.0/"
+    },
+    {
+     "source": "r/ObsidianMD",
+     "url": "https://www.reddit.com/r/ObsidianMD/comments/1xm19hk/obsidian_115_for_desktop_and_mobile_mermaid/"
+    }
+   ]
+  },
+  {
+   "id": "d13992a8ed13",
+   "topic": "obsidian",
+   "source": "Vladimir Campos [EN]",
+   "title": "Video tests whether the new Bases Kanban view can replace the plugin",
+   "url": "https://www.youtube.com/watch?v=PD0mNvN3aMw",
+   "summary": "A walkthrough of the native Kanban view now built into Bases, comparing it with the popular community plugin. It's a quick way to judge whether you can drop a dependency.",
+   "date": "2026-11-02",
+   "image": "thumbs/86a324093b9467e4.webp",
+   "kind": "video"
+  },
+  {
+   "id": "937fb80e6986",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Home-built Chartroom plugin turns a vault into a personal dashboard",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xm7pub/loving_obsidian_as_it_lets_me_organize_my_life/",
+   "summary": "A user wrote a private plugin that builds a visual dashboard around their own properties and folders instead of someone else's template. It's a good example of vault-specific tooling.",
+   "date": "2026-11-02",
+   "kind": "reddit"
+  },
+  {
+   "id": "e1cb285753ed",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Gallery View plugin builds image galleries from vault, web or self-hosted sources",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xlsoqt/gallery_view_plugin/",
+   "summary": "Pulls reference images from the vault, external links, Immich or Nextcloud into a note-embedded gallery. It could be handy for mood boards and lookdev references without bloating attachments.",
+   "date": "2026-11-02",
+   "kind": "reddit"
+  },
+  {
+   "id": "067c2d87d86e",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Series Tracker plugin logs shows and episodes inside your vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xly9zk/i_made_a_plugin_to_track_tv_shows_and_movies_in/",
+   "summary": "Search TMDb, and the plugin creates a note per show with a checkbox and watch date for every episode, plus a poster dashboard. It's now available in community plugins.",
+   "date": "2026-11-02",
+   "kind": "reddit"
+  },
+  {
+   "id": "bfcaa3941bb9",
+   "topic": "obsidian",
+   "source": "Quarks",
+   "title": "Step-by-step video guide to creating and using templates in Obsidian",
+   "url": "https://www.youtube.com/watch?v=9XSYSzGISFk",
+   "summary": "A full walkthrough of setting up and applying templates, aimed at people who want to standardise note creation.",
+   "date": "2026-10-30",
+   "image": "thumbs/6dce5339d987ddb4.webp",
+   "kind": "video"
+  },
+  {
+   "id": "10c411efa5cc",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Obsidian 1.15 finally fixes diacritics in search and link suggestions",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xmb5vy/appreciation_post_on_diacritics_update/",
+   "summary": "A long-requested fix, open since about 2020, means accented characters now match properly in search and link suggestions. Users working in non-English languages can drop their workaround aliases.",
+   "date": "2026-11-02",
+   "image": "thumbs/97a6b362d8bb1fae.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c94c5b087793",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Tabletop RPG character sheet built in Obsidian with just four plugins",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xm4l51/im_in_love_with_obisidian_took_some_time_to_learn/",
+   "summary": "A player shows a polished Perils and Princesses sheet made with the ITS theme, Iconize, a dice roller and backup tooling. It's a neat showcase of what themes and callouts can do.",
+   "date": "2026-11-02",
+   "image": "thumbs/1e5ac54745f17c63.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d42033e4945f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "RecipeBox plugin tidies a messy recipe note into organised, checkable recipes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xm76i8/recipebox/",
+   "summary": "A user without Markdown skills describes how the RecipeBox plugin turned one chaotic recipes note into cleanly structured entries with tick-off steps.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "8a7918506a7b",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Chess study workflow turns a book into notes with live boards",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xlygcq/obsidian_completely_changed_how_i_study_chess/",
+   "summary": "Claude split a chess book into one note per position. A chess plugin renders each as a live board, with hidden answers for self-checking.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "64a1c3dcdcb6",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Native Bases Kanban: how to move cards automatically when due dates hit",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xlt6pd/obsidian_native_bases_kanban_view_manually_and/",
+   "summary": "A user migrating from Trello asks how to make notes jump from a Programmed to a Doing column once their due date arrives. It shows where the new Kanban view is still limited.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "b9a6b137310e",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Inktober finale drawn with a flex-nib pen and Sailor Manyo Ayama ink",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xksaeq/happy_halloween_capyhero_does_inktober_day_31/",
+   "summary": "The Day 31 Inktober piece pairs a Gravitas Ultemate Vac flex EF nib with Sailor's Manyo Ayama. It's a nice look at how a Japanese ink behaves in line work.",
+   "date": "2026-11-01",
+   "image": "thumbs/774da6f057d93bf8.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "8c9ecd9e79e4",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Backfilling empty Hobonichi A6 pages with pen drawings of plants",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xks6ah/backfilling_empty_a6_pages/",
+   "summary": "After falling behind, the owner fills older months of a Hobonichi A6 with small flower and plant sketches. It's a nice example of rescuing a neglected journal.",
+   "date": "2026-11-01",
+   "kind": "reddit"
+  },
+  {
+   "id": "569267609b86",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Mini-sticker hobby tracker adapted for the Hobonichi Weeks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xkinxt/hobby_tracker/",
+   "summary": "A user copies their Nolty sticker habit tracker into a Hobonichi Weeks using a photocopy, scissors and tape. It's a quick way to see at a glance whether you're making time for hobbies.",
+   "date": "2026-10-31",
+   "image": "thumbs/543c0c70268b44e2.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "5c6ea34d18cd",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Iroshizuku Momiji shows its fiery red-pink in a Jinhao 9019",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xkv4kj/pilot_momiji_jinhao_9019/",
+   "summary": "A writing sample in Marathi shows off the ink's vibrant red, pink and orange shading, which recalls autumn maple leaves.",
+   "date": "2026-11-01",
+   "image": "thumbs/0cd774c0b579bb9d.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "aff581fdf232",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "A single Pilot Kakuno cartridge keeps going through four drawings",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xkrgp0/the_cartridge_that_would_not_die/",
+   "summary": "An Inktober artist finds a Kakuno cartridge holds far more ink than expected, with no need for the spare converter, cartridges or black ink they bought.",
+   "date": "2026-11-01",
+   "kind": "reddit"
+  },
+  {
+   "id": "542a45d0298a",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Traveler's Notebook cover chosen to hold a Hobonichi Weeks and more",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xksbqv/a_perfect_weeks_cover_as_well_as_a_travelers/",
+   "summary": "A Hobonichi user picks a Traveler's Notebook as a long-term cover that holds the Weeks planner alongside extra inserts.",
+   "date": "2026-11-01",
+   "kind": "reddit"
+  },
+  {
+   "id": "a2b9cd6a6ec0",
+   "topic": "stationery",
+   "source": "Sailor",
+   "title": "Sailor moves Hiroshima factory tours to Fridays only from January 2027",
+   "url": "https://sailor.co.jp/news/20261102/",
+   "summary": "Sailor's Hiroshima plant will run its regular tours every Friday instead of most Wednesdays and Fridays. Anyone planning a visit should check the new schedule.",
+   "date": "2026-11-02",
+   "title_ja": "2026.11.02 その他 広島工場工場見学開催日変更のお知らせ",
+   "image": "thumbs/0b7cd63af3cfba0c.webp"
+  },
+  {
+   "id": "9abede8aa5ec",
+   "topic": "stationery",
+   "source": "The Well-Appointed Desk",
+   "title": "Planner reset: going back to basics with a B6 six-month setup",
+   "url": "https://www.wellappointeddesk.com/2026/11/november-planner-set-up-back-to-what-works/",
+   "summary": "A video walkthrough of a planner owner rolling back big changes to a simpler system, with the items used listed.",
+   "date": "2026-11-02",
+   "image": "thumbs/1bb00edf71a2d56e.webp"
+  },
+  {
+   "id": "e67673dd14c8",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Ordered a Pilot Vanishing Point, received a Jinhao in Pilot packaging",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xkr3b7/i_know_no_one_will_believe_me_but_ordered_a_pilot/",
+   "summary": "A buyer reports getting a different brand's pen in genuine-looking Pilot packaging, a cautionary tale about marketplace purchases that drew a long discussion.",
+   "date": "2026-11-01",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "3dfc07d9a705",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Repainting an orange Hobonichi Weeks Mega sneaker cover with acrylic markers",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xkbcgk/painted_hobonichi_weeks_mega_sneaker/",
+   "summary": "An owner toned down a too-bright cover with acrylic paint marker and invites others to share custom covers.",
+   "date": "2026-10-31",
+   "image": "thumbs/480b64cb46acc02d.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "dd26104ca113",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Decorating Hobonichi dashboard pages: one user's attempt",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xkfz6f/well_its_not_perfect_but_its_pretty/",
+   "summary": "A user shares a decorated dashboard page and asks others to show how they set up theirs.",
+   "date": "2026-10-31",
+   "image": "thumbs/46bf3c1a4d0c3636.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "505a9f0fb48b",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "First-time Hobonichi user sets up a five-year Cousin",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xk17jv/diving_into_hobonichi_world_for_the_first_time/",
+   "summary": "A newcomer looks forward to comparing how each year differs and asks how others use the right-hand pages.",
+   "date": "2026-10-31",
+   "image": "thumbs/5ac929762bd8f52c.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "100acbaf04d6",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Sheep Weeks Mega shown off",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xkb1hx/in_love_with_my_hobonichi_sheep_weeks_mega/",
+   "summary": "A well-liked photo post of the Sheep Weeks Mega cover and its pages.",
+   "date": "2026-10-31",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "7bad12d826a7",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Halloween spread in a Hobonichi journal",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xkm67q/holoween_journal/",
+   "summary": "A themed journal page shared with a call for others to post theirs.",
+   "date": "2026-10-31",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "ae283f99d36f",
+   "topic": "stationery",
+   "source": "Studio Rosmiku",
+   "title": "Video review after one month of a Hobonichi travel-style planner setup",
+   "url": "https://www.youtube.com/watch?v=nB6vrboVT30",
+   "summary": "A Hobonichi user shares an honest review while deciding on a 2027 planner.",
+   "date": "2026-11-02",
+   "image": "thumbs/3af0fb050ebcf75e.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "6b40371e22e7",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Weta FX supervisors discuss their visual effects work on Resident Evil",
+   "url": "https://www.artofvfx.com/resident-evil-kevin-smith-jo-davison-eric-reynolds-janet-walters-weta-fx/",
+   "summary": "Art of VFX interviews Weta FX's VFX supervisor, additional VFX supervisor, animation supervisor and VFX producer about the show, and about careers that run from Framestore through Godzilla x Kong and Fantastic Four.",
+   "date": "2026-11-02",
+   "image": "thumbs/6cb39f2c62dd96d8.webp"
+  },
+  {
+   "id": "ddaa348c6498",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Laika's stop-motion Wildwood beats projections with strong second weekend",
+   "url": "https://www.cartoonbrew.com/box-office-report/wildwood-laika-week-2-box-office-fathom-entertainment-268837.html",
+   "summary": "The film fell only 27% in its second weekend and reached $27.4 million domestically, helped by good word of mouth. It's a good sign for craft-led animation.",
+   "date": "2026-11-02",
+   "image": "thumbs/8177fb36d22fc9f7.webp"
+  },
+  {
+   "id": "06f8132bc0a8",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Nippon Animation and Production I.G on capitalising on anime's $28B market",
+   "url": "https://www.cartoonbrew.com/anime/anime-28-billion-japanese-studios-global-growth-268825.html",
+   "summary": "Executives discuss overseas partnerships, family audiences and lasting fan connections as Japanese studios use the industry's global growth.",
+   "date": "2026-11-02",
+   "image": "thumbs/8e187a8551e0c4c1.webp"
+  },
+  {
+   "id": "0378533b9096",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "China's first AI-made feature earns only $253K after 11 days",
+   "url": "https://www.cartoonbrew.com/box-office-report/sanxingdui-future-past-week-2-box-office-268831.html",
+   "summary": "Sanxingdui: Future Past cost about $1.5M to make and is on course to gross under a third of that, a sobering data point for AI-generated features.",
+   "date": "2026-11-02",
+   "image": "thumbs/ed5a123a8719d281.webp"
+  },
+  {
+   "id": "87c50963dd6c",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Oscar short contender Apart draws on woodcuts and Nguni patterns",
+   "url": "https://www.cartoonbrew.com/awards/apart-pola-maneli-oscar-qualified-short-268847.html",
+   "summary": "Director Pola Maneli talks about a forbidden friendship in apartheid South Africa, with a look shaped by resistance woodcuts and harsh sunlight.",
+   "date": "2026-11-02",
+   "image": "thumbs/ea4034360780444b.webp"
+  },
+  {
+   "id": "d8e9d431d993",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Réunion-based Goa Shan Pictures behind this year's buzziest French animated features",
+   "url": "https://www.cartoonbrew.com/studios/gao-shan-pictures-studio-profile-268817.html",
+   "summary": "The studio behind Jim Queen, In Waves and Lucy Lost is expanding across borders while investing in local talent and sustainable production.",
+   "date": "2026-11-02",
+   "image": "thumbs/5b99ed867957a6ca.webp"
+  },
+  {
+   "id": "9ad5511e074f",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Death Stranding Isolations gets a Disney+ teaser and a new writer",
+   "url": "https://www.cartoonbrew.com/series/death-stranding-isolations-teaser-disney-plus-268713.html",
+   "summary": "Sci-fi author Tow Ubukata joins the hand-drawn series, with new story details about reconnecting a fractured America.",
+   "date": "2026-11-02",
+   "image": "thumbs/88adb5fdf74358cd.webp"
+  },
+  {
+   "id": "b6e7d1de04c3",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "CG software roundup: Nuke Stage, OctaneRender, Character Creator and Ucupaint updates",
+   "url": "https://www.cgchannel.com/2026/11/new-cg-software-you-may-have-missed-2-november-2026/",
+   "summary": "A digest of the latest updates across Nuke Stage, OctaneRender, Character Creator, iClone, Pulldownit and the Ucupaint add-on for Blender.",
+   "date": "2026-11-02"
+  },
+  {
+   "id": "b328cf1223ea",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini tutorial series starts on procedural knitted fabric using basic trigonometry",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xkwf4f/houdini_tutorial_creating_knitted_fabric_in/",
+   "summary": "The first part of a new series explains how to build knitted cloth in Houdini from simple trigonometry, with the author asking for feedback.",
+   "date": "2026-11-01",
+   "image": "thumbs/1c0c34f6e9d56440.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "bf7753ad46df",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Vulkan 1.4 with RAII headers praised as a joy to work with",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xkcy7l/vulkan_14_with_raii_headers_is_absolute_joy_to/",
+   "summary": "A r/GraphicsProgramming post shows a project using the C++ RAII headers with Vulkan 1.4, which cut much of the usual lifetime-management boilerplate.",
+   "date": "2026-10-31",
+   "kind": "reddit"
+  },
+  {
+   "id": "e2ba9aa7d519",
+   "topic": "pipeline",
+   "source": "FoxForm3D",
+   "title": "Beginner video: what to know before learning Houdini",
+   "url": "https://www.youtube.com/watch?v=6zH5-RnkFRU",
+   "summary": "A short guide to common pitfalls and advice for newcomers starting with Houdini.",
+   "date": "2026-10-26",
+   "image": "thumbs/d84419bf122a6e4c.webp",
+   "kind": "video"
+  }
+ ]
+}
