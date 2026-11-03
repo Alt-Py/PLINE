@@ -1,0 +1,474 @@
+{
+ "date": "2026-11-04",
+ "generated_at": "2026-11-04T10:44:07+13:00",
+ "headline": "Obsidian 1.15.1 early access adds Relevance search, a Web viewer and Android widgets; Weta FX details Moana's Te Ka and Te Fiti; Disney's layoffs continue.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 40,
+ "sources_total": 40,
+ "source_errors": {},
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "01e99185c945",
+   "topic": "obsidian",
+   "source": "Obsidian changelog",
+   "title": "Obsidian 1.15.1 adds Relevance search, mobile Web viewer and Android widgets",
+   "url": "https://obsidian.md/changelog/2026-11-03-desktop-v1.15.1/",
+   "summary": "The early-access build re-engineers search with faster, accent-insensitive results and a Relevance sort. It also adds a Web viewer core plugin, Android home-screen widgets and a quicker desktop start-up with progress in the status bar.",
+   "date": "2026-11-03",
+   "image": "thumbs/f9b48989cd33cf58.webp",
+   "also": [
+    {
+     "source": "Obsidian changelog",
+     "url": "https://obsidian.md/changelog/2026-11-03-mobile-v1.15.1/"
+    },
+    {
+     "source": "r/ObsidianMD",
+     "url": "https://www.reddit.com/r/ObsidianMD/comments/1xn2bhe/obsidian_1151_early_access_relevance_search/"
+    },
+    {
+     "source": "Theo Stowell",
+     "url": "https://www.youtube.com/watch?v=hUUFMVOSAJg"
+    }
+   ]
+  },
+  {
+   "id": "34cc6890c685",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Just Simple Planner 0.5.2 runs multiple timelines as a Bases layout",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xml8qr/just_simple_planner_052_multiple_planners_inside/",
+   "summary": "The visual timeline plugin now has a native Bases layout. You can keep several planners in one vault, each driven by its own query and property mapping, with links stored as ordinary wikilinks.",
+   "date": "2026-11-03",
+   "image": "thumbs/9f155cb0e07ce6d9.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "32a718e70419",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Git history reveals five years of plugin, theme and core-plugin churn",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xmw06y/my_community_plugin_history/",
+   "summary": "A user mined their vault's git log: 183 community plugins tried and only six kept, 16 themes, and 223 core-plugin toggles. It is a candid look at how setups settle over time.",
+   "date": "2026-11-03",
+   "also": [
+    {
+     "source": "r/ObsidianMD",
+     "url": "https://www.reddit.com/r/ObsidianMD/comments/1xmyfwc/my_core_plugin_history/"
+    },
+    {
+     "source": "r/ObsidianMD",
+     "url": "https://www.reddit.com/r/ObsidianMD/comments/1xmy015/my_community_theme_history/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "844f7f4b0478",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "flexcyon 2.1.0 theme adds more tab and modal animations",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xmsaj8/flexcyon_210_more_animations/",
+   "summary": "The theme update brings animated note tabs and modals, some inspired by Gnome's Burn My Windows. Defaults are deliberately subtle and every value can be adjusted.",
+   "date": "2026-11-03",
+   "image": "thumbs/c6c5a011cac009c1.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "000fdec075bb",
+   "topic": "obsidian",
+   "source": "Daniel Agrici",
+   "title": "Video: an AI agent builds several Obsidian plugins from a single idea",
+   "url": "https://www.youtube.com/watch?v=GCnhiAS9ZrA",
+   "summary": "A short experiment in having a coding agent generate multiple plugins from one prompt. It is useful if you are curious about prototyping your own tools.",
+   "date": "2026-11-02",
+   "image": "thumbs/68bc8ac28df2f80e.webp",
+   "kind": "video"
+  },
+  {
+   "id": "6b56334154d0",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "csvzall adds SQLite queries and exports for CSV files in Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xmlweo/csvzall_update_now_with_sqlite_queries_and_exports/",
+   "summary": "The CSV viewer and editor can now run SQLite queries and export results, bringing spreadsheet-style analysis into the vault while keeping open data formats.",
+   "date": "2026-11-03",
+   "kind": "reddit"
+  },
+  {
+   "id": "cced6a0d801a",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Tradoshi plugin turns every logged trade into a Markdown note",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xmal55/i_created_the_tradoshi_trading_journal_plugin_for/",
+   "summary": "An open-source trading journal plugin keeps trades and reviews as plain notes in your vault. It is a practical example of a journaling workflow built on Obsidian's file-based model.",
+   "date": "2026-11-02",
+   "kind": "reddit"
+  },
+  {
+   "id": "3c91bf02c4cc",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "A deliberately simple calendar-and-journal workflow, built with a custom plugin",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xmlvsf/love_how_powerful_and_simple_obsidian_can_be/",
+   "summary": "A user shows a minimal setup centred on calendar and daily journal notes, as a counterpoint to the elaborate dashboards that usually get shared.",
+   "date": "2026-11-03",
+   "kind": "reddit"
+  },
+  {
+   "id": "461bc28e632b",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Community wishlist: which features should Obsidian ship natively?",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xmhl5z/what_features_are_you_hoping_get_implemented/",
+   "summary": "A discussion of recent native additions and what users still want beyond the public roadmap, including workarounds people currently build themselves.",
+   "date": "2026-11-03",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "e5dfd1921689",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Plain vault or elaborate dashboard? Users debate how far to take Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xn2xq7/i_see_many_people_saying_to_use_obsidian_just_as/",
+   "summary": "A thread weighs the pull of customised homepages and task systems against the advice to keep Obsidian simple.",
+   "date": "2026-11-03",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "8164ee8a39f5",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A year of favourite Hobonichi spreads, shared as a 2026 review",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xla2jf/my_fav_spreads_of_2026/",
+   "summary": "A user flips back through the year's best pages, a good source of layout ideas as people plan their 2027 books.",
+   "date": "2026-11-01",
+   "kind": "reddit"
+  },
+  {
+   "id": "a53c8e44cdd3",
+   "topic": "stationery",
+   "source": "集まれ文具ラバーズ【文具店勤務13年目】",
+   "title": "Rollbahn releases translucent stained-glass winter notebook patterns",
+   "url": "https://www.youtube.com/watch?v=-N72XKOl6cE",
+   "summary": "A Japanese stationery shop video shows the new Rollbahn winter designs, with see-through patterns and a closer look at the covers.",
+   "date": "2026-11-03",
+   "image": "thumbs/fed0d2d404d22cb0.webp",
+   "kind": "video"
+  },
+  {
+   "id": "1f4de8dd182a",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Teranishi Guitar ink boxes recycled into collaged postage-stamp postcards",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xlnh1m/collaged_postcards_out_of_my_teranishi_guitar_ink/",
+   "summary": "Instead of hoarding empty Teranishi Guitar ink boxes, one fountain-pen fan punched them into stamp-shaped pieces and collaged postcards. It is a lovely example of what to do with packaging.",
+   "date": "2026-11-02",
+   "kind": "reddit"
+  },
+  {
+   "id": "48b9866cc5f4",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Grance in pearl blue wins praise as a slim everyday fountain pen",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xlk8z7/this_pen_is_actually_amazing/",
+   "summary": "A medium-nib owner likes its ballpoint-like size as a companion to Vanishing Points, though the Con-40 converter is a minor drawback.",
+   "date": "2026-11-02",
+   "kind": "reddit"
+  },
+  {
+   "id": "f951b09aa608",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Pink 2027 Hobonichi system: one colour theme across work, journal and memory books",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xle8cg/pink_for_2027/",
+   "summary": "A user splits a Cousin, A5 and A6 books into distinct roles, from work planning to morning pages and a family memory journal, all in one palette.",
+   "date": "2026-11-01",
+   "image": "thumbs/2376b11bb8221b77.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d15da030adfc",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Maki-e fountain pen picked up at the Melbourne Pen and Stationery Show",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xlo83v/my_new_makie_pen_has_beautiful_balls/",
+   "summary": "A showcase of a decorated Japanese lacquer-style pen bought in person at the show.",
+   "date": "2026-11-02",
+   "kind": "reddit"
+  },
+  {
+   "id": "691675ac1e86",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A Hobonichi, Jibun Techo and A5 notebook ecosystem, with an everyday-carry setup",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xll7b8/sharing_my_notebook_ecosystem/",
+   "summary": "One user lays out how several Hobonichi sizes and a customised Kokuyo Jibun cover split monthly planning, daily notes and carry duties.",
+   "date": "2026-11-02",
+   "kind": "reddit"
+  },
+  {
+   "id": "96fc1643ff96",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens explains dip pens versus fountain pens, with picks for each",
+   "url": "https://www.jetpens.com/blog/What-s-the-Difference-Between-Dip-Pens-and-Fountain-Pens/pt/1055",
+   "summary": "A beginner-friendly guide to how the two writing tools differ in ink delivery and use, with recommended pens. It is a handy reference for calligraphy-curious fountain-pen users.",
+   "date": "2026-11-03",
+   "image": "thumbs/d956cae13e694ecc.webp"
+  },
+  {
+   "id": "fed5833154c5",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Twenty years of ink collecting distilled into a minimalist wet-ink shelf",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xlk64z/my_ink_collection_after_20_years_of_collecting/",
+   "summary": "A long-time collector shares a small, curated ink lineup, favouring wet inks and buying to try before selling on, and mentions a Japanese ink hoped to approximate Tsutsuji.",
+   "date": "2026-11-02",
+   "image": "thumbs/c134abadd0b3a17b.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "834b30bef395",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "First Hobonichi Weeks for 2027 with a hand-designed cover",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xlmhzs/first_time_trying_hobonichi_for_2027_i_got_the/",
+   "summary": "A newcomer shows the cover design she made for a Mega Weeks, popular with the community.",
+   "date": "2026-11-02",
+   "image": "thumbs/be96feee6913959c.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "f959b508d6ec",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Scattering small reminders through a Hobonichi to plan months ahead",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xldyvz/self_reminders_happy_november_1st/",
+   "summary": "A post shows how tiny notes such as gift lists, placed across the year, turn a daily planner into a forward-planning tool, and asks for readers' own tips.",
+   "date": "2026-11-01",
+   "image": "thumbs/fd53c571a82d4266.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "e8c5f3056ea4",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A first Hobonichi setup asks what weekly pages are best used for",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xl3m69/first_ever_hobonichi_setup_is_ready_for_2027/",
+   "summary": "A new user combines Weeks for to-dos with a Cousin for memory keeping and asks how others split duties between the two.",
+   "date": "2026-11-01",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "721bbdf6f7a8",
+   "topic": "stationery",
+   "source": "いぐ【いぐのて】",
+   "title": "Hobonichi sneaker-cover journaling session with a system-planner weight comparison",
+   "url": "https://www.youtube.com/watch?v=HHyKArFvDjE",
+   "summary": "A Japanese planner video shows a Hobonichi in a sneaker cover, along with a sticker book and a weight comparison of ring-binder planners.",
+   "date": "2026-11-03",
+   "title_ja": "ほぼ日手帳スニーカーで手帳タイム｜ちいかわシールえほん紹介＆システム手帳の重さ比較　＃995",
+   "image": "thumbs/02a66d116544375f.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "f2f2f89feeff",
+   "topic": "stationery",
+   "source": "ちゃんこ　手帳デコ",
+   "title": "Hobonichi HON setup reviewed after four days of use",
+   "url": "https://www.youtube.com/watch?v=OFtNZwKfUyE",
+   "summary": "A Japanese journaler reflects on how a Hobonichi HON layout is coming together after the first few days.",
+   "date": "2026-11-03",
+   "image": "thumbs/5f56d9b6d0d8d1ed.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "d8d274d960d2",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Cousin 2027 decoration showcase",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xlisa2/hobonichi_cousin_2027_decoration/",
+   "summary": "A user proudly shares decorated Cousin pages for 2027.",
+   "date": "2026-11-02",
+   "image": "thumbs/f9dcf6a26a6d3d27.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "a620086eaf89",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hand-drawn Halloween week spread made to fix a layout mistake",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xlrb2s/halloweek/",
+   "summary": "After botching the original weekly layout, the user drew a fresh week spread in the notes pages, a handy recovery trick.",
+   "date": "2026-11-02",
+   "image": "thumbs/2841251140ee2bf9.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "3b134417f11f",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Weta FX breaks down animating and simulating Te Ka and Te Fiti for live-action Moana",
+   "url": "https://www.artofvfx.com/moana-weta-fx-explores-the-animation-and-fx-challenges-of-te-ka-and-te-fiti/",
+   "summary": "A making-of video from your own studio shows how the team recreated the lava demon and the island goddess in a live-action setting. It is a good look at character and FX design for large-scale elemental creatures.",
+   "date": "2026-11-03",
+   "image": "thumbs/7eac77be46784766.webp"
+  },
+  {
+   "id": "f9dd26d0fc15",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Disney reportedly orders 20% cost cuts, with thousands more layoffs expected",
+   "url": "https://www.cartoonbrew.com/artist-rights/disney-layoffs-continue-thousands-of-cuts-268895.html",
+   "summary": "Managers are said to be asked to trim annual spending through redundancies and other savings. It is another sign of pressure on studio budgets and jobs.",
+   "date": "2026-11-03",
+   "image": "thumbs/4157e82db48eef66.webp"
+  },
+  {
+   "id": "3f56dc60f5d4",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "BOT VFX shows the invisible work behind Reacher Season 4",
+   "url": "https://www.artofvfx.com/reacher-season-4-a-closer-look-at-the-invisible-vfx-by-bot-vfx/",
+   "summary": "A breakdown covers wire removals, bloody injuries and subtle enhancements, with before-and-after comparisons of discreet VFX.",
+   "date": "2026-11-03",
+   "image": "thumbs/c8b616234f819cb8.webp"
+  },
+  {
+   "id": "5e2ea0867938",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Laika's Wildwood opens on 3,000+ screens as Fathom's CEO outlines animation ambitions",
+   "url": "https://www.cartoonbrew.com/newsletter/wildwood-holds-strong-fathom-ceo-interview-disney-cuts-continue-268917.html",
+   "summary": "Fathom's Jason Brenek discusses its widest release yet, lessons from a surprise box-office hit and plans to bring more anime to US cinemas.",
+   "date": "2026-11-03",
+   "image": "thumbs/bdde3304851337eb.webp",
+   "also": [
+    {
+     "source": "Cartoon Brew",
+     "url": "https://www.cartoonbrew.com/distribution/fathom-entertainment-jason-brenek-interview-268856.html"
+    }
+   ]
+  },
+  {
+   "id": "265d28bc4207",
+   "topic": "vfx",
+   "source": "Doctor Who",
+   "title": "Before-and-after VFX: the Tenth Doctor in the Satan Pit",
+   "url": "https://www.youtube.com/watch?v=OU2AyC9N5-k",
+   "summary": "A video comparison shows the effects layers behind a classic Doctor Who sequence.",
+   "date": "2026-11-03",
+   "image": "thumbs/aa6ba4a3645dc667.webp",
+   "kind": "video"
+  },
+  {
+   "id": "2ad14365c89b",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "befores & afters previews a large magazine on The Mandalorian and Grogu",
+   "url": "https://beforesandafters.com/2026/11/03/coming-soon-huge-mag-on-the-mandalorian-and-grogu/",
+   "summary": "The site offers a sneak peek inside an upcoming deep-dive issue on the film's visual effects.",
+   "date": "2026-11-03",
+   "image": "thumbs/9db7ff5470e9fe5f.webp"
+  },
+  {
+   "id": "ec73af4218e7",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Japan's animation association sets first Nippon Anime Awards for November 2027",
+   "url": "https://www.cartoonbrew.com/awards/nippon-anime-awards-association-of-japanese-animations-268909.html",
+   "summary": "The AJA-backed awards aim to celebrate anime artists and productions and support emerging talent and business opportunities.",
+   "date": "2026-11-03",
+   "image": "thumbs/7b2bac5619a5d5bb.webp"
+  },
+  {
+   "id": "c24f09639b4b",
+   "topic": "vfx",
+   "source": "Boundless Entertainment",
+   "title": "Video walks through the process used on every VFX shot",
+   "url": "https://www.youtube.com/watch?v=5ASMvgZT9BE",
+   "summary": "A practitioner outlines a repeatable shot workflow, useful as a checklist for newer compositors and generalists.",
+   "date": "2026-11-02",
+   "image": "thumbs/41d12d26cb918a22.webp",
+   "kind": "video"
+  },
+  {
+   "id": "6b71bc56f12f",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Pigeons director on making an AI-anxiety animated documentary with 45 artists",
+   "url": "https://www.cartoonbrew.com/awards/pigeons-director-amos-sussigan-oscars-short-268929.html",
+   "summary": "Amos Sussigan explains turning fears about obsolescence into an Oscar-contending short produced on almost no budget.",
+   "date": "2026-11-03",
+   "image": "thumbs/b379e96124ad2687.webp",
+   "extra": true
+  },
+  {
+   "id": "3b9ac08939dc",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Back to Tomioka brings Fukushima's exclusion zone to hand-drawn animation",
+   "url": "https://www.cartoonbrew.com/feature-film/back-to-tomioka-francois-marc-baillet-268937.html",
+   "summary": "Director François-Marc Baillet discusses adapting the graphic novel and portraying the community with respect.",
+   "date": "2026-11-03",
+   "image": "thumbs/37534d501e756181.webp",
+   "extra": true
+  },
+  {
+   "id": "b7e593af59b2",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Blue Eye Samurai Season Two lands in January with a new Netflix teaser",
+   "url": "https://www.cartoonbrew.com/series/blue-eye-samurai-season-2-release-date-teaser-268890.html",
+   "summary": "The revenge story moves to London while the characters in Japan face a dangerous new shogun.",
+   "date": "2026-11-03",
+   "image": "thumbs/24ad923ede000f62.webp",
+   "extra": true
+  },
+  {
+   "id": "e4ae5ce9e575",
+   "topic": "pipeline",
+   "source": "Konstantin Magnus",
+   "title": "Houdini tutorial: guiding curves through volumes",
+   "url": "https://www.youtube.com/watch?v=oCj05Fp0tyc",
+   "summary": "Konstantin Magnus shows a procedural technique for steering curves through volume fields, a useful recipe for FX and look-dev setups.",
+   "date": "2026-11-03",
+   "image": "thumbs/738fc8f64ebf8a36.webp",
+   "kind": "video"
+  },
+  {
+   "id": "faae6b9e0e3b",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Unreal Engine 5 plugin renders stable 3D pixel art without pixel jitter",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xl3ppu/we_released_an_ue5_plugin_to_render_stable_3d/",
+   "summary": "A cubemap-based approach to pixel-art rendering avoids the shimmering that normally plagues 3D pixel art, an interesting real-time rendering technique.",
+   "date": "2026-11-01",
+   "image": "thumbs/5316e5381d434123.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "1268dd7257f3",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Canva releases free Affinity for iPad",
+   "url": "https://www.cgchannel.com/2026/11/free-tool-canva-launches-affinity-for-ipad/",
+   "summary": "The long-awaited iPad edition of Affinity's image-editing, vector design and layout suite is now a free download.",
+   "date": "2026-11-02"
+  }
+ ]
+}
