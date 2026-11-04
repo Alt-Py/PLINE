@@ -1,0 +1,438 @@
+{
+ "date": "2026-11-05",
+ "generated_at": "2026-11-05T10:50:20+13:00",
+ "headline": "Weta-relevant picks today: a neural-network cloud shader checked against a path tracer, a Laika animator's Wildwood breakdown, and Platinum's new Izumo Tame-nuri rhodium pen.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 40,
+ "sources_total": 40,
+ "source_errors": {},
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "958847bece95",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Tiny neural network replaces cloud in-scattering, validated against a path tracer",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xlt1w6/i_replaced_the_inscattering_in_a_cloud_raymarch/",
+   "summary": "A developer trained a small network on path-traced reference data to stand in for the light scattered toward the camera in a cloud raymarch, running in HLSL in Unity 6. It shows how far common real-time approximations drift from ground truth.",
+   "date": "2026-11-02",
+   "image": "thumbs/c18bd2d7df47fccd.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "f07eca122920",
+   "topic": "pipeline",
+   "source": "Houdini",
+   "title": "Houdini 22 COPs series: sending Copernicus results into Solaris",
+   "url": "https://www.youtube.com/watch?v=Wlvh2gYjsLA",
+   "summary": "Latest lesson in SideFX's H22 Intro to COPs series covers moving Copernicus image networks into Solaris. Useful for anyone planning to use the new compositing context in lookdev or USD workflows.",
+   "date": "2026-11-04",
+   "image": "thumbs/49ce643237b3612b.webp",
+   "kind": "video"
+  },
+  {
+   "id": "d2b36512c6a0",
+   "topic": "pipeline",
+   "source": "IDA | VFX ",
+   "title": "Houdini 22 release presented in a short overview",
+   "url": "https://www.youtube.com/watch?v=SPUpdH5yfTc",
+   "summary": "A mini presentation walks through what Houdini 22 brings, a quick way to scan the new release before digging into the tutorials.",
+   "date": "2026-10-31",
+   "image": "thumbs/6d4eb84a38435e88.webp",
+   "kind": "video"
+  },
+  {
+   "id": "4171c054c79d",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Real-time 3D fire and smoke sim in WebGL2, steered by hand tracking",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xm5luk/realtime_3d_fire_and_smoke_sim_in_webgl2_on_my/",
+   "summary": "A 3D fluid simulation runs in the browser on a phone and responds to tracked hand movements. A neat demonstration of how much grid-based simulation now fits into mobile GPU budgets.",
+   "date": "2026-11-02",
+   "image": "thumbs/a5b0ac3aeac58e29.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "8fc09761b59a",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "World Creator 4 enters early access with nodes, macOS and planets",
+   "url": "https://www.cgchannel.com/2026/11/bitethebytes-unveils-world-creator-4/",
+   "summary": "BiteTheBytes' terrain generator gains a node-based workflow, macOS support and whole-planet generation. It may be of interest for environment work and procedural landscapes.",
+   "date": "2026-11-04"
+  },
+  {
+   "id": "5646560a7331",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "CozyBlanket Pro brings AI-assisted retopology and UVs to desktop",
+   "url": "https://www.cgchannel.com/2026/11/sparseal-releases-cozyblanket-pro/",
+   "summary": "Sparseal's retopology, UV unwrapping and baking tool, previously on iPad, is now available on Windows and macOS.",
+   "date": "2026-11-04"
+  },
+  {
+   "id": "c75e1e8610ae",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini artist shares 'Ghost in the machine' piece on r/Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xm8v2f/ghost_in_the_machine/",
+   "summary": "A well-received Houdini showcase from the community, worth a look for effects inspiration.",
+   "date": "2026-11-02",
+   "image": "thumbs/399820d13bac99f2.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "eab3f90a52c8",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Laika animator Tilly Fidler breaks down her stop-motion work on Wildwood",
+   "url": "https://beforesandafters.com/2026/11/04/laika-animator-breaks-down-work-on-wildwood/",
+   "summary": "befores & afters goes behind the scenes with a Laika animator on the craft of animating Wildwood. A useful look at how performance is built frame by frame.",
+   "date": "2026-11-03",
+   "image": "thumbs/638f7ff24f1b62ee.webp"
+  },
+  {
+   "id": "66bf18bc26a2",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "El Ranchito shows storm, ship and crocodile VFX for The Bluff",
+   "url": "https://www.artofvfx.com/the-bluff-el-ranchito-showcases-storm-and-crocodile-vfx/",
+   "summary": "The breakdown covers stormy sea simulations, ships battling waves, digital doubles and a crocodile sequence. It shows how plates were transformed into the final storm shots.",
+   "date": "2026-11-04",
+   "image": "thumbs/e1db7567dedba571.webp"
+  },
+  {
+   "id": "61ef36acec15",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Doctor Strange VFX supervisor Stephane Ceretti looks back ten years on",
+   "url": "https://www.artofvfx.com/doctor-strange-stephane-ceretti-production-vfx-supervisor/",
+   "summary": "Art of VFX revisits its 2016 interview with Ceretti for a more personal retrospective on bringing Marvel's shifting-reality magic to the screen.",
+   "date": "2026-11-04",
+   "image": "thumbs/baf4115e4ea32600.webp"
+  },
+  {
+   "id": "41b060c1f983",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "The Cat in the Hat directors on turning Seuss pages into CG worlds",
+   "url": "https://www.cartoonbrew.com/feature-film/the-cat-in-the-hat-erica-rivinoja-alessandro-carloni-268957.html",
+   "summary": "Erica Rivinoja and Alessandro Carloni discuss building three distinct worlds, designing the monster and creating a percussive language for the Things.",
+   "date": "2026-11-04",
+   "image": "thumbs/bb125e26ce5d642f.webp"
+  },
+  {
+   "id": "167fa5b25e9a",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Rome's MIA Market 2026: who pays for animation, and for whom?",
+   "url": "https://www.cartoonbrew.com/markets/rome-mia-market-2026-overview-268482.html",
+   "summary": "Five takeaways on co-productions, new financing models and the shortage of European animation aimed at teens.",
+   "date": "2026-11-04",
+   "image": "thumbs/63264b457c6b4fb6.webp"
+  },
+  {
+   "id": "da4426ff5612",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "TIFF Daily: anime's $28 billion market and calls for new awards",
+   "url": "https://www.cartoonbrew.com/newsletter/tiff-daily-newsletter-3-268908.html",
+   "summary": "Japanese studios talk about overseas growth, industry leaders argue for new anime honours, and Fathom's Jason Brenek discusses animation's theatrical potential.",
+   "date": "2026-11-04",
+   "image": "thumbs/2b452edf38ee6418.webp"
+  },
+  {
+   "id": "d5fea0c29023",
+   "topic": "vfx",
+   "source": "HammertossFX",
+   "title": "Minecraft in Real Life: VFX breakdown and behind the scenes",
+   "url": "https://www.youtube.com/watch?v=6l8gozF-HRQ",
+   "summary": "A small creator's video shows how a live-action Minecraft piece was put together. It is a low-view video, but it shows the shot-by-shot process.",
+   "date": "2026-11-04",
+   "image": "thumbs/b863cefdd78575db.webp",
+   "kind": "video"
+  },
+  {
+   "id": "c3b212dfaa72",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Artist shows a viewport-only VFX piece on r/vfx",
+   "url": "https://www.reddit.com/r/vfx/comments/1xllu9i/i_want_him_to_know_it_was_me/",
+   "summary": "A well-received post where everything is said to run live in the viewport, popular with the community.",
+   "date": "2026-11-02",
+   "image": "thumbs/f6fd20dfc0100432.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "bb625576f68a",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Oscar short contender The Flesh Dress: stop-motion horror about ageing",
+   "url": "https://www.cartoonbrew.com/awards/oscars-short-flesh-dress-joachim-herisse-268967.html",
+   "summary": "Director Joachim Hérissé discusses blurring fabric, flesh and skin in a stop-motion short about the fear of ageing and artistic anxiety.",
+   "date": "2026-11-04",
+   "image": "thumbs/14fe3b267cd98177.webp",
+   "extra": true
+  },
+  {
+   "id": "4a8a3bb544d7",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Sylvain Chomet directs a hand-drawn Dior holiday short set in 1949 Paris",
+   "url": "https://www.cartoonbrew.com/advertising/sylvain-chomet-dior-christmas-ad-268960.html",
+   "summary": "The Triplets of Belleville director animates a short inspired by Christian Dior's friendship with Marlene Dietrich.",
+   "date": "2026-11-04",
+   "image": "thumbs/73ac287cc52f7ed5.webp",
+   "extra": true
+  },
+  {
+   "id": "446b56a1f7ec",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Vault dashboard built with AnuPpuccin, Style Settings and custom CSS",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xn9hh1/showing_off_my_dashboard/",
+   "summary": "A user shares a polished dashboard after months of tweaking, with theme settings and CSS snippets that others can borrow.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "45bf7bb3ff5f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Tiny plugin shows image file size and dimensions in the status bar",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xngziz/i_made_a_small_plugin_that_shows_image_size_and/",
+   "summary": "Open an image and the status bar shows its weight, resolution and format. A handy forty-line plugin for anyone who prepares images for publishing from their vault.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "b47f39451813",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "All of StatPearls turned into a searchable, linkable Obsidian vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xn8fke/for_med_and_nursing_students_all_of_statpearls/",
+   "summary": "A med student built a tool that downloads the National Library of Medicine's StatPearls archive and converts it into a tagged, linked offline vault. The author notes AI assisted the coding.",
+   "date": "2026-11-03",
+   "image": "thumbs/8d33ef892faa05f7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9afc11df106f",
+   "topic": "obsidian",
+   "source": "Fan",
+   "title": "Tasks Flowchart shows visual task dependencies in Obsidian",
+   "url": "https://www.youtube.com/watch?v=ZlXBRI4P3Xw",
+   "summary": "A short video demonstrates a flowchart view of task dependencies from your notes. It is niche, but may suit project planning.",
+   "date": "2026-10-29",
+   "image": "thumbs/68a0bbb486ae4532.webp",
+   "kind": "video"
+  },
+  {
+   "id": "2971a88cbf90",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Do you still need a sandbox for plugins after the review changes?",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xnk9qy/plugin_safety_since_the_plugin_review_changes/",
+   "summary": "A user asks whether Obsidian's new plugin review process makes running the app in a sandbox unnecessary. Useful reading on plugin trust and security.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "92c8d26665a7",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Sync Standard's 5MB file limit frustrates a would-be subscriber",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xnk8zx/5mb_file_size_limit_for_sync_standard_is_a/",
+   "summary": "A user who wanted to support Obsidian finds the Standard plan's file size cap a dealbreaker. This helps you judge which Sync tier suits your vault.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "b91d6afee272",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Abyss Tasks: a task manager workflow built inside Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xn99ma/abyss_tasks/",
+   "summary": "A former Todoist user describes moving GTD-style projects into Obsidian, with tasks written in notes and surfaced through queries.",
+   "date": "2026-11-03",
+   "kind": "reddit"
+  },
+  {
+   "id": "ddba415a453b",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Will the native Kanban Bases view get automation?",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xnm3gf/can_we_expect_automations_from_the_native_kanban/",
+   "summary": "A user asks whether cards might move columns or archive automatically based on due dates, and plans a feature request.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "c0241019d4ea",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Line drawing with a Pilot Kakuno EF, MD grid paper and a rainbow of inks",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xmj9ly/new_favorite_pen_for_line_drawing/",
+   "summary": "A hugely popular post shows a drawing made with document-black ink in a Kakuno, coloured in with brush and a list of inks. The ink and paper pairing is spelled out.",
+   "date": "2026-11-03",
+   "image": "thumbs/2e0fac1850a4261b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "3dc909621cb0",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum releases limited Izumo Tame-nuri with rhodium fittings",
+   "url": "https://www.platinum-pen.co.jp/news/13607/",
+   "summary": "The flagship Izumo Tame-nuri gets a limited rhodium-trim edition. Its layered Japanese lacquer looks deep and dark, with details revealed when held to the light.",
+   "title_ja": "出雲 溜塗りロジウム仕様を数量限定で発売",
+   "image": "thumbs/e3370d373fccfef8.webp"
+  },
+  {
+   "id": "835723d9ee9b",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "A month of daily drawings, each in a different fountain pen ink",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xmnemc/daily_drawings_with_fountain_pens/",
+   "summary": "A newcomer drew daily through October using a new ink each day and lists the pens and inks used. A good model for a drawing habit.",
+   "date": "2026-11-03",
+   "kind": "reddit"
+  },
+  {
+   "id": "1e10a8536232",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks layout painted with brush, water and Sailor Yamadori ink",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xmg40d/weeks_layout_with_ink/",
+   "summary": "A user wets Sailor's Yamadori ink with a brush on a Hobonichi spread, using a Kakuno for the lines. A simple look at how ink behaves on Tomoe River paper.",
+   "date": "2026-11-03",
+   "image": "thumbs/499b6c493d763a9f.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "a11c679b2725",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Parallel pen lettering for NibVember and Callivember",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xmiop5/pilot_parallel_lettering/",
+   "summary": "Day 2 of two penmanship challenges, done with a Pilot Parallel. Inspiration for a calligraphy practice routine.",
+   "date": "2026-11-03",
+   "kind": "reddit"
+  },
+  {
+   "id": "8a85b11ecfd1",
+   "topic": "stationery",
+   "source": "The Artistic Biker",
+   "title": "Chameleon drawn with pen, ink and cross-hatching",
+   "url": "https://www.youtube.com/watch?v=NWzewNWVqQc",
+   "summary": "A video demonstrating how to build up shading on a chameleon using pen and ink with cross-hatching.",
+   "date": "2026-11-03",
+   "title_ja": "ペン、インク、クロスハッチングによるカメレオンの絵",
+   "image": "thumbs/9f8a0cdd6bf576ae.webp",
+   "kind": "video"
+  },
+  {
+   "id": "7154d27cf286",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "What do you use Hobonichi's weekly timeline pages for?",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xlzpqi/what_do_you_guys_use_the_weekly_timeline_pages_for/",
+   "summary": "A first-time Weeks user asks for ideas on using the timeline pages for journaling and memory keeping. The comments have many practical layouts.",
+   "date": "2026-11-02",
+   "image": "thumbs/cf751d4eda9f60d1.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "717653b316a1",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Drawing a monthly layout over Hobonichi Weeks extra pages",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xmo5db/weeks_extra_pages/",
+   "summary": "A user decorated the extra pages of a 2027 Weeks to start writing early. It shows how to use art to cover the layout lines.",
+   "date": "2026-11-03",
+   "image": "thumbs/c59d557c152ab12b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "2e170eb2d8e0",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Setting up a first Hobonichi Weeks for work",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xm6wy1/how_ive_set_up_my_first_hobonichi_weeks/",
+   "summary": "A new user shows how they arranged their first Weeks for work notes, with page layouts to borrow.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "899394457374",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "November bullet journal setup in a Hobonichi Weeks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xm30bt/november_bujo_setup_in_my_weeks_3/",
+   "summary": "A monthly bujo layout built into Weeks pages, with an autumn theme.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "c4e2326e1e51",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Decorating the inner cover of a Hobonichi with a Malevich-inspired design",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xm4p1m/inner_cover_decor/",
+   "summary": "A new owner decorates the inside cover and explains how the ivory paper inspired the look.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "bc2d03f2bbc7",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens guide walks through the NOLTY planner range",
+   "url": "https://www.jetpens.com/blog/Guide-to-NOLTY-Planners/pt/1031",
+   "summary": "An overview of the Japanese NOLTY brand's planners, including 2027 editions and what makes each format different.",
+   "date": "2026-11-03",
+   "extra": true
+  },
+  {
+   "id": "acaa6fd5b3bc",
+   "topic": "stationery",
+   "source": "Pilot",
+   "title": "Pilot relaunches its AR drawing app Kotobubble with stamps",
+   "url": "https://www.pilot.co.jp/press_release/2026/11/04/content_21.html",
+   "summary": "The AR app that turns real scenery into a canvas gets a new stamp feature and partnerships with local governments and companies.",
+   "date": "2026-11-04",
+   "title_ja": "ＡRおえかきアプリ『コトバブル』がリニューアル",
+   "image": "thumbs/21ec62ea380a76bf.webp",
+   "extra": true
+  },
+  {
+   "id": "aa5ff3f0393b",
+   "topic": "stationery",
+   "source": "Planning with Bumble",
+   "title": "Traveler's-style notebook setup in a Happy Planner Life Folio",
+   "url": "https://www.youtube.com/watch?v=27h3vsxN37k",
+   "summary": "A video walkthrough of setting up inserts in a Traveler's Notebook-format folio.",
+   "date": "2026-11-03",
+   "image": "thumbs/6ef9ba94a1db451b.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "e00026c1f910",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Completed Hobonichi A6 HON weekly spread",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xmbbfw/completed_hobonichi_a6_hon_weekly_spread/",
+   "summary": "A finished weekly spread in the A6 Hobonichi Original, shared for page-layout ideas.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  }
+ ]
+}
