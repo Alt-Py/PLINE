@@ -1,0 +1,460 @@
+{
+ "date": "2026-11-06",
+ "generated_at": "2026-11-06T10:57:51+13:00",
+ "headline": "Pixar names Jonathan Garson as its next president, Wētā FX's Moana and Resident Evil work gets detailed, and Pilot launches Iroshizuku-inspired Landscape Colours stationery.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "828d297f6968",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "InkMagix plugin turns photos of hand-drawn diagrams into Mermaid or draw.io",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xo28mk/inkmagix_plugin_convert_pic_of_handdrawn_diagrams/",
+   "summary": "Photograph a whiteboard or paper sketch and the plugin converts it into editable text and diagrams inside your vault. It makes capturing rough technical ideas on paper much faster.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "69f046b26595",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Three companion plugins form a visual layer: Home Cards, Relate and new Pagewise",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xojm9n/three_obsidian_plugins_that_work_as_a_new_visual/",
+   "summary": "One developer shows Home Cards, Relate and the new Pagewise working together on a single note. The trio turns the start page and property links into a more visual, card-based vault.",
+   "date": "2026-11-05",
+   "kind": "reddit"
+  },
+  {
+   "id": "6893ad21b5ba",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "TaskForge 3.1 answers redesign criticism with 13 themes and calendar sync",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xoow1f/taskforge_30s_redesign_got_a_lot_of_pushback_31/",
+   "summary": "After pushback on the dark, flat 3.0 look, the update restores colour options, adds custom properties and a note per meeting, and connects Google and Outlook calendars.",
+   "date": "2026-11-05",
+   "image": "thumbs/8e275eabb08e1ce2.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "f8a6b110dd93",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Dowse plugin finds PDFs, images and recordings by describing their content",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xo2qs9/i_built_an_obsidian_plugin_that_finds_any_file_by/",
+   "summary": "A free, open-source search plugin locates notes, PDF pages, screenshots and spoken moments in media from a natural-language description, across languages. It could be useful for large reference-heavy vaults.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "dfb7a75f8779",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Android home-screen widget for Obsidian notes reaches 1.4 with read-only mode",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xob9r8/my_android_widget_for_obsidian_notes_got_an/",
+   "summary": "The widget now lets you hide the quick-note buttons, set card size and colours globally, and walks you through folder setup on first launch. Most changes came from user feedback.",
+   "date": "2026-11-05",
+   "image": "thumbs/fe6571ceb31a3b86.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "e985a8bf9bfa",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Users complain about new delayed navbar animation in Obsidian iOS",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xoet6u/love_obsidian_but_the_new_forced_navbar_animation/",
+   "summary": "A recent iOS update slides the navbar in with a noticeable lag when switching panels, and users are asking for a way to turn it off.",
+   "date": "2026-11-05",
+   "image": "thumbs/853503a139b2f5eb.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "7673cb3fd589",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Snipsy adds an importer for the abandoned Text Snippets plugin",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xoebwp/text_snippets_hasnt_had_a_release_since_2022_so_i/",
+   "summary": "With Text Snippets unmaintained since 2022 and 40 open issues, the Snipsy developer built a migration path for its roughly 50k users. Snipsy is free and MIT-licensed.",
+   "date": "2026-11-05",
+   "kind": "reddit"
+  },
+  {
+   "id": "97e74dae3bde",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "A task-first workflow for Obsidian: define the job, then pick plugins",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xok7pp/there_are_many_ways_to_use_obsidian_and_here_is/",
+   "summary": "The author argues for starting from the task and the functions it needs before implementing them with plugins or custom code. That keeps you from endlessly fiddling with settings.",
+   "date": "2026-11-05",
+   "kind": "reddit"
+  },
+  {
+   "id": "bef183bfa718",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Vibe-coded CSS theme adds accent-driven UI colours and auto-hiding scrollbars",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xofyca/was_messing_a_bit_with_stylesheet_cuz_why_not_and/",
+   "summary": "A CSS newcomer shares a snippet set with a minimal settings page and adjustable saturation and lightness, and asks for review.",
+   "date": "2026-11-05",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "71f3e45df979",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Book-tracking and journaling dashboard built with Base and CSS snippets",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xocw6o/my_dashboard/",
+   "summary": "A simple home dashboard links the current read and a book database, with styling inspired by other community dashboards.",
+   "date": "2026-11-05",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "c013d0b4303e",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "A year of running work, study, finances and life from one Obsidian vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xoluzd/my_personal_os_in_obsidian/",
+   "summary": "A junior developer describes organising everything into four areas, including a log of every job application. It is a real-world example of a vault used as a personal operating system.",
+   "date": "2026-11-05",
+   "image": "thumbs/af30e10a05242c21.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "d0a8be60a2ed",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Obsidian-only email alias receives suspicious Stripe-style message",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xo52nj/just_got_an_email_to_my_uniquetoobsidian/",
+   "summary": "A user who gave a unique alias only to Obsidian got a mail purporting to come from Link/Stripe, which raises questions about where the address leaked. Worth a look if you use the same setup.",
+   "date": "2026-11-05",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "b599b8e06c00",
+   "topic": "stationery",
+   "source": "Pilot",
+   "title": "Pilot launches limited Landscape Colours line inspired by Iroshizuku inks",
+   "url": "https://www.pilot.co.jp/press_release/2026/11/05/content_22.html",
+   "summary": "The stationery range translates the world of the Iroshizuku fountain-pen inks into limited items built around a 'Chill Writing' theme of calming handwriting. A rare Pilot product aimed at ink fans.",
+   "date": "2026-11-05",
+   "title_ja": "パイロット『Landscape Colours（ランドスケープカラーズ）』限定発売",
+   "image": "thumbs/21ec62ea380a76bf.webp"
+  },
+  {
+   "id": "b19ceacbfd47",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Watercolour piece drawn with Platinum Century 3776 EF and DeAtramentis ink",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xniqf4/under_control_platinum_century_3776_ef/",
+   "summary": "A 26x21 cm artwork 'Under control' made with a fine Century 3776 and DeAtramentis ink. It shows how a fine Japanese nib handles line work with watercolour.",
+   "date": "2026-11-04",
+   "image": "thumbs/415ee17877a5ab4a.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "95cad95ebdfa",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A finished 2027 Hobonichi Weeks setup, with a question about elastic closures",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xn7x6o/my_2027_hobonichi_weeks_setup/",
+   "summary": "A well-liked photo of a decorated Weeks layout. The owner asks how others attached elastic to the plastic cover as a closure.",
+   "date": "2026-11-03",
+   "image": "thumbs/384cab3cfaab00ee.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "18327a234998",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Two bottles of Kosumosu ink turn out visibly different shades",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xnb20t/update_my_2_bottles_of_kosumosu_are_absolutely/",
+   "summary": "A swatch comparison, with Hana-ikada as reference, shows two bottles of Kosumosu that don't match. Online swatches match both versions, so batch variation looks likely.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "46cd462762c5",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Parallel pens bring out sheen ink for Callivember and NibVember",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xnca5s/pilot_parallels_and_sheen_ink/",
+   "summary": "Day 3 writing samples with broad Pilot Parallel nibs show how well they display sheening inks. Good inspiration for ink and nib pairings.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "c2743d0ab559",
+   "topic": "stationery",
+   "source": "carolilyart",
+   "title": "Planning how to merge four journaling practices into one 2027 Hobonichi A5",
+   "url": "https://www.youtube.com/watch?v=tQLBx8EAZLg",
+   "summary": "A journaler walks through plans for combining several journaling habits in a HON and Cousin pairing. It is a useful look at structuring a Hobonichi system.",
+   "date": "2026-11-05",
+   "image": "thumbs/556f1128f35a6d78.webp",
+   "kind": "video"
+  },
+  {
+   "id": "f58882e45474",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Testing a weekly dashboard layout in a Hobonichi A6",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xnal33/testing_what_works/",
+   "summary": "The poster weighs a Weeks against daily pages and a Cousin. The goal is a weekly overview without losing the per-day planning space.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "9160a28b4a88",
+   "topic": "stationery",
+   "source": "SJ Tech Talk",
+   "title": "Designing a custom 14-day journal for the new card-size TRAVELER'S Notebook",
+   "url": "https://www.youtube.com/watch?v=jL7gZl7hmJg",
+   "summary": "A walkthrough of building a two-week layout for Traveler's Company's new small format. It is a practical idea for anyone making their own inserts.",
+   "date": "2026-11-05",
+   "image": "thumbs/e482e880f86be179.webp",
+   "kind": "video"
+  },
+  {
+   "id": "c66fe9306c91",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi restocks look thin in Europe as shipping costs bite",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xm2f9h/my_restock_issues/",
+   "summary": "Polish retailers report reduced shipments and no partner stickers, while the official store has stock but shipping is costly. It's a signal about this year's supply.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "c8172702181c",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Mixing custom DeAtramentis colours for 2027 Techo pages",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xmaaoc/must_resist_the_urge_to_use_2027_techos/",
+   "summary": "A user is holding off on their 2027 Techos while planning to order cyan, yellow and thinner to mix their own ink shades for the planner.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "a5d67b9c4b63",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Starting a 2027 Weeks early by re-dating a spare calendar page",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xm9qx0/alr_started_my_2027_weeks/",
+   "summary": "A user began their 2027 Weeks in November by reusing and re-dating an unused January 2028 calendar page. It is a small trick for starting early.",
+   "date": "2026-11-02",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "e22b9d35e56f",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Saving voting stickers in Hobonichi diaries, with a 5-year A5 setup",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xmu9sm/who_else_saves_their_voting_stickers_in_their/",
+   "summary": "A fun collage idea: keeping yearly voting stickers in Hobonichi pages, plus a look at starting a 5-year A5 early with 2026 on the right page.",
+   "date": "2026-11-03",
+   "image": "thumbs/d71cd6da0e1debf5.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "27b527935edc",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "How to use Hobonichi monthly and weekly pages beyond planning",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xme7y2/how_do_you_use_this/",
+   "summary": "Two busy threads ask for creative uses for the extra pages once they are not needed for scheduling. The comments collect ideas beyond habit trackers.",
+   "date": "2026-11-04",
+   "also": [
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1xnddoh/i_need_ideas/"
+    }
+   ],
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "e7deec270569",
+   "topic": "stationery",
+   "source": "トミー【Tommy’s Room】",
+   "title": "A daily planner routine walkthrough with Tommy's Room",
+   "url": "https://www.youtube.com/watch?v=xGo0XfmI97c",
+   "summary": "Tommy shows how he works through his planner each day. It is a helpful look at a real habit.",
+   "date": "2026-11-05",
+   "title_ja": "#433 My Daily Planner Routine",
+   "image": "thumbs/40ee3a836ad427f5.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "dade0663512a",
+   "topic": "stationery",
+   "source": "Happier by Seppy",
+   "title": "Best pens for a Hobonichi Techo: functional and aesthetic picks",
+   "url": "https://www.youtube.com/watch?v=CdQXctgrMVk",
+   "summary": "A short video of pen choices for Techo pages, covering fine-tip options and planning use.",
+   "date": "2026-11-05",
+   "image": "thumbs/ef346913142c8930.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "89872928fc57",
+   "topic": "stationery",
+   "source": "LouPlans",
+   "title": "Test-writing three new pens and twelve new inks",
+   "url": "https://www.youtube.com/watch?v=uB1wbqTKOVo",
+   "summary": "A Japanese video of writing samples for a batch of new pens and inks that joined the collection.",
+   "date": "2026-11-04",
+   "title_ja": "新しいペンとインクの試し書き！ペン3本とインク12本が仲間入り",
+   "image": "thumbs/a3f8f146298b5183.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "a462afe9e166",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Jonathan Garson to succeed Jim Morris as Pixar president in January",
+   "url": "https://www.cartoonbrew.com/executives/pixar-jim-morris-jonathan-garson-jonas-rivera-269116.html",
+   "summary": "Jonas Rivera takes an expanded creative role alongside Pete Docter as the leadership changes take effect in January 2027. It's a major shift at the home of RenderMan.",
+   "date": "2026-11-05",
+   "image": "thumbs/a5ce3cb408b50305.webp"
+  },
+  {
+   "id": "d1aa1523b9a7",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Wētā FX creatures in Zach Cregger's Resident Evil, with VFX supervisor Ongaro",
+   "url": "https://beforesandafters.com/2026/11/06/the-pedestrian-mutant-bryan-and-all-the-crazy-creatures-in-zach-creggers-resident-evil/",
+   "summary": "A deep dive into the film's monsters, from The Pedestrian to Mutant Bryan, with production VFX supervisor Alessandro Ongaro and Wētā FX. Worth reading for creature work from your own studio.",
+   "date": "2026-11-05",
+   "image": "thumbs/e6ea3cd149ac04b6.webp"
+  },
+  {
+   "id": "4fe54a5cd2ca",
+   "topic": "vfx",
+   "source": "fxguide",
+   "title": "Wētā FX on building Moana's ocean, volcano and islands in live action",
+   "url": "https://www.fxguide.com/fxpodcasts/fxpodcast-weta-fx-brings-the-ocean-lava-and-islands-of-moana-to-life/",
+   "summary": "The fxpodcast covers blending live performances with a heightened digital world, including an art-directable storm ceiling, Te Kā's lava and Te Fiti's rebirth. Strong material on water and FX.",
+   "date": "2026-11-05",
+   "image": "thumbs/68123791a785279d.webp",
+   "also": [
+    {
+     "source": "fxguide (YouTube)",
+     "url": "https://www.youtube.com/watch?v=KVg5UPLcTz4"
+    }
+   ]
+  },
+  {
+   "id": "ae9497556750",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "VFX Notes podcast covers the big shots and technology of Sinners",
+   "url": "https://beforesandafters.com/2026/11/05/new-vfx-notes-episode-on-the-visual-effects-of-sinners/",
+   "summary": "A new episode goes through the film's major sequences and the technologies behind them.",
+   "date": "2026-11-05",
+   "image": "thumbs/015302549f20b7c7.webp"
+  },
+  {
+   "id": "fb2701181f8f",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Autodesk releases extended behind-the-scenes cut for The Cat in the Hat",
+   "url": "https://beforesandafters.com/2026/11/06/autodesk-releases-extended-cut-of-behind-the-scenes-the-cat-in-the-hat-video/",
+   "summary": "The longer video is part of the 'Made to Make' series and shows how the animated feature was made.",
+   "date": "2026-11-05",
+   "image": "thumbs/924afb16ec069412.webp"
+  },
+  {
+   "id": "7f5491f9f962",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Silverlake Studios delivered 400-plus shots as sole vendor on The Drop: A Snowfall Saga",
+   "url": "https://www.artofvfx.com/the-drop-a-snowfall-saga-a-look-at-the-vfx-created-by-silverlake-studios/",
+   "summary": "The Los Angeles studio handled everything from on-set supervision to final comp, extending environments while keeping the period look. A useful look at what a single-vendor show demands.",
+   "date": "2026-11-05",
+   "image": "thumbs/ce9a014500431720.webp"
+  },
+  {
+   "id": "667f151701e8",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Debate: why Godzilla Minus One beat The Creator for the VFX Oscar",
+   "url": "https://www.reddit.com/r/vfx/comments/1xmv8t0/still_thinking_about_how_godzilla_minus_one_won/",
+   "summary": "A busy r/vfx thread revisits the 2024 win, weighing storytelling and craft against The Creator's visual polish.",
+   "date": "2026-11-03",
+   "kind": "reddit"
+  },
+  {
+   "id": "543574b29df5",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Busy Bodies director on printed animation and vintage synths in her Oscar-contending short",
+   "url": "https://www.cartoonbrew.com/awards/busy-bodies-director-kate-renshaw-lewis-269103.html",
+   "summary": "Kate Renshaw-Lewis's short uses tiny factory workers to show the absurdity of everyday production, combining printed animation with household sounds.",
+   "date": "2026-11-05",
+   "image": "thumbs/ea757e397d1715cd.webp"
+  },
+  {
+   "id": "6b34a9766ee5",
+   "topic": "vfx",
+   "source": "Corridor Crew",
+   "title": "Corridor Crew does VFX for the director of Obsession",
+   "url": "https://www.youtube.com/watch?v=jpj2uRKmxUM",
+   "summary": "The crew works on effects for Curry Barker's short. It is sponsored content, but it shows how indie VFX work is done.",
+   "date": "2026-11-01",
+   "image": "thumbs/9f25b45aaba0bb62.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "d2569b97c440",
+   "topic": "pipeline",
+   "source": "Inside The Mind",
+   "title": "Houdini 22's new implicit surface nodes explored in a video",
+   "url": "https://www.youtube.com/watch?v=sb2g1gw7xwA",
+   "summary": "A walkthrough of the new implicit-surface tools in Houdini 22. A useful look at what changes for modelling and procedural geometry.",
+   "date": "2026-11-05",
+   "image": "thumbs/99d806c059085c26.webp",
+   "kind": "video"
+  },
+  {
+   "id": "42f54bc18297",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Liquid pretzel simulation shown off on r/Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xnj4dn/liquid_brezel/",
+   "summary": "A well-received Houdini fluid showcase of a pretzel made of liquid, which got 166 upvotes.",
+   "date": "2026-11-04",
+   "image": "thumbs/a2f085e60582b62c.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "4189ef310fe8",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Adding sparse stylised texture to an ASCII shader without making it tonal",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xmyswn/trying_to_add_stylized_sparse_texture_to_ascii/",
+   "summary": "A graphics programmer shows a stylised ASCII shader and seeks advice on texture. It's a small non-photoreal rendering experiment.",
+   "date": "2026-11-03",
+   "kind": "reddit"
+  }
+ ]
+}
