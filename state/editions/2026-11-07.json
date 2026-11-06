@@ -1,0 +1,428 @@
+{
+ "date": "2026-11-07",
+ "generated_at": "2026-11-07T10:27:52+13:00",
+ "headline": "Pilot pairs Frixion Juice Up with Tombow MONO, Cartoon Brew corrects its Dior ad coverage over AI doubts, and Houdini artists show knitted BB8 closeups.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "721cf80994b0",
+   "topic": "stationery",
+   "source": "Pilot",
+   "title": "Pilot and Tombow's MONO team up on limited Frixion Juice Up 3 set",
+   "url": "https://www.pilot.co.jp/press_release/2026/11/06/3_mono.html",
+   "summary": "Pilot announces a limited-run Frixion Juice Up 3 collaboration with MONO, themed around two imaginary pastry shops. It is a rare cross-brand tie-up between two of Japan's biggest stationery names.",
+   "date": "2026-11-06",
+   "title_ja": "2026.11.06 プレスリリース 『フリクション・ジュースアップ3 × MONO』コラボ 数量限定発売",
+   "image": "thumbs/21ec62ea380a76bf.webp"
+  },
+  {
+   "id": "b6daba1e096c",
+   "topic": "stationery",
+   "source": "The Goulet Pen Company",
+   "title": "Goulet Q&A: where Sailor King of Pens went, plus BENU nib change",
+   "url": "https://www.youtube.com/watch?v=Swv_s0dYL-s",
+   "summary": "Brian looks into the scarcity of Sailor King of Pens, covers BENU's move from Schmidt to JoWo nibs and shows the LAMY 2000 bog oak set. Useful context for anyone tracking Sailor availability.",
+   "date": "2026-11-06",
+   "image": "thumbs/b91b36a506298fd5.webp",
+   "kind": "video"
+  },
+  {
+   "id": "35b4df5aed7b",
+   "topic": "stationery",
+   "source": "maimai＊手帳と文具で楽しくLife Log＊",
+   "title": "Video tour of Traveler's Notebook 20th anniversary tin set and journaling extras",
+   "url": "https://www.youtube.com/watch?v=XHl8ASZ7tTY",
+   "summary": "A Japanese planner channel shows the Traveler's Company 20th anniversary tin set alongside stamps, sticky notes and notebooks she uses in her journal. It gives a close look at the commemorative release.",
+   "date": "2026-11-06",
+   "title_ja": "【最近お迎えした文房具】お気に入りを紹介💖 トラベラーズノート20周年缶セット・手帳に使えるスタンプ・ふせん・ノートなど✨",
+   "image": "thumbs/13466b36bae7f005.webp",
+   "kind": "video"
+  },
+  {
+   "id": "1a29641512c7",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi's Tanakadaisuke Starlight Weeks restock sells out within minutes",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xo6prr/war_is_over/",
+   "summary": "The Starlight Weeks returned to the Hobonichi store at 11 AM JST and was gone in about three minutes. Buyers report that pre-saved checkout details were the only way to get one.",
+   "date": "2026-11-05",
+   "image": "thumbs/9d6f32df206cc91d.webp",
+   "also": [
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1xo7x65/the_tanakadaisuke_starlight_weeks_sold_out_in_3/"
+    },
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1xncmvs/starlight_date_for_restock/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "12425a7fa5b0",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A 2027 'Frankenichi' A6 setup mixes Weeks, card case and grid notebook",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xo86w6/2027_frankenichi_setup_a6/",
+   "summary": "A long-time Hobonichi user combines a leather A6 cover, a Weekly card case with stencils and page flags, and a Yamazakura grid notebook. A practical example of fixing planner limitations with a hybrid setup.",
+   "date": "2026-11-05",
+   "image": "thumbs/abd6c485d9d1166a.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "60a78d8175b2",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Filling empty Hobonichi pages with imperfect doodles to keep a journaling habit",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xo0e3d/filling_empty_pages_in_my_2026_cousin/",
+   "summary": "Blank summer pages in a 2026 Cousin got filled with simple, wonky doodles learned from a video, and will be repeated in the 2027 back pages. A low-pressure way to revive a lapsed habit.",
+   "date": "2026-11-04",
+   "image": "thumbs/79584086ca70b654.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "dd17e063d145",
+   "topic": "stationery",
+   "source": "キャパゼロでも手帳が好き",
+   "title": "Three weeks with Hobonichi Weeks: what to improve and how to adapt it",
+   "url": "https://www.youtube.com/watch?v=wtyKgzjf2bk",
+   "summary": "A Japanese planner YouTuber reviews what has and hasn't worked in her first weeks with Hobonichi Weeks, and how she plans to adapt the layout to her routine.",
+   "date": "2026-11-06",
+   "image": "thumbs/dd571baae99c5650.webp",
+   "kind": "video"
+  },
+  {
+   "id": "38aae11ee174",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Twelve blue fountain pens line up, from Sailor and Platinum to Kawanishi",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xoa0kc/my_blue_pens/",
+   "summary": "A collector photographs a dozen blue pens, including a Sailor PG, a Platinum 3776 Astro and a Kawanishi Sazanami. The post is mainly about the colours, with a few Japanese makers in the mix.",
+   "date": "2026-11-05",
+   "image": "thumbs/802371fdea6d9732.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9ae136979894",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Colorverse 'Plankton' teal inks well with Hobonichi's November colour",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xo4wc6/found_the_perfect_ink_match_for_november/",
+   "summary": "A Hobonichi user matches November's colourway with a light teal ink from the Colorverse Colorvent calendar and plans to use it in a Kaweco Sport. A simple ink-and-planner pairing idea.",
+   "date": "2026-11-05",
+   "image": "thumbs/8f47fd2d136456eb.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "b5b818289740",
+   "topic": "stationery",
+   "source": "おゆの手帳",
+   "title": "Plan-with-me morning journaling in a Personal planner and Traveler's Notebook",
+   "url": "https://www.youtube.com/watch?v=Hy_ZGtWmY1o",
+   "summary": "A Japanese journaler works through her morning pages in a Personal planner and a Traveler's Notebook, showing how she splits tasks between the two.",
+   "date": "2026-11-06",
+   "image": "thumbs/4270a3d7d586717f.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "f3b739cf99e9",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "First Hobonichi Cousin dressed in a book band and clear cover",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xo2q4a/my_first_hobonichi_cousin/",
+   "summary": "A first-time Cousin owner chooses a Yumi Kitagishi book band and clear cover instead of a full cover. It's a budget-friendly way to personalise the planner.",
+   "date": "2026-11-04",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "97532f624b2d",
+   "topic": "stationery",
+   "source": "なつこ手帳",
+   "title": "Planner chat: current Mini 6 contents, Hobonichi Cousin and reading log setup",
+   "url": "https://www.youtube.com/watch?v=dbzFXGxDer0",
+   "summary": "A Japanese planner YouTuber walks through her current setup, covering Mini 6 refills, a Hobonichi Cousin and how she keeps a reading log.",
+   "date": "2026-11-06",
+   "image": "thumbs/1db0e8a1e99237b2.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "1b437f9d4cf3",
+   "topic": "stationery",
+   "source": "いぐ【いぐのて】",
+   "title": "Restarting Jibun Techo DAYS with a Mini 6 and Hobonichi sneaker",
+   "url": "https://www.youtube.com/watch?v=rgr38ChhMu0",
+   "summary": "A planner video showing a restart of Kokuyo's Jibun Techo DAYS alongside a Mini 6 setup and a Hobonichi sneaker, plus Chiikawa market purchases.",
+   "date": "2026-11-05",
+   "title_ja": "ジブン手帳DAYSを再始動！｜ちいかわマーケット購入品紹介＆ミニ6・ほぼ日スニーカーで手帳タイム　＃997",
+   "image": "thumbs/07f88a9e014c6674.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "1e19d6ba5fb8",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Two Weeks Mega setups for 2027: stickers, extra pages and a floppy cover",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xnydrv/2027_weeks_mega/",
+   "summary": "Two users share their first Hobonichi Weeks, one with big stickers and a complaint about a limp cover, the other with monthly spreads drawn in the back pages for immediate use.",
+   "date": "2026-11-05",
+   "also": [
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1xo7k0r/my_first_weeks/"
+    }
+   ],
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "950cf0cc7245",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "WeFX breaks down 250 shots for Reacher spinoff Neagley",
+   "url": "https://www.artofvfx.com/neagley-wefx-breaks-down-its-visual-effects-work/",
+   "summary": "The Toronto studio's roughly 70 artists spent eight months on CG environments, digital doubles, vehicle crashes and explosions. A useful look at how a mid-size house handles a heavy episodic workload.",
+   "date": "2026-11-06",
+   "image": "thumbs/d5c044e315fd2a0a.webp"
+  },
+  {
+   "id": "f225a1d6ed9e",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Cartoon Brew corrects Dior ad coverage after signs of AI in Chomet film",
+   "url": "https://www.cartoonbrew.com/artificial-intelligence/sylvain-chomet-dior-ad-ai-use-269124.html",
+   "summary": "Hands and other imagery in Sylvain Chomet's Dior spot suggest AI use, undermining its claim to be hand-drawn. Cartoon Brew apologises for first describing it as traditional animation.",
+   "date": "2026-11-06",
+   "image": "thumbs/d6fcd1957819bee8.webp"
+  },
+  {
+   "id": "fa45345b3fc8",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Pixar executive shakeup and Wildwood's momentum lead Cartoon Brew's news roundup",
+   "url": "https://www.cartoonbrew.com/newsletter/pixars-executive-shakeup-wildwood-gains-ground-chomet-ai-questions-269148.html",
+   "summary": "The daily digest covers leadership changes at Pixar, Laika's Wildwood gaining ground at the box office, and the unresolved questions around the Chomet Dior ad.",
+   "date": "2026-11-06",
+   "image": "thumbs/2f52ab9cacbb8d4f.webp"
+  },
+  {
+   "id": "5d8afcfb8172",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Laika's Wildwood heads into third weekend toward $38 million domestic",
+   "url": "https://www.cartoonbrew.com/box-office-report/wildwood-third-weekend-box-office-predictions-269142.html",
+   "summary": "After a strong second week, the stop-motion feature is closing in on earlier Laika totals. It is also an early test of Fathom's first wide release.",
+   "date": "2026-11-06",
+   "image": "thumbs/2ba7c7cfa2b65e57.webp"
+  },
+  {
+   "id": "af45fe7757bb",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Godzilla Minus Zero gets an IMAX-format trailer and a VFX discussion video",
+   "url": "https://www.artofvfx.com/godzilla-minus-zero/",
+   "summary": "Takashi Yamazaki's sequel is the first Japanese production under the 'Filmed For IMAX' programme. A new trailer is out, and a video episode discusses its effects.",
+   "date": "2026-11-06",
+   "image": "thumbs/9f6645014b8f19b6.webp",
+   "also": [
+    {
+     "source": "Get Rec'd with Straw Hat Goofy",
+     "url": "https://www.youtube.com/watch?v=CjGXeHFgOi8"
+    }
+   ]
+  },
+  {
+   "id": "ffe040d68db1",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Out-of-work VFX artists swap side-income ideas in a long r/vfx thread",
+   "url": "https://www.reddit.com/r/vfx/comments/1xnrsqs/fellow_underemployed_vfx_artists_what_are_you/",
+   "summary": "A senior artist unemployed for over a month asks how others bridge dry spells, drawing about 100 replies. It is a blunt snapshot of the current job market in the industry.",
+   "date": "2026-11-04",
+   "kind": "reddit"
+  },
+  {
+   "id": "8c4405428e2f",
+   "topic": "vfx",
+   "source": "Pixel In The Frame",
+   "title": "Eye of Sauron breakdown combines Houdini with ComfyUI",
+   "url": "https://www.youtube.com/watch?v=qGZtjI2KI40",
+   "summary": "A short VFX breakdown shows how a Houdini setup was mixed with a ComfyUI AI workflow to build the Eye of Sauron. It's a look at the hybrid pipelines now appearing in indie work.",
+   "date": "2026-11-02",
+   "image": "thumbs/6e50c59e7053662e.webp",
+   "kind": "video"
+  },
+  {
+   "id": "978bdb8c40cc",
+   "topic": "vfx",
+   "source": "Nerdy ladka",
+   "title": "Ramayana VFX breakdown walks through how major scenes were built",
+   "url": "https://www.youtube.com/watch?v=YsTtksGhvKw",
+   "summary": "A video analysis of the film's key scenes and how its visual effects were likely made, part of a wave of commentary on the film's CGI.",
+   "date": "2026-11-05",
+   "image": "thumbs/a46b0ab709286f6b.webp",
+   "kind": "video"
+  },
+  {
+   "id": "5eb21111b03e",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "TIFF panel: anime's $28 billion market, new awards and Fathom's theatrical push",
+   "url": "https://www.cartoonbrew.com/festivals/tiff-daily-newsletter-3-268908.html",
+   "summary": "Japanese studios discuss overseas growth, industry leaders argue for new anime honours, and Fathom's Jason Brenek talks about animation's theatrical potential.",
+   "date": "2026-11-04",
+   "image": "thumbs/2b452edf38ee6418.webp",
+   "extra": true
+  },
+  {
+   "id": "a6a9ae51c485",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Knitted BB8 closeups show curve-driven cloth, burning fibres and copper-wire antennas",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xo0y2s/bb8_knitted_closeups/",
+   "summary": "The artists push beyond standard clothing workflows in Houdini, using direct curve control for burning, smoking fibres. The antenna detailing was built with the Fibric toolset.",
+   "date": "2026-11-04",
+   "image": "thumbs/e6ca22631fb7ecc0.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c95e4ba75a44",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Handwritten custom engine renders a dense forest at 130 fps on an RTX 3080",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xnly73/custom_engine_forest_showcase_130_fps_average_on/",
+   "summary": "The eight-month solo engine uses virtual-geometry LODs, voxel far representation and a screen-space plus voxel hybrid GI, all without impostors. A good look at real-time techniques that parallel production rendering.",
+   "date": "2026-11-04",
+   "image": "thumbs/63aa45e9508fdfb6.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "0690d5f28be1",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Vibe-coded Cycles integration renders Vellum simulations inside Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xo2bd1/rd_vellum_rendered_in_houdini_cycles/",
+   "summary": "An R&D experiment hooks Blender's Cycles into Houdini at SOP level, similar to Redshift, with Solaris support judged feasible. Interesting for anyone eyeing alternative render delegates.",
+   "date": "2026-11-04",
+   "image": "thumbs/3b9055e803a73f1f.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "a076a5afe608",
+   "topic": "pipeline",
+   "source": "RenderMan",
+   "title": "RenderMan announces results of its 'Diorama Drama' art challenge",
+   "url": "https://renderman.pixar.com/news/renderman-diorama-drama-art-challenge-final-results",
+   "summary": "Pixar's RenderMan team has named the winners of its latest community challenge. It offers fresh RenderMan work to look at.",
+   "image": "thumbs/1b724a4d3aef7c52.webp"
+  },
+  {
+   "id": "cf2640fe9d08",
+   "topic": "pipeline",
+   "source": "CG Forge",
+   "title": "CG Forge argues AI isn't killing Houdini or VFX",
+   "url": "https://www.youtube.com/watch?v=nEhYPt_kPjI",
+   "summary": "A video essay, already past 4,700 views, makes the case that procedural tools and VFX craft stay relevant despite generative AI.",
+   "date": "2026-11-05",
+   "image": "thumbs/26e0992104a457ba.webp",
+   "kind": "video"
+  },
+  {
+   "id": "c0d3b3f01c70",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Gnomon Workshop's two-part Maya course teaches AAA boss combat animation",
+   "url": "https://www.cgchannel.com/2026/11/master-creature-animation-for-games/",
+   "summary": "The masterclass covers animating a combat move set for a game boss in Maya, with techniques that transfer to creature work.",
+   "date": "2026-11-06"
+  },
+  {
+   "id": "3b9166230428",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Candoo, a sad candle that missed Halloween, shown in Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xnr3e1/candoo_a_sad_candle_that_missed_halloween/",
+   "summary": "A character-style candle render posted to r/Houdini that drew over 150 upvotes.",
+   "date": "2026-11-04",
+   "image": "thumbs/a30c3a928b52f6cf.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "360fb21b6f06",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "New plugin syncs 5–50 MB vault files through any S3 service",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xpi36x/built_a_s3_sync_plugin_to_sync_file_between_550mb/",
+   "summary": "A user on the standard Sync plan built a plugin that moves larger PDFs through S3-compatible storage such as Cloudflare R2, avoiding a plan upgrade. It is handy for vaults heavy with reference documents.",
+   "date": "2026-11-06",
+   "kind": "reddit"
+  },
+  {
+   "id": "5fcf51af24cc",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Adapting Dashboard Navigator into a custom homepage with calendar and stats",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xplouh/anyone_else_here_customize_plugins_while_using_it/",
+   "summary": "A user customises plugin interfaces, building a home dashboard with a daily-note calendar, recent files, bookmarks and statistics. It is an example of how far plugin tweaking can go.",
+   "date": "2026-11-06",
+   "kind": "reddit"
+  },
+  {
+   "id": "d62634ea415b",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Reminder for overwhelmed newcomers: Obsidian is simply a note-taking app",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xplv02/newbies_and_people_that_are_overwhelmed_please/",
+   "summary": "A long post urges new users to let their needs decide how complex a vault becomes rather than copying elaborate setups.",
+   "date": "2026-11-06",
+   "image": "thumbs/acb24a7ef1f67f88.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "bd99603c5441",
+   "topic": "obsidian",
+   "source": "Beomsu Koh | 고범수",
+   "title": "Video: one vault feeding seven publishing channels",
+   "url": "https://www.youtube.com/watch?v=tB1w5OoILwU",
+   "summary": "A short walkthrough of an Obsidian publishing workflow that pushes content from a single vault to multiple outlets.",
+   "date": "2026-11-06",
+   "image": "thumbs/b5d3fbe81383453c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "0fd0c57b3729",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Reflection: Obsidian can trap effort inside the vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xpjd35/obsidian_traps_my_effort_inside_the_vault_a/",
+   "summary": "After years of use, a user finds planning and prototyping in the system easier than taking action in the real world. It is a thoughtful take on the limits of note-taking systems.",
+   "date": "2026-11-06",
+   "kind": "reddit"
+  },
+  {
+   "id": "65b71745a7b0",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Custom planning and reminders plugins built with Claude for uni and tutoring",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xox4ms/my_custom_planning_and_reminders_plugin_i_made_on/",
+   "summary": "A user shares two AI-assisted plugins for class tracking and personal planning, and asks whether merging them would be worthwhile.",
+   "date": "2026-11-05",
+   "image": "thumbs/19a6b5c99f546ea7.webp",
+   "kind": "reddit"
+  }
+ ]
+}
