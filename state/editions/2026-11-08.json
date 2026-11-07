@@ -1,0 +1,409 @@
+{
+ "date": "2026-11-08",
+ "generated_at": "2026-11-08T09:11:56+13:00",
+ "headline": "Flame 2027.2 adds USD scene import, Epic makes Megascans permanently free, and Chomet defends the Dior ad's hand-drawn claim while admitting automated in-betweening.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "f627866f6f3e",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Open-source Ink Notebook plugin brings drawing and annotation into Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xq8y75/ink_notebook_ive_created_a_plugin_for_drawing/",
+   "summary": "A from-scratch plugin for sketching, annotating and designing inside notes, built for an e-ink Boox tablet as a replacement for GoodNotes. The author is asking for feature requests, and it joins the growing handwriting-in-vault tools.",
+   "date": "2026-11-07",
+   "image": "thumbs/1ca6d96b170a5766.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "7ea51b621c30",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Local LLM and Obsidian cross-reference a shelf of Hollywood history books",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xqf3gw/using_obsidian_and_a_local_llm_to_crossreference/",
+   "summary": "An epub-to-markdown workflow converts book chapters into vault notes, and a local model links them without any RAG layer. It's a practical research method for film and VFX history reading.",
+   "date": "2026-11-07",
+   "kind": "reddit"
+  },
+  {
+   "id": "2e672a6f1d4a",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Flatcap theme lands in Obsidian community themes with dark and light variants",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xq97f4/flatcap_the_theme_i_use_for_my_own_notes/",
+   "summary": "A long-running personal style, now installable by searching \"FlatCap\", with Slate (dark) and Daylight (light) modes. Source and screenshots are on GitHub.",
+   "date": "2026-11-07",
+   "kind": "reddit"
+  },
+  {
+   "id": "9ed2f0305cb8",
+   "topic": "obsidian",
+   "source": "Wanderloots",
+   "title": "Video explains agentic context with Hermes, Honcho memory and an Obsidian LLM wiki",
+   "url": "https://www.youtube.com/watch?v=nlYuDKdDvMY",
+   "summary": "Walks through how persistent agent memory and an Obsidian-based wiki can work together as a knowledge layer for AI assistants.",
+   "date": "2026-11-07",
+   "image": "thumbs/b6c22330810877df.webp",
+   "kind": "video"
+  },
+  {
+   "id": "9459ca6bb403",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Dropping an elaborate daily-note template improved one user's notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xpt915/i_dropped_my_automated_daily_note_setup_after_a/",
+   "summary": "After a month of maintaining query-heavy daily notes that broke after plugin updates, the author went back to a simple setup and wrote more. A useful counterpoint to over-engineered vaults.",
+   "date": "2026-11-07",
+   "kind": "reddit"
+  },
+  {
+   "id": "15431a98b865",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Worldbuilding wiki moved from Notion to Obsidian, graph view timelapse included",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xprqnm/he_conseguido_pasar_mi_wiki_a_obsidian_y_al/",
+   "summary": "A short timelapse shows the graph view filling out as a worldbuilding wiki is indexed, with the notes appearing to grow organically.",
+   "date": "2026-11-06",
+   "image": "thumbs/870d039649a269c1.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "46066ad90415",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Tags versus links: how do you decide in the body of a note?",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xqdwrk/tags_vs_links/",
+   "summary": "A discussion on when to reach for tags and when for links in personal and academic notes, with community opinions on organising approaches.",
+   "date": "2026-11-07",
+   "image": "thumbs/da8972cd8a631ce8.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "8575586ae45e",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Searching for a PDF++-style rectangular PDF embed outside Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xqf050/any_obsidian_alternatives_that_can_do_pdf_embeds/",
+   "summary": "A student praises PDF++'s selection-embed feature that links back to the exact spot in a PDF, and asks whether any alternative app does the same. It's a useful pointer to what the plugin does.",
+   "date": "2026-11-07",
+   "kind": "reddit"
+  },
+  {
+   "id": "29bf1dce1f6c",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot previews new Kakuno colourways in a November press release",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xoyk6r/new_pilot_kakunos_on_the_way/",
+   "summary": "Pilot Japan has announced fresh colours for the entry-level Kakuno fountain pen, and the community is already enthusiastic about the palette.",
+   "date": "2026-11-06",
+   "image": "thumbs/bf70fe0b759ea980.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "17b9f14832d3",
+   "topic": "stationery",
+   "source": "手帳とか、革細工とか、生活とか。",
+   "title": "Rethinking a Hobonichi Original in November: weekly-left layout to one page a day",
+   "url": "https://www.youtube.com/watch?v=rUewI9L7iyU",
+   "summary": "A Japanese journaler explains how they restructured schedule and task tracking, moving from a weekly-left spread to daily pages. A practical look at adapting a layout mid-year.",
+   "date": "2026-11-07",
+   "title_ja": "【11月の手帳の使い方】週間レフトから1日1ページ。予定とタスク管理を見直した話｜ほぼ日オリジナル",
+   "image": "thumbs/2945ce360cf3261f.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ae126b143ddf",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Red Hobonichi Weeks becomes a canvas for a commissioned illustration",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xoeyi2/my_friend_her_weeks/",
+   "summary": "A friend bought the red Weeks specifically so an artist friend could draw on it. The photo is a lovely example of treating a planner as an art object, and it drew over a thousand upvotes.",
+   "date": "2026-11-05",
+   "image": "thumbs/5a96d48d00a3f8a4.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "53c0664cc246",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Day Free A5 chosen as an everyday journal after Weeks didn't stick",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xouq19/a_few_days_in_my_day_free_and_this_is_the_one/",
+   "summary": "A journaler explains why the loose structure and generous space of the Hobonichi Day Free suited them better than the Weeks, which they abandoned halfway through the year.",
+   "date": "2026-11-05",
+   "kind": "reddit"
+  },
+  {
+   "id": "7093ece626d2",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Sub-$30 Pilot Metropolitan with a medium italic nib impresses",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xozkn6/punching_above_its_weight/",
+   "summary": "The CM italic nib gives a distinctive line without being as broad as a 1.1 stub. A budget pairing that's worth a look for anyone exploring italic writing.",
+   "date": "2026-11-06",
+   "image": "thumbs/01e7f0b22184f8b9.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "45ec4a719132",
+   "topic": "stationery",
+   "source": "yama.",
+   "title": "Hobonichi Cousin and Mini deco pages: a relaxed two- and three-day journaling session",
+   "url": "https://www.youtube.com/watch?v=K7JPmAvTr6k",
+   "summary": "A Japanese video shows decorating Hobonichi pages in real time, a good source of layout and sticker ideas.",
+   "date": "2026-11-07",
+   "title_ja": "《手帳タイム》ほぼ日カズンデコ２日分とミニデコ３日分♡ ゆっくり手帳タイム✏️ #ほぼ日手帳",
+   "image": "thumbs/ce8ad5a7b33c3f52.webp",
+   "kind": "video"
+  },
+  {
+   "id": "6f7ca7272cc7",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Filling in the Hobonichi Weeks extra pages with artwork",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xp0cod/weeks_extra_page_art/",
+   "summary": "Two posts show how people use the extra pages at the back of the Weeks for illustration and personal projects.",
+   "date": "2026-11-06",
+   "image": "thumbs/c08fa457dd03ef53.webp",
+   "also": [
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1xnt0es/weeks_extra_pages_part_2/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "8f951882e13b",
+   "topic": "stationery",
+   "source": "Sailor",
+   "title": "Sailor launches a note writing contest for people turning 21",
+   "url": "https://sailor.co.jp/news/20261105/",
+   "summary": "The \"21K Anchor Project\" invites the generation turning 21 this year to post personal declarations on the note platform, an unusual brand campaign for the pen maker.",
+   "date": "2026-11-05",
+   "title_ja": "2026.11.05 プレスリリース 『21K Anchor Project（21歳わたしの宣言）』開催",
+   "image": "thumbs/0b7cd63af3cfba0c.webp"
+  },
+  {
+   "id": "ff6eab3a6996",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Looking for ways to loosen up a structured Hobonichi Weeks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xoniux/more_chaos_in_weeks/",
+   "summary": "The poster tracks meals, health and dates but wants a less rigid, more chaotic spread, and asks for advice on how to get there.",
+   "date": "2026-11-05",
+   "image": "thumbs/245e4b625ab76e1c.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "cdaf95b05b16",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Three months after doubting the A6, a Hobonichi convert reports back",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xolqp9/me_in_august_i_dont_think_the_a6_is_for_me/",
+   "summary": "A half-year Techo bought as a polite trial turned into a daily habit. A candid look at what makes the small format stick.",
+   "date": "2026-11-05",
+   "image": "thumbs/fedfd9f75c81eb27.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "fdeff679a3f2",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens lists its full 2027 planner lineup, from Hobonichi to Jibun Techo",
+   "url": "https://www.jetpens.com/blog/2027-Planner-Lineup-Overview/pt/982",
+   "summary": "An overview of the dated planners and calendars coming for 2027, including Hobonichi, Kokuyo Jibun Techo, Midori and Nolty. A handy reference for the new-year changeover.",
+   "date": "2026-11-03",
+   "extra": true
+  },
+  {
+   "id": "05f2faa30db5",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum's metal-detector-compatible BSL-500D ballpoint featured in Goods Press",
+   "url": "https://www.platinum-pen.co.jp/news/13612/",
+   "summary": "The factory-friendly ballpoint is covered in the December issue of the Tokuma Shoten magazine.",
+   "title_ja": "徳間書店発行グッズプレス 12月号にて「BSL-500D. 工場用金属探知機対応」ボールペンが掲載になりました。",
+   "image": "thumbs/cc624308a7204cbc.webp",
+   "extra": true
+  },
+  {
+   "id": "bcfe5f639da9",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "First Hobonichi Weeks gets an Adventure Time theme",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xok7tj/my_first_hobonichi_weeks/",
+   "summary": "A new user decorates the Poppy Red Mega Weeks with an Adventure Time theme, a cheerful example of theming a planner.",
+   "date": "2026-11-05",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "f7afb21b71c5",
+   "topic": "stationery",
+   "source": "進め。60代のシングルライフ",
+   "title": "Uni-ball One P 3-colour ballpoint reviewed as a favourite everyday pen",
+   "url": "https://www.youtube.com/watch?v=0QWdnypMy-Y",
+   "summary": "A short Japanese-market video on why this multi-pen became the reviewer's daily carry.",
+   "date": "2026-11-06",
+   "image": "thumbs/e2b1bdb0340d637f.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "862eec95f804",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Chomet says Dior ad was hand-drawn but admits automated interpolation",
+   "url": "https://www.cartoonbrew.com/artificial-intelligence/sylvain-chomet-dior-ad-automated-interpolation-269167.html",
+   "summary": "The director and producer defend the craft behind the ad but give few specifics on the tools used to generate in-between frames. It's a live debate about where AI assistance sits in animation pipelines.",
+   "date": "2026-11-07",
+   "image": "thumbs/8f6d2c8a3a53deb0.webp"
+  },
+  {
+   "id": "1697a467ef9e",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Ramayana behind-the-scenes shows on-set mocap as VFX breakdowns circulate",
+   "url": "https://beforesandafters.com/2026/11/08/behind-the-scenes-on-ramayana/",
+   "summary": "befores & afters shares on-set footage including motion capture, while a large reaction video and a breakdown discuss how polished the film's CG looks.",
+   "date": "2026-11-07",
+   "image": "thumbs/96e390c0c52e5082.webp",
+   "also": [
+    {
+     "source": "MrFlickMan",
+     "url": "https://www.youtube.com/watch?v=aNt-RbKiQKw"
+    },
+    {
+     "source": "Pop da corn",
+     "url": "https://www.youtube.com/watch?v=4Xx4KDmcuR8"
+    }
+   ]
+  },
+  {
+   "id": "e527476aad89",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Kid Koala on directing animated debut Space Cadet with 16 animators",
+   "url": "https://www.cartoonbrew.com/feature-film/space-cadet-kid-koala-eric-san-interview-269165.html",
+   "summary": "The scratch DJ built a handmade CG world and used turntable techniques to give his robot character a human touch. A distinctive small-team production story.",
+   "date": "2026-11-07",
+   "image": "thumbs/4b1c038878f15ab8.webp"
+  },
+  {
+   "id": "ea037e5a1b0f",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Daffy Season directors discuss Looney Tunes comedy with Argento-style horror in CG",
+   "url": "https://www.cartoonbrew.com/awards/daffy-season-hamish-grieve-todd-wilderman-269158.html",
+   "summary": "An Oscar short-film contender mixes classic slapstick with a modern CG look and horror influences, with the directors explaining their approach.",
+   "date": "2026-11-06",
+   "image": "thumbs/e0f08e202561ebc0.webp"
+  },
+  {
+   "id": "59644b153c55",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Jurassic Park's previs was done with stop-motion animation",
+   "url": "https://www.reddit.com/r/vfx/comments/1xp6gxf/jurassic_park_used_stop_motion_animation_for_its/",
+   "summary": "A reminder of how pre-CG dinosaur planning worked on the film, and a nice historical anchor for anyone who teaches previs.",
+   "date": "2026-11-06",
+   "image": "thumbs/0507a4cddc54b551.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "97be5777ff1d",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "VFX artist shares 45-minute deep dive on a new tool that excites and unsettles them",
+   "url": "https://www.reddit.com/r/vfx/comments/1xoxu7m/i_built_a_little_tool_that_im_super_excited_about/",
+   "summary": "A post on r/vfx about a self-built tool whose creative potential is matched by unease about whether it should be possible, with a long video walkthrough.",
+   "date": "2026-11-05",
+   "image": "thumbs/518359ce3506a3d8.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "75277aa7bd63",
+   "topic": "vfx",
+   "source": "Liam J. M. Wilson",
+   "title": "MUTINY visual effects breakdown",
+   "url": "https://www.youtube.com/watch?v=PvCf5fCto5k",
+   "summary": "A short independent breakdown video showing the VFX work behind the project.",
+   "date": "2026-11-06",
+   "image": "thumbs/3a30243e6652be4f.webp",
+   "kind": "video"
+  },
+  {
+   "id": "beaf77a897ee",
+   "topic": "vfx",
+   "source": "ErikDoesVFX",
+   "title": "Video pits a $10 AI workflow against $10,000 of traditional VFX",
+   "url": "https://www.youtube.com/watch?v=40uRWuhfZI0",
+   "summary": "A heavily viewed comparison of AI-generated and conventional VFX output that is part of the ongoing industry conversation on cost and quality.",
+   "date": "2026-10-31",
+   "image": "thumbs/f310277dcc10f80e.webp",
+   "kind": "video"
+  },
+  {
+   "id": "9e53eb313e60",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Free Ray Gunn screening and Q&A with Brad Bird in Los Angeles on November 10",
+   "url": "https://www.cartoonbrew.com/feature-film/netflix-ray-gunn-free-screening-los-angeles-269151.html",
+   "summary": "The Netflix Home Theater event includes a conversation with Bird, Tony Fucile, Michal Makarewicz and Doug Frankel.",
+   "date": "2026-11-06",
+   "image": "thumbs/064c0bfa1e808273.webp",
+   "extra": true
+  },
+  {
+   "id": "c4e7948ddf92",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Flame 2027.2 can import USD scenes and generate normal maps from video",
+   "url": "https://www.cgchannel.com/2026/11/autodesk-releases-flame-2027/",
+   "summary": "Autodesk's compositing and finishing tool gains USD scene import and a new AI model for deriving normal maps from footage, extending USD further into finishing workflows.",
+   "date": "2026-11-07"
+  },
+  {
+   "id": "534a80bbc742",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Epic makes Megascans free again, permanently",
+   "url": "https://www.cgchannel.com/2026/11/epic-has-made-megascans-free-again-for-good-this-time/",
+   "summary": "Over 23,000 scanned environment assets, buildings, plants and materials are available at no cost for games, VFX and visualisation, a big resource for lookdev and set-dressing work.",
+   "date": "2026-11-07"
+  },
+  {
+   "id": "15b5a8c4710f",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini MPM simulation of a collapsing dirt mound",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xox554/mpm_dirt_mound/",
+   "summary": "A material point method sim showing granular soil behaviour, a good reference for MPM setups in Houdini.",
+   "date": "2026-11-05",
+   "image": "thumbs/e240f5b60ba37a92.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "4477879f343f",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Bonfire built from around 25 Houdini pyro sims, rendered in Blender, comped in Fusion",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xooe0n/bonefire/",
+   "summary": "A second pyro project showing a cross-DCC workflow: Houdini simulation, Blender scene and render, and Fusion Studio compositing.",
+   "date": "2026-11-05",
+   "image": "thumbs/d11706693b03e94f.webp",
+   "kind": "reddit"
+  }
+ ]
+}
