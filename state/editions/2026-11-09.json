@@ -1,0 +1,270 @@
+{
+ "date": "2026-11-09",
+ "generated_at": "2026-11-09T09:25:48+13:00",
+ "headline": "Chaos ships V-Ray 7.5 with an AI assistant, Reddit buzzes over Weta's reported GenAI move, and Obsidian gets an on-device voice-note workflow.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 38,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found",
+  "r/bulletjournal": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "434f9c949dd3",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Chaos releases V-Ray 7.5 for 3ds Max with AI assistant",
+   "url": "https://www.cgchannel.com/2026/11/chaos-releases-v-ray-7-5-for-3ds-max-with-new-ai-features/",
+   "summary": "The new integrated AI Assistant can even score your renders out of ten for artistic merit. The release adds further AI and non-AI features, a notable shift in how a major production renderer approaches look-dev feedback.",
+   "date": "2026-11-08"
+  },
+  {
+   "id": "5647c31b6e6e",
+   "topic": "pipeline",
+   "source": "IndyZone チャンネル",
+   "title": "Houdini 22 SOP Particle FX walkthrough for fireworks and magic effects",
+   "url": "https://www.youtube.com/watch?v=mxw8n7Is-I8",
+   "summary": "A video tour of the new SOP-level particle tools in Houdini 22, building fireworks and magical effects quickly without going through a full DOP setup. Useful for seeing where the release is heading.",
+   "date": "2026-11-07",
+   "image": "thumbs/48378f5cbbf3a761.webp",
+   "kind": "video"
+  },
+  {
+   "id": "79bb864eed68",
+   "topic": "pipeline",
+   "source": "Kolton Eichers",
+   "title": "Houdini tutorial: setting up object parameters for tools and HDAs",
+   "url": "https://www.youtube.com/watch?v=aK-J2gYPPT8",
+   "summary": "A short tutorial on exposing object-level parameters cleanly when building Houdini tools and digital assets. A practical tip for anyone packaging procedural setups for a team pipeline.",
+   "date": "2026-11-03",
+   "image": "thumbs/e9d40130d1f07f4a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "55f14ea74abd",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Reddit debates reports of Weta moving into generative AI",
+   "url": "https://www.reddit.com/r/vfx/comments/1xpakbo/weta_goes_genai_possibly_london_studio/",
+   "summary": "An r/vfx thread picks over claims that Weta, and possibly its London studio, is turning to GenAI. The discussion is the community's read on how business pressure is reshaping big-studio VFX.",
+   "date": "2026-11-06",
+   "image": "thumbs/3fcdc6d5f98b23c6.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "353d3f7a51f5",
+   "topic": "vfx",
+   "source": "VFX Verdict",
+   "title": "Video asks how Godzilla Minus One looked so good on a small budget",
+   "url": "https://www.youtube.com/watch?v=bKF8c2rx6yI",
+   "summary": "A breakdown of the craft choices and production approach behind Godzilla Minus One's effects, and how a lean team got big-screen results. Worth a look for anyone thinking about efficient shot design.",
+   "date": "2026-11-03",
+   "image": "thumbs/0eaf47d53155298d.webp",
+   "kind": "video"
+  },
+  {
+   "id": "e20ddb941ba0",
+   "topic": "vfx",
+   "source": "Corridor Crew",
+   "title": "Corridor Crew's VFX artists react to bad and great CGI",
+   "url": "https://www.youtube.com/watch?v=FBV-leryHu8",
+   "summary": "The latest instalment of the series, with working VFX artists critiquing what sells a shot and what breaks it. Light, but handy for training the eye.",
+   "date": "2026-11-07",
+   "image": "thumbs/8c5bffa03e047041.webp",
+   "kind": "video"
+  },
+  {
+   "id": "bfa5cd54d43a",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "iPhone Action Button turns voice notes into timestamped daily-note entries",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xqxnlh/press_the_action_button_talk_done_voice_notes/",
+   "summary": "A pure Apple Shortcuts setup records speech, transcribes it on-device and appends it to the day's note in Obsidian. No extra apps and no cloud, so it makes quick capture on the go very cheap.",
+   "date": "2026-11-08",
+   "kind": "reddit"
+  },
+  {
+   "id": "321f2fea8809",
+   "topic": "obsidian",
+   "source": "MacSparky",
+   "title": "MacSparky builds a personal Mac app around his Obsidian vault",
+   "url": "https://www.youtube.com/watch?v=VJuQXsbwKog",
+   "summary": "A video showing how a custom native app can sit on top of plain-Markdown notes. It's a good example of why open file formats make this kind of tooling possible.",
+   "date": "2026-11-07",
+   "image": "thumbs/efd2441391b91427.webp",
+   "kind": "video"
+  },
+  {
+   "id": "b2e80b5d6fe2",
+   "topic": "obsidian",
+   "source": "Theo Stowell",
+   "title": "Plugin and Bases API demo sets up a self-triaging inbox",
+   "url": "https://www.youtube.com/watch?v=Jk1l8cZdlLk",
+   "summary": "A walkthrough of a plugin that uses the Bases API to sort incoming notes automatically. It's a concrete look at what Bases can do beyond simple tables.",
+   "date": "2026-11-05",
+   "image": "thumbs/e2a30693bfcc1598.webp",
+   "kind": "video"
+  },
+  {
+   "id": "2a964f6894d4",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Lathe: a minimal, native-looking Obsidian theme forked from Verso",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xqvts9/lathe_my_minimal_nativelooking_theme/",
+   "summary": "A new theme that keeps contrast high, uses bold folders and big file-name titles, and aims to feel like a native app. A decent option if most themes have felt too busy.",
+   "date": "2026-11-08",
+   "image": "thumbs/d691d27748aee21f.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "4c0c98aa0b63",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Users report display-math blocks breaking in PDF export after updates",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xqjtaj/mathjax_rendering_bug_in_recent_updates_display/",
+   "summary": "A thread describes $$ MathJax blocks turning into raw text in Live Preview and exported PDFs. Worth knowing about if your notes carry LaTeX, since PDF export is a common handoff route.",
+   "date": "2026-11-07",
+   "kind": "reddit"
+  },
+  {
+   "id": "63e9316d014d",
+   "topic": "stationery",
+   "source": "Yoseka Stationery",
+   "title": "Kaweco winter releases, 2026 ink advent calendar and Pilot Kakuno picks",
+   "url": "https://www.youtube.com/watch?v=sE8Wlv-bUhc",
+   "summary": "A shop video covering Kaweco's new winter lineup, this year's ink advent calendar and how to choose a Pilot Kakuno. A quick overview of what's new for the season.",
+   "date": "2026-11-03",
+   "title_ja": "Kawecoの冬の新作、2026年版インクアドベントカレンダー、Yosekaでのパイロット カクノ選び、そしてハッピーハロウィン！",
+   "image": "thumbs/27bf4712e3b06b19.webp",
+   "kind": "video"
+  },
+  {
+   "id": "77494da7d384",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A month of Hobonichi Weeks pages with a back-to-school theme",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xpl7jj/september_in_my_weeks/",
+   "summary": "A beautifully laid-out September spread themed around autumn school vibes, with the poster explaining the choices. It shows how a single theme can unify a month of weekly pages.",
+   "date": "2026-11-06",
+   "kind": "reddit"
+  },
+  {
+   "id": "877c8dbb6008",
+   "topic": "stationery",
+   "source": "MiiCHOS",
+   "title": "Traveler's Notebook Diary 2027 unboxing with customisation ideas",
+   "url": "https://www.youtube.com/watch?v=cN0hnIIG7ns",
+   "summary": "An opening of the new 2027 Traveler's Company diary, with the purchases shown and ideas for personalising the set. A good first look at next year's refills.",
+   "date": "2026-11-08",
+   "title_ja": "【2027 手帳】トラベラーズノート ダイアリー2027を開封！購入品紹介＆カスタマイズ｜TRAVELER'S notebook Diary",
+   "image": "thumbs/e09f74252fc54866.webp",
+   "kind": "video"
+  },
+  {
+   "id": "c3fd045648bc",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Flip-through of a full year in a chunky Hobonichi Techo A5",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xpuvb7/my_first_year_using_techo_a5/",
+   "summary": "A year-in-review of a well-filled A5 Techo, with the owner noting that writing got harder as it thickened and weighing a switch to the Avec. A useful look at how the book wears over twelve months.",
+   "date": "2026-11-07",
+   "image": "thumbs/01a377b182982e9b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "dda600bf8411",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Decimo Tsukuyomi in fine-medium arrives on Fountain Pen Day",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xpqvh4/happy_fountain_pen_day/",
+   "summary": "A new Pilot Decimo in the Tsukuyomi finish, shown after weeks of waiting. A look at a slim Japanese pen that fans of the lineup have been watching.",
+   "date": "2026-11-06",
+   "kind": "reddit"
+  },
+  {
+   "id": "e68ed006ec96",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Transparent violet Jinhao and Lady Grey ink on Tomoe River paper",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xpdkry/transparent_violet_jinhao_with_lady_grey_ink_for/",
+   "summary": "A pen, ink and paper pairing prepared for next year's Hobonichi. The poster found Tomoe River far better for fountain pens than ordinary paper when using a medium nib.",
+   "date": "2026-11-06",
+   "kind": "reddit"
+  },
+  {
+   "id": "5496b6493c69",
+   "topic": "stationery",
+   "source": "はかどる手帳ライフ_KYOKO",
+   "title": "Hobonichi catch-up writing session for falling-behind daily pages",
+   "url": "https://www.youtube.com/watch?v=SRpZjb6Cj9w",
+   "summary": "A follow-along session for filling in missed Hobonichi days. It's a practical habit-recovery approach for anyone whose journaling has slipped.",
+   "date": "2026-11-08",
+   "title_ja": "[Mass Writing] Behind on your Hobonichi daily pages? Let's catch up together! ✏️ Clearing your mi...",
+   "image": "thumbs/1109a382f587f274.webp",
+   "kind": "video"
+  },
+  {
+   "id": "bc46fdc9897b",
+   "topic": "stationery",
+   "source": "Philippa",
+   "title": "Honest review of a journal ecosystem: what worked and what didn't",
+   "url": "https://www.youtube.com/watch?v=ly2fMeegffE",
+   "summary": "A creator shares which notebooks and tools they actually kept using after trying many. A reality check on building a setup that sticks.",
+   "date": "2026-11-08",
+   "image": "thumbs/05f10a04e92ec43c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "5136816ad0f6",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Midori A6 lined notebook in a Hobonichi cover as an address book",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xpm2qm/hobonichiish_address_book/",
+   "summary": "A clever repurposing: the Midori's small block layout suits addresses, and the cover pockets hold stamp sheets. A neat example of mixing Japanese notebooks and covers.",
+   "date": "2026-11-06",
+   "image": "thumbs/03e271de589d781b.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "a0a00f8383e1",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Bijutsukai lined notebook spotted at a US bookstore",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xokzkz/bijutsukai_lined_notebook_at_bn/",
+   "summary": "A find of the Japanese Bijutsukai lined notebook in a Barnes & Noble, with discussion about why the lined version gets less attention. Notable for how widely distributed Japanese paper has become.",
+   "date": "2026-11-05",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "d7a88821f69e",
+   "topic": "stationery",
+   "source": "The Unfinished Woman with Melissa",
+   "title": "Why a PhD student chose the Hobonichi Cousin for reflections",
+   "url": "https://www.youtube.com/watch?v=j7xEtue3Yo0",
+   "summary": "A video on using the Cousin as a reflective journal during doctoral study. Interesting for the reasoning behind the format choice.",
+   "date": "2026-11-08",
+   "image": "thumbs/278c3062ecabb70e.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "1b3cc59613f1",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Majohn P139 with a No.8 nib and Pilot Iroshizuku Fuyu-syogun",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xpq6jv/new_pen_on_fountain_pen_day_2026/",
+   "summary": "A wet, generous nib is paired with a frosty grey-blue Japanese ink. A pairing note for fans of Iroshizuku colours.",
+   "date": "2026-11-06",
+   "image": "thumbs/b31a9a6688399e48.webp",
+   "kind": "reddit",
+   "extra": true
+  }
+ ]
+}
