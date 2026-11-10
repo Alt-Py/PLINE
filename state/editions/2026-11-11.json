@@ -1,0 +1,450 @@
+{
+ "date": "2026-11-11",
+ "generated_at": "2026-11-11T10:47:17+13:00",
+ "headline": "Framestore details its Project Hail Mary effects, Octane 2027.1 beta adds an MCP server, and Corona 16 relights Gaussian Splats.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "910834488f8d",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Video tutorial builds a D&D Beyond-style 5E character sheet in Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xsktek/tutorial_for_a_dnd_beyond_character_sheet_in/",
+   "summary": "A community author recreates the D&D Beyond look as an Obsidian character sheet and walks through the setup on video. More plugin-based tools for players and GMs are planned. It's a good example of Obsidian used as a layout tool.",
+   "date": "2026-11-10",
+   "image": "thumbs/0a2fa2ab45081d80.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "f38b085bd3a2",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Using Obsidian as a Markdown CMS for client websites and blogs",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xso8j5/using_obsidian_as_a_cms_for_comercial_websites/",
+   "summary": "A developer explains how Obsidian's file browsing and drag-and-drop images make it the editing front end for static-site projects. It's a practical workflow for anyone who already keeps their notes as plain Markdown.",
+   "date": "2026-11-10",
+   "kind": "reddit"
+  },
+  {
+   "id": "f7a50017b926",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Morning Pages plugin brings 750words-style statistics to a local vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xsy2o8/made_a_morning_pages_plugin_for_obsidian/",
+   "summary": "A new plugin recreates the stats page of the 750words writing site, but keeps everything on your machine. It suits daily writers who want streaks and metrics without a cloud service.",
+   "date": "2026-11-10",
+   "image": "thumbs/6ea0e8cca8669539.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "7dd064ace1a3",
+   "topic": "obsidian",
+   "source": "Daniel Agrici",
+   "title": "Plugin runs a website audit from inside Obsidian",
+   "url": "https://www.youtube.com/watch?v=DIcJX1AjKuk",
+   "summary": "A creator shows a free website auditor that lives in the vault, so the checks and their notes sit side by side. It's an unusual use of Obsidian as a lightweight dev and SEO workspace.",
+   "date": "2026-11-06",
+   "image": "thumbs/297e9796d5115586.webp",
+   "kind": "video"
+  },
+  {
+   "id": "7dc0ac517e35",
+   "topic": "obsidian",
+   "source": "Beomsu Koh | 고범수",
+   "title": "Drawing Excalidraw diagrams in Obsidian with Claude Code",
+   "url": "https://www.youtube.com/watch?v=_apBzliAD9c",
+   "summary": "A short video shows an AI coding assistant generating Excalidraw diagrams directly in a vault. It's an early look at automating diagrams and canvases for notes.",
+   "date": "2026-11-08",
+   "image": "thumbs/32d89725db1eb0b0.webp",
+   "kind": "video"
+  },
+  {
+   "id": "52f19c4ec947",
+   "topic": "obsidian",
+   "source": "Just Ask Leo",
+   "title": "Step-by-step guide to using Excalidraw in Obsidian",
+   "url": "https://www.youtube.com/watch?v=0uaPLRgwHiE",
+   "summary": "A beginner walkthrough of setting up and drawing with the Excalidraw plugin. It's useful for sketching diagrams and light-transport notes inside the vault.",
+   "date": "2026-11-05",
+   "image": "thumbs/45681541bb1dc165.webp",
+   "kind": "video"
+  },
+  {
+   "id": "50331a1a130c",
+   "topic": "obsidian",
+   "source": "Just Ask Leo",
+   "title": "Walkthrough: moving notes from Notion into Obsidian",
+   "url": "https://www.youtube.com/watch?v=87mjiQ8sly4",
+   "summary": "A video guide to importing a Notion workspace into Obsidian with the importer. It's relevant if you are migrating or helping others move.",
+   "date": "2026-11-05",
+   "image": "thumbs/da1d46c9b02fa005.webp",
+   "kind": "video"
+  },
+  {
+   "id": "52d908ad727f",
+   "topic": "obsidian",
+   "source": "Just Ask Leo",
+   "title": "Setting up daily notes and the calendar in Obsidian",
+   "url": "https://www.youtube.com/watch?v=XYPFAzf6kZE",
+   "summary": "An introductory video on wiring up daily notes with the calendar view. It's basic, but a clean reference for a standard journaling setup.",
+   "date": "2026-11-05",
+   "image": "thumbs/d06033cbb2d4a4bc.webp",
+   "kind": "video"
+  },
+  {
+   "id": "a7f011bb7655",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Tabletop Kit adds a soundboard and generators for RPG sessions",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xsp8ws/i_made_two_obsidian_plugins_for_tabletop_rpg/",
+   "summary": "Two new plugins let you run tabletop games from a vault. One is a soundboard with looping, crossfading ambience and effects. The other is a set of generators.",
+   "date": "2026-11-10",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "5834145ee05c",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Tracking a quest to play all 50 board-game monsters in Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xs79el/tracking_my_boardgame_quest/",
+   "summary": "A user builds a tracker for playing all 50 monsters in a board game, using it as an excuse to try new vault structures and ideas. It's a fun example of creative note design.",
+   "date": "2026-11-09",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "59437d07861c",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "A user finally sees the point of backlinks for project updates",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xstexr/i_think_i_just_figured_out_the_power_of_backlinks/",
+   "summary": "A user describes how backlinks removed the daily-note-to-project-note copying step in their work and hobby vaults. It's a clear, practical illustration of linked notes.",
+   "date": "2026-11-10",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "3540c8d8950e",
+   "topic": "stationery",
+   "source": "Pilot",
+   "title": "Pilot releases pale-tone FriXion Synergy Knock erasable pens",
+   "url": "https://www.pilot.co.jp/press_release/2026/11/10/post_155.html",
+   "summary": "Pilot adds new pale-colour body designs to its fine-writing FriXion Synergy Knock erasable gel pen. It's a cosmetic refresh of an everyday pen popular for journaling and planners.",
+   "date": "2026-11-10",
+   "title_ja": "消せるボールペン『フリクションシナジーノック』新デザイン発売",
+   "image": "thumbs/21ec62ea380a76bf.webp"
+  },
+  {
+   "id": "87a61d8bca5a",
+   "topic": "stationery",
+   "source": "Torey Ramos",
+   "title": "Flip-through of October journals: Hobonichi Cousin, October Daily and a pen-and-ink book",
+   "url": "https://www.youtube.com/watch?v=L6dijQFnH1Q",
+   "summary": "A video tour of three concurrent journals shows how one person divides tasks between a Cousin, a themed daily book and an ink-focused notebook. It shows real pages and a practical multi-journal routine.",
+   "date": "2026-11-10",
+   "image": "thumbs/4221b1699a000106.webp",
+   "kind": "video"
+  },
+  {
+   "id": "936914482802",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks year-end review of favourite decorated pages",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xrn9h4/some_pages_in_my_weeks/",
+   "summary": "A user goes back through a full year of Weeks spreads, picking out the most decorated pages and resolving to add more washi and stickers next year. It's a good example of a reflective year-in-review flip-through.",
+   "date": "2026-11-09",
+   "kind": "reddit"
+  },
+  {
+   "id": "885a510b5d72",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks Favorites spread repurposed as an ink test page",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xr8woc/first_hobonichi_weeks_ink_test_page/",
+   "summary": "A first-time user turns the Favorites spread into a swatch and ink test page, with custom trackers planned for the back. It's a neat way to check ink and paper pairings.",
+   "date": "2026-11-08",
+   "image": "thumbs/e1ce1367d05f5c4a.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "b6dc816a67be",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Why fountain pen ink looks darker or lighter between writing sessions",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xrfqfd/fp_newbie_why_does_my_ink_get_lighterdarker/",
+   "summary": "A newcomer copying poems on Maruman paper with a TWSBI Eco asks why the same ink changes tone. The thread covers paper, flow and drying behaviour, so it's useful for ink-paper pairing.",
+   "date": "2026-11-09",
+   "image": "thumbs/5821a1410b909de5.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "6d8591d720a5",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Hand-carved nib finished with three-colour electroplating",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xrn43i/show_a_handcarved_nib_with_threecolor/",
+   "summary": "A maker shows a hand-engraved fountain pen nib with a three-colour plated finish. It's a striking piece of craft that drew strong community interest.",
+   "date": "2026-11-09",
+   "kind": "reddit"
+  },
+  {
+   "id": "32b2b250133a",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "2027 Hobonichi Cousin setup reuses layouts and adds Tombow swatches",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xr2xuu/2027_cousin_set_up/",
+   "summary": "A user carries over proven page layouts from this year and uses the back time table as a Tombow marker swatch page. It's a handy example of a reusable setup.",
+   "date": "2026-11-08",
+   "kind": "reddit"
+  },
+  {
+   "id": "da70a78003bd",
+   "topic": "stationery",
+   "source": "ArtishByTrisha",
+   "title": "Trying Strathmore vellum Bristol, Sailor brush pen with pigment ink and Neo Color II",
+   "url": "https://www.youtube.com/watch?v=ZzWSoziQBGg",
+   "summary": "A video test of new art supplies pairs Sailor's brush pen and pigment ink with Bristol vellum and Neo Color II crayons. It's useful for calligraphy and lettering.",
+   "date": "2026-11-10",
+   "title_ja": "新しい画材を試してみた｜ストラスモア・ブリストル・ベラム紙、セーラー筆ペン＆顔料インク、ネオカラーII",
+   "image": "thumbs/17b5fc2391be46e6.webp",
+   "kind": "video"
+  },
+  {
+   "id": "e705dc901e7d",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Second-year Hobonichi Weeks setup compared with this year's",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xrc9ae/my_second_year_setup_next_to_this_year/",
+   "summary": "A user plans two Weeks books for 2027, one for daily plans, health and budget and one as a media and hobby log. They show last year's version alongside, and the setup shows how habits shape the layout.",
+   "date": "2026-11-08",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "97527131a56a",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A5 Traveler's Notebook insert works as an add-on for an A5 Techo",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xr4m35/so_you_have_an_a5_journaltecho_then_you_need_one/",
+   "summary": "A journaler recommends pairing an A5 Traveler's insert with a Hobonichi Cousin and shares how it fits into the rotation. It's a modular-setup tip.",
+   "date": "2026-11-08",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "6cc5c0a04360",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "2027 Hobonichi Weeks includes a stick-on back pocket",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xr6c67/surprise_in_the_techo_weeks/",
+   "summary": "A user notices a small extra in the new Weeks: an adhesive pocket for the inside back cover. They use it to hold a stencil, a handy detail for storing loose items.",
+   "date": "2026-11-08",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "2b872e8c93d1",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Mining the Library of Congress archives for journaling ephemera",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xr213e/library_of_congress_for_ephemera/",
+   "summary": "A Hobonichi user shares their experience digging through public-domain archives for collage material, with a caution about outdated content. It's an inspiring and free source of ephemera.",
+   "date": "2026-11-08",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "2fd2a2a6ce66",
+   "topic": "stationery",
+   "source": "CreativEmme",
+   "title": "Why one journaler left the Hobonichi Cousin for a bullet journal",
+   "url": "https://www.youtube.com/watch?v=eFIAGnrPmY4",
+   "summary": "A video explains the reasons for moving from the Cousin to a bullet journal, comparing structure and flexibility. It's a useful look at the trade-offs between the two systems.",
+   "date": "2026-11-10",
+   "image": "thumbs/4d52409ae4bfe624.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "f66a31a56214",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Diamine ink swatches photographed under a grow light to show sheen",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xrdw72/a_bunch_of_diamine_swatches_feat_super_sheeners/",
+   "summary": "A collector swatches a large set of Diamine inks and finds a plant grow light brings out sheen far better than daylight. It's a simple lighting trick for ink photography.",
+   "date": "2026-11-09",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "ae567f8590c5",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Framestore's team explains the visual effects of Project Hail Mary",
+   "url": "https://www.artofvfx.com/project-hail-mary-stuart-penn-bob-winter-and-arslan-elver-framestore/",
+   "summary": "VFX supervisors Stuart Penn and Bob Winter and animation supervisor Arslan Elver discuss the challenges behind Framestore's work on the film. It's a detailed look at a major feature's pipeline.",
+   "date": "2026-11-10",
+   "image": "thumbs/4a619014e2e242f4.webp"
+  },
+  {
+   "id": "647ccfffb746",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "WeFX breakdown for Neagley covers a brutal train accident",
+   "url": "https://www.cgchannel.com/2026/11/see-wefxs-visceral-vfx-breakdown-for-crime-drama-neagley/",
+   "summary": "CG Channel highlights the studio's making-of for the Reacher spin-off series, focusing on a pivotal train accident sequence. It's a good example of invisible, visceral episodic VFX.",
+   "date": "2026-11-09"
+  },
+  {
+   "id": "491202ae0e62",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Disney's Hexed directors on hand-drawn animation and pushing CG boundaries",
+   "url": "https://www.cartoonbrew.com/feature-film/disney-hexed-filmmakers-hand-drawn-animation-original-films-267896.html",
+   "summary": "Directors Fawn Veerasunthorn and Jason Hand discuss ambitious character designs, while Jared Bush sets out his vision for Disney's future. It blends hand-drawn and CG approaches.",
+   "date": "2026-11-10",
+   "image": "thumbs/68a98e0361e151d9.webp"
+  },
+  {
+   "id": "a4c8f729c770",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "BlueBolt shows invisible effects on Wuthering Heights: fog, landscapes and environments",
+   "url": "https://www.artofvfx.com/wuthering-heights-bluebolt-showcases-its-invisible-visual-effects/",
+   "summary": "The London studio details the subtle work behind the film's atmosphere, including mist-covered moors and rocky terrain. It's a reminder that most VFX is meant to go unnoticed.",
+   "date": "2026-11-10",
+   "image": "thumbs/eee915a1ff0400e3.webp"
+  },
+  {
+   "id": "84da3331e1fe",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "AI account copies award-winning short El Empleo to sell filmmaking classes",
+   "url": "https://www.cartoonbrew.com/artificial-intelligence/el-empleo-unauthorized-ai-remake-269233.html",
+   "summary": "A 30-second AI knockoff of Patricio Plaza's hand-drawn 2008 short drew millions of views and a copyright dispute. It adds to the growing debate over generative AI and artists' rights.",
+   "date": "2026-11-10",
+   "image": "thumbs/6158b7c999682d8a.webp"
+  },
+  {
+   "id": "13fa8350ba0f",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Bad Day trailer arrives, with VFX supervisor Ashley Bettini",
+   "url": "https://www.artofvfx.com/bad-day/",
+   "summary": "The first trailer for the action comedy introduces its chaotic premise. Art of VFX notes production VFX supervisor Ashley Bettini's involvement.",
+   "date": "2026-11-10",
+   "image": "thumbs/0304431c434187eb.webp"
+  },
+  {
+   "id": "feb75943d880",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "New Spy x Family film and fourth TV season announced for 2027",
+   "url": "https://www.cartoonbrew.com/anime/spy-x-family-season-4-new-feature-269251.html",
+   "summary": "After the success of Code: White, the franchise is set to return to cinemas and television in 2027. It's a notable anime production pipeline.",
+   "date": "2026-11-10",
+   "image": "thumbs/4dbaad0b877c1039.webp"
+  },
+  {
+   "id": "073a8830ae65",
+   "topic": "vfx",
+   "source": "Ranjith .A",
+   "title": "VFX Dailies roundup covers Ramayana, Godzilla Minus Zero and Wildwood",
+   "url": "https://www.youtube.com/watch?v=O3kJA9U13rE",
+   "summary": "A short video digest of recent VFX news and clips, including Ramayana and Godzilla Minus Zero. It's a quick way to catch up on the week.",
+   "date": "2026-11-08",
+   "image": "thumbs/0128bc82438dd4cd.webp",
+   "kind": "video"
+  },
+  {
+   "id": "b9cf701d395d",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Cartoon Brew weekly roundup: Disney's AI partner, Cat in the Hat debut, DC shake-up",
+   "url": "https://www.cartoonbrew.com/newsletter/too-much-ai-cat-in-the-hat-debuts-dc-executive-shakeup-269264.html",
+   "summary": "A busy news week dominated by AI stories, including a new Disney AI partnership, alongside the Cat in the Hat debut and a DC executive shuffle.",
+   "date": "2026-11-10",
+   "image": "thumbs/f3cacb602b6aeeba.webp",
+   "extra": true
+  },
+  {
+   "id": "fcb82348226b",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Oscar short contender Please explores affection through stop-motion puppets",
+   "url": "https://www.cartoonbrew.com/shorts/please-director-anna-mantzaris-oscar-qualified-269188.html",
+   "summary": "Director Anna Mantzaris discusses her stop-motion comedy about awkward encounters and vulnerable puppets. It's a craft-focused look at a 2027 Oscar contender.",
+   "date": "2026-11-10",
+   "image": "thumbs/f0906de82557a1fd.webp",
+   "extra": true
+  },
+  {
+   "id": "83942bbb26f0",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "OctaneRender 2027.1 beta adds an MCP server for AI-driven scene building",
+   "url": "https://www.cgchannel.com/2026/11/otoy-releases-octanerender-2027-1/",
+   "summary": "Otoy's GPU renderer lets AI tools build and render scenes through a Model Context Protocol server. It's an early sign of renderers being exposed to agent workflows.",
+   "date": "2026-11-09"
+  },
+  {
+   "id": "89cc0a7c8c32",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Corona 16 relights Gaussian Splats and adds a parallax interiors system",
+   "url": "https://www.cgchannel.com/2026/11/chaos-releases-corona-16-for-3ds-max-and-cinema-4d/",
+   "summary": "Chaos's architectural renderer can now relight splat-based captures in a path-traced scene. It brings new radiance-field content into physically based rendering.",
+   "date": "2026-11-09"
+  },
+  {
+   "id": "5c5233532d32",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Raytracer built in Scratch seeks optimisation advice",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xrh2yc/i_built_a_raytracer_in_scratch_looking_for/",
+   "summary": "A Scratch block-based raytracer renders chrome, gold, refracting glass, soft shadows and fog, with progressive refinement. The author is asking for speed-up ideas, so it's a fun teaching example.",
+   "date": "2026-11-09",
+   "image": "thumbs/47aa763ebe31bc3d.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "343d88a7f960",
+   "topic": "pipeline",
+   "source": "Houdini",
+   "title": "Houdini H22 COPs lesson covers pattern generation",
+   "url": "https://www.youtube.com/watch?v=hRClIq_zZF8",
+   "summary": "SideFX continues its COPs concepts series with a video on generating patterns in the new compositing network. It's useful for learning procedural texture workflows.",
+   "date": "2026-11-04",
+   "image": "thumbs/2e0d0bb78bc5f89e.webp",
+   "kind": "video"
+  },
+  {
+   "id": "00eb54db2d83",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "After Effects 27.0 changes the 3D toolset and adds an agentic AI assistant",
+   "url": "https://www.cgchannel.com/2026/11/adobe-releases-after-effects-27-0/",
+   "summary": "Adobe's compositing and motion graphics app updates its 3D tools and introduces an AI Assistant. It's mainly relevant for motion graphics and compositing.",
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ef1f99d6f7d4",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Photoshop 28.0 adds AI relighting and trace erase",
+   "url": "https://www.cgchannel.com/2026/11/adobe-releases-photoshop-28-0/",
+   "summary": "Adobe's image editor gains AI relighting and a trace erase feature. It's relevant to concept and texture work.",
+   "date": "2026-11-10"
+  }
+ ]
+}
