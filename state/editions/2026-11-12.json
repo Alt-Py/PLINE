@@ -1,0 +1,466 @@
+{
+ "date": "2026-11-12",
+ "generated_at": "2026-11-12T11:39:28+13:00",
+ "headline": "Skydance bets on AI to cut costs, Blender 5.3 lands with Gaussian splatting and DLSS denoising, and Pilot raises fountain pen prices again from January.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/bulletjournal": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "eb537acc04ac",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "TaskLoops adds drag-and-drop Kanban board for Markdown tasks",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xtey2n/taskloops_for_obsidian_now_has_a_draganddrop/",
+   "summary": "Version 0.5.24 of the TaskLoops plugin groups tasks by date or priority and lets you drag cards between columns to reschedule them. Mobile gets a Move to… action instead of dragging.",
+   "date": "2026-11-11",
+   "kind": "reddit"
+  },
+  {
+   "id": "fd700bd2d5fb",
+   "topic": "obsidian",
+   "source": "How I AI",
+   "title": "Video: running Claude Code over an Obsidian vault as a family knowledge base",
+   "url": "https://www.youtube.com/watch?v=wdyOjcCj2hw",
+   "summary": "A walkthrough of pairing an AI coding agent with a plain-Markdown vault to hold family information. It shows how well local files suit agent workflows.",
+   "date": "2026-11-11",
+   "image": "thumbs/00fdbf70791c4d18.webp",
+   "kind": "video"
+  },
+  {
+   "id": "4642f8c60531",
+   "topic": "obsidian",
+   "source": "Paul's Obsidian Systems",
+   "title": "Build a daily-use shortcut dashboard inside Obsidian",
+   "url": "https://www.youtube.com/watch?v=6QuB7GG7hBM",
+   "summary": "A tutorial on setting up a home note with one-click links to your most-used notes and actions, and how to add your own.",
+   "date": "2026-11-11",
+   "image": "thumbs/a2b6b6f3f8bcde98.webp",
+   "kind": "video"
+  },
+  {
+   "id": "fbccf3b0521c",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Short demo shows Bases as a spreadsheet view over frontmatter",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xt52qo/more_love_for_obsidian_bases_i_made_a_little_demo/",
+   "summary": "A newcomer explains that Obsidian Bases don't replace Markdown storage. They give a table view of your note properties. Useful as a quick intro for anyone still unsure what Bases do.",
+   "date": "2026-11-11",
+   "kind": "reddit"
+  },
+  {
+   "id": "5ec2c100bde0",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Solo Leveling-style RPG life system built in a personal vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xtrd7o/solo_levelling_system_actually_looks_like_the/",
+   "summary": "A user turns daily habits into an RPG-like dashboard with levels and stats. It is a showcase of how far vault design can be pushed visually.",
+   "date": "2026-11-11",
+   "kind": "reddit"
+  },
+  {
+   "id": "08dbc201c764",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Long-time users share vault regrets and breakthroughs",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xtttuo/regrets_and_breakthroughs/",
+   "summary": "A discussion on what went wrong and right over years of use, starting with chasing note counts over quality. It offers practical lessons for structuring a vault.",
+   "date": "2026-11-11",
+   "kind": "reddit"
+  },
+  {
+   "id": "0843ec00846f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "SaveNest previews a Mac reading workspace beside Obsidian notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xtgsud/i_built_a_reading_workspace_for_web_pages_and/",
+   "summary": "A free open-source Mac app shows a web page next to its Markdown note so you can write while the source stays visible. The note remains an ordinary vault file.",
+   "date": "2026-11-11",
+   "kind": "reddit"
+  },
+  {
+   "id": "806218fab97a",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "TTRPG vault bundles campaign tools and a Forgotten Realms wiki",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xt1e6x/ttrpg_vault_with_dnd_basic_rule_cli_and_fr_wiki/",
+   "summary": "A D&D vault covers session management, worldbuilding, NPCs and quests. It is built to work alongside virtual tabletops such as Foundry.",
+   "date": "2026-11-10",
+   "image": "thumbs/f5a1702d5afa6a8b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "1fc1323bf277",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "JS Engine snippet recreates Perchance-style text generator in Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xt4uzn/recreating_perchanceorgs_manual_text_generator/",
+   "summary": "Two code blocks run a random text generator inside a note with no AI involved. A small example of what JavaScript-running plugins can do.",
+   "date": "2026-11-11",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "8b2fc0698a9f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Using an Obsidian vault to keep your native language from fading",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xthjrr/in_my_head_english_is_taking_over_my_native/",
+   "summary": "The author built a language-practice system in their vault and explains the code in an article, as an alternative to learner apps.",
+   "date": "2026-11-11",
+   "image": "thumbs/0cdf997494d8647a.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "f61fb366967d",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Long notes versus modular notes: how people size their notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xthmfp/what_is_your_longest_note_in_terms_of_word_length/",
+   "summary": "Users compare one long note with many headers against small linked notes, and explain their reasons. Helpful when deciding how to structure your own vault.",
+   "date": "2026-11-11",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "8ac846216223",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Blender 5.3 arrives with Gaussian splatting, DLSS denoising and layered compositing",
+   "url": "https://www.cgchannel.com/2026/11/blender-5-3-is-here-discover-its-5-key-features/",
+   "summary": "The open-source package adds 3D Gaussian Splatting support, DLSS-based denoising and layered compositing. The denoising and compositing changes are the ones that matter for lookdev and render workflows.",
+   "date": "2026-11-11"
+  },
+  {
+   "id": "15636588885d",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "VQField volume compression rendered in Karma: 30x smaller on disk",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xs84zr/karma_rendering_of_vqfield_volumes/",
+   "summary": "A hobby volumetric engine reports about 30x disk savings and 10x less render RAM than OpenVDB on conservative settings, with Karma rendering the results. Worth a look for anyone fighting heavy volumes.",
+   "date": "2026-11-10",
+   "image": "thumbs/3334d04dc27840e5.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "3d2c67d4baf3",
+   "topic": "pipeline",
+   "source": "Voxyde VFX",
+   "title": "Tutorial on optimising particle simulations in Houdini",
+   "url": "https://www.youtube.com/watch?v=nLJULvelk4Q",
+   "summary": "A video covers ways to cut particle sim cost and cache size without losing the look. Practical for FX artists working with big counts.",
+   "date": "2026-11-11",
+   "image": "thumbs/94297605ac92659c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "1df157613304",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "F1 cinematic rain simulation built across Blender and Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xs1fsv/working_on_a_rain_simulation_for_my_f1_cinematic/",
+   "summary": "A work-in-progress rain sim for an F1 cinematic shows a combined Blender and Houdini workflow. It drew good engagement on r/Houdini.",
+   "date": "2026-11-09",
+   "image": "thumbs/9ed57079cfa880a0.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9c1557583750",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Gross procedural worm render, with help on wemap issues",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xsapb1/worm/",
+   "summary": "A Houdini artist shares a creepy worm render inspired by Enrique Garcia Herrera. The thread credits David Torno for fixing wemap problems.",
+   "date": "2026-11-10",
+   "image": "thumbs/33418b23ce3f7f7b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "888fcc9b89db",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Skydance's Ellison pins debt recovery on AI-driven production savings",
+   "url": "https://www.cartoonbrew.com/business/skydance-ai-cost-cutting-87-billion-debt-269275.html",
+   "summary": "David Ellison wants to cut $6 billion in annual costs and says AI will speed up and cheapen production without replacing artists. Expect pressure on VFX budgets and schedules.",
+   "date": "2026-11-11",
+   "image": "thumbs/e08bcaf75ff0c9cc.webp"
+  },
+  {
+   "id": "6dc9e61e563e",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "EDI shows how it built the digital black panther in Ferine",
+   "url": "https://www.artofvfx.com/ferine-edi-effetti-digitali-italiani-brings-a-panther-to-life/",
+   "summary": "The Italian studio's making-of covers anatomical modelling, animation and facial expression work for a photoreal big cat.",
+   "date": "2026-11-11",
+   "image": "thumbs/22ec303283143af4.webp"
+  },
+  {
+   "id": "a21fa2a47d14",
+   "topic": "vfx",
+   "source": "DeTect",
+   "title": "Video explains why Ramayana generated 500,000 GB of data",
+   "url": "https://www.youtube.com/watch?v=-BBRlEEcbr4",
+   "summary": "A tech-focused look at the data volumes behind the Indian epic's production, with its CG-heavy scale. It is a reminder of how large pipelines are growing.",
+   "date": "2026-11-11",
+   "image": "thumbs/67aa9aa429fbfd97.webp",
+   "kind": "video"
+  },
+  {
+   "id": "67fb1a9023ee",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Manchester Animation Festival panel debates endemic hiring bias in animation",
+   "url": "https://www.cartoonbrew.com/events/animation-industry-diversity-hiring-bias-manchester-animation-festival-269351.html",
+   "summary": "Industry figures discuss systemic hiring barriers and representation. It is a workforce and labour conversation relevant to studio hiring.",
+   "date": "2026-11-11",
+   "image": "thumbs/e81156dfb31f0e59.webp"
+  },
+  {
+   "id": "3fa4cca5f72f",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Cannes and Annecy winner Iron Boy gets US trailer and release dates",
+   "url": "https://www.cartoonbrew.com/feature-film/iron-boy-trailer-us-release-date-269365.html",
+   "summary": "Louis Clichy's animated feature opens in select US theatres on December 4 and goes nationwide January 22, with Oscar buzz building.",
+   "date": "2026-11-11",
+   "image": "thumbs/a1365f027c20044e.webp"
+  },
+  {
+   "id": "bd132fe1759f",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Barad-Dûr lower fortress cinematic in post, artist seeks feedback",
+   "url": "https://www.reddit.com/r/vfx/comments/1xrp6ho/baraddûr_the_lower_fortress_wip/",
+   "summary": "A solo artist's Tolkien environment is finished in 3D and in final compositing. They ask for notes on grade, atmosphere and comp.",
+   "date": "2026-11-09",
+   "image": "thumbs/98a9d7168254a12d.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9621d9fa2d2d",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Danny Boyle's Ink gets first teaser about The Sun's rise",
+   "url": "https://www.artofvfx.com/ink/",
+   "summary": "The teaser sets the drama in the changing British media landscape and the partnership behind the tabloid.",
+   "date": "2026-11-11",
+   "image": "thumbs/d235cbbf16e5f2f0.webp"
+  },
+  {
+   "id": "52ed8af3a463",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Karoshi trailer shows corporate violence in near-future Manhattan",
+   "url": "https://www.artofvfx.com/karoshi/",
+   "summary": "The action-thriller trailer follows an outsider infiltrating a powerful corporation, with brutal fights and big set pieces.",
+   "date": "2026-11-06",
+   "image": "thumbs/abbca0a8c3bffa92.webp"
+  },
+  {
+   "id": "34cc82503fa8",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Mexican distributor orders new Wildwood dub after voice-cast backlash",
+   "url": "https://www.cartoonbrew.com/voice-acting/wildwood-new-spanish-language-dub-269270.html",
+   "summary": "Imagem Films Mx will release a second Spanish version on November 12, two weeks after the original run, following criticism of celebrity casting.",
+   "date": "2026-11-11",
+   "image": "thumbs/8f305934f3efbf18.webp",
+   "extra": true
+  },
+  {
+   "id": "6c95504ec14f",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot confirms up-to-15% price rise from January 1, 2027",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xs90wq/repost_pilot_price_increase_jan_1st_2027/",
+   "summary": "A dealer list shows new retail prices across the Custom 823 and 743, the Custom Urushi at $1,850 and the Metropolitan. Owners compare how much prices have climbed in two years.",
+   "date": "2026-11-10",
+   "also": [
+    {
+     "source": "r/fountainpens",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1xsdy3h/the_price_increases_in_just_two_years/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "282e98423e61",
+   "topic": "stationery",
+   "source": "Sailor",
+   "title": "Sailor to release Classic Ko maki-e Laurel fountain pen on November 21",
+   "url": "https://sailor.co.jp/news/20261111/",
+   "summary": "The new pen in Sailor's Classic Ko maki-e series goes on sale nationwide at Sailor retailers on November 21. The series is themed around wabi-sabi.",
+   "date": "2026-11-11",
+   "title_ja": "2026.11.11 プレスリリース 『Classic Ko 蒔絵文房万年筆 Laurel』2026年11月21日（土）より全国発売",
+   "image": "thumbs/0b7cd63af3cfba0c.webp"
+  },
+  {
+   "id": "abc8256a3f29",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks used as a project planner, with a worked-out layout",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xru38e/last_couple_weeks_in_my_weeks/",
+   "summary": "The owner shares spreads showing how they track projects instead of a daily schedule. One of the most popular posts of the week, and a good example of repurposing the format.",
+   "date": "2026-11-09",
+   "kind": "reddit"
+  },
+  {
+   "id": "dc143b19436a",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Sailor King of Pen Tamenuri Midoridame finally bought after years of wanting",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xse57u/overruled_my_own_no_buy_until_2027but_a_fleeting/",
+   "summary": "A collector writes up the Nakaya-level urushi work on the oversized King of Pen. They describe the writing feel and why they broke a no-buy pledge.",
+   "date": "2026-11-10",
+   "kind": "reddit"
+  },
+  {
+   "id": "ae9f4a42e75f",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Trying colored pencils, acrylic markers and Distress Oxides in a Hobonichi Day-Free",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xseh00/medium_experiments_colored_pencils_acrylic/",
+   "summary": "A user tests art media on a spare Day-Free before using them in a memory book, with a supply list and the motto \"it doesn't have to be perfect\". Helpful for choosing paper-safe media.",
+   "date": "2026-11-10",
+   "kind": "reddit"
+  },
+  {
+   "id": "0ef1ade5b077",
+   "topic": "stationery",
+   "source": "つむじん。",
+   "title": "How one Hobonichi Cousin user's setup has changed, plus new designs and paper goods",
+   "url": "https://www.youtube.com/watch?v=FWlW0_Sw5GA",
+   "summary": "A Japanese video walks through changes in how they use the Cousin and unboxes new cover designs and French paper goods. It gives ideas for refining your own layout.",
+   "date": "2026-11-11",
+   "title_ja": "ほぼ日手帳カズンの使い方の変化🍀新作デザペやフランス紙もの開封♡",
+   "image": "thumbs/5dcbaaed6c8d4859.webp",
+   "kind": "video"
+  },
+  {
+   "id": "a8d6ad831d9e",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi launches MOTHER Project sub-brand for collaborations",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xrnocm/hobonichi_launches_mother_project/",
+   "summary": "A new site and Instagram account suggest more MOTHER-themed merchandise and events from Hobonichi. Fans hope for game re-releases and special covers.",
+   "date": "2026-11-09",
+   "image": "thumbs/eb457d8a56692f36.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9c88e58b34e4",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Cheap copier paper gunked an EF nib during two days of interview notes",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xs8qpb/i_know_paper_makes_a_difference_but_holy_cow/",
+   "summary": "A fountain pen user found poor paper built up residue and made the nib write bold. The thread is a good reminder that paper choice affects nib behaviour.",
+   "date": "2026-11-10",
+   "image": "thumbs/14ffa99d97a38e7c.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d9727530817b",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Buyer rushes to buy Pilot Custom Urushi ahead of price rise",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xsjd3e/i_fomod_into_a_pilot_custom_urushi_and_need_a_hug/",
+   "summary": "A collector paid about JPY 132,000 and asks whether it was a good deal. The thread has plenty of discussion about the pen and the coming price increase.",
+   "date": "2026-11-10",
+   "image": "thumbs/39b2728621f63dbb.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "7d00b4f9f8d5",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Weekly Hobonichi spread with stickers and a Sunday-night setup ritual",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xs2f1m/setup_for_this_week/",
+   "summary": "The poster shares this week's layout, inspired by another user, using stickers from Mind Wave. It shows a simple weekly setup routine.",
+   "date": "2026-11-09",
+   "image": "thumbs/2b25e5d775ad26a3.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "89aac3fcc3bc",
+   "topic": "stationery",
+   "source": "Peggy",
+   "title": "Video: why and how to back-journal, with a cozy Q&A",
+   "url": "https://www.youtube.com/watch?v=PVEHyg3NMVU",
+   "summary": "A journaler explains the habit of filling in pages after the fact and answers viewer questions on the method.",
+   "date": "2026-11-11",
+   "image": "thumbs/821d6f811fd89ede.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "432255d93b91",
+   "topic": "stationery",
+   "source": "mimiのてちよう日☺︎",
+   "title": "Monday-morning Hobonichi Techo journaling session on camera",
+   "url": "https://www.youtube.com/watch?v=i_-ViyMY_LI",
+   "summary": "A calm walkthrough of setting up and writing a weekly spread in a Hobonichi, useful for seeing a real routine.",
+   "date": "2026-11-11",
+   "image": "thumbs/e4cafc35b1d81a68.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "e56bbe230135",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Custom 743 FM with Iroshizuku Ama-iro makes a sky-blue pairing",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xsevz2/pilot_duo_for_the_day/",
+   "summary": "A short pen-and-ink pairing post praising the airy blue of Ama-iro in a Custom 743.",
+   "date": "2026-11-10",
+   "image": "thumbs/3805f0f80bc91fb1.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "18e1118c2556",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Loon drawn with a brass Kaweco Sport and Fernambuk ink",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xsa9ru/drew_a_loon/",
+   "summary": "A small ink drawing shows how a fountain pen works for sketching. The pen and ink are not Japanese, but the post shows the technique.",
+   "date": "2026-11-10",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "6da03d62833d",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Planning a 2027 Hobonichi Weeks layout with cover decoration",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xrryqk/decided_my_2027_hobonichi_weeks_layout/",
+   "summary": "A user describes the chosen layout and sticker-decorated cover for next year's Weeks.",
+   "date": "2026-11-09",
+   "image": "thumbs/d2e2a45485a48db3.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "ff2e8b3794b8",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Sticker storage ideas for Hobonichi users",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xsa9e5/how_are_we_storing_our_stickers/",
+   "summary": "A user shares the binder method that makes stickers easiest to flip through and asks for better options. The comments have a good mix of practical solutions.",
+   "date": "2026-11-10",
+   "image": "thumbs/17e77c4d02c526db.webp",
+   "kind": "reddit",
+   "extra": true
+  }
+ ]
+}
