@@ -1,0 +1,351 @@
+{
+ "date": "2026-11-13",
+ "generated_at": "2026-11-13T11:13:40+13:00",
+ "headline": "Obsidian 1.15.1 goes public with Relevance search and a mobile Web viewer; Leica's MANTIS captures 3D scene data during filming; Traveler's Notebook releases a 20th-anniversary card-size set.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "4d2fa8e819b1",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Obsidian 1.15.1 ships Relevance search, Android widgets and a Web viewer",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xug865/obsidian_1151_public_relevance_search_android/",
+   "summary": "The public release revamps search with faster results, a Relevance sort and accent-insensitive matching. It also adds Android home-screen widgets, a Web viewer core plugin for mobile and a quicker desktop start-up.",
+   "date": "2026-11-12",
+   "image": "thumbs/b376fc68b6519a85.webp",
+   "also": [
+    {
+     "source": "Obsidian changelog",
+     "url": "https://obsidian.md/changelog/2026-11-12-desktop-v1.15.1/"
+    },
+    {
+     "source": "Obsidian changelog",
+     "url": "https://obsidian.md/changelog/2026-11-12-mobile-v1.15.1/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "22580701bc31",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Plugin syncs Kindle highlights with Calibre and opens the book at the quote",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xuk645/made_a_plugin_for_obsidian_that_syncs_kindle/",
+   "summary": "A new plugin joins Kindle clippings to a Calibre library, then opens the book beside your note at the exact highlighted passage. Handy for literature-note and Zettelkasten workflows.",
+   "date": "2026-11-12",
+   "image": "thumbs/969336f4f22ff2cc.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "fedfa8b5258e",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Hosting a vault on a cheap VPS for 24/7 MCP access",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xtvlcw/i_put_my_vault_on_a_cheap_vps_so_claude_can/",
+   "summary": "A write-up of syncing a vault over git to a small server so AI clients can reach it from a phone. It lists the failures hit along the way, including slow calls caused by process-per-request spawning and silent sync errors.",
+   "date": "2026-11-11",
+   "image": "thumbs/b87de5785b84f9d2.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "df1b2e4b7e93",
+   "topic": "obsidian",
+   "source": "Alex Hitt",
+   "title": "Video overview of obsidian-skills for shaping notes and Bases",
+   "url": "https://www.youtube.com/watch?v=fVi-dt_mSnE",
+   "summary": "A short walkthrough of how plain-text skill files steer AI tools when they work with Obsidian notes and Bases.",
+   "date": "2026-11-12",
+   "image": "thumbs/af241a70c69a156f.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ce501b746ec9",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Paper DOI plugin builds literature notes from a DOI",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xuh67f/paper_doi_save_metadata_pdf_directly_within/",
+   "summary": "Enter a DOI and the plugin creates a note with the paper's metadata. It can also download the PDF when an accessible link exists, which helps with research reading.",
+   "date": "2026-11-12",
+   "image": "thumbs/db742666eb49f5ff.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d1cf012bc48c",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Perchance-style text generator rebuilt in Obsidian with JS Engine",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xulyoe/recreating_perchanceorgs_manual_text_generator/",
+   "summary": "A hobbyist recreates Perchance.org's manual random-text generator inside a note using JS Engine, with no AI involved. It is still a bit buggy but covers most of the original's features.",
+   "date": "2026-11-12",
+   "kind": "reddit"
+  },
+  {
+   "id": "c146e9958ffd",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Vault showcase: studying Patton's Third Army in 1944",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xtz7yj/my_vault_studying_pattons_3rd_army_in_augsep_1944/",
+   "summary": "A researcher shares a densely linked vault built around Patton's Third Army campaign in August–September 1944. It shows how far linked notes can go for historical study.",
+   "date": "2026-11-12",
+   "kind": "reddit"
+  },
+  {
+   "id": "addc01420fd4",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Traveler's Notebook 20th-anniversary card-size set gets an enthusiast's review",
+   "url": "https://www.penaddict.com/blog/2026/11/12/travelers-notebook-card-size-20th-anniversary-set",
+   "summary": "A self-declared Traveler's Notebook evangelist reviews the tiny card-size anniversary set. She is upfront that she is biased and loves the format.",
+   "date": "2026-11-12",
+   "image": "thumbs/03a815cbd3961d7a.webp"
+  },
+  {
+   "id": "1361c1d14154",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Ideas for using up spare note pages in a Hobonichi",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xt7ahz/got_plenty_of_spare_note_pages_in_your_hobonichi/",
+   "summary": "A user whose to-do and recipe pages stayed empty shares a creative way to fill the back-of-book notes. A practical idea for anyone with unused pages.",
+   "date": "2026-11-11",
+   "kind": "reddit"
+  },
+  {
+   "id": "ec8deafa634f",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Sketching over pencil with a Kaweco EF and Pilot Iroshizuku To-Ro",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xt4vrd/did_realize_what_a_joy_drawing_with_a_fountain/",
+   "summary": "A fountain-pen drawing over pencil on Leuchtturm sketchbook paper, using Pilot's warm 'To-Ro' ink. It's a good example of how a fine nib and shading ink work together.",
+   "date": "2026-11-11",
+   "kind": "reddit"
+  },
+  {
+   "id": "5f65a8e99f4f",
+   "topic": "stationery",
+   "source": "The Well-Appointed Desk",
+   "title": "The Pilot Precise V5 RT gets a fresh look",
+   "url": "https://www.wellappointeddesk.com/2026/11/pen-re-review-pilot-precise-v5-rt/",
+   "summary": "The Well-Appointed Desk revisits the Pilot Precise V5 RT, a gateway pen for many, after a friend named it her favourite.",
+   "date": "2026-11-12",
+   "image": "thumbs/183b625fe8331d2c.webp"
+  },
+  {
+   "id": "57de1d6bf07e",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Trying Hobonichi's stencil schedule: why a finer pen worked better",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xsoibj/stencil_schedule_experience/",
+   "summary": "A user found a Pentel Clena 0.4 too broad for the stencil's numerals and switched to a 0.1 mm pen. The comments hold more tips on getting clean results.",
+   "date": "2026-11-10",
+   "image": "thumbs/5cedcec986344ecf.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9302339d5806",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "DIY 'day free' Weeks Mega made by swapping pages",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xskbhb/weeks_day_free_a_rushed_diy/",
+   "summary": "One user cut the weekly section out of a Mega and replaced it with the notes pages from a regular Weeks. The result is a thick day-free book, and she asks Hobonichi to make one officially.",
+   "date": "2026-11-10",
+   "image": "thumbs/c9e118599b48453b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "e83896bbbecd",
+   "topic": "stationery",
+   "source": "꼬아름 Kko a reum",
+   "title": "Korean stationery fan shows the pens and inks she uses most lately",
+   "url": "https://www.youtube.com/watch?v=tDUYqZAECdk",
+   "summary": "A video tour of current favourites, from ballpoints to fountain pens and inks, with a Japanese-stationery slant.",
+   "date": "2026-11-11",
+   "title_ja": "STATIONERY | 最近よく使う筆記具たち ✍🏻 ボールペンから万年筆、インクまで",
+   "image": "thumbs/70b84c1ea05db52a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "dde2d182bede",
+   "topic": "stationery",
+   "source": "Orisa Channel",
+   "title": "How six different 2027 planners each get their own job",
+   "url": "https://www.youtube.com/watch?v=O16HNzAyfnQ",
+   "summary": "A planner fan explains the role of each of her six planners for 2027. It's a useful look at splitting tasks across notebooks.",
+   "date": "2026-11-12",
+   "image": "thumbs/b0e19387f1d22527.webp",
+   "kind": "video"
+  },
+  {
+   "id": "6238c9eb8200",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Budget carry options for Hobonichi Weeks Mega: a thrifted cover and a Lihit Lab case",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xsi5hs/weeks_mega_cover_on_a_budget/",
+   "summary": "Two cheap ways to carry or cover the big Weeks Mega: a second-hand book cover that nearly fits, and a Lihit Lab double pen case that holds it well.",
+   "date": "2026-11-10",
+   "image": "thumbs/c0075809f3dc9c78.webp",
+   "also": [
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1xt2cgn/sneaker_weeks_mega_case_alternative/"
+    }
+   ],
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "2a48341c98c0",
+   "topic": "stationery",
+   "source": "The Goulet Pen Company",
+   "title": "Goulet Pens explains nib types, sizes and fixes",
+   "url": "https://www.youtube.com/watch?v=ypoB5ohxiF4",
+   "summary": "The first part of a compilation covers steel versus gold nibs, line widths from EF to broad, and common nib problems. A good primer on choosing a nib.",
+   "date": "2026-11-12",
+   "image": "thumbs/95fe1617f1a7bc7c.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "fe4b78692cbe",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Pen Addict podcast begins its recap of a Japan stationery trip",
+   "url": "https://www.penaddict.com/blog/2026/11/12/the-pen-addict-podcast-episode-740-i-checked-out-5-times",
+   "summary": "The first of at least two episodes covers the host's Japan visit, including Itoya, where he checked out five times.",
+   "date": "2026-11-12",
+   "image": "thumbs/54e3ff7e9acfd11d.webp",
+   "extra": true
+  },
+  {
+   "id": "5f556c0c5ed7",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Leica's MANTIS captures 3D scene data while the cinema camera rolls",
+   "url": "https://beforesandafters.com/2026/11/13/ive-seen-a-demo-of-a-new-way-to-capture-3d-scene-data-while-your-cinema-camera-is-rolling-and-its-very-cool/",
+   "summary": "A behind-the-scenes demo of Leica Geosystems' MANTIS, which records 3D data of the set during a take. It could simplify on-set capture for VFX and virtual production.",
+   "date": "2026-11-12",
+   "image": "thumbs/2bf62cf622a28dbd.webp"
+  },
+  {
+   "id": "12bbae66f630",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Netflix's Below: VFX supervisor and producer discuss the visual effects",
+   "url": "https://www.artofvfx.com/below-matt-glover-production-vfx-supervisor-and-annie-godin-production-vfx-producer/",
+   "summary": "Production VFX supervisor Matt Glover and producer Annie Godin go through the work on the Netflix series Below.",
+   "date": "2026-11-12",
+   "image": "thumbs/ebf3ef2434383305.webp"
+  },
+  {
+   "id": "f4b6a266d693",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "'18 Months' directors on blending stop-motion, shadows and digital faces",
+   "url": "https://www.cartoonbrew.com/awards/18-months-directors-paulo-garcia-natalia-gouvea-269280.html",
+   "summary": "Directors Paulo Garcia and Natália Gouvea discuss their Oscar-contending short, which mixes stop-motion puppets, projected shadows and digital expressions.",
+   "date": "2026-11-12",
+   "image": "thumbs/dc84667218876ed1.webp"
+  },
+  {
+   "id": "11a8131c0943",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Magnolia buys French adult animation 'Jim Queen' for US theatres",
+   "url": "https://www.cartoonbrew.com/distribution/jim-queen-us-theatrical-release-magnolia-pictures-269369.html",
+   "summary": "The acclaimed French comedy gets a US theatrical release with an English dub featuring Jordan Firstman and Matteo Lane.",
+   "date": "2026-11-12",
+   "image": "thumbs/61a6176905a5a48d.webp"
+  },
+  {
+   "id": "3d08405e7311",
+   "topic": "vfx",
+   "source": "Kausar POV",
+   "title": "Ramayana VFX breakdowns circulate ahead of the film",
+   "url": "https://www.youtube.com/watch?v=k2B1jY7VO88",
+   "summary": "Fan-made videos break down the film's effects, including the Hanuman entrance. Worth a look for a sense of the scale of Indian VFX production.",
+   "date": "2026-11-12",
+   "image": "thumbs/60a2d1374678f0dd.webp",
+   "also": [
+    {
+     "source": "SD INFORMATION",
+     "url": "https://www.youtube.com/watch?v=JAdcNCueryM"
+    }
+   ],
+   "kind": "video"
+  },
+  {
+   "id": "3d3647508d33",
+   "topic": "pipeline",
+   "source": "Arvid Schneider",
+   "title": "Knitted BB-8 breakdown: Houdini, Fibric and Nuke from fibre to final comp",
+   "url": "https://www.youtube.com/watch?v=jFXrYFWdM3k",
+   "summary": "A video follows a knitted BB-8 from procedural fibre generation in Houdini through rendering to Nuke compositing. Useful for anyone building yarn or fabric looks.",
+   "date": "2026-11-12",
+   "image": "thumbs/3548e10e003a29ba.webp",
+   "kind": "video"
+  },
+  {
+   "id": "04d2a2debd1b",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Vulkan vector-field visualiser with a runtime-compiled formula parser",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xson0r/vector_field_simulation_with_my_own_math_library/",
+   "summary": "A C# and Vulkan tool compiles a typed 2D field formula into a fast delegate and advects thousands of particles through it each frame.",
+   "date": "2026-11-10",
+   "image": "thumbs/f22289f6e1386438.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "bcdf152fec09",
+   "topic": "pipeline",
+   "source": "Inside The Mind",
+   "title": "Houdini 22 tutorial builds custom implicit surfaces",
+   "url": "https://www.youtube.com/watch?v=9UM25Xrgpds",
+   "summary": "A walkthrough of creating your own implicit surfaces in Houdini 22, relevant to procedural modelling and SDF-style workflows.",
+   "date": "2026-11-12",
+   "image": "thumbs/9584effbbe9f7f05.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ed399f9b3fcb",
+   "topic": "pipeline",
+   "source": "Julia Chaix",
+   "title": "RenderMan Art Challenge 2026 winner shares 'The Star Who Fell for the Sky' making-of",
+   "url": "https://www.youtube.com/watch?v=qPzhrI6UN_E",
+   "summary": "The first-place artist explains how the entry was built for the RenderMan challenge, a good look at a polished RenderMan scene.",
+   "date": "2026-11-06",
+   "image": "thumbs/a7a25d51ccd3ed49.webp",
+   "kind": "video"
+  },
+  {
+   "id": "2f075f6cd1cf",
+   "topic": "pipeline",
+   "source": "Houdini",
+   "title": "Houdini Connect 'Flying Laps' shows Q3D integration",
+   "url": "https://www.youtube.com/watch?v=byin9e8iFd0",
+   "summary": "A short official Houdini clip demonstrates the Q3D connection to Houdini.",
+   "date": "2026-11-12",
+   "image": "thumbs/e0194ce732375284.webp",
+   "kind": "video"
+  },
+  {
+   "id": "bc6fed08a45f",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini gift-bow showcase on r/Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xs8dbj/giftbow_looking_for_its_gift/",
+   "summary": "A festive procedural bow render shared in the community.",
+   "date": "2026-11-10",
+   "image": "thumbs/ec5913747b10b6ca.webp",
+   "kind": "reddit"
+  }
+ ]
+}
