@@ -1,0 +1,476 @@
+{
+ "date": "2026-11-14",
+ "generated_at": "2026-11-14T10:57:00+13:00",
+ "headline": "Houdini 22's machine-learning series starts, Framestore breaks down Project Hail Mary's virtual production, and Seek Search 1.3 speeds up semantic search in Obsidian.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 38,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found",
+  "r/Houdini": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "fc88b5af27cb",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Seek Search 1.3 makes semantic vault search faster and lighter",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xvdrnw/making_semantic_search_fast_seek_search_13/",
+   "summary": "The hybrid semantic search plugin now indexes vaults and answers queries faster while using much less memory, with benchmarks across devices. It is a useful option for large vaults where search plugins slow startup.",
+   "date": "2026-11-13",
+   "kind": "reddit"
+  },
+  {
+   "id": "813c997d6907",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "MuseScorer plugin lets you embed and edit sheet music in Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xv8v1i/musescore_integration_for_obsidian/",
+   "summary": "Built on webmscore, the plugin embeds MuseScore files in notes, plays them back with note highlighting and allows editing, all running locally without external services.",
+   "date": "2026-11-13",
+   "kind": "reddit"
+  },
+  {
+   "id": "575d3c5d4bae",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Magazine Rack builds a self-updating magazine front page inside one note",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xus1yr/magazine_rack_a_magazinestyle_front_page_for_your/",
+   "summary": "A plugin turns a note into a front page for your feeds, with newest articles and pictures, unread filters, a reading list and clipping through Web Clipper templates.",
+   "date": "2026-11-12",
+   "image": "thumbs/92b52f54c327685f.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "21817c206dcb",
+   "topic": "obsidian",
+   "source": "Daniel Agrici",
+   "title": "Video: coding agents like Claude Code can now control Obsidian directly",
+   "url": "https://www.youtube.com/watch?v=4yPa9gt7jWA",
+   "summary": "A walkthrough of connecting Claude Code, Codex and other agents to a vault so they can read and act on notes.",
+   "date": "2026-11-09",
+   "image": "thumbs/35cb24c22203420a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "98b52f51dc82",
+   "topic": "obsidian",
+   "source": "Maitis",
+   "title": "Two videos show how to wire Claude into an Obsidian vault",
+   "url": "https://www.youtube.com/watch?v=xgL5uPdXF5I",
+   "summary": "Both demonstrate turning a vault into an AI-assisted knowledge base with Claude Code. They are mainly useful if you want an agent working on your notes.",
+   "date": "2026-11-12",
+   "image": "thumbs/1a19e0acd4826f51.webp",
+   "also": [
+    {
+     "source": "Nick Ponte",
+     "url": "https://www.youtube.com/watch?v=sjo_HLU1Ubs"
+    }
+   ],
+   "kind": "video"
+  },
+  {
+   "id": "5d11dcf9b7d2",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "New plugin converts Samsung Notes handwriting files into Excalidraw drawings",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xvcp23/i_made_a_plugin_to_convert_samsung_notes_files_to/",
+   "summary": "Export SDOCX files into a vault folder and the importer converts them to Excalidraw automatically. It is early and a few cases are rough, but it opens a route for handwritten notes.",
+   "date": "2026-11-13",
+   "kind": "reddit"
+  },
+  {
+   "id": "04eeb6decfbf",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Lorebase 4.0.0 pre-release arrives after months of community-driven improvements",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xvjg0y/lorebase_400_is_coming/",
+   "summary": "The worldbuilding and lore plugin's author previews a major update built from GitHub and Reddit suggestions, with plenty of new features.",
+   "date": "2026-11-13",
+   "kind": "reddit"
+  },
+  {
+   "id": "9988d8f16793",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Lighter alternatives to Omnisearch: Lean Search and CFR Find discussed",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xv1fq5/lean_search_better_than_omnisearch/",
+   "summary": "A user whose startup was slowed by Omnisearch asks whether lesser-known search plugins hold up. Useful for anyone tuning vault performance.",
+   "date": "2026-11-13",
+   "kind": "reddit"
+  },
+  {
+   "id": "7e3a5ea1e61f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Writers ask how to get book-quality typesetting from an Obsidian vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xv349i/professional_typesetting_and_rendering_with/",
+   "summary": "An author who keeps each book as a folder and each chapter as a note wants dropcaps, margins and layout handled automatically. The thread is a good place to look for export and typesetting workflows.",
+   "date": "2026-11-13",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "d9cc7e04a426",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Sidecar AI plugin gives instant AI access to notes, works with local models too",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xv2y9b/built_extension_to_instant_ai_access_for_cloud/",
+   "summary": "Originally made to avoid copy-pasting links into a CLI agent, the plugin now supports local models as well and has had several recent updates.",
+   "date": "2026-11-13",
+   "image": "thumbs/3f36ee96885cb624.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "343db8fdefcd",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Solo Leveling-style gamified vault gets a 2.0 with images, sounds and phone alerts",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xvjj38/i_made_solo_leveling_system_20_this_is_sick/",
+   "summary": "A heavily themed personal system adds more artwork, icons, sound effects and phone notifications after 75+ hours of work. A fun example of how far vault customisation can go.",
+   "date": "2026-11-13",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "beecab15e0ba",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot's new Elite pens finally spotted in Japan, including a striking blue limited edition",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xu03x2/found_this_beauty_on_my_second_to_last_day_in/",
+   "summary": "A visitor hunted for the new Pilot Elite releases for two weeks before finding the full colour range on the second-to-last day. The blue limited edition won out over the brown models.",
+   "date": "2026-11-12",
+   "image": "thumbs/666417eb9f9b20c7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "295a21fdd122",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A 2027 journal ecosystem built from Hobonichi Weeks plus a separate daily book",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xtjkti/my_2027_journal_ecosystem_is_finally_ready/",
+   "summary": "After using Weeks and the A5 Cousin, this journaler explains why each size fell short and how splitting daily and weekly pages next year addresses it. Practical layout thinking for anyone setting up a Hobonichi.",
+   "date": "2026-11-11",
+   "image": "thumbs/b3d64efd472302b2.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "87cbf8f643ca",
+   "topic": "stationery",
+   "source": "makko  手帳と猫のいる暮らし",
+   "title": "How to fill a weekly vertical planner spread and what daily reviews do for you",
+   "url": "https://www.youtube.com/watch?v=vFbYClMjToU",
+   "summary": "A full week of planner time showing layout, writing habits and the effect of reviewing each day.",
+   "date": "2026-11-13",
+   "title_ja": "週間バーチカルの書き方2026｜1週間分の手帳タイム｜日々の振り返りとその効果",
+   "image": "thumbs/bbb7500d01b9c034.webp",
+   "kind": "video"
+  },
+  {
+   "id": "2ad6bcbf8138",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi's own guidance on clear covers and covers-on-covers, and the risks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xtr9o1/psa_regarding_hobonichi_clear_covers_cover_on/",
+   "summary": "A highlighted official resource explains why clear covers are not recommended for Weeks, with a lively discussion of the trade-offs. Good to read before dressing up a new planner.",
+   "date": "2026-11-11",
+   "kind": "reddit"
+  },
+  {
+   "id": "bc2ea90ee5cc",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "One word lettered in five pen-and-ink styles",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xu8nru/one_word_five_styles_which_one_is_your_favourite/",
+   "summary": "A calligraphy post comparing five lettering approaches for the same word. Good inspiration for comparing hands and ink choices.",
+   "date": "2026-11-12",
+   "image": "thumbs/6fc5ad200c463317.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "0a1e971c7c0e",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Free downloadable custom index tabs for Hobonichi Weeks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xtuvi2/sharing_the_custom_sheep_index_i_made_for_my/",
+   "summary": "A user shares printable PNG index tabs, plus a One Piece set, for organising a Weeks planner.",
+   "date": "2026-11-11",
+   "kind": "reddit"
+  },
+  {
+   "id": "d5da9ccd8c75",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Custom 743 (FM) photographed beside a lifetime stamp collection",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xu3w3s/two_passions_in_one_frame/",
+   "summary": "A nicely composed shot pairing a Pilot Custom 743 with decades of collected stamps.",
+   "date": "2026-11-12",
+   "image": "thumbs/2159b4bd6f03b60d.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "efa00c306866",
+   "topic": "stationery",
+   "source": "oh really Alana",
+   "title": "A tour of one creator's journal and planner ecosystem for 2027",
+   "url": "https://www.youtube.com/watch?v=Ubd1VVWRbf4",
+   "summary": "A video walk-through of how a full planner and journal setup fits together, with ideas for splitting roles between notebooks.",
+   "date": "2026-11-12",
+   "image": "thumbs/bce1798546471541.webp",
+   "kind": "video"
+  },
+  {
+   "id": "344d9980abff",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A 'words to remember' page in a Hobonichi, and a request to see yours",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xu5zee/words_to_remember/",
+   "summary": "A journaler shares her favourite recurring spread, a page for collecting quotes. A simple habit idea you can borrow.",
+   "date": "2026-11-12",
+   "image": "thumbs/75d54feec9e20535.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "233dc20c0889",
+   "topic": "stationery",
+   "source": "The Goulet Pen Company",
+   "title": "Goulet Q&A covers Conklin wood pens, why Vaseline is bad for pens and notebooks for lefties",
+   "url": "https://www.youtube.com/watch?v=3Sw5x_s1thk",
+   "summary": "The episode compares two TWSBI Diamond models, explains why not to grease pens, recommends lefty-friendly notebooks and spotlights the Sheaffer Balance III.",
+   "date": "2026-11-13",
+   "image": "thumbs/8e3329eb0ef15145.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "f9d78e9f0f28",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Shop visit: Pen Pals Stationery & Gift Shop",
+   "url": "https://www.penaddict.com/blog/2026/11/13/pen-pals-stationery-amp-gift-shop-shop-visit",
+   "summary": "A first-hand tour of a stationery store, written right after a trip to BunguLA, with notes on what's on the shelves.",
+   "date": "2026-11-13",
+   "image": "thumbs/4bad0a858f9ec045.webp",
+   "extra": true
+  },
+  {
+   "id": "4163ed4749fd",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Mega Weeks art journaling: how to add more back pages for comics",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xt7eq0/a_weeks_dilemma/",
+   "summary": "A user who sketches a weekly comic in the Mega Weeks weighs ways to get extra pages. A real-use case with community suggestions.",
+   "date": "2026-11-11",
+   "image": "thumbs/71450042dbd941c7.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "38ae3401c185",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "A Lamy Smile used since first grade still going after 20 years",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xu00yf/my_companion_of_20_years/",
+   "summary": "A heartfelt story of a school pen that outlasted a full education.",
+   "date": "2026-11-12",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "9b72f22b03af",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "befores & afters issue #69 digs into the visual effects of The End of Oak Street",
+   "url": "https://beforesandafters.com/2026/11/14/the-making-of-the-end-of-oak-street/",
+   "summary": "The magazine's latest issue is devoted to the film's VFX, a good starting point for studio-level breakdown detail.",
+   "date": "2026-11-13",
+   "image": "thumbs/57612a1b894b7296.webp"
+  },
+  {
+   "id": "e11ede6590c5",
+   "topic": "vfx",
+   "source": "Framestore",
+   "title": "Framestore breaks down virtual production on Project Hail Mary",
+   "url": "https://www.youtube.com/watch?v=g62roy_1p-c",
+   "summary": "The studio shows how virtual production was used on the film, relevant for anyone tracking LED-volume workflows.",
+   "date": "2026-11-13",
+   "image": "thumbs/24a94c7951a19a7c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "667d06285d28",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Framestore reveals the creatures and environments of Heart of the Beast",
+   "url": "https://www.artofvfx.com/heart-of-the-beast-framestore-reveals-its-creature-and-environment-vfx-work/",
+   "summary": "Under supervisor François Dumoulin, the team built photoreal digital animals, from a German Shepherd to larger creatures, and detailed CG environments for David Ayer's thriller.",
+   "date": "2026-11-13",
+   "image": "thumbs/127172590e534e04.webp"
+  },
+  {
+   "id": "0a489d25f90a",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Pixar's 'Gatto' trailer shows hand-painted 2D textures on CG animation",
+   "url": "https://www.cartoonbrew.com/feature-film/gatto-trailer-pixar-enrico-casarosa-269394.html",
+   "summary": "Enrico Casarosa's Venice-set crime comedy opens March 5, 2027, and its painterly look is a notable stylisation approach in feature rendering.",
+   "date": "2026-11-13",
+   "image": "thumbs/b957bbff0740b45d.webp"
+  },
+  {
+   "id": "f18078d3d5f5",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Digital Domain shows its previs and postvis for Spider-Man: Brand New Day",
+   "url": "https://www.artofvfx.com/spider-man-brand-new-day-digital-domain-reveals-its-visualization-work/",
+   "summary": "A year of visualization work on major action sequences including the tank chase.",
+   "date": "2026-11-13",
+   "image": "thumbs/caa8b2f6ceb68f44.webp"
+  },
+  {
+   "id": "bb6d9fdfaebc",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Brad Bird's Ray Gunn gets a new trailer and an Art of VFX look",
+   "url": "https://www.artofvfx.com/ray-gunn/",
+   "summary": "The retro-futuristic animated noir opens in select theaters December 4 and streams December 18, after a limited 70mm run.",
+   "date": "2026-11-13",
+   "image": "thumbs/b0e1a342e61cf2a4.webp",
+   "also": [
+    {
+     "source": "Cartoon Brew",
+     "url": "https://www.cartoonbrew.com/feature-film/ray-gunn-trailer-brad-bird-netflix-269401.html"
+    }
+   ]
+  },
+  {
+   "id": "d620db097e35",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "GKIDS takes North American rights to Cartoon Saloon's hand-drawn 'Julián'",
+   "url": "https://www.cartoonbrew.com/animators/julian-cartoon-saloon-trailer-gkids-269405.html",
+   "summary": "Louise Bagnall's feature, based on Jessica Love's book, gets a March 2027 theatrical release and a first trailer.",
+   "date": "2026-11-13",
+   "image": "thumbs/b444d5af3e980f68.webp"
+  },
+  {
+   "id": "9262457a8a14",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Indie sci-fi KILL/SAVE shows its neon city window shot, built in Blender and Nuke",
+   "url": "https://www.reddit.com/r/vfx/comments/1xtfali/killsave_scifi_feature_neon_city_window_shot/",
+   "summary": "A small remote team built the whole exterior city in CG around a studio-shot actor, using Photoshop, Nuke and After Effects. A useful look at a low-budget pipeline.",
+   "date": "2026-11-11",
+   "image": "thumbs/0b54d9964f35ec7d.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "6009460aea9f",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Oscar short contender 'Adgwa-Ata' mixes felt-tip textures, latex outfits and techno",
+   "url": "https://www.cartoonbrew.com/awards/adgwa-ata-zsuzsanna-kreif-269414.html",
+   "summary": "Director Zsuzsanna Kreif discusses her short about three girls facing giant serpents in an initiation ritual.",
+   "date": "2026-11-13",
+   "image": "thumbs/800a41b4477c4781.webp",
+   "extra": true
+  },
+  {
+   "id": "233538f12864",
+   "topic": "vfx",
+   "source": "LEO VFX",
+   "title": "Artist remakes the Green Lantern ending with no budget",
+   "url": "https://www.youtube.com/watch?v=gpaWr6N_4-A",
+   "summary": "A hobbyist VFX recreation of a famous finale, showing what a tiny setup can do.",
+   "date": "2026-11-08",
+   "image": "thumbs/670fe8e35d53b740.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "75b4625b492f",
+   "topic": "vfx",
+   "source": "Carolina Jiménez G.",
+   "title": "Two Power Rangers VFX breakdowns, including an Operation Overdrive explosion",
+   "url": "https://www.youtube.com/watch?v=tJXjartYsHk",
+   "summary": "Short breakdowns of effects work on the franchise, one focused on how an explosion was put together.",
+   "date": "2026-11-13",
+   "image": "thumbs/f3ed5ecfee7397b3.webp",
+   "also": [
+    {
+     "source": "BENTAVISION",
+     "url": "https://www.youtube.com/watch?v=ObWVvdycq_I"
+    }
+   ],
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "3d61fcf82594",
+   "topic": "pipeline",
+   "source": "Houdini",
+   "title": "SideFX starts Houdini 22 machine-learning video series with 'ML Thinking'",
+   "url": "https://www.youtube.com/watch?v=BQmSLV1qIqA",
+   "summary": "The first lessons introduce how to think about ML in Houdini and how to pick problems it suits. Worth following for ML-based production tools.",
+   "date": "2026-11-13",
+   "image": "thumbs/343fd82d37e75b6f.webp",
+   "also": [
+    {
+     "source": "Houdini",
+     "url": "https://www.youtube.com/watch?v=lBUhNn87LfQ"
+    }
+   ],
+   "kind": "video"
+  },
+  {
+   "id": "35c32afa1797",
+   "topic": "pipeline",
+   "source": "Game Industry Conference",
+   "title": "Talk: building and optimising massive game worlds with Houdini",
+   "url": "https://www.youtube.com/watch?v=LrZbD-BeXH4",
+   "summary": "Artur Szymański of Simteract covers procedural approaches to large world creation and optimisation, with ideas that carry over to VFX environment work.",
+   "date": "2026-11-13",
+   "image": "thumbs/3b38444cfbcf43d5.webp",
+   "kind": "video"
+  },
+  {
+   "id": "643fcb7f29ab",
+   "topic": "pipeline",
+   "source": "DP CreativeVerse",
+   "title": "Houdini tutorial: procedural object breaking with the IsoOffset node",
+   "url": "https://www.youtube.com/watch?v=7iOudTBYCRw",
+   "summary": "A walkthrough of building procedural destruction in Houdini using IsoOffset.",
+   "date": "2026-11-06",
+   "image": "thumbs/336917ce57c40047.webp",
+   "kind": "video"
+  },
+  {
+   "id": "0ea84b24cdb1",
+   "topic": "pipeline",
+   "source": "BLACKBOX: School of Visual Effects",
+   "title": "Houdini for Motion Design lecture series covers procedural modeling basics",
+   "url": "https://www.youtube.com/watch?v=AUZrvfe19Pg",
+   "summary": "Part two of lecture one from BLACKBOX introduces procedural modeling fundamentals in Houdini.",
+   "date": "2026-11-13",
+   "image": "thumbs/ebfdee51b345eb6a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "7822698e94bb",
+   "topic": "pipeline",
+   "source": "Boost VFX",
+   "title": "Quick Houdini tip: using the frustum of an animated camera",
+   "url": "https://www.youtube.com/watch?v=njQfFKO8kDo",
+   "summary": "A short demo on using an animated camera's frustum in a Houdini setup.",
+   "date": "2026-11-12",
+   "image": "thumbs/eff538f1c26431e6.webp",
+   "kind": "video"
+  }
+ ]
+}
