@@ -1,0 +1,377 @@
+{
+ "date": "2026-11-15",
+ "generated_at": "2026-11-15T09:40:26+13:00",
+ "headline": "Weta FX's chief says studios now expect an AI strategy, Manchester Animation Festival bans GenAI, and a 51-minute Houdini breakdown of a knitted BB-8.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "6a4929fffd44",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "One year of Obsidian, visualised as a colour-coded graph",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xwa3jl/my_obsidian_graph_after_using_it_for_around_a_year/",
+   "summary": "A user shares their vault graph after a year, colour-coded by study, daily notes, home pages, interests and attachments. It's a good look at how a long-lived vault actually clusters.",
+   "date": "2026-11-14",
+   "kind": "reddit"
+  },
+  {
+   "id": "65d05a4fb958",
+   "topic": "obsidian",
+   "source": "Radial Timeline",
+   "title": "Radial Timeline plugin shows a whole novel on one circular timeline",
+   "url": "https://www.youtube.com/watch?v=M_rW3jAg-6M",
+   "summary": "A short demo of a plugin that lays a manuscript out on a single radial timeline. It's an interesting take on visualising long-form structure inside a vault.",
+   "date": "2026-11-11",
+   "image": "thumbs/461ceb9187a35070.webp",
+   "kind": "video"
+  },
+  {
+   "id": "9800e33410b0",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Users compare ways to connect Obsidian vaults to ChatGPT and Claude",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xw24mx/is_there_a_way_to_access_my_obsidian_vault/",
+   "summary": "Two threads ask how to let AI chats read and write vault notes, including voice capture and sorting ideas out of chat history. They are useful for seeing which connector setups people are trying.",
+   "date": "2026-11-14",
+   "also": [
+    {
+     "source": "r/ObsidianMD",
+     "url": "https://www.reddit.com/r/ObsidianMD/comments/1xvzxei/where_do_you_capture_everything_from_quick_todos/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "d854c15afd75",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "A playful creative dashboard with GIF banners and backgrounds",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xvojlf/so_happy_with_my_first_ever_dashboard/",
+   "summary": "A user shows off a first dashboard built for fun and self-expression, with animated GIFs for the title card and background. It's a nice example of how far vault styling can go.",
+   "date": "2026-11-14",
+   "image": "thumbs/eb3ef149a7f202f1.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "3046bdc349c9",
+   "topic": "obsidian",
+   "source": "Julian Goldie SEO",
+   "title": "Video walkthrough of building a local AI second brain in Obsidian",
+   "url": "https://www.youtube.com/watch?v=_R5TKmP0mMU",
+   "summary": "A tutorial on setting up an Obsidian-based second brain that runs AI locally. It may help if you want to keep notes private while experimenting.",
+   "date": "2026-11-13",
+   "image": "thumbs/adda161e3e375909.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ebb589408ffc",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Looking for a plugin to label the connections between notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xvz7dj/is_there_any_plugin_for_obsidian_that_allows_you/",
+   "summary": "A user wants named, visualised relationships between characters in a complex project. The thread is a useful pointer to what Obsidian's graph and canvas can and can't do for relationship mapping.",
+   "date": "2026-11-14",
+   "kind": "reddit"
+  },
+  {
+   "id": "c959f0024a7d",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Weta FX chief: Hollywood studios now expect an AI strategy",
+   "url": "https://www.reddit.com/r/vfx/comments/1xuki6v/weta_fx_chief_says_hollywood_studios_now_expect/",
+   "summary": "Weta FX's leadership says clients now ask vendors how they plan to use AI. This is directly relevant to your workplace, and the r/vfx thread is active.",
+   "date": "2026-11-12",
+   "image": "thumbs/a9da761c432f2f57.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "4db71b491ec1",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Manchester Animation Festival bans GenAI films from 2027 entries",
+   "url": "https://www.cartoonbrew.com/awards/manchester-animation-festival-genai-ban-in-waves-269431.html",
+   "summary": "The festival will refuse generative-AI work from its 2027 call, while 'In Waves' took best feature. It's another sign of festivals drawing hard lines on AI.",
+   "date": "2026-11-14",
+   "image": "thumbs/59fa9bff3e76a6ce.webp"
+  },
+  {
+   "id": "a637dd5c5c38",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Leica releases a lidar camera aimed at VFX production",
+   "url": "https://www.reddit.com/r/vfx/comments/1xukpbv/leica_releases_vfx_lidar_camera_for_production/",
+   "summary": "Leica has launched a lidar camera for production use, which would speed up on-set capture of environments for matchmoving and set reconstruction. The r/vfx thread discusses how useful it will be.",
+   "date": "2026-11-12",
+   "image": "thumbs/3fa37be35bf4a7c7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "91e04852bcb9",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "European Film Awards announce a standout animation lineup",
+   "url": "https://www.cartoonbrew.com/awards/european-animation-award-nominees-269443.html",
+   "summary": "'In Waves,' 'Iron Boy,' 'Jim Queen,' 'Lucy Lost' and 'Viva Carmen' are nominated in what Cartoon Brew calls one of the strongest animation fields in years.",
+   "date": "2026-11-14",
+   "image": "thumbs/0fd8c7c94e333ff3.webp"
+  },
+  {
+   "id": "07fadf353d0b",
+   "topic": "vfx",
+   "source": "Fame Focus",
+   "title": "Behind-the-scenes video looks at how the VFX of 'Sinners' were made",
+   "url": "https://www.youtube.com/watch?v=xUXNCCHusmg",
+   "summary": "A video covering the visual effects work on 'Sinners', useful if you want a quick look at how the film's effects were put together.",
+   "date": "2026-11-14",
+   "image": "thumbs/278ec13375536f87.webp",
+   "kind": "video"
+  },
+  {
+   "id": "4148512e3e17",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Netflix teases animated 'Magic: The Gathering' series 'Planeswalker' for 2027",
+   "url": "https://www.cartoonbrew.com/series/netflix-magic-the-gathering-planeswalker-first-look-269425.html",
+   "summary": "A development diary gives a first look at protagonist Chandra and the series' worlds ahead of its 2027 streaming date.",
+   "date": "2026-11-14",
+   "image": "thumbs/7ee47e91b784da85.webp"
+  },
+  {
+   "id": "03fa4afc7a52",
+   "topic": "vfx",
+   "source": "Captain Atom",
+   "title": "Godzilla Minus Zero breakdown: the seaplane shot was never filmed",
+   "url": "https://www.youtube.com/watch?v=s_5cNG_OYeU",
+   "summary": "A breakdown of how the seaplane shot was built entirely in CG. It's a small channel, but the shot is a good case study.",
+   "date": "2026-11-11",
+   "image": "thumbs/96a3f365242f5c4c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "e8d05f528af1",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "New 'Hunger Games: Sunrise on the Reaping' clip shows a mountain explosion and wall of fire",
+   "url": "https://www.artofvfx.com/the-hunger-games-sunrise-on-the-reaping/",
+   "summary": "The clip shows large-scale fire and explosion effects in the forest sequence, a taste of the film's effects work ahead of release.",
+   "date": "2026-11-12",
+   "image": "thumbs/04db34a342ecd3d5.webp"
+  },
+  {
+   "id": "93a5e7ea7ea0",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Knitted BB-8 built in Houdini from 840,000 fibre curves, with full breakdown",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xukrkg/knitted_bb8_in_houdini_840000_fibric_curves_full/",
+   "summary": "An artist shares a 51-minute walkthrough of a fully knitted BB-8, with hundreds of thousands of yarn curves. It's a strong procedural-modelling and curve-handling reference.",
+   "date": "2026-11-12",
+   "image": "thumbs/a42d986990bb7182.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9599fe97b28d",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "CORTAO: a new physically based screen-space ambient occlusion method goes open source",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xudoib/a_brandnew_physically_based_ssao_technique_cortao/",
+   "summary": "Circular Occluder Ray-Traced Ambient Occlusion replaces horizon-based SSAO with a physically motivated approach, and the code is on GitHub. It's an interesting look at approximating occlusion in real time.",
+   "date": "2026-11-12",
+   "image": "thumbs/2a4978ac4d65a9ab.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "3b6d3a6259a1",
+   "topic": "pipeline",
+   "source": "Houdini",
+   "title": "Houdini H22 video trains a simple neural network inside Houdini",
+   "url": "https://www.youtube.com/watch?v=YaKR3qlmDG0",
+   "summary": "SideFX's H22 machine-learning series continues with training a small neural net in-app. It shows where native ML tooling in Houdini is heading.",
+   "date": "2026-11-13",
+   "image": "thumbs/793bd6ba46b3629b.webp",
+   "kind": "video"
+  },
+  {
+   "id": "595502777b7d",
+   "topic": "pipeline",
+   "source": "r/vfx",
+   "title": "Shotrover: a Linux file manager that previews VDBs, EXRs and caches",
+   "url": "https://www.reddit.com/r/vfx/comments/1xuqrri/i_built_a_linux_file_manager_for_vfx_work/",
+   "summary": "A new tool previews Houdini caches, VDB volumes and scene files without launching a DCC. It's handy for sorting through shot data on Linux.",
+   "date": "2026-11-12",
+   "image": "thumbs/5e58b52e6f429a25.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "2002fcffa09e",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Real-time global illumination running in a Bevy dungeon crawler",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xujwgh/realtime_global_illumination_in_my_bevy_dungeon/",
+   "summary": "A demo of real-time GI in the Rust Bevy engine, a good example of lightweight indirect lighting in a small renderer.",
+   "date": "2026-11-12",
+   "image": "thumbs/f7b8fc6e26752328.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "f14f4f848503",
+   "topic": "pipeline",
+   "source": "BLACKBOX: School of Visual Effects",
+   "title": "Houdini for Motion Design lecture covers procedural modelling basics",
+   "url": "https://www.youtube.com/watch?v=dBz--2K58w4",
+   "summary": "The second part of the first lecture in a Houdini course introduces procedural modelling. It's aimed at beginners, so mainly useful for teaching reference.",
+   "date": "2026-11-13",
+   "image": "thumbs/ee925bcdf9ae3259.webp",
+   "kind": "video"
+  },
+  {
+   "id": "d7a77cbed468",
+   "topic": "pipeline",
+   "source": "AGN3d Artist",
+   "title": "Dubai Frame swing VFX shot made with Blender and fSpy",
+   "url": "https://www.youtube.com/watch?v=FN86W9oLnss",
+   "summary": "A tutorial that matches a camera to a photo with fSpy and builds the effect in Blender. It's a short, practical example of single-image camera matching.",
+   "date": "2026-11-14",
+   "image": "thumbs/37fb2c2d1ea5484b.webp",
+   "kind": "video"
+  },
+  {
+   "id": "6dc40a2fbf04",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Is a Pilot Custom 743 from Amazon genuine? Packaging concerns discussed",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xuvtgo/post_for_wife_lurker_is_this_pilot_legit/",
+   "summary": "A buyer questions the plain packaging on a Custom 743. The comments are a useful guide to telling real Pilot packaging from doubtful marketplace sellers.",
+   "date": "2026-11-13",
+   "kind": "reddit"
+  },
+  {
+   "id": "f9aba474a07c",
+   "topic": "stationery",
+   "source": "Wasted Paper",
+   "title": "Review of the first new Lamy Safari LX colour in seven years: blue",
+   "url": "https://www.youtube.com/watch?v=DhTXXcq6WKg",
+   "summary": "A Japanese-language video looks at the new blue Safari LX, a Lamy product now under Mitsubishi Pencil ownership.",
+   "date": "2026-11-14",
+   "title_ja": "7年ぶりの新色登場！ラミー サファリ LX（ブルー）レビュー",
+   "image": "thumbs/7116330a3b536cba.webp",
+   "kind": "video"
+  },
+  {
+   "id": "e62352044cfa",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks fits Daiso's A6 zipper file case",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xurgve/hobonichi_weeks_fits_in_daisos_a6_zipper_file_case/",
+   "summary": "A cheap, practical tip: Daiso's A6 zipper case holds the Weeks, giving it protection and carrying storage for about $2.",
+   "date": "2026-11-12",
+   "kind": "reddit"
+  },
+  {
+   "id": "579c2030f901",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "November Weeks spreads built around swirl doodles",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xux5zt/november_so_far_in_my_weeks/",
+   "summary": "A Hobonichi user shares a month of Weeks pages decorated with swirls, an easy, repeatable way to give weekly spreads a consistent look.",
+   "date": "2026-11-13",
+   "kind": "reddit"
+  },
+  {
+   "id": "f7d86ae753c8",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Protecting a glossy Weeks cover with a clear plastic layer",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xulzt8/so_i_just_finished_setting_up_my_starlight_weeks/",
+   "summary": "After worrying about gloss finish and cover-on-cover, a user shares a fix: a layer of clear plastic cut from a bag. It's a practical setup tip.",
+   "date": "2026-11-12",
+   "kind": "reddit"
+  },
+  {
+   "id": "8e2814afec0c",
+   "topic": "stationery",
+   "source": "maimai＊手帳と文具で楽しくLife Log＊",
+   "title": "Three 2027 planners compared, including a new Life Mastery notebook",
+   "url": "https://www.youtube.com/watch?v=EfsKeH3hw-8",
+   "summary": "A Japanese video introduces a magazine-bundled planner, a retailer bonus planner and the new Life Mastery notebook. It's useful for seeing the layouts on offer.",
+   "date": "2026-11-13",
+   "title_ja": "【2027年手帳】気になる手帳を3冊紹介！GLOW付録・フェリシモ購入特典・新発売のライフマスタリー手帳",
+   "image": "thumbs/76a9a13e3f895231.webp",
+   "kind": "video"
+  },
+  {
+   "id": "b092ba5c4553",
+   "topic": "stationery",
+   "source": "Happier by Seppy",
+   "title": "A full 2027 journal and planner ecosystem, with ideas to borrow",
+   "url": "https://www.youtube.com/watch?v=YhisW61sLi4",
+   "summary": "A creator walks through how several journals and planners divide up their roles for 2027. It's useful for rethinking your own system.",
+   "date": "2026-11-14",
+   "image": "thumbs/3151b5fba1ceccc0.webp",
+   "kind": "video"
+  },
+  {
+   "id": "60ff103f7ce2",
+   "topic": "stationery",
+   "source": "Little Coco Studio",
+   "title": "Why two notebooks are enough, even with a large collection",
+   "url": "https://www.youtube.com/watch?v=RY7CG74_pk4",
+   "summary": "A reflection on narrowing a big notebook stash down to two working notebooks. It's useful for thinking about what each journal is for.",
+   "date": "2026-11-14",
+   "image": "thumbs/9d47d2af1e672270.webp",
+   "kind": "video"
+  },
+  {
+   "id": "5cbbe5e2aa6d",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Affordable standard refills fit the Hobonichi Yumi pen",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xuf41w/found_an_affordable_yumi_pen_refill/",
+   "summary": "Community members found that generic refills fit the Yumi pen. They click properly, don't smudge with highlighters and write smoothly.",
+   "date": "2026-11-12",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "1ba501195d07",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A 2027 Weeks decorated in Sea Glass, with a Detective Conan cover",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xutxya/my_2027_weeks_is_ready/",
+   "summary": "A user shows a fully decorated 2027 Weeks, plus a Conan collaboration cover. It's a good example of how people theme their setup.",
+   "date": "2026-11-13",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "0023344acd13",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A Laban 325 in Ginko pen chosen to match a 2027 Hobonichi setup",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xugsni/my_single_fountain_pen_day_purchase_really/",
+   "summary": "A user bought one pen on Fountain Pen Day to complete a colour-coordinated 2027 setup. Their pairing of pen and planner is a nice example.",
+   "date": "2026-11-12",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "05a204b76077",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "2027 Hobonichi lineup split by purpose: travel, daily, work and church",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xuyt19/2027_hobonichi_lineup_ready/",
+   "summary": "A user lays out four Hobonichis, each with its own cover, and a distinct job. It's a clear example of dividing roles between books.",
+   "date": "2026-11-13",
+   "kind": "reddit",
+   "extra": true
+  }
+ ]
+}
