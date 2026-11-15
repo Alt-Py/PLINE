@@ -1,0 +1,411 @@
+{
+ "date": "2026-11-16",
+ "generated_at": "2026-11-16T10:00:07+13:00",
+ "headline": "Framestore's wolf, bear and German Shepherd tissue sims lead the day, with Pilot's China-only Kakuno and a reMarkable–Obsidian round-trip plugin close behind.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "1df89917bc59",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "reMarkable Roundtrip plugin sends notes out and returns handwritten annotations as text",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xwkjuk/show_remarkable_roundtrip_publish_obsidian_notes/",
+   "summary": "A new plugin renders Obsidian notes to PDF for a reMarkable tablet, then pulls your handwritten markup back into the vault as text. Unlike existing one-way integrations, it closes the loop for review-and-annotate workflows.",
+   "date": "2026-11-15",
+   "kind": "reddit"
+  },
+  {
+   "id": "71575b358e11",
+   "topic": "obsidian",
+   "source": "Tim Abell",
+   "title": "Video explains Obsidian Bases as spreadsheets over markdown frontmatter",
+   "url": "https://www.youtube.com/watch?v=hAOdEnZgHcg",
+   "summary": "A walkthrough shows how Bases turns note properties into sortable, filterable table views. Useful if your vault holds structured notes, such as shot logs or lecture material, that you'd like to query without plugins.",
+   "date": "2026-11-11",
+   "image": "thumbs/3860a67b8d96ef5e.webp",
+   "kind": "video"
+  },
+  {
+   "id": "433faa1b0855",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Acid Xerox: a high-contrast, photocopy-style theme for Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xx4rb1/made_acid_xerox_a_highcontrast_theme_for_obsidian/",
+   "summary": "A new community theme gives the app a stark, xerox-inspired look with strong contrast. It's a bold alternative to the usual soft dark palettes.",
+   "date": "2026-11-15",
+   "image": "thumbs/0052608f378eb975.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "e794e3615559",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Coffer syncs vaults through your own S3 bucket or WebDAV folder",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xweogn/my_own_attempt_at_an_obsidian_sync_plugin_coffer/",
+   "summary": "A newly listed community plugin encrypts files on-device before syncing them via S3-compatible storage or WebDAV. It's a self-hosted alternative to Obsidian Sync across Mac, iPhone and work machines.",
+   "date": "2026-11-14",
+   "kind": "reddit"
+  },
+  {
+   "id": "fb3e94ac347a",
+   "topic": "obsidian",
+   "source": "Daniel Agrici",
+   "title": "Free open-source website explorer for Obsidian vaults",
+   "url": "https://www.youtube.com/watch?v=Szz8F1O2w0w",
+   "summary": "A developer demonstrates a free, open-source tool for exploring a website's structure from inside Obsidian. It's a niche but practical example of what the plugin API can do.",
+   "date": "2026-11-11",
+   "image": "thumbs/75cfa1a99b990b6b.webp",
+   "kind": "video"
+  },
+  {
+   "id": "161c31ecc184",
+   "topic": "obsidian",
+   "source": "明立非 · Mingnify | Indie Maker",
+   "title": "Turning vault notes into Mermaid diagrams and charts with AI",
+   "url": "https://www.youtube.com/watch?v=7_JyhZKeFX8",
+   "summary": "A video demonstrates generating structural diagrams and data charts from an Obsidian knowledge base using Mermaid. It's handy for visualising pipelines or project notes.",
+   "date": "2026-11-12",
+   "image": "thumbs/08a6fc1dd965f7bb.webp",
+   "kind": "video"
+  },
+  {
+   "id": "23f92d933fbd",
+   "topic": "obsidian",
+   "source": "Luke Byrne (AI Luke)",
+   "title": "Step-by-step Claude Code and Obsidian second-brain setup",
+   "url": "https://www.youtube.com/watch?v=8FbZeWUxDDc",
+   "summary": "A tutorial connects an AI coding agent to an Obsidian vault for note-building and organisation. It's a hands-on look at the growing agent-plus-vault workflow.",
+   "date": "2026-11-14",
+   "image": "thumbs/b84a5c085597f971.webp",
+   "kind": "video"
+  },
+  {
+   "id": "aa3caf5004d5",
+   "topic": "obsidian",
+   "source": "MDFriday",
+   "title": "MDFriday Share plugin offers a quick way to publish a note",
+   "url": "https://www.youtube.com/watch?v=07IlBQnyoDM",
+   "summary": "A short demo shows sharing a single Obsidian note via the MDFriday Share plugin. It's a lightweight option for one-off publishing.",
+   "date": "2026-11-11",
+   "image": "thumbs/df39900402c42cac.webp",
+   "kind": "video"
+  },
+  {
+   "id": "97c3762ce464",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Guide routes Pebble Index ring voice notes into Obsidian daily notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xwfpf2/guide_voice_notes_from_a_pebble_index_01_ring/",
+   "summary": "A user explains how to get transcribed voice memos from a Pebble ring appended to the right daily note. The built-in export can't do that, so the guide fills the gap.",
+   "date": "2026-11-14",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "f954b358c931",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Dev kit lets plugin authors run review checks and catch mobile breakage locally",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xwdrt1/i_made_a_dev_kit_for_obsidian_plugin_authors_run/",
+   "summary": "A tooling bundle runs the directory's review-scanner checks before publishing, flags mobile problems, and records demo GIFs from the real app. It should save plugin authors repeated round trips.",
+   "date": "2026-11-14",
+   "image": "thumbs/bf73c831d86f7e93.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "34fd7a70724d",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Ardoise: a calm slate-toned dark theme for Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xx3t24/ardoise_a_calm_theme_thats_easy_on_the_eyes/",
+   "summary": "A new community theme aims for soft, highly readable dark styling and is now available in the theme directory.",
+   "date": "2026-11-15",
+   "image": "thumbs/78abbdabcea6435d.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "016d6e13220f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Just Simple NPC 0.8.0 adds a pointing hand for live demos",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xwtpn2/the_obsidian_npc_nos_has_a_tiny_hand_for_live/",
+   "summary": "The plugin's mascot can now pull out a glove pointer to highlight things and draw red marks while you walk someone through a note. It's handy for teaching and screen-sharing.",
+   "date": "2026-11-15",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "82a1572b58d8",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Self-hosted MCP server gives mobile AI assistants access to a private vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xwsb03/giving_mobile_ai_assistants_claudegrok_read_write/",
+   "summary": "A user asks whether a VPS-hosted MCP is a sound way to let Claude or Grok read and write an iCloud vault without GitHub. The discussion touches on privacy trade-offs.",
+   "date": "2026-11-15",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "3b22df73a99f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "How do newcomers judge whether a community plugin is safe?",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xwetc1/new_to_obsidian_how_do_you_decide_which_community/",
+   "summary": "A beginner asks what to check beyond a plugin's directory listing before installing it. The thread is a useful look at trust practices in the plugin ecosystem.",
+   "date": "2026-11-14",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "334cff37069c",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot's China-exclusive Kakuno variant appears, but only in fine nib",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xvv4s0/its_a_new_chineseexclusive_kakuno/",
+   "summary": "A new Kakuno made for the Chinese market has surfaced and drawn heavy discussion. The poster passed on it because only an F nib is available. It's a notable sign of regional exclusives for Pilot's entry-level pen.",
+   "date": "2026-11-14",
+   "kind": "reddit"
+  },
+  {
+   "id": "44aeaa7d146b",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Can you grow to love Sailor's nib feedback? Owners compare notes",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xvtvj7/did_anyone_fall_in_love_with_the_sailor_feedback/",
+   "summary": "A new Sailor owner finds the signature feedback off-putting despite loving the pen's looks, and asks whether wetter ink helps. The long thread collects advice on ink choice and nib tuning.",
+   "date": "2026-11-14",
+   "kind": "reddit"
+  },
+  {
+   "id": "b576761b793e",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Fully stickered Hobonichi Weeks cover, with questions on sticker durability",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xva2ya/i_was_brave_enough_to_sticker_my_weeks/",
+   "summary": "A user goes all-in decorating a Weeks cover after a minimal first year and asks how small stickers hold up over time. It's a very popular example of cover personalisation.",
+   "date": "2026-11-13",
+   "kind": "reddit"
+  },
+  {
+   "id": "043ab02090ba",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Planned 2027 Hobonichi Weeks spreads, with Tombow brush-marker colour coding",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xvjf28/my_planned_weekly_spread_for_2027_how_about_yours/",
+   "summary": "A first-time Weeks user mocks up weekly layouts digitally, using the two ends of a Tombow dual-tip brush marker to encode categories, plus a playful 'police blotter' daily log. It's a clear layout idea to borrow.",
+   "date": "2026-11-13",
+   "image": "thumbs/0cab2a07feae7a54.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "41e80306cbac",
+   "topic": "stationery",
+   "source": "手帳のひよりあり。｜藤堂",
+   "title": "How one user runs a Traveler's Notebook and preps for the November reset",
+   "url": "https://www.youtube.com/watch?v=skCO65NI5YU",
+   "summary": "A Japanese-language video shows how the creator currently uses her Traveler's Notebook and what she sets up before swapping inserts. It offers practical habit and layout ideas.",
+   "date": "2026-11-15",
+   "title_ja": "最近の手帳の使い方と11月セットアップ前の準備【トラベラーズノート】",
+   "image": "thumbs/69a35b42510cf39c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "f721d180945b",
+   "topic": "stationery",
+   "source": "Planning with Bumble",
+   "title": "Hobonichi Cousin 2027 flip-through with first impressions and planned use",
+   "url": "https://www.youtube.com/watch?v=LwhpMoejf7Y",
+   "summary": "A first-time Cousin owner pages through the book and explains how she intends to use the large daily format.",
+   "date": "2026-11-14",
+   "image": "thumbs/1720aa0e33d62631.webp",
+   "kind": "video"
+  },
+  {
+   "id": "a12481402c7a",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "DIY Hobonichi cover pockets built for a Weeks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xvqvqc/made_a_diy_hobonichi_x_beautiful_people_cover_for/",
+   "summary": "A maker shares a handmade cover with adhesive pockets and plans an A6 version. The comments add tips on glue and construction.",
+   "date": "2026-11-14",
+   "kind": "reddit"
+  },
+  {
+   "id": "e4dc194b8911",
+   "topic": "stationery",
+   "source": "海と文房具@ゆうたん",
+   "title": "Next year's Hobonichi pick: the Moomin 5-year techo",
+   "url": "https://www.youtube.com/watch?v=JULmag9sF9o",
+   "summary": "A Japanese stationery vlogger explains choosing the Moomin five-year techo for the coming year and what drew her to it.",
+   "date": "2026-11-15",
+   "title_ja": "来年のほぼ日手帳決めました。/ MOOMIN 5年手帳",
+   "image": "thumbs/4a73f5ff6beb6a93.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ac19f6d05348",
+   "topic": "stationery",
+   "source": "mikijournals",
+   "title": "Honest Hobonichi review covers what worked and what didn't",
+   "url": "https://www.youtube.com/watch?v=_eYtWG-R-w4",
+   "summary": "A long-term user reviews the planner, covering which features she kept using and which she dropped.",
+   "date": "2026-11-15",
+   "image": "thumbs/e689f7ca11534060.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "0503f6991cc8",
+   "topic": "stationery",
+   "source": "みすずのほっこりおうちごはん | 手帳とSugarfree Recipes",
+   "title": "Inside the FOCUS EiTO notebook and how one user writes in it",
+   "url": "https://www.youtube.com/watch?v=PlOittpEtSU",
+   "summary": "A Japanese video tours the notebook's pages and shows the creator's own layout and writing approach.",
+   "date": "2026-11-15",
+   "title_ja": "書いてみたら、すっかりお気に入りに！FOCUS EiTO手帳の中身と私の使い方",
+   "image": "thumbs/b411a66691f0b38c.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "6ed4e34ea972",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Embracing a chaotic, ADHD-friendly Hobonichi setup",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xvoc7q/anyone_else_bringing_chaotic_energy_to_their/",
+   "summary": "A user shows a messy-by-design Weeks layout using an Alettone holder, stickers and loose papers. It's a counterpoint to polished aesthetic spreads.",
+   "date": "2026-11-14",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "5dda4e4f7de2",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Photo-printed pages bulked up a Hobonichi, so washi stickers are next",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xvafa4/does_not_fit_in_my_cover_anymore_tt_tt/",
+   "summary": "A user outgrew her cover by mid-November after adding printed photos, and plans to switch to thinner washi-style stickers next year. It's a practical lesson on bulk.",
+   "date": "2026-11-13",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "c8e7e7c17e7c",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Comparing a full 2026 Weeks Mega with the new 2027 one",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xvim8f/the_difference_btw_my_26_and_27_weeks_mega/",
+   "summary": "A side-by-side shows how much a year of use thickens a Weeks Mega.",
+   "date": "2026-11-13",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "593ed4f3608e",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "How many journals do you keep? A6 diary plus Weeks planner",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xvnpdt/journal_ecosystem/",
+   "summary": "A user splits personal diary and planning between an A6 and a Weeks, and asks others how they divide their journaling systems.",
+   "date": "2026-11-13",
+   "image": "thumbs/3f5796bd661c9e3f.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "c74b4070590c",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Sudoku puzzles added to a blank Hobonichi page",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xvsupr/added_some_sodoku_puzzles_to_a_blank_page/",
+   "summary": "A user shows a trial-and-error experiment and a polished final version of a puzzle layout on a blank page.",
+   "date": "2026-11-14",
+   "image": "thumbs/eb5167eb72755155.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "1c18043ee9ca",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "Framestore breaks down Odin the German Shepherd and animal sims for Heart of the Beast",
+   "url": "https://www.cgchannel.com/2026/11/see-how-framestore-created-odin-the-cg-dog-for-heart-of-the-beast/",
+   "summary": "The studio's breakdown covers tissue simulation for wolves, bears and Odin the dog. It's a good look at how muscle and skin dynamics help realistic creature work.",
+   "date": "2026-11-14"
+  },
+  {
+   "id": "2d410e950141",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "EDI shows how it built a photoreal CG jaguar for Ferine",
+   "url": "https://www.cgchannel.com/2026/11/see-how-edi-created-a-photorealistic-cg-jaguar-for-ferine/",
+   "summary": "A narrated breakdown walks through the shader development, fur groom and Maya rig behind the horror film's big cat.",
+   "date": "2026-11-12"
+  },
+  {
+   "id": "ab1767798766",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Web reader makes the Cinefex archive easier to browse by film",
+   "url": "https://www.reddit.com/r/vfx/comments/1xv2rra/i_made_a_web_reader_for_the_cinefex_archive/",
+   "summary": "A fan rebuilt scanned Cinefex digital issues into a searchable web reader that jumps to articles by title, with galleries and clips intact. It's a handy reference for VFX history.",
+   "date": "2026-11-13",
+   "kind": "reddit"
+  },
+  {
+   "id": "8dad9a4d47d9",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Unrendered: an escape room where every lock is a shader you write",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xv5e03/im_making_an_escape_room_where_every_lock_is_a/",
+   "summary": "A first-person puzzle game by the maker of an interactive shader-lesson site has you write shader code to repair a corrupted material cache. It's a playful approach to teaching shading.",
+   "date": "2026-11-13",
+   "image": "thumbs/6b4da8a31c5f1250.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "7672180c5178",
+   "topic": "pipeline",
+   "source": "VFX SHOWDOWN",
+   "title": "Compositing an Avatar-inspired sequence in Nuke, step by step",
+   "url": "https://www.youtube.com/watch?v=KVceDKs8ExY",
+   "summary": "A tutorial builds a sci-fi sequence in Nuke, showing how layered elements come together in a composite.",
+   "date": "2026-11-10",
+   "image": "thumbs/848dd233ce46b2b3.webp",
+   "kind": "video"
+  },
+  {
+   "id": "1828ad2d97f6",
+   "topic": "pipeline",
+   "source": "OpenUsd Editor",
+   "title": "Quick introduction to the OpenUSD Editor tool",
+   "url": "https://www.youtube.com/watch?v=XqsqxCOiutA",
+   "summary": "A short video introduces a standalone editor for working with OpenUSD scenes. It's useful if you're looking at lightweight USD inspection and editing options.",
+   "date": "2026-11-08",
+   "image": "thumbs/c4fc4f78ba2895ad.webp",
+   "kind": "video"
+  },
+  {
+   "id": "2150a46cad60",
+   "topic": "pipeline",
+   "source": "Aleksandr Shmakov",
+   "title": "GeoFusion 1.1 updated for Houdini 22",
+   "url": "https://www.youtube.com/watch?v=7FPhNyaRZCI",
+   "summary": "A short video shows the GeoFusion 1.1 release, now compatible with Houdini 22, for those tracking third-party Houdini tools.",
+   "date": "2026-11-15",
+   "image": "thumbs/a02bfc7e8253dc52.webp",
+   "kind": "video"
+  }
+ ]
+}
