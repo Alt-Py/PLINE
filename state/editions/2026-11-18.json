@@ -1,0 +1,294 @@
+{
+ "date": "2026-11-18",
+ "generated_at": "2026-11-18T12:29:00+13:00",
+ "headline": "Obsidian 1.15.1 gets a big performance push, Pilot launches Juice Crystal Color pens and a colored-paper notebook, and Disney targets $3B in cuts as more layoffs loom.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/GraphicsProgramming": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "50eb77beee47",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Obsidian 1.15.1 loads fast, even with an 18,000-file vault",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xwc2r3/obsidian_1151_loads_very_fast/",
+   "summary": "The Obsidian team shows 1.15.1 opening a large vault with 10 plugins quickly, the result of performance work across the app. Mobile also gets a faster Quick Capture for adding notes.",
+   "date": "2026-11-14",
+   "image": "thumbs/b1bc135312702c8e.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "f56edad39ef9",
+   "topic": "obsidian",
+   "source": "Mike Schmitz",
+   "title": "Mike Schmitz asks whether a perfectly tidy vault is a warning sign",
+   "url": "https://www.youtube.com/watch?v=9JUOjDCG530",
+   "summary": "A video argument that over-organizing an Obsidian vault can stand in for real thinking and writing. A useful check on your own habits if you spend a lot of time tuning your setup.",
+   "date": "2026-11-17",
+   "image": "thumbs/0966d65ff804dd70.webp",
+   "kind": "video"
+  },
+  {
+   "id": "3e971fb6807b",
+   "topic": "stationery",
+   "source": "Pilot",
+   "title": "Pilot adds six blue-toned Crystal Color shades to its Juice gel pens",
+   "url": "https://www.pilot.co.jp/press_release/2026/11/17/post_156.html",
+   "summary": "The new Juice Crystal Color series has six bluish colors inspired by the tints and sparkle of crystals. It is a fresh option for gel-ink fans who like cool palettes in notes and journals.",
+   "date": "2026-11-17",
+   "title_ja": "ゲルインキボールペン『ジュース クリスタルカラー』発売",
+   "image": "thumbs/21ec62ea380a76bf.webp"
+  },
+  {
+   "id": "6e27473d12af",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Swappable sticker sheet keeps a Hobonichi cover easy to redecorate",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xx3prn/commitment_issues_but_make_it_stationery/",
+   "summary": "A user builds changeable cover art on the clear plastic sheet that comes inside a Weeks. It suits anyone who keeps redesigning their cover and doesn't want sticky residue on the glossy original.",
+   "date": "2026-11-15",
+   "kind": "reddit"
+  },
+  {
+   "id": "272dcaaff415",
+   "topic": "stationery",
+   "source": "Pilot",
+   "title": "Pilot's Write with [?] notebook uses colored paper to make handwriting pop",
+   "url": "https://www.pilot.co.jp/press_release/2026/11/17/write_with.html",
+   "summary": "The new notebook has tinted pages chosen to show off pastel and metallic Juice gel inks. It is aimed at lettering, doodles and anyone pairing ink color with paper color.",
+   "date": "2026-11-17",
+   "title_ja": "筆跡が映える色の紙を使ったノート『Write with［?］』発売",
+   "image": "thumbs/21ec62ea380a76bf.webp"
+  },
+  {
+   "id": "bd47e8e2ca58",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A6 Hobonichi used as a daily vent journal alongside the planner",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xxd7pa/a6_2027/",
+   "summary": "The owner moved venting from the weekly page to a separate A6, written daily instead of in an end-of-week summary. It's a practical way to split planning from reflection.",
+   "date": "2026-11-16",
+   "kind": "reddit"
+  },
+  {
+   "id": "ca48fb8f948c",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Tiny 2 cm hydration stickers save space in a Hobonichi Weeks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xx4psr/i_made_teeny_tiny_hydration_trackers/",
+   "summary": "The maker designed very small stickers that track eight glasses of water a day. It's a clever fix for fitting habit trackers into the limited room of a Weeks spread.",
+   "date": "2026-11-15",
+   "image": "thumbs/ac5e701e6ff5e9de.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "f223951067be",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens interviews illustrator Yumi Kitagishi on her warm, handmade paper goods",
+   "url": "https://www.jetpens.com/blog/Interview-with-Japanese-Illustrator-Yumi-Kitagishi/pt/1056",
+   "summary": "The Japanese picture-book author and illustrator talks about her color-rich, hand-crafted style and her paper-based original merchandise. It shows the design thinking behind Japanese stationery.",
+   "date": "2026-11-17",
+   "image": "thumbs/4eb08ce0775cfc39.webp"
+  },
+  {
+   "id": "da5d8352086d",
+   "topic": "stationery",
+   "source": "The Well-Appointed Desk",
+   "title": "Year-end list-making season: planning projects for a clean 2027 start",
+   "url": "https://www.wellappointeddesk.com/2026/11/tis-the-season-for-lists/",
+   "summary": "The Well-Appointed Desk writes about listing the projects to finish and start before the year ends. A prompt to set up your own end-of-year planning pages.",
+   "date": "2026-11-17",
+   "image": "thumbs/b4d769badad21a85.webp"
+  },
+  {
+   "id": "2821cbcdc3d9",
+   "topic": "stationery",
+   "source": "Key Lime Ink",
+   "title": "Video tips for making journaling less boring",
+   "url": "https://www.youtube.com/watch?v=nrk90QoTEzo",
+   "summary": "A short video with ideas for keeping a journaling habit fresh. A small channel, so treat it as light inspiration.",
+   "date": "2026-11-17",
+   "image": "thumbs/c1ce7e3982f982ac.webp",
+   "kind": "video"
+  },
+  {
+   "id": "bee3d3ae19f5",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Laminated pencil-board dashboard built from a Hobonichi Weeks back spread",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xx4dpx/making_a_thing_ideas_required/",
+   "summary": "A user turns a removed back spread and a card insert into a reusable dashboard, and asks for ideas on reminders and shortcuts to include. The comments are a good source of layout ideas.",
+   "date": "2026-11-15",
+   "image": "thumbs/3c2b2341d011ed36.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "0efc8ad03fe8",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Collaged 2027 Weeks cover and endpaper planning",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xwzfxm/2027_weeks_setup/",
+   "summary": "A Hobonichi owner builds a collage cover themed around cipher letters and is now planning the endpapers. It shows how to make a Weeks setup personal.",
+   "date": "2026-11-15",
+   "image": "thumbs/644862e29dd1b338.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "b8b4965992a9",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Daiso zipper case found to fit the Hobonichi Weeks and carry pens",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xwj1vz/another_weeks_sized_find_at_daiso/",
+   "summary": "A cheap Daiso bag holds a Weeks plus pens and stickers. It's a handy option for anyone who doesn't want to cover the glossy original.",
+   "date": "2026-11-15",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "85e48aa2475b",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "2027 Sneaker Weeks setup with a yellow cover and a notebook at the front",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xwtkbm/2027_set_up_sneaker_weeks_and_bp_cover/",
+   "summary": "The owner tried several layouts for a Weeks and an A6 notebook in one cover. It's a useful example of combining the two.",
+   "date": "2026-11-15",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "74af050a39b3",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Disney nearly doubles quarterly profit while targeting $3B in annual cuts",
+   "url": "https://www.cartoonbrew.com/business/disney-q4-layoffs-buybacks-269502.html",
+   "summary": "Disney's Q4 follows a year of layoffs, with more expected. It plans $9B in buybacks and a 33% dividend raise. A significant signal for animation and VFX labor and for studio budgets.",
+   "date": "2026-11-17",
+   "image": "thumbs/d6824b1025848435.webp"
+  },
+  {
+   "id": "5b17a4f29a73",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Framestore details its year-long virtual production work on Project Hail Mary",
+   "url": "https://www.artofvfx.com/how-framestore-used-virtual-production-for-project-hail-mary/",
+   "summary": "A six-week visualisation job grew into a year of collaboration at Shepperton with directors Lord and Miller. It covers the virtual environments and camera technology behind the film.",
+   "date": "2026-11-17",
+   "image": "thumbs/7f74a01507616190.webp"
+  },
+  {
+   "id": "cef93771fc49",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "VFX reel goes behind the scenes of Everest biopic Tenzing",
+   "url": "https://beforesandafters.com/2026/11/18/go-behind-the-scenes-of-tenzing-with-this-vfx-reel/",
+   "summary": "befores & afters shares a reel from the film about Tenzing Norgay and Edmund Hillary's 1953 summit. Worth a look for environment and mountain work.",
+   "date": "2026-11-17",
+   "image": "thumbs/e3eff8f13d6af84a.webp"
+  },
+  {
+   "id": "6e04378e6c20",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Pixar's first Gatto trailer shows a Venice-set adventure from Enrico Casarosa",
+   "url": "https://www.artofvfx.com/gatto/",
+   "summary": "The first trailer for Pixar's next feature reveals the canals and streets of Venice and an unlikely friendship. It's an early look at the film's lighting and look.",
+   "date": "2026-11-17",
+   "image": "thumbs/444eb44d1d390ad7.webp"
+  },
+  {
+   "id": "6d0e2069e7de",
+   "topic": "vfx",
+   "source": "Ante Dekovic",
+   "title": "Shadow and Bone season 2 Emmy-nominated VFX breakdown",
+   "url": "https://www.youtube.com/watch?v=2iAa91vqXQ0",
+   "summary": "A breakdown video of the series' Emmy-nominated effects work. A small channel, but a useful look at the shots.",
+   "date": "2026-11-13",
+   "image": "thumbs/417de4684b518502.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ec82c30589a0",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Tuna Tartare director discusses her 2D musical Oscar contender",
+   "url": "https://www.cartoonbrew.com/awards/tuna-tartare-lena-greene-oscars-short-269511.html",
+   "summary": "Lena Greene's short features a karaoke bar run by a tuna can and a nightmare sequence made from 100 watercolor paintings. A handmade-animation counterpoint to CG-heavy awards talk.",
+   "date": "2026-11-17",
+   "image": "thumbs/682f4071e8a2a347.webp"
+  },
+  {
+   "id": "e20928cc26de",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Hand-drawn short Beast of the Seine, based on a 1908 dog story, is now online",
+   "url": "https://www.cartoonbrew.com/shorts/beast-of-the-seine-jon-portman-watch-online-269510.html",
+   "summary": "Jon Portman's short follows a dog who gets a steak for each child she rescues, until the villagers grow suspicious. It's free to watch.",
+   "date": "2026-11-17",
+   "image": "thumbs/734191f19e14f5b5.webp"
+  },
+  {
+   "id": "315295092ad6",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Cordell Barker's hand-drawn holiday special gets a full trailer",
+   "url": "https://www.cartoonbrew.com/tv/cordell-barker-anta-claus-of-the-south-pole-trailer-269474.html",
+   "summary": "The 24-minute special The Anta Claus of the South Pole, co-produced by the NFB and Tonic DNA, premieres December 1 in Canada.",
+   "date": "2026-11-17",
+   "image": "thumbs/1113435e08b3e6fa.webp"
+  },
+  {
+   "id": "462fe4daac5d",
+   "topic": "pipeline",
+   "source": "Voxyde VFX",
+   "title": "Free lesson builds an RBD simulation from scratch in Houdini",
+   "url": "https://www.youtube.com/watch?v=pSrT3cnE4Fo",
+   "summary": "Voxyde VFX walks through a complete rigid body destruction setup from an empty scene. A good refresher on the fundamentals of Houdini's RBD workflow.",
+   "date": "2026-11-17",
+   "image": "thumbs/50f51122dd585aa9.webp",
+   "kind": "video"
+  },
+  {
+   "id": "d61bc948432f",
+   "topic": "pipeline",
+   "source": "newa",
+   "title": "Woodchips sim with extra detail in Houdini 22",
+   "url": "https://www.youtube.com/watch?v=ORHr-z0A9FA",
+   "summary": "A video from the Houdini blog covers adding fine detail to a woodchip simulation in the new release. Helpful for seeing what Houdini 22's tools can do in practice.",
+   "date": "2026-11-17",
+   "image": "thumbs/9df9dcd3f708cb72.webp",
+   "kind": "video"
+  },
+  {
+   "id": "84ee19fbe706",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini showcase \"Divine Machinery\" draws strong interest on r/Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xwyvfo/divine_machinery/",
+   "summary": "A mechanical, sculptural Houdini piece gets 165 upvotes. A quick look at what artists are making with the software.",
+   "date": "2026-11-15",
+   "image": "thumbs/5dc2eab59bac0d32.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "66e00afaae45",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Fluid Curve: a Houdini fluid experiment shared on r/Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xxdzte/fluid_curve/",
+   "summary": "A short community showcase of curve-driven fluid motion in Houdini. Light on details, but a visual idea to try.",
+   "date": "2026-11-16",
+   "image": "thumbs/6d141b34f895f4e0.webp",
+   "kind": "reddit"
+  }
+ ]
+}
