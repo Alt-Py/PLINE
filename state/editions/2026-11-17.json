@@ -1,0 +1,368 @@
+{
+ "date": "2026-11-17",
+ "generated_at": "2026-11-17T13:12:37+13:00",
+ "headline": "The Pen Addict reviews uniball's wood-barrel Jetstream Pure Malt, befores & afters digs into 'Obsession' face work and 'The Lost Bus' fire, and a Houdini artist recreates a shot from 'The Creator'.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/GraphicsProgramming": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "ef63a443be3f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Eldritch Scholar: a dark Renaissance-inspired theme for Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xxjrar/i_built_a_dark_renaissanceeldritchinspired/",
+   "summary": "A community member released Eldritch Scholar, a moody theme blending Renaissance and eldritch styling. Worth a look if you like heavily art-directed vaults and want a change from minimal themes.",
+   "date": "2026-11-16",
+   "image": "thumbs/0c5fb673e5780040.webp",
+   "also": [
+    {
+     "source": "r/ObsidianMD",
+     "url": "https://www.reddit.com/r/ObsidianMD/comments/1xxka8w/i_built_a_dark_renaissanceeldritchinspired/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "513da034a86c",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Vaultbell turns dated tasks in your vault into real Android alarms",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xxo6if/i_built_vaultbell_localfirst_android_reminders/",
+   "summary": "A local-first Android app reads dated tasks straight from your vault folder and fires proper alarms, with no account or server. It fixes the Reminder plugin's limit of only firing while Obsidian is open.",
+   "date": "2026-11-16",
+   "kind": "reddit"
+  },
+  {
+   "id": "4eaa0d5aee06",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Easy TikZ v5 lands for drawing graphs and diagrams in notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xxx0ci/easytikz_an_easy_way_to_create_powerful_graphs/",
+   "summary": "A plugin built for fast, TikZ-style graph creation inside Obsidian reaches version 5 after two years of development. Useful for technical and mathematical notes where diagrams usually mean leaving the vault.",
+   "date": "2026-11-16",
+   "image": "thumbs/914df89dd42ba378.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "57c77401be50",
+   "topic": "obsidian",
+   "source": "CreaDev Labs",
+   "title": "Video compares Obsidian's native Kanban with the Kanban plugin",
+   "url": "https://www.youtube.com/watch?v=mHfltVVZcds",
+   "summary": "A walkthrough of the differences between the built-in Kanban option and the popular community plugin. Helpful when deciding whether you still need the plugin.",
+   "date": "2026-11-16",
+   "image": "thumbs/2cf5ef4244046aaf.webp",
+   "kind": "video"
+  },
+  {
+   "id": "5c3dc971f928",
+   "topic": "obsidian",
+   "source": "Ev Chapman",
+   "title": "Developer explains building a free AI agent plugin inside Obsidian",
+   "url": "https://www.youtube.com/watch?v=e6VrvX4YthI",
+   "summary": "A video on why and how a free plugin embeds an AI agent in your vault. It is a look at one approach to agent workflows on local Markdown notes.",
+   "date": "2026-11-16",
+   "image": "thumbs/443afa5d2da83d4a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "f68c9c13088d",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Radar plugin 1.1.0 colours blips from tags or properties",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xxzjih/radar_plugin_update_110/",
+   "summary": "The Radar plugin can now set blip colours automatically from a tag or note property. It's a small but practical update for anyone using the radar view to track technologies or topics.",
+   "date": "2026-11-16",
+   "image": "thumbs/906d540756fcd055.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "fc870e5ca6f9",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "TaskLoops 0.5.29 adds #tag support for tasks",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xxjnm5/taskloops_now_supports_tags/",
+   "summary": "TaskLoops now pulls tagged lines such as #task, #todo or #follow-up into its planner, alongside normal checkboxes. You can choose checkboxes, tags or both.",
+   "date": "2026-11-16",
+   "kind": "reddit"
+  },
+  {
+   "id": "69936d5a7742",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "The Pen Addict reviews uniball's wood-barrel Jetstream Pure Malt ballpoint",
+   "url": "https://www.penaddict.com/blog/2026/11/16/uniball-jetstream-pure-malt-ballpoint-pen-review",
+   "summary": "A look at the Japan-launched Jetstream Pure Malt, which puts a wooden barrel on the popular low-viscosity ballpoint. The reviewer argues it still deserves attention nearly a year after launch.",
+   "date": "2026-11-16",
+   "image": "thumbs/0ad11714525603b4.webp"
+  },
+  {
+   "id": "4b7f6ad4b9b2",
+   "topic": "stationery",
+   "source": "The Well-Appointed Desk",
+   "title": "Pilot E95s EF fountain pen reviewed by a left-handed overwriter",
+   "url": "https://www.wellappointeddesk.com/2026/11/pen-review-pilot-e95s-ef-fountain-pen/",
+   "summary": "The Well-Appointed Desk tests the $176 Pilot E95s with an extra-fine nib. The review covers how gold-nib softness suits a writer who pushes the pen, which matters for anyone choosing Pilot nibs.",
+   "date": "2026-11-16",
+   "image": "thumbs/f0ceec185c06a802.webp"
+  },
+  {
+   "id": "71a65075d26f",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Swatching Kitty Ink Pot inks with a sketch and diluted washes",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xwlrfa/swatching_new_ink/",
+   "summary": "A newcomer shows off an ink set by sketching with a TWSBI Eco and a wet brush to reveal each colour's dilution behaviour. It's a nice idea for swatching beyond the standard card.",
+   "date": "2026-11-15",
+   "image": "thumbs/17dd1acc36744304.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "383415412099",
+   "topic": "stationery",
+   "source": "nym's archive",
+   "title": "Monthly analog review: how one person used journals and planners in October",
+   "url": "https://www.youtube.com/watch?v=SlRSTUNykwk",
+   "summary": "A flip-through showing how multiple journals and planners were actually used over a month. It offers real pages and practical habit ideas for your own review ritual.",
+   "date": "2026-11-16",
+   "image": "thumbs/219897af65ae60ca.webp",
+   "kind": "video"
+  },
+  {
+   "id": "fe1fd0cc5a10",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks set up as a highlights-and-recap journal for 2027",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xwhjfe/babys_first_weeks_2027_set_up/",
+   "summary": "A 2027 Weeks setup that treats the planner as a recap journal with collage and stickers rather than a schedule. It's a useful template for a lighter, more memory-driven approach.",
+   "date": "2026-11-15",
+   "kind": "reddit"
+  },
+  {
+   "id": "dbf5870d64fa",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "2027 Hobonichi Weeks setups shared by the community",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xw4tci/2027_weeks_setup/",
+   "summary": "Two well-liked posts show how people are arranging their 2027 Weeks, including daily-carry configurations. Good for layout and cover-pairing inspiration.",
+   "date": "2026-11-14",
+   "also": [
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1xvtug0/2027_weeks/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "26faadea0e4d",
+   "topic": "stationery",
+   "source": "うたたね。",
+   "title": "Filling 11 days of a Hobonichi Cousin with vertical-layout decoration",
+   "url": "https://www.youtube.com/watch?v=7v_byJZZIiw",
+   "summary": "A Japanese journal-with-me video decorating a Hobonichi Cousin's vertical daily pages. It shows layout, sticker and washi techniques across a batch of days.",
+   "date": "2026-11-16",
+   "title_ja": "【ほぼ日手帳カズン】11日分！とことんバーチカルデコやっていく！| 手帳タイム | 手帳デコ | journal with me",
+   "image": "thumbs/086a914a353f2f54.webp",
+   "kind": "video"
+  },
+  {
+   "id": "f97c58fb7844",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Iroshizuku Momiji paired with a red Plaisir",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xwm2ru/my_name_is_red/",
+   "summary": "A simple ink and pen pairing post with Pilot's autumn-red Momiji, recalling a trip to Japan. A reminder of how well a colour-matched pen and ink can work.",
+   "date": "2026-11-15",
+   "image": "thumbs/b127934a07c0555b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d2f3f2f6164a",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "A year's favourite pens and inks swatched in one big session",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xwnbp7/was_it_the_best_use_of_my_time_no_but_it_was/",
+   "summary": "A reflective look at the year's inks and favourite pens, put together as a cathartic swatch project. A good year-in-review example for ink lovers.",
+   "date": "2026-11-15",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "2fca8b5b1a89",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi flip-through at the end of a hard year",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xw3e79/bittersweet/",
+   "summary": "A poster reaches the last notes pages of a difficult year and flips through it. A personal example of how a Techo records both the wins and the hard parts.",
+   "date": "2026-11-14",
+   "image": "thumbs/6c10ea976ed3c979.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "5c8363cca38c",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Two pens brought back from Japan, including a Sailor Shikiori ink",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xwtjsl/two_new_pens_from_japan/",
+   "summary": "A haul of two pens from Japan: a customised pen from Ancora in Ginza with a rainy-day converter, and a Sailor Shikiori Shito-shito. It shows what Ginza shops offer visitors.",
+   "date": "2026-11-15",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "ab378cd45dad",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Collection of gold-nib Pilot and Platinum fountain pens",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xwtpoz/pilotplatinum_collection/",
+   "summary": "A collector shows off their Pilot and Platinum gold-nib pens with an index photo. It's a handy visual reference of the two makers' ranges.",
+   "date": "2026-11-15",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "c1be4d4c3bed",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "VFX supervisor details the Plastik toolset behind subtle face work in 'Obsession'",
+   "url": "https://beforesandafters.com/2026/11/17/behind-the-tools-and-techniques-used-to-craft-those-subtle-facial-enhancements-in-obsession/",
+   "summary": "Peter Timberlake explains the Plastik tools used for the film's understated facial enhancements. Invisible face work is the area where production techniques matter most.",
+   "date": "2026-11-16",
+   "image": "thumbs/da5be24481e37233.webp"
+  },
+  {
+   "id": "1869fea66183",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Real versus CG fire in Paul Greengrass's 'The Lost Bus'",
+   "url": "https://beforesandafters.com/2026/11/17/you-wont-believe-whats-real-or-cg-in-the-lost-bus/",
+   "summary": "befores & afters looks at which of the film's blaze and disaster visuals were practical and which were digital. It's a good case study in blending real and simulated fire.",
+   "date": "2026-11-16",
+   "image": "thumbs/3a6eac9dbbc59fdb.webp"
+  },
+  {
+   "id": "c5a77a7dbc66",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "The Mill's invisible VFX recreate occupied France in 'The Rays and Shadows'",
+   "url": "https://www.artofvfx.com/the-rays-and-shadows-les-rayons-et-les-ombres-the-mill-recreates-occupied-france-with-invisible-vfx/",
+   "summary": "The Mill delivered 163 shots of subtle period work to rebuild World War II France. It's a good example of unobtrusive environment work.",
+   "date": "2026-11-16",
+   "image": "thumbs/274c622704c9bef2.webp"
+  },
+  {
+   "id": "75e088bb107b",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "How PDI's morphing made Michael Jackson's 'Black or White' a landmark",
+   "url": "https://beforesandafters.com/2026/11/16/the-music-video-that-made-morphing-a-hit/",
+   "summary": "A history of the pioneering morphing in the 1991 music video. It's a useful look back at an early milestone in digital image-making.",
+   "date": "2026-11-15",
+   "image": "thumbs/0e452d62ac2dcd1f.webp"
+  },
+  {
+   "id": "2f4f59939257",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Lanterns VFX supervisor and producer discuss the show's visual effects",
+   "url": "https://www.artofvfx.com/lanterns-greg-steele-production-vfx-supervisor-eddie-bonin-production-vfx-producer/",
+   "summary": "Greg Steele and Eddie Bonin, both with extensive superhero and VFX credits, talk about the production. It's a window into how a large series handles its effects pipeline.",
+   "date": "2026-11-16",
+   "image": "thumbs/35a6ab3b3f6d77a0.webp"
+  },
+  {
+   "id": "cf51920a36cb",
+   "topic": "vfx",
+   "source": "KOTM 2021",
+   "title": "Godzilla Minus Zero visual effects breakdown video",
+   "url": "https://www.youtube.com/watch?v=5YTevEDFR9M",
+   "summary": "A shot-by-shot breakdown of the film's creature and destruction work. Worth watching for how the sequel's visuals are built.",
+   "date": "2026-11-12",
+   "image": "thumbs/a2f806173949d69a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ffe3dd267954",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Oscar short contender about a woman and Laika the space dog",
+   "url": "https://www.cartoonbrew.com/awards/with-tapes-and-toasts-in-the-car-kiana-naghshineh-269462.html",
+   "summary": "Director Kiana Naghshineh discusses her 2D short, which is inspired by family memories and Soviet poster art. It's a contender profile for the animated shorts race.",
+   "date": "2026-11-16",
+   "image": "thumbs/6f35f97e0615017a.webp"
+  },
+  {
+   "id": "e40e65001220",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "'The Cat in the Hat' holds second place as 'Wildwood' passes 'Kubo'",
+   "url": "https://www.cartoonbrew.com/box-office-report/cat-in-the-hat-wildwood-box-office-269459.html",
+   "summary": "The animated box office shows 'The Cat in the Hat' earning $11.4M domestically, while 'Wildwood' reaches $67.4M worldwide and overtakes 'Kubo and the Two Strings'.",
+   "date": "2026-11-16",
+   "image": "thumbs/1890eec75ec7e6e3.webp"
+  },
+  {
+   "id": "5c053477f69d",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "New Harry Potter series clip revisits the Hogwarts start-of-term banquet",
+   "url": "https://www.artofvfx.com/harry-potter-and-the-philosophers-stone/",
+   "summary": "A fresh teaser from the Mark Mylod-directed series shows the Great Hall scene. It's an early look at the show's VFX approach.",
+   "date": "2026-11-16",
+   "image": "thumbs/2c32a24f1c2be3f1.webp",
+   "extra": true
+  },
+  {
+   "id": "fa070c7b7e42",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Artist recreates a shot from 'The Creator' largely in Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xw7t59/the_creator_shot_recreation/",
+   "summary": "A solo artist built the shot from Blender models, Substance textures and Houdini lighting and assembly, and is seeking feedback. It's a thorough full-pipeline exercise.",
+   "date": "2026-11-14",
+   "image": "thumbs/49355eed6e53a565.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "2472301fd2be",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Granular rhythm Vellum sim rendered in Octane",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xwqcww/granular_rhythm_vellum_octane/",
+   "summary": "A Houdini Vellum granular simulation with a rhythmic motion, rendered in Octane. A nice showcase of motion design with Vellum.",
+   "date": "2026-11-15",
+   "image": "thumbs/8824bc1d98537673.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "599b18c78190",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "TumbleRig aims to make Houdini rigging approachable",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xw84qm/rigging_used_to_scare_me_then_i_tried_tumblerig/",
+   "summary": "A community post shares experience with the TumbleRig tool for rigging in Houdini. Useful if rigging in Houdini has put you off.",
+   "date": "2026-11-14",
+   "image": "thumbs/b718f5b7ed92bfe7.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "b7e3351cc642",
+   "topic": "pipeline",
+   "source": "RenderMan",
+   "title": "RenderMan team heads to SIGGRAPH 2026 with an Art & Science Fair",
+   "url": "https://renderman.pixar.com/news/renderman-art-and-science-fair-2026",
+   "summary": "Pixar's RenderMan team will show its latest innovations and studio collaborations in Los Angeles. It also brings its Walking Teapot Museum to the show floor.",
+   "image": "thumbs/9b143b63de780ee4.webp"
+  }
+ ]
+}
