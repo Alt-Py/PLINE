@@ -1,0 +1,414 @@
+{
+ "date": "2026-11-19",
+ "generated_at": "2026-11-19T11:56:03+13:00",
+ "headline": "Sailor announces limited 'Patisserie Sailor' pens and inks, Skydance's shakeup hits Warner Bros. Pictures Animation, and Houdini 22 gets a woodchips sim walkthrough.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 38,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found",
+  "r/GraphicsProgramming": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "efbb879d60fe",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Someone put a nearly thirty-year-old Markdown vault on a MiniDisc",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xy9xpa/md_on_md/",
+   "summary": "A playful r/ObsidianMD showcase of an Obsidian vault stored on MiniDisc, a reminder that plain-text Markdown stays readable across decades and media.",
+   "date": "2026-11-17",
+   "image": "thumbs/2d8a2aed3ba5082b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "104503e15f7c",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "A vault of 16,000 notes and 40,000 attachments, all interconnected",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xy8u8z/16k_notes_40k_attachments_and_over_a_decade_of_my/",
+   "summary": "A long-time user shares the graph of a decade of teaching, research and project notes. The 83-comment thread is useful for anyone scaling a vault.",
+   "date": "2026-11-17",
+   "kind": "reddit"
+  },
+  {
+   "id": "e7e2928daf1a",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Game Shelf plugin tracks game notes and backlog inside Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xycxi2/i_made_game_shelf_a_plugin_for_game_notes_and/",
+   "summary": "A new community plugin builds notes from game lookups (cover, platforms, release date), adds a shelf view for your backlog, and lets you rate games and log play sessions.",
+   "date": "2026-11-17",
+   "kind": "reddit"
+  },
+  {
+   "id": "4931b010f20f",
+   "topic": "stationery",
+   "source": "Sailor",
+   "title": "Sailor announces limited 'Patisserie Sailor vol.1' pens and bottled ink",
+   "url": "https://sailor.co.jp/news/20261118/",
+   "summary": "Sailor will release a numbered-quantity set of fountain pen, ballpoint and bottled ink on 28 November through its retailers. A Japanese stationery channel also covers it in a late-November new-release roundup.",
+   "date": "2026-11-18",
+   "title_ja": "パティスリー・セーラー vol.1 万年筆・ボールペン・ボトルインク 11月28日限定発売",
+   "image": "thumbs/0b7cd63af3cfba0c.webp",
+   "also": [
+    {
+     "source": "集まれ文具ラバーズ【文具店勤務13年目】",
+     "url": "https://www.youtube.com/watch?v=IoOM18sNdu8"
+    }
+   ]
+  },
+  {
+   "id": "a772bde2131e",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Seven-hour marathon swatching of an entire ink collection, with close-ups",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xye78d/as_promised_close_ups_of_my_7_hr_ink_swatch/",
+   "summary": "A fountain pen fan swatched every ink they own in a single sitting and posted detailed close-ups. It's a handy reference for comparing sheen, shading and colour families side by side.",
+   "date": "2026-11-17",
+   "also": [
+    {
+     "source": "r/fountainpens",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1xybwux/i_swatched_every_ink_i_own_in_a_marathon_7_hour/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "e63d6c3d3eb4",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Namiki Emperor in black urushi: a first look at the grail pen",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xy665f/namiki_emperor_in_glorious_black_urushi/",
+   "summary": "An owner reports on unboxing the huge Namiki (Pilot) Emperor, comparing its size to a Montblanc 149 and a Pelikan M1000. It follows the urushi-lacquer thread Thomas has liked before.",
+   "date": "2026-11-17",
+   "kind": "reddit"
+  },
+  {
+   "id": "eef0291e9b6a",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A 2027 Hobonichi setup: Weeks, A5 and Traveler's Notebook, each with its own job",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xyfvfz/finally_ready_for_2027/",
+   "summary": "A user splits planning, journaling and sketching across three notebooks and explains what each one holds. It's a useful example of building a multi-notebook system.",
+   "date": "2026-11-17",
+   "kind": "reddit"
+  },
+  {
+   "id": "2ed3ac60e6d1",
+   "topic": "stationery",
+   "source": "Shawna Ripari",
+   "title": "Do you really need a whole journal ecosystem for 2027?",
+   "url": "https://www.youtube.com/watch?v=-iYMEU3qSUs",
+   "summary": "A journaling video argues for a simpler setup instead of many notebooks, and walks through how to pare it down before the new year.",
+   "date": "2026-11-18",
+   "image": "thumbs/40df29fc6f172680.webp",
+   "kind": "video"
+  },
+  {
+   "id": "277d4ba0c1eb",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi tip: turn 'Words to remember' into a monthly list of cities visited",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xxt8zy/cities_ive_travelled_to_instead_of_words_to/",
+   "summary": "A frequent traveller repurposes the monthly 'words to remember' box as a record of cities. It's a small layout idea that turns the page into a travel log.",
+   "date": "2026-11-16",
+   "image": "thumbs/68943f8e7e884765.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "91ef15056f2d",
+   "topic": "stationery",
+   "source": "haruka手帳 l sincere voice",
+   "title": "How I use a regular-size Traveler's Notebook as my main planner",
+   "url": "https://www.youtube.com/watch?v=nIyHmlHBdQ0",
+   "summary": "A setup walkthrough shows how a Traveler's Notebook Regular holds a main planner, with a look at the inserts and how pages are laid out.",
+   "date": "2026-11-18",
+   "image": "thumbs/1c78f61f02bfda89.webp",
+   "kind": "video"
+  },
+  {
+   "id": "a5cc765b2a2a",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Majohn flex nib in an M800, paired with Iroshizuku Kosumosu and Diamine Soft Mint",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xy9enx/late_to_the_party_but_this_is_worth_it/",
+   "summary": "A writing sample shows how a flex nib brings out shading in Pilot's Iroshizuku Kosumosu next to a Diamine green. A practical ink and nib pairing.",
+   "date": "2026-11-17",
+   "kind": "reddit"
+  },
+  {
+   "id": "5dda60ba4578",
+   "topic": "stationery",
+   "source": "Yoseka Stationery",
+   "title": "Inside a $4,000 handmade fountain pen: an interview with maker Lin Shu-chen",
+   "url": "https://www.youtube.com/watch?v=wZA5pC2VwJY",
+   "summary": "A video interview with a high-end pen maker about the craft decisions behind a handmade fountain pen. It's a rare look at how such pens are built.",
+   "date": "2026-11-18",
+   "title_ja": "4000ドルの万年筆の裏側：制作者・林淑珍インタビュー、手作りペンに込められたこだわりとは？",
+   "image": "thumbs/372eecc4fbb10025.webp",
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "4a95048e53a6",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A weekly Hobonichi spread built around a green colour scheme",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xxe020/weekly_spread/",
+   "summary": "A well-photographed Weeks page shows how a single colour can tie a whole layout together.",
+   "date": "2026-11-16",
+   "image": "thumbs/e89a0773d17717ff.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "bf9ed8bdcc55",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Carrying Hobonichi Weeks, A6 and an A5 cover together: setup advice sought",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xyfpf7/how_do_i_hold_it_all_together_figuratively/",
+   "summary": "A user asks how to keep several Hobonichi books, a pencil and an eraser together in one carry. The comments collect everyday-carry solutions.",
+   "date": "2026-11-17",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "9a193e491786",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Pen Addict profiles Josh Miller-Watt of Matome Collection",
+   "url": "https://www.penaddict.com/blog/2026/11/18/meet-your-maker-josh-miller-watt-matome-collection",
+   "summary": "A 'Meet Your Maker' interview with an independent pen maker from Alberta, covering how he got into making pens.",
+   "date": "2026-11-18",
+   "image": "thumbs/f96eb2e6c1a3ca89.webp",
+   "extra": true
+  },
+  {
+   "id": "a1f6cf9f6107",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "A collection of red fountain pen inks, from deep dark to true red",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xyaole/my_red_ink_collection/",
+   "summary": "A user sorts their favourite reds, including Diamine Writer's Blood, J. Herbin Rouge Grenat and Wearingeul, and asks for more suggestions.",
+   "date": "2026-11-17",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "88c724c4db0a",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Fantastic Beasts at ten: VFX supervisors Tim Burke and Christian Manz look back",
+   "url": "https://www.artofvfx.com/fantastic-beasts-and-where-to-find-them-tim-burke-overall-vfx-supervisor/",
+   "summary": "The two production VFX supervisors revisit the film's effects and their favourite memories a decade on. Useful retrospective context on large-scale creature and world work.",
+   "date": "2026-11-18",
+   "image": "thumbs/9802d1c928d715bc.webp"
+  },
+  {
+   "id": "982f9ff3ba5a",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Skydance shakeup: Bill Damaschke leaves Warner Bros. Pictures Animation",
+   "url": "https://www.cartoonbrew.com/newsletter/skydance-animation-shakeup-the-death-of-etsy-manchesters-ai-ban-269561.html",
+   "summary": "Damaschke steps down as head of Warner Bros. Pictures Animation, and Michael Ouweleen takes over a TV animation group that includes Nickelodeon and Cartoon Network. Another sign of consolidation in studio leadership.",
+   "date": "2026-11-18",
+   "image": "thumbs/9a17ac7dfdefb967.webp",
+   "also": [
+    {
+     "source": "Cartoon Brew",
+     "url": "https://www.cartoonbrew.com/executives/skydance-animation-bill-damaschke-michael-ouweleen-269545.html"
+    }
+   ]
+  },
+  {
+   "id": "49616457806c",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Gulliver Studios shows its galaxy and energy effects for 'Wooju Bakery'",
+   "url": "https://www.artofvfx.com/wooju-bakery-explore-the-visual-effects-created-by-gulliver-studios/",
+   "summary": "A new breakdown from the South Korean studio covers its space and energy VFX work for the series.",
+   "date": "2026-11-18",
+   "image": "thumbs/dc926ee8f59f63ce.webp"
+  },
+  {
+   "id": "d7d4752102c8",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Rockstar defends itself at a Glasgow tribunal over union-busting claims",
+   "url": "https://www.cartoonbrew.com/artist-rights/rockstar-union-busting-claims-gta-vi-launch-269528.html",
+   "summary": "On the eve of GTA VI's launch, the studio faces claims that it fired workers for trying to unionise. The case has labour implications for the wider games and VFX industry.",
+   "date": "2026-11-18",
+   "image": "thumbs/0e253794d6e3612e.webp"
+  },
+  {
+   "id": "028b609b931b",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Why does a Backrooms actor have a green leg? A r/vfx discussion",
+   "url": "https://www.reddit.com/r/vfx/comments/1xxocp3/how_does_this_help_the_vfx_team/",
+   "summary": "Practitioners explain what a partial green-screen costume piece does on set and how the spill is handled. A good primer on practical keying choices.",
+   "date": "2026-11-16",
+   "image": "thumbs/9a58549d8a23f152.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "41956ad4e5d4",
+   "topic": "vfx",
+   "source": "Corridor Crew",
+   "title": "Corridor Crew demo CorridorKey 2.0 and take live questions",
+   "url": "https://www.youtube.com/watch?v=GOX594srvU4",
+   "summary": "The team walks through how their keying tool was built and answers audience questions. Relevant to anyone following AI-assisted matte extraction.",
+   "date": "2026-11-18",
+   "image": "thumbs/60cfdf8090eac61a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "1964aa2ae930",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "First teaser for '3 Body Problem' Season 2 points to a fleet leaving Earth",
+   "url": "https://www.artofvfx.com/3-body-problem-season-2/",
+   "summary": "The teaser shows the space-fleet story taking the series beyond Earth, which should mean a heavy VFX load.",
+   "date": "2026-11-18",
+   "image": "thumbs/88d9e3100b37a9f7.webp"
+  },
+  {
+   "id": "1557d9333152",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Pixar veteran Alli Sadegiani on her Oscar-contending short 'The View'",
+   "url": "https://www.cartoonbrew.com/awards/the-view-director-alli-sadegiani-269526.html",
+   "summary": "She blends hand-drawn animation with live-action footage to tell a story about growing up between cultures in Sweden.",
+   "date": "2026-11-18",
+   "image": "thumbs/6ba7125538cfef20.webp"
+  },
+  {
+   "id": "a018554d5a4b",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Artists leave Etsy after new terms allow AI training on their work",
+   "url": "https://www.cartoonbrew.com/artificial-intelligence/etsy-ai-training-terms-of-use-269553.html",
+   "summary": "Indie animators who sell prints and zines are closing shops over the policy change, giving up years of reviews and holiday sales.",
+   "date": "2026-11-18",
+   "image": "thumbs/eb172c9f2594ee4d.webp",
+   "extra": true
+  },
+  {
+   "id": "2848afa87671",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Floyd Norman accepts his honorary Oscar at the Governors Awards",
+   "url": "https://www.cartoonbrew.com/awards/floyd-norman-honorary-oscar-2-269576.html",
+   "summary": "The Disney animation veteran accepted the honour and recalled his first visit to the Disney studio.",
+   "date": "2026-11-18",
+   "image": "thumbs/76546033cb211d9e.webp",
+   "extra": true
+  },
+  {
+   "id": "903f827ac654",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "'Somewhere Out There' directors on Don Bluth, leaving Disney and independence",
+   "url": "https://www.cartoonbrew.com/documentary-2/don-bluth-documentary-directors-dave-lamattina-chad-walker-269560.html",
+   "summary": "An exclusive clip has the film's directors discussing Bluth's reflections on building his own studio and what independence costs.",
+   "date": "2026-11-18",
+   "image": "thumbs/201c6c41607ebef0.webp",
+   "extra": true
+  },
+  {
+   "id": "842a90f055ae",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Netflix revives 'Grendel' as an adult animated series with Bobbypills",
+   "url": "https://www.cartoonbrew.com/series/netflix-grendel-bobbypills-bobak-esfarjani-269583.html",
+   "summary": "Bobak Esfarjani is showrunner and the French studio Bobbypills handles animation of Matt Wagner's comics.",
+   "date": "2026-11-18",
+   "image": "thumbs/0ac98409ecf548d8.webp",
+   "extra": true
+  },
+  {
+   "id": "583f499d3d12",
+   "topic": "vfx",
+   "source": "DEBA : The HBT",
+   "title": "Two videos pick through the VFX and visuals of 'Ramayana'",
+   "url": "https://www.youtube.com/watch?v=Lgft73WBA_s",
+   "summary": "Commentary videos list the VFX changes and the film's look. They are viewer breakdowns rather than studio material, so treat them as light context.",
+   "date": "2026-11-16",
+   "image": "thumbs/06cb4b941fa6b324.webp",
+   "also": [
+    {
+     "source": "Pixel Bender",
+     "url": "https://www.youtube.com/watch?v=KVXUChw0Jj0"
+    }
+   ],
+   "kind": "video",
+   "extra": true
+  },
+  {
+   "id": "13d97ad94b29",
+   "topic": "pipeline",
+   "source": "newa",
+   "title": "Houdini 22 woodchips: a walkthrough of the effect and an extra-detail sim pass",
+   "url": "https://www.youtube.com/watch?v=e3SHZfqmcPw",
+   "summary": "Two videos from the Houdini Blog show the new woodchips tool and how to layer in extra simulation detail. Useful for seeing what Houdini 22 can do for debris work.",
+   "date": "2026-11-17",
+   "image": "thumbs/3b4647889fc8d45a.webp",
+   "also": [
+    {
+     "source": "newa",
+     "url": "https://www.youtube.com/watch?v=ZZfin4_kbms"
+    }
+   ],
+   "kind": "video"
+  },
+  {
+   "id": "d34c3b54bb03",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Free Houdini HDA cycles viewport backgrounds with one toolbar button",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xxtpk6/free_hda_i_got_tired_of_digging_through_display/",
+   "summary": "A free tool steps through background presets across all viewports at once, with custom colours and gradients. It saves digging through the Display Options menu.",
+   "date": "2026-11-16",
+   "image": "thumbs/115a426ddd9ec342.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "97b6e37c3155",
+   "topic": "pipeline",
+   "source": "cgcircuitLLC",
+   "title": "Free lesson on setting up a Solaris USD scene in Houdini",
+   "url": "https://www.youtube.com/watch?v=srb10t12nQU",
+   "summary": "A beginner-friendly walkthrough of building a USD scene in Solaris, handy as a refresher on the Solaris and USD workflow.",
+   "date": "2026-11-14",
+   "image": "thumbs/388feb4daa60170f.webp",
+   "kind": "video"
+  },
+  {
+   "id": "c2944381e8da",
+   "topic": "pipeline",
+   "source": "Leo Dinäss",
+   "title": "Modelling with Volume VOPs in Houdini 22",
+   "url": "https://www.youtube.com/watch?v=HFaBwwxsClk",
+   "summary": "A tutorial shows how to build 3D shapes with volume VOPs, an approach that works in fields rather than polygons.",
+   "date": "2026-11-11",
+   "image": "thumbs/f9f525d7b36538fb.webp",
+   "kind": "video"
+  },
+  {
+   "id": "4f303a8beb77",
+   "topic": "pipeline",
+   "source": "Vimpassion",
+   "title": "Qubit's new modeler toolkit adds an OpenUSD prefab assembly workflow",
+   "url": "https://www.youtube.com/watch?v=63uYNWbxmfs",
+   "summary": "A short demo of assembling scenes from prefabs in OpenUSD using Qubit's modelling tools.",
+   "date": "2026-11-17",
+   "image": "thumbs/8866a1b5fea59366.webp",
+   "kind": "video"
+  }
+ ]
+}
