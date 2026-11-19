@@ -1,0 +1,396 @@
+{
+ "date": "2026-11-20",
+ "generated_at": "2026-11-20T12:01:29+13:00",
+ "headline": "Autodesk ships Maya and 3ds Max 2027.3 with agentic AI, while CoSA and Digital Domain break down Backrooms and Disclosure Day.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 39,
+ "sources_total": 40,
+ "source_errors": {
+  "r/GraphicsProgramming": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "766bf1413896",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Autodesk ships Maya and 3ds Max 2027.3 with agentic AI tools",
+   "url": "https://www.cgchannel.com/2026/11/autodesk-releases-maya-2027-3-with-new-agentic-ai-features/",
+   "summary": "Maya gets an updated AI assistant and an MCP server. 3ds Max adds agentic workflows, a new Arnold viewport and 4D Gaussian Splat import. Both point towards scriptable, AI-driven DCC pipelines.",
+   "date": "2026-11-19",
+   "also": [
+    {
+     "source": "CG Channel",
+     "url": "https://www.cgchannel.com/2026/11/autodesk-releases-3ds-max-2027-3/"
+    }
+   ]
+  },
+  {
+   "id": "be85bb4b409b",
+   "topic": "pipeline",
+   "source": "Inside The Mind",
+   "title": "Houdini 22 video explores implicit surfaces and mathematical geometry",
+   "url": "https://www.youtube.com/watch?v=oCqDJC8KVH4",
+   "summary": "A visual walkthrough of building implicit surfaces in Houdini 22. It is a good reference if you like field-based geometry and the maths behind surface representations.",
+   "date": "2026-11-19",
+   "image": "thumbs/6570a85983a3b535.webp",
+   "kind": "video"
+  },
+  {
+   "id": "6032b1e50e9d",
+   "topic": "pipeline",
+   "source": "Kotov Roman",
+   "title": "Tutorial: inflating foam with Vellum soft bodies in Houdini",
+   "url": "https://www.youtube.com/watch?v=zHmyqoj7I2Q",
+   "summary": "A practical Vellum setup for puffy, inflating foam, part of an ongoing foam series. It is useful for anyone tuning soft-body behaviour in FX.",
+   "date": "2026-11-18",
+   "image": "thumbs/197d9309f1f19b18.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ae906aa3067f",
+   "topic": "pipeline",
+   "source": "Houdini",
+   "title": "Sydney HIVE talk on harnessing AI agents in VFX production",
+   "url": "https://www.youtube.com/watch?v=uUciuxeEAqU",
+   "summary": "Andrew Graham discusses structuring and constraining agent workflows for production use. It is a look at how studios might wire automation into pipelines without losing control.",
+   "date": "2026-11-18",
+   "image": "thumbs/0997a92805263892.webp",
+   "kind": "video"
+  },
+  {
+   "id": "98cd91ac736c",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Boris FX Sapphire 2027 adds a Halation effect and bubble noise",
+   "url": "https://www.cgchannel.com/2026/11/boris-fx-releases-sapphire-2027/",
+   "summary": "The compositing plugin suite gets a film-style halation effect and a new noise type. Halation is a handy tool for emulating optical glow in comp.",
+   "date": "2026-11-17"
+  },
+  {
+   "id": "b8d6bb5af99a",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Silo 2027.0 adds a script editor and an MCP server",
+   "url": "https://www.cgchannel.com/2026/11/nevercenter-releases-silo-2027/",
+   "summary": "The lightweight modeller now has a built-in script editor and an MCP link to external AI tools. It is a small release that follows the same automation trend.",
+   "date": "2026-11-17"
+  },
+  {
+   "id": "1197dbdedf99",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini artist shares a 2026 reel of particles, glass and product CGI",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xynbe7/particles_glass_cgi_my_2026_cgi_reel/",
+   "summary": "A short r/Houdini showcase of particle sims and glass rendering for product work. It is mainly of interest for the look-dev of refractive materials.",
+   "date": "2026-11-17",
+   "image": "thumbs/8118104f9792400c.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "16796f8ba2f6",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Roundup of new CG tools including KeyShot, CityEngine and PFTrack",
+   "url": "https://www.cgchannel.com/2026/11/new-cg-software-you-may-have-missed-15-november-2026/",
+   "summary": "CG Channel's weekly digest covers ten tools, including DaVinci Resolve and the free hair groomer Sisir. It is worth a skim for anything new in your toolkit.",
+   "date": "2026-11-16"
+  },
+  {
+   "id": "da6c6ed98e7d",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Digital Domain details Disclosure Day crop circles and the train-versus-car sequence",
+   "url": "https://www.artofvfx.com/disclosure-day-digital-domain-explores-the-visual-effects-behind-steven-spielbergs-film/",
+   "summary": "VFX supervisor Matthew Butler walks through key sequences of Spielberg's film in a new behind-the-scenes episode. It shows how the studio staged a spectacular freight-train collision digitally.",
+   "date": "2026-11-19",
+   "image": "thumbs/92b5b7e9539cbc80.webp"
+  },
+  {
+   "id": "985b088764dd",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "CoSA VFX releases its breakdown reel for Backrooms",
+   "url": "https://beforesandafters.com/2026/11/20/cosa-breaks-down-its-backrooms-vfx/",
+   "summary": "The studio shows how it built the film's unsettling spaces in a new reel. It is a good look at environment work for a horror feature.",
+   "date": "2026-11-19",
+   "image": "thumbs/2a82566d1480f0a1.webp"
+  },
+  {
+   "id": "54becc2bdffc",
+   "topic": "vfx",
+   "source": "CG Channel",
+   "title": "Untold Studios breaks down its giant CG monster for Hyundai's Little Warrior",
+   "url": "https://www.cgchannel.com/2026/11/see-untold-studios-brilliant-vfx-breakdown-for-hyundai-little-warrior/",
+   "summary": "The reel covers design, rigging and rendering of a massive creature for a childhood-cancer research ad. It shows feature-grade creature work done at commercial scale.",
+   "date": "2026-11-16"
+  },
+  {
+   "id": "68d8b5da856b",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "EDI Effetti Digitali Italiani shows how it made the digital panther in Ferine",
+   "url": "https://www.artofvfx.com/ferine-edi-effetti-digitali-italiani-reveals-more-about-its-digital-panther/",
+   "summary": "A making-of follows the initial breakdown, with the team explaining the creative and technical work behind the creature.",
+   "date": "2026-11-19",
+   "image": "thumbs/48cfd9d2fc0b780f.webp"
+  },
+  {
+   "id": "a6664120ce61",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Indie sci-fi short with 100+ shots uses Jetset, Blender and CorridorKey 2.0",
+   "url": "https://www.reddit.com/r/vfx/comments/1xykcs3/breakdown_for_scifi_short_jetset_blender_and_of/",
+   "summary": "A creator shares a breakdown of an indie short using Jetset camera tracking, Blender, Embergen and Fusion. They say the new keyer is a big step up from v1. A useful low-budget pipeline example.",
+   "date": "2026-11-17",
+   "image": "thumbs/77220da0accb32fc.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "4432b9fc67ce",
+   "topic": "vfx",
+   "source": "fxguide",
+   "title": "VFXShow 311 debates whether Godzilla Minus Zero lands its VFX and history",
+   "url": "https://www.fxguide.com/thevfxshow/vfxshow-311-godzila-minus-zero/",
+   "summary": "The panel weighs the film's photoreal monster work against its green-screen nostalgia and its grounded post-war perspective.",
+   "date": "2026-11-19",
+   "image": "thumbs/ca29f35426665453.webp",
+   "also": [
+    {
+     "source": "fxguide (YouTube)",
+     "url": "https://www.youtube.com/watch?v=9i9HZIeGlT0"
+    }
+   ]
+  },
+  {
+   "id": "a78cd2f885b3",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Tippett Studio shows the making of its stop-motion Arges and Bullethead",
+   "url": "https://beforesandafters.com/2026/11/20/stop-motion-delights/",
+   "summary": "A behind-the-scenes look at the physical craft of stop-motion animation at a studio best known for digital creatures.",
+   "date": "2026-11-19",
+   "image": "thumbs/ac91eb11b950ee6e.webp"
+  },
+  {
+   "id": "266ea46b54e4",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Danse Macabre director on oil paintings and animated skeletons for an Oscar run",
+   "url": "https://www.cartoonbrew.com/awards/danse-macabre-hisko-hulsing-269621.html",
+   "summary": "Hisko Hulsing describes how oil painting, skeleton animation and Shostakovich's music shape his anti-war short, now an Oscar contender.",
+   "date": "2026-11-19",
+   "image": "thumbs/4f1382ead3a9567f.webp"
+  },
+  {
+   "id": "97e1161d8ee6",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Steps directors on rococo design, mech chases and a reworked Cinderella",
+   "url": "https://www.cartoonbrew.com/feature-film/steps-alyce-tzue-john-ripa-interview-269608.html",
+   "summary": "Alyce Tzue and John Ripa discuss design influences, including espresso foam inspiring palace stucco, and staging emotion inside an action scene.",
+   "date": "2026-11-19",
+   "image": "thumbs/bf2a6f2a3fbe5f0a.webp",
+   "extra": true
+  },
+  {
+   "id": "332b2d6d0e39",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Disney releases first trailer for Ice Age: Boiling Point",
+   "url": "https://www.cartoonbrew.com/feature-film/ice-age-boiling-point-trailer-269630.html",
+   "summary": "The franchise returns to theatres after a decade, with the herd carrying a dinosaur egg up an active volcano.",
+   "date": "2026-11-19",
+   "image": "thumbs/d44a856abaa20e0e.webp",
+   "extra": true
+  },
+  {
+   "id": "e10f8545e0f9",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Jorge Gutiérrez and Agora Studio join Heeboo's founding slate",
+   "url": "https://www.cartoonbrew.com/animators/heeboo-jorge-gutierrez-emily-brundige-agora-269603.html",
+   "summary": "The new platform lines up creator-owned animated projects with fan communities from January 2027.",
+   "date": "2026-11-19",
+   "image": "thumbs/9f5309e9b0b08680.webp",
+   "extra": true
+  },
+  {
+   "id": "95c3fbede30c",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks system tracks spending, habits and tasks with weekly decorating",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xyz88p/finally_found_my_groove/",
+   "summary": "A user shares the weekly routine that finally made a planner stick. It combines a Sunday set-up ritual, simple tracking and washi tape, and the spreads are shown.",
+   "date": "2026-11-17",
+   "kind": "reddit"
+  },
+  {
+   "id": "4548f3249474",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Video shows fountain pen nibs being tested at the factory",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xz3h4u/fountain_pen_nibs_being_tested_at_the_factory/",
+   "summary": "A r/fountainpens post that drew over a thousand upvotes shows how nibs are checked before shipping, a rare look at quality control behind the writing feel.",
+   "date": "2026-11-18",
+   "image": "thumbs/2f1443dff038fc6f.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "5f1fd56aca24",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Review: Hightide Penco Perfection pocket ballpoint is a no-frills staple",
+   "url": "https://www.penaddict.com/blog/2026/11/19/hightide-penco-perfection-bullet-ballpoint-pen-review",
+   "summary": "Sarah Read looks at a tiny, back-to-basics ballpoint from the Japanese maker. It is part of her series on miniature stationery.",
+   "date": "2026-11-19",
+   "image": "thumbs/b4e6a8105d7a45c7.webp"
+  },
+  {
+   "id": "12155e5b235c",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Pen Addict podcast covers what Brad bought on his Japan trip",
+   "url": "https://www.penaddict.com/blog/2026/11/19/the-pen-addict-podcast-episode-741-more-about-the-other-things",
+   "summary": "The second part of the Japan trip discussion looks at the stationery he brought home and recommends LOFT's selection.",
+   "date": "2026-11-19",
+   "image": "thumbs/ef1625e101e6fa08.webp"
+  },
+  {
+   "id": "77127e12429b",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Ninth consecutive year with a Hobonichi Weeks Mega",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xyxg0k/year_9/",
+   "summary": "A long-time user shows the 2027 Mega, which drew over 600 upvotes. It is a good sign of how loyal the community is to the format.",
+   "date": "2026-11-17",
+   "image": "thumbs/7f118fc8a1239ccc.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "e0afeb9f51cc",
+   "topic": "stationery",
+   "source": "einaの趣味ログ",
+   "title": "Flip-through of next year's Hobonichi Cousin",
+   "url": "https://www.youtube.com/watch?v=jzUXNj3IJuE",
+   "summary": "A Japanese vlogger pages through the 2027 Cousin, so you can see its layout and paper before deciding how to use it.",
+   "date": "2026-11-19",
+   "image": "thumbs/5e65657cfce21367.webp",
+   "kind": "video"
+  },
+  {
+   "id": "f02af1037eef",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi A6 cover collection prompts a debate on rotating covers by season",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xyc77c/a6_covers_are_my_weakness/",
+   "summary": "A reader shows covers including Shaun Tan's Arrival and The Blue Marble, and asks whether people stick with one cover all year. The comments show many collections.",
+   "date": "2026-11-17",
+   "image": "thumbs/e3b807689da4f760.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "ec35e712e326",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum announces broadcast date for documentary on letter writing between hometown benefactors",
+   "url": "https://www.platinum-pen.co.jp/news/13619/",
+   "summary": "The third episode of a TV series about people writing letters to those who helped them airs on 21 November. A nice nod to the culture of handwritten correspondence.",
+   "title_ja": "TSKさんいん中央テレビ制作のドキュメンタリー番組「越境エコレター」第3回目放送日をお知らせします。",
+   "image": "thumbs/d3874868b7eecbfe.webp"
+  },
+  {
+   "id": "8ec5c7e58d98",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "First-time Weeks owner decorates a pink planner with stickers, tabs and art",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xyjzfa/my_pink_weeks_settup_and_decoration/",
+   "summary": "A fully covered cover and inside art for a first Hobonichi, shown as a set-up example. It is good inspiration for personalising a new book.",
+   "date": "2026-11-17",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "459fa8e4f209",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Messy multilingual Hobonichi week compared with a tidy daily Cousin",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xzb4ub/duality_of_woman/",
+   "summary": "A user minimises pens and colours but still ends up with a busy spread in several languages, alongside a neat daily page. It shows the range of real-world pages.",
+   "date": "2026-11-18",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "76fcce81ded0",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Makeshift plastic cover protects a Hobonichi HON without the pristine-book anxiety",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xynaoe/a5_hon_macgyver/",
+   "summary": "A DIY cover idea using plastic roll and a booklet scrap, plus a look at a well-used 2027 Weeks Mega already 50 pages in.",
+   "date": "2026-11-17",
+   "image": "thumbs/3cd03d6bd8dd0a4d.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "9f97fa90d1c6",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "First Hobonichi Cousin decorated, with a call for ideas on daily use",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xyuq0x/my_first_cousin/",
+   "summary": "A newcomer plans to pair it with a junk journal for consistency and asks others how they fill the daily pages.",
+   "date": "2026-11-17",
+   "image": "thumbs/c013bc26c598d271.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "635b7dce6458",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi users share their 'worst' spreads after a discouraging first trial week",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xz3ypl/worst_spread_ever/",
+   "summary": "A discussion thread about ugly pages, useful for anyone nervous about starting a planner.",
+   "date": "2026-11-18",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "287957514a96",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks user finishes a year-long streak and moves to the 2027 edition",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xz7c5h/the_hobonichi_weeks_are_almost_over/",
+   "summary": "A bilingual post says the Weeks was the first planner they kept up for months. It includes a look at the pages as the old book ends.",
+   "date": "2026-11-18",
+   "image": "thumbs/7a64fb22ac503897.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "e38911a56dc7",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Unlinked mentions panel resurfaces forgotten notes and prevents duplicate work",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xz4pl0/the_quiet_power_of_unlinked_mentions/",
+   "summary": "A year-long user explains how paying attention to unlinked mentions turned up old notes on the same people and tools, a simple habit for connecting research.",
+   "date": "2026-11-18",
+   "kind": "reddit"
+  },
+  {
+   "id": "b1ab84c68600",
+   "topic": "obsidian",
+   "source": "Linking Your Thinking",
+   "title": "Nick Milo's 15-minute guide to working faster in Obsidian",
+   "url": "https://www.youtube.com/watch?v=WB-yLc_ALZw",
+   "summary": "Linking Your Thinking shares speed-focused tips for setup and workflow. It also plugs paid courses.",
+   "date": "2026-11-19",
+   "image": "thumbs/c9e2f1193c4b33b5.webp",
+   "kind": "video"
+  }
+ ]
+}
