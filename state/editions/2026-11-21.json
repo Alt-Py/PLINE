@@ -1,0 +1,314 @@
+{
+ "date": "2026-11-21",
+ "generated_at": "2026-11-21T11:38:58+13:00",
+ "headline": "Weta's Gollum gets a making-of look, a Cycles render delegate lands in Houdini 22 Solaris, and Sailor teams up with Plus on a mizutama 20th set.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 37,
+ "sources_total": 40,
+ "source_errors": {
+  "YouTube · journaling": "no stories found",
+  "YouTube · Obsidian": "no stories found",
+  "YouTube · 万年筆": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "f9f34ea16663",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "TaskNotes v5 reworks its UI and adds easier Google Calendar sign-in",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xzq6ep/tasknotes_v5_and_tasknotes_app/",
+   "summary": "The task-management plugin now blends better with Obsidian's interface, shows calendar events in its own calendar, and no longer needs a personal Google Cloud project. A companion TaskNotes app is also announced.",
+   "date": "2026-11-18",
+   "image": "thumbs/2a5cbce1114db191.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d17b79589cb1",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Agent Change Review plugin marks what external tools edited in your notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xzij2a/i_made_a_plugin_that_shows_what_ai_agents_or_any/",
+   "summary": "When an AI agent, script, git or sync tool changes a note, the edits appear inline with colour coding rather than as a red/green diff. Handy if you let automation touch your vault.",
+   "date": "2026-11-18",
+   "image": "thumbs/dcdbe338c9e0c82b.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "bcd6271a705e",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Reddit debate: is paid Obsidian Sync worth it over other options?",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1xzv682/is_obsidian_sync_worth_it/",
+   "summary": "A busy thread weighs Obsidian Sync against Google or Proton Drive for privacy and convenience across devices, with plenty of user experience from the community.",
+   "date": "2026-11-19",
+   "image": "thumbs/86bb43d03b99e8df.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "f4ec2f3deac6",
+   "topic": "stationery",
+   "source": "Sailor",
+   "title": "Sailor and Plus release mizutama 20th anniversary fountain pen, notebook and ink set",
+   "url": "https://sailor.co.jp/news/20261120/",
+   "summary": "The tenth Plus x Sailor collaboration marks mizutama's 20th anniversary with a limited three-piece set: a fountain pen, a Premium Cloth notebook and bottled ink in matching artwork.",
+   "date": "2026-11-20",
+   "title_ja": "「カ.クリエ プレミアムクロス×万年筆 mizutama20th デザイン限定セット」を発売",
+   "image": "thumbs/0b7cd63af3cfba0c.webp"
+  },
+  {
+   "id": "2410bccc221a",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Emerald celluloid Platinum #3776 with 14k nib found at a discount",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y02jlm/first_14k_emerald_celluloid_platinum_3776/",
+   "summary": "A fountain pen fan picks up a celluloid #3776 for $231 and praises its precise writing. A nice look at Platinum's celluloid finish in a well-loved model.",
+   "date": "2026-11-19",
+   "image": "thumbs/f4b942130e729f84.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "6c2942397406",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Lamy loyalist says the Pilot Custom 823 changed how they write",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1xzr36r/i_got_the_pilot_custom_823_after_wanting_it_for/",
+   "summary": "After nine years of journaling with Lamys, the writer describes what the 823's piston filler and nib brought to daily writing. A useful first-hand account for Pilot flagship shoppers.",
+   "date": "2026-11-18",
+   "image": "thumbs/da908747957f381c.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "55affda218cc",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks cover recoloured dark grey, with pet polaroids planned",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xzn9ni/finally_bit_the_bullet_and_made_the_grey_weeks/",
+   "summary": "A reader customises a Weeks cover in dark grey after seeing a similar black version, and plans to add photos of their pets. A clear idea for personalising a Techo on the cheap.",
+   "date": "2026-11-18",
+   "kind": "reddit"
+  },
+  {
+   "id": "47fffffb9e55",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "2027 setup splits planning, daily records and pens across three Japanese tools",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xzwa0c/2027_set_up/",
+   "summary": "Hobonichi Weeks Mega handles planning, a Kikuyo Jibun Techo B6 slim records the day's key points, and a Moomin Stappo carries the pens. A practical division of labour between notebooks.",
+   "date": "2026-11-19",
+   "kind": "reddit"
+  },
+  {
+   "id": "2e42eaf88357",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Custom 743 or 823? Owners weigh cleaning ease against hype",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y01q69/pilot_custom_743_vs_823/",
+   "summary": "A 743 FM owner questions why the 823 gets all the attention, and the thread compares cleaning, ink swaps and feel. Useful if you are choosing within Pilot's Custom line.",
+   "date": "2026-11-19",
+   "image": "thumbs/8cca3c01af2e8a83.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "af736b8eee13",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Reusing an A5 cover for a Hobonichi Weeks and notebook combo",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xzovlr/my_hobonichi_2027_setup/",
+   "summary": "The setup uses the cover's bookmark strings to hold the Weeks in place when closed, and carries over a favourite sticker from 2026. A tidy approach to pairing planner and notebook.",
+   "date": "2026-11-18",
+   "image": "thumbs/0961e171d5babcfa.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "ad90a47a8317",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Academic 2027 setup pairs Hobonichi Avec with a brainstorming notebook",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xzdjlu/academic_planner_notes_for_2027/",
+   "summary": "An A6 Avec covers specific tasks, an added notebook takes brainstorming and loose details, and a Weeks handles appointments. A workable split for a heavy semester.",
+   "date": "2026-11-18",
+   "kind": "reddit"
+  },
+  {
+   "id": "f05ed23a93f3",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Sewing a fabric cover for a Hobonichi Techo",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xzry73/impulse_buy_and_impromptu_sewing_project/",
+   "summary": "A bullet journaller who impulse-bought a Techo 2027 describes making a cover after finding an earlier community sewing guide. A DIY idea for readers who like custom setups.",
+   "date": "2026-11-18",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "ec40b5cdb917",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Customising a Japanese-holiday Weeks with stickers",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xzewcw/getting_into_weeks/",
+   "summary": "A newcomer based in Japan chose a Weeks that lists local holidays after the English edition did not, then decorated it with stickers. A practical tip when choosing an edition.",
+   "date": "2026-11-18",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "0d6f8f20efb0",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "What to do with an early-bought Hobonichi while waiting for January",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1xzresi/got_the_hobo_of_nochi_what_now/",
+   "summary": "Owners share how they use the weeks before the new year starts, from jotting down important dates to prepping the pages. A useful discussion for planning ahead.",
+   "date": "2026-11-18",
+   "image": "thumbs/95ca4035697e3ffe.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "2ada2c4bfa99",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Why Gollum worked so well: the making of Weta's creature",
+   "url": "https://beforesandafters.com/2026/11/21/why-gollum-worked-so-well/",
+   "summary": "befores & afters looks back at how Weta Digital, now Wētā FX, created Gollum. Essential reading on a landmark of performance-driven character work, from the studio you work in.",
+   "date": "2026-11-20",
+   "image": "thumbs/09650c9e96c0c48c.webp"
+  },
+  {
+   "id": "ae79394aeffb",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "CoSA VFX breaks down the Threshold Chamber in Backrooms",
+   "url": "https://www.artofvfx.com/backrooms-cosa-vfx-reveals-the-visual-effects-behind-the-threshold-chamber/",
+   "summary": "The only location taken directly from Kane Parsons' original series was rebuilt from his teenage Blender file. Breakdowns from Roxel Creative, Mr Wolf and CoSA VFX show the eerie CG environments.",
+   "date": "2026-11-20",
+   "image": "thumbs/7dd8222bb55540da.webp",
+   "also": [
+    {
+     "source": "CG Channel",
+     "url": "https://www.cgchannel.com/2026/11/watch-vfx-breakdowns-for-backrooms-in-one-place/"
+    }
+   ]
+  },
+  {
+   "id": "704e60e8ccfa",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Annecy, Ottawa and Manchester programmers explain where they draw the line on genAI",
+   "url": "https://www.cartoonbrew.com/artificial-intelligence/annecy-ottawa-manchester-festival-programmers-artificial-intelligence-269655.html",
+   "summary": "Festival programmers describe how they treat AI in film submissions as Manchester moves to ban genAI entries. The debate shapes the awards landscape for animation.",
+   "date": "2026-11-20",
+   "image": "thumbs/51cb4e9656ddef5d.webp"
+  },
+  {
+   "id": "86a99308b273",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Producer details preserving 9,000 drawings for Richard Williams' final film, Lysistrata",
+   "url": "https://www.cartoonbrew.com/awards/lysistrata-imogen-sutton-richard-williams-trailer-269662.html",
+   "summary": "Imogen Sutton explains how her late husband's last film was completed and brought to audiences, with an exclusive trailer. It is a 2027 Oscars short film contender.",
+   "date": "2026-11-20",
+   "image": "thumbs/ec5a883bc8d2dcc6.webp"
+  },
+  {
+   "id": "47871423ffd7",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Netflix's digital art book explores the retro-futurist world of Brad Bird's Ray Gunn",
+   "url": "https://www.cartoonbrew.com/books/ray-gunn-digital-art-of-book-brad-bird-269649.html",
+   "summary": "Bird's foreword recalls pitching the sci-fi detective story with aliens, jetpacks and flying cars over 30 years before it was made. The book shows the film's design thinking.",
+   "date": "2026-11-20",
+   "image": "thumbs/3bc3a7d7117e01fa.webp"
+  },
+  {
+   "id": "e7fd3a89b609",
+   "topic": "vfx",
+   "source": "Josh Toonen",
+   "title": "Tutorial: making VFX breakdown reels in Unreal Engine 5",
+   "url": "https://www.youtube.com/watch?v=QnVPD2deojI",
+   "summary": "Josh Toonen shows how to present shot breakdowns inside Unreal. Useful if you want an alternative to traditional compositing for showreels.",
+   "date": "2026-11-20",
+   "image": "thumbs/16337fc967a1384a.webp",
+   "kind": "video"
+  },
+  {
+   "id": "ab4c1195c76f",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Artists swap coping advice for constant work anxiety in VFX",
+   "url": "https://www.reddit.com/r/vfx/comments/1xzhnlv/workplace_anxiety/",
+   "summary": "A thread asks how people handle feeling slow and behind after switching studios, even away from the computer. A candid look at the mental load of pipeline work.",
+   "date": "2026-11-18",
+   "kind": "reddit"
+  },
+  {
+   "id": "f89963aeb2d9",
+   "topic": "pipeline",
+   "source": "r/vfx",
+   "title": "karles22 brings Blender's Cycles into Houdini 22 Solaris as a MaterialX render delegate",
+   "url": "https://www.reddit.com/r/vfx/comments/1y02x7l/i_built_karles22_an_very_fast_matxnative_cycles/",
+   "summary": "The delegate reads Karma scenes unchanged through MaterialX, and its author claims at least twice Karma's speed. Worth watching for anyone comparing Hydra render delegates.",
+   "date": "2026-11-19",
+   "image": "thumbs/65600d0e2495abfc.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "cc524e9a8e6b",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Real-time shallow water on the GPU with advected ripples and caustics",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xzcqjg/breakdown_of_a_realtime_stream_shallow_water/",
+   "summary": "A 512x512 grid runs the Chentanez and Müller solver in WebGPU compute shaders, driving depth, foam, ripples and caustics from one flow field. A neat reference for fluid-based shading.",
+   "date": "2026-11-18",
+   "image": "thumbs/67456300a71104c5.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "5c8e97d2d6ec",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "TinyBVH ray traces a PS1 Metal Gear Solid level on the CPU",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1xzrvre/rendering_physics_using_tinybvh/",
+   "summary": "A Breda University demo uses TinyBVH for both rendering and sphere collision, with moving spheres in their own BLAS combined into the scene. A compact look at BVH use in practice.",
+   "date": "2026-11-18",
+   "image": "thumbs/1012b528532c9b82.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "1bb719b2750a",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Framestore's title sequence R&D for Moana shown in Houdini",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xzhv2o/title_sequence_rd_for_moana_done_at_framestore/",
+   "summary": "A short clip shows the Framestore research and development behind the Moana title sequence. Gives a glimpse of production Houdini work.",
+   "date": "2026-11-18",
+   "image": "thumbs/b80d593c8fb7bfce.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d492939c6464",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Houdini lookdev exercise grows, packs and bursts a vine of baseballs",
+   "url": "https://www.reddit.com/r/Houdini/comments/1y04xfx/grapy_baseballs/",
+   "summary": "A scanned vintage baseball becomes a cluster that grows, packs and then bursts apart, with sound design. A fun showcase of Houdini's growth and packing tools.",
+   "date": "2026-11-19",
+   "image": "thumbs/ffc4d530985acf07.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "10c1c1b77e7a",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "A different kind of crowd built with Houdini's crowd solver",
+   "url": "https://www.reddit.com/r/Houdini/comments/1xzlckc/different_kind_of_crowd/",
+   "summary": "A showcase that sparked 26 comments from artists discussing the crowd solver setup. Worth a look for ideas outside typical agent sims.",
+   "date": "2026-11-18",
+   "image": "thumbs/9ac5e6df42a6df25.webp",
+   "kind": "reddit"
+  }
+ ]
+}
