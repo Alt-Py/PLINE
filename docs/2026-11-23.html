@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Pline</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M22 50V14h12a11 11 0 0 1 0 22h-6' fill='none' stroke='%23f5f5f7' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;600&display=swap">
+<style>
+/* Apple-style full-bleed tiles in one dark palette: true-black and near-black bands alternate,
+   cards sit one step lighter, a single blue carries every action. */
+:root {
+  color-scheme: dark;
+  --bg: #000000;
+  --band: #0e0e0f;          /* alternate tile */
+  --band-2: #161617;        /* third tile tone */
+  --card: #1c1c1e;
+  --card-2: #232325;
+  --ink: #f5f5f7;
+  --body: #c7c7cc;          /* summaries: softer than headlines for long reads */
+  --muted: #8e8e93;
+  --hairline: #2c2c2e;
+  --accent: #2997ff;
+  --accent-focus: #4aa8ff;
+  --like: #2997ff;
+  --less: #ff9f0a;
+  --chip: rgba(255, 255, 255, 0.10);
+  --frost: rgba(16, 16, 18, 0.78);
+  --img-bg: #2a2a2c;
+  --font-display: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-text: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-jp: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-text); font-size: 17px; line-height: 1.47; letter-spacing: -0.374px;
+  -webkit-font-smoothing: antialiased; padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); text-decoration: none; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; border-radius: 8px; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.gnav { background: var(--bg); padding-top: env(safe-area-inset-top, 0px); border-bottom: 1px solid var(--hairline); }
+.gnav .wrap { height: 44px; display: flex; align-items: center; gap: 24px; }
+.brand { font-family: var(--font-display); font-weight: 600; font-size: 17px; letter-spacing: -0.2px; color: var(--ink); }
+.gnav nav { display: flex; gap: 20px; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
+.gnav nav::-webkit-scrollbar { display: none; }
+.gnav nav a { color: var(--ink); opacity: .75; font-size: 12px; letter-spacing: -0.12px; white-space: nowrap; }
+.gnav nav a:hover { opacity: 1; }
+
+.subnav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--frost); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--hairline); }
+.subnav .wrap { min-height: 52px; display: flex; align-items: center; gap: 12px; padding-block: 8px; }
+.subnav h2 { margin: 0; font-family: var(--font-display); font-size: 21px; font-weight: 600; letter-spacing: 0.231px; line-height: 1.19; white-space: nowrap; }
+.days { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+.days::-webkit-scrollbar { display: none; }
+.pill { font: inherit; font-size: 14px; letter-spacing: -0.224px; line-height: 1; border: 0; border-radius: 9999px; padding: 10px 14px; cursor: pointer; background: var(--chip); color: var(--ink); white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; min-height: 34px; transition: transform .12s ease; }
+.pill:active { transform: scale(0.95); }
+.pill[aria-current="page"], .pill[aria-pressed="true"], .pill.primary { background: var(--accent); color: #fff; }
+.pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--less); }
+.pill .dot[hidden] { display: none; }
+
+.hero { background: var(--bg); text-align: center; }
+.hero .wrap { padding-block: 64px 48px; display: grid; gap: 12px; justify-items: center; }
+.eyebrow { font-size: 14px; letter-spacing: -0.224px; color: var(--muted); font-weight: 600; }
+.hero h1 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 56px; line-height: 1.07; letter-spacing: -0.28px; text-wrap: balance; }
+.hero .lead { margin: 0; font-size: 21px; line-height: 1.38; color: var(--body); max-width: 42ch; text-wrap: balance; }
+.stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 12px; }
+.stat { display: inline-flex; align-items: baseline; gap: 6px; background: var(--card); border-radius: 9999px; padding: 8px 16px; font-size: 14px; color: var(--body); font-variant-numeric: tabular-nums; }
+.stat b { font-weight: 600; color: var(--ink); }
+
+.tile { --t-bg: var(--bg); --c-bg: var(--card); background: var(--t-bg); scroll-margin-top: 60px; }
+.tile.parchment { --t-bg: var(--band); --c-bg: var(--card); }
+.tile.dark { --t-bg: var(--band-2); --c-bg: var(--card-2); }
+.tile > .wrap { padding-block: 72px; display: grid; gap: 32px; }
+.tile-head { display: grid; gap: 6px; text-align: center; justify-items: center; }
+.tile-head h2 { margin: 0; font-family: var(--font-display); font-size: 40px; line-height: 1.1; font-weight: 600; text-wrap: balance; }
+.tile-head .jp { font-family: var(--font-jp); font-size: 14px; color: var(--muted); letter-spacing: 0.2em; }
+.tile-head p { margin: 0; font-size: 21px; line-height: 1.38; color: var(--body); }
+.tile-head .count { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 20px; }
+.card { background: var(--c-bg); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; transition: opacity .2s ease; }
+.card .media { display: block; position: relative; aspect-ratio: 16 / 10; background: var(--img-bg); overflow: hidden; }
+.card .media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.card .media:hover img { transform: scale(1.03); }
+.card .media .play { position: absolute; left: 14px; bottom: 14px; width: 44px; height: 44px; border-radius: 50%; background: rgba(0,0,0,.6); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); display: grid; place-items: center; }
+.body { padding: 20px 24px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
+.card.lead { grid-column: 1 / -1; }
+.card.lead .body { padding: 28px 32px 24px; justify-content: center; }
+.card.lead h3 { font-family: var(--font-display); font-size: 28px; line-height: 1.14; letter-spacing: -0.2px; }
+.card.lead .sum { font-size: 17px; line-height: 1.47; max-width: 62ch; }
+@media (min-width: 834px) {
+  .card.lead.has-img { flex-direction: row; }
+  .card.lead.has-img .media { flex: 0 0 56%; aspect-ratio: auto; min-height: 340px; }
+}
+.tile.stationery .card .media { aspect-ratio: 4 / 3; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 12px; letter-spacing: -0.12px; color: var(--muted); }
+.meta .src { font-weight: 600; color: var(--ink); }
+.badge { background: var(--accent); color: #fff; border-radius: 9999px; padding: 3px 8px; font-weight: 600; font-size: 11px; letter-spacing: 0; }
+.kind { border: 1px solid var(--hairline); color: var(--body); border-radius: 9999px; padding: 2px 8px; font-size: 11px; letter-spacing: 0; }
+.card h3 { margin: 0; font-size: 17px; line-height: 1.29; font-weight: 600; letter-spacing: -0.374px; text-wrap: pretty; }
+.card h3 a { color: var(--ink); }
+.card h3 a:hover { color: var(--accent); }
+.jp-title { font-family: var(--font-jp); font-size: 13px; color: var(--muted); letter-spacing: 0; line-height: 1.5; }
+.sum { margin: 0; font-size: 15px; line-height: 1.5; letter-spacing: -0.24px; color: var(--body); overflow-wrap: anywhere; }
+.foot { margin-top: auto; padding-top: 6px; display: flex; align-items: center; gap: 12px; }
+.links { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; letter-spacing: -0.224px; flex: 1; min-width: 0; }
+.links .also { color: var(--muted); }
+.votes { display: flex; gap: 6px; flex: none; }
+.vote { width: 36px; height: 36px; border-radius: 50%; border: 0; background: var(--chip); color: var(--body); display: grid; place-items: center; cursor: pointer; transition: transform .12s ease, background .15s ease, color .15s ease; }
+.vote:active { transform: scale(0.92); }
+.vote svg { width: 18px; height: 18px; }
+.vote.up[aria-pressed="true"] { background: var(--like); color: #fff; }
+.vote.down[aria-pressed="true"] { background: var(--less); color: #000; }
+.card.read { opacity: .5; }
+.card.read:hover, .card.read:focus-within { opacity: .9; }
+.hide-read .card.read { display: none; }
+[hidden] { display: none !important; }
+.more-row { display: flex; justify-content: center; }
+.pill.more { padding: 12px 22px; min-height: 44px; font-size: 15px; }
+.card.extra.revealed { animation: rise .35s ease both; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.allread { display: none; text-align: center; color: var(--muted); font-size: 14px; margin: 0; }
+.hide-read .grid.all-read + .allread { display: block; }
+
+.pager { background: var(--bg); }
+.pager .wrap { padding-block: 32px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.empty { background: var(--bg); text-align: center; }
+.empty .wrap { padding-block: 80px; display: grid; gap: 10px; justify-items: center; }
+.empty h2 { margin: 0; font-family: var(--font-display); font-size: 34px; font-weight: 600; }
+.empty p { margin: 0; color: var(--body); max-width: 46ch; }
+footer { background: var(--bg); color: var(--muted); font-size: 12px; letter-spacing: -0.12px; }
+footer .wrap { padding-block: 32px 56px; display: grid; gap: 8px; border-top: 1px solid var(--hairline); }
+footer p { margin: 0; line-height: 1.6; max-width: 90ch; }
+footer a { color: var(--muted); text-decoration: underline; }
+
+/* Likes panel */
+dialog { border: 0; padding: 0; border-radius: 18px; background: var(--card); color: var(--ink); width: min(520px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); overflow: auto; }
+dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.sheet { padding: 28px; display: grid; gap: 14px; }
+.sheet h2 { margin: 0; font-family: var(--font-display); font-size: 24px; font-weight: 600; }
+.sheet p, .sheet li { margin: 0; font-size: 15px; line-height: 1.5; color: var(--body); }
+.sheet ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.sheet b { color: var(--ink); font-weight: 600; }
+.sheet .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.sheet input { flex: 1; min-width: 0; font: inherit; font-size: 15px; color: var(--ink); background: var(--bg); border: 1px solid var(--hairline); border-radius: 9999px; padding: 10px 16px; min-height: 44px; }
+.status { font-size: 14px; color: var(--muted); min-height: 1.4em; }
+.status.ok { color: #30d158; }
+.status.err { color: #ff6961; }
+
+@media (max-width: 734px) {
+  .hero h1 { font-size: 34px; }
+  .hero .lead, .tile-head p { font-size: 17px; }
+  .tile-head h2 { font-size: 28px; }
+  .tile > .wrap { padding-block: 48px; gap: 24px; }
+  .hero .wrap { padding-block: 40px 32px; }
+  .card.lead .body { padding: 20px 24px 20px; }
+  .card.lead h3 { font-size: 21px; }
+  .subnav h2 { display: none; }
+  .likes-label { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Save + Saved page */
+.vote.save[aria-pressed="true"] { background: var(--ink); color: #000; }
+.vote.save[aria-pressed="true"] .ic-off, .vote.save[aria-pressed="false"] .ic-on { display: none; }
+.pill .num { font-variant-numeric: tabular-nums; color: var(--muted); }
+.pill[aria-current="page"] .num { color: #fff; }
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.filters .pill[aria-pressed="true"] { background: var(--ink); color: #000; }
+.saved-at { color: var(--muted); }
+.card.unsaved { opacity: .45; }
+.empty-saved { text-align: center; color: var(--body); display: grid; gap: 8px; justify-items: center; padding-block: 24px 8px; }
+.empty-saved svg { width: 28px; height: 28px; color: var(--muted); }
+</style>
+</head>
+<body data-repo="Alt-Py/PLINE" data-issue="1" data-page="edition">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2.5 2.5 0 0 1 2.5 2.5V9h5.2a2 2 0 0 1 2 2.3l-1.2 8A2 2 0 0 1 17.5 21H7"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M17 14V3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-3Zm0 0-4 7a2.5 2.5 0 0 1-2.5-2.5V15H5.3a2 2 0 0 1-2-2.3l1.2-8A2 2 0 0 1 6.5 3H17"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="#fff" d="M8 5.5v13a1 1 0 0 0 1.5.9l10.4-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5Z"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1v16l-6.5-4.2-6.5 4.2v-16a1 1 0 0 1 1-1Z"/></symbol>
+  <symbol id="i-saved" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 3h11A1.5 1.5 0 0 1 19 4.5V21l-7-4.5L5 21V4.5A1.5 1.5 0 0 1 6.5 3Z"/></symbol>
+</svg>
+
+<header class="gnav">
+  <div class="wrap">
+    <a class="brand" href="./">Pline</a>
+    <nav aria-label="Topics">
+<a href="#vfx">VFX industry</a><a href="#pipeline">Houdini · USD</a><a href="#obsidian">Obsidian</a><a href="#stationery">Japanese stationery</a>    </nav>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="wrap">
+    <h2>Today</h2>
+    <nav class="days" aria-label="Editions">
+      <a class="pill" href="./" aria-current="page">Today</a>
+      <a class="pill" href="2026-11-22.html">Sun 22</a>
+      <a class="pill" href="2026-11-21.html">Sat 21</a>
+      <a class="pill" href="2026-11-20.html">Fri 20</a>
+      <a class="pill" href="2026-11-19.html">Thu 19</a>
+      <a class="pill" href="2026-11-18.html">Wed 18</a>
+      <a class="pill" href="2026-11-17.html">Tue 17</a>
+    </nav>
+    <a class="pill" href="saved.html" id="savedLink" aria-label="Saved stories"><svg width="16" height="16" aria-hidden="true"><use href="#i-saved"/></svg><span class="likes-label">Saved</span><span class="num" id="savedCount"></span></a>
+    <button class="pill" id="likesBtn" type="button" aria-haspopup="dialog" aria-label="Likes and sync"><svg width="16" height="16" aria-hidden="true"><use href="#i-up"/></svg><span class="likes-label">Likes</span><span class="dot" id="pendingDot" hidden></span></button>
+<button class="pill" id="hideRead" type="button" aria-pressed="false">Hide read</button>  </div>
+</div>
+
+<main>
+  <section class="hero"><div class="wrap">
+    <div class="eyebrow">Good morning, Thomas</div>
+    <h1>Monday 23 November</h1>
+<p class="lead">Obsidian plugin updates (Aion Codex timelines, SupaBase Jump 1.2.0, Folder Note Revamped) lead today, plus Hobonichi 2027 spreads and a Platinum Preppy x Sharpie conversion.</p>    <div class="stats">
+      <a class="stat" href="#vfx"><b>1</b>VFX industry</a>
+      <a class="stat" href="#pipeline"><b>4</b>Houdini, RenderMan &amp; USD</a>
+      <a class="stat" href="#obsidian"><b>4</b>Obsidian</a>
+      <a class="stat" href="#stationery"><b>8</b>Japanese stationery</a>
+    </div>
+  </div></section>
+
+  <section class="tile light vfx" id="vfx"><div class="wrap">
+    <div class="tile-head">
+      <h2>VFX industry</h2>
+      <p>Studios, shows and the business.</p>
+      <div class="count">1 story</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="254e93276c0b" data-topic="vfx" data-source="Corridor Crew" data-title="Corridor Crew artists react to bad and great CGI from the early 2000s">
+        <a class="media" href="https://www.youtube.com/watch?v=P-DlTagFC7k" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/662c380e1ee76246.webp" alt="" loading="eager" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Corridor Crew</span><span>14 Nov</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=P-DlTagFC7k" target="_blank" rel="noopener">Corridor Crew artists react to bad and great CGI from the early 2000s</a></h3>
+<p class="sum">The crew breaks down old effects work, discussing what holds up and what doesn&#39;t. It includes a paid Higgsfield partnership segment.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=P-DlTagFC7k" target="_blank" rel="noopener">Watch on Corridor Crew ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+  <section class="tile dark pipeline" id="pipeline"><div class="wrap">
+    <div class="tile-head">
+      <h2>Houdini, RenderMan &amp; USD</h2>
+      <p>The tools in the pipeline.</p>
+      <div class="count">4 stories</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="fe8dc035c198" data-topic="pipeline" data-source="RenderMan" data-title="RenderMan announces final results of its First Contact art challenge">
+        <a class="media" href="https://renderman.pixar.com/news/renderman-first-contact-art-challenge-final-results" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/635b516289cabf5a.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">RenderMan</span><span>Recent</span>
+          </div>
+          <h3><a href="https://renderman.pixar.com/news/renderman-first-contact-art-challenge-final-results" target="_blank" rel="noopener">RenderMan announces final results of its First Contact art challenge</a></h3>
+<p class="sum">Pixar&#39;s RenderMan team congratulates the winners of its &#34;First Contact&#34; community art challenge. Useful as a showcase of what artists are making with the renderer.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://renderman.pixar.com/news/renderman-first-contact-art-challenge-final-results" target="_blank" rel="noopener">Read on RenderMan ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="14733a923a47" data-topic="pipeline" data-source="SideFX" data-title="SideFX lists Equinox 2026 Houdini event in Toronto">
+        <a class="media" href="https://www.sidefx.com/community/equinox-toronto-2026/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/cd5d2e5fb48406c4.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">SideFX</span><span>Recent</span>
+          </div>
+          <h3><a href="https://www.sidefx.com/community/equinox-toronto-2026/" target="_blank" rel="noopener">SideFX lists Equinox 2026 Houdini event in Toronto</a></h3>
+<p class="sum">SideFX has a page for its Equinox 2026 event in Toronto, a gathering for the Houdini community.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.sidefx.com/community/equinox-toronto-2026/" target="_blank" rel="noopener">Read on SideFX ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="c2107317da7a" data-topic="pipeline" data-source="SideFX" data-title="Houdini HIVEalt event scheduled in London">
+        <a class="media" href="https://www.sidefx.com/community/houdini-hivealt-london/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/92e98e19a913b406.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">SideFX</span><span>Recent</span>
+          </div>
+          <h3><a href="https://www.sidefx.com/community/houdini-hivealt-london/" target="_blank" rel="noopener">Houdini HIVEalt event scheduled in London</a></h3>
+<p class="sum">SideFX lists a Hive Alt event in London for Houdini users, though the page gives little detail.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.sidefx.com/community/houdini-hivealt-london/" target="_blank" rel="noopener">Read on SideFX ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="73b7ac9c6af7" data-topic="pipeline" data-source="RenderMan" data-title="RenderMan shares a recap of its Art &amp; Science Fair at Siggraph 2025">
+        <a class="media" href="https://renderman.pixar.com/news/renderman-art-and-science-fair-2025" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/ed7ec0cb344bffc2.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">RenderMan</span><span>Recent</span>
+          </div>
+          <h3><a href="https://renderman.pixar.com/news/renderman-art-and-science-fair-2025" target="_blank" rel="noopener">RenderMan shares a recap of its Art &amp; Science Fair at Siggraph 2025</a></h3>
+<p class="sum">A recap video of the RenderMan Art &amp; Science Fair in Vancouver, where the team showed new work and collaborations from Pixar.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://renderman.pixar.com/news/renderman-art-and-science-fair-2025" target="_blank" rel="noopener">Read on RenderMan ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+  <section class="tile parchment obsidian" id="obsidian"><div class="wrap">
+    <div class="tile-head">
+      <h2>Obsidian</h2>
+      <p>Releases, plugins and the community.</p>
+      <div class="count">4 stories</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="1da5d10660a5" data-topic="obsidian" data-source="r/ObsidianMD" data-title="SupaBase Jump 1.2.0 adds real-time multi-device editing and version history">
+        <a class="media" href="https://www.reddit.com/r/ObsidianMD/comments/1y14yq9/supabase_jump_120_realtime_editing_across_devices/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/b6cbc370c72cdbbf.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1y14yq9/supabase_jump_120_realtime_editing_across_devices/" target="_blank" rel="noopener">SupaBase Jump 1.2.0 adds real-time multi-device editing and version history</a></h3>
+<p class="sum">The plugin syncs a vault through your own Supabase project. Version 1.2.0 adds live editing across devices, version history and safer sync, a self-hosted alternative to paid sync.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1y14yq9/supabase_jump_120_realtime_editing_across_devices/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="e1913c1f15d3" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Aion Codex: a new Markdown-based vertical timeline plugin">
+        <a class="media" href="https://www.reddit.com/r/ObsidianMD/comments/1y146zv/aion_codex_a_new_obsidian_timeline_plugin/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/8f9b715577d04d8f.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1y146zv/aion_codex_a_new_obsidian_timeline_plugin/" target="_blank" rel="noopener">Aion Codex: a new Markdown-based vertical timeline plugin</a></h3>
+<p class="sum">A customisable timeline plugin that builds a vertical timeline from Markdown notes. It is still in development and the author is asking for feedback before an early release. Useful for production schedules or research chronologies.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1y146zv/aion_codex_a_new_obsidian_timeline_plugin/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="204b7a29af53" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Folder Note Revamped revives the classic folder-note plugin">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1y1gbr0/folder_note_revamped_the_classic_folder_note/" target="_blank" rel="noopener">Folder Note Revamped revives the classic folder-note plugin</a></h3>
+<p class="sum">The abandoned Folder Note plugin, which stopped loading in recent Obsidian versions, is back under new maintenance and in Community Plugins. Click a folder to open its note and card.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1y1gbr0/folder_note_revamped_the_classic_folder_note/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="152041992dad" data-topic="obsidian" data-source="r/ObsidianMD" data-title="Users compare how many apps Obsidian has replaced for them">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/ObsidianMD</span><span>4 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/ObsidianMD/comments/1y0bkz2/how_many_apps_did_obsidian_replace_for_you/" target="_blank" rel="noopener">Users compare how many apps Obsidian has replaced for them</a></h3>
+<p class="sum">A popular discussion where one user lists the eight apps and services (notes, text files, saved links, to-dos, recipes) they consolidated into Obsidian. The comments are a useful source of workflow ideas.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/ObsidianMD/comments/1y0bkz2/how_many_apps_did_obsidian_replace_for_you/" target="_blank" rel="noopener">Read on r/ObsidianMD ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+  <section class="tile dark stationery" id="stationery"><div class="wrap">
+    <div class="tile-head">
+<div class="jp" lang="ja">文房具</div>      <h2>Japanese stationery</h2>
+      <p>Pens, inks, paper and journaling.</p>
+      <div class="count">8 stories · 6 more in reserve</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="a7622b8cd5e4" data-topic="stationery" data-source="r/hobonichi" data-title="Hobonichi back page tracks each day&#39;s conversation mood on skyline drawings">
+        <a class="media" href="https://www.reddit.com/r/hobonichi/comments/1y1fh7l/2027_back_page_spread_im_excited_about/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/172d85a7eb55b924.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1y1fh7l/2027_back_page_spread_im_excited_about/" target="_blank" rel="noopener">Hobonichi back page tracks each day&#39;s conversation mood on skyline drawings</a></h3>
+<p class="sum">A 2027 back-page layout where each building on a skyline is a month and each row a day. A daily mood note fills the rows. It is a clear, copyable habit-tracker design for Hobonichi users.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1y1fh7l/2027_back_page_spread_im_excited_about/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="c736d7348b28" data-topic="stationery" data-source="r/fountainpens" data-title="Platinum Preppy turned into a Sharpie marker, with a call for cap-fit ideas">
+        <a class="media" href="https://www.reddit.com/r/fountainpens/comments/1y1kpxz/preppy_x_sharpie_advice_requested/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/90025d9622b1d164.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/fountainpens</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/fountainpens/comments/1y1kpxz/preppy_x_sharpie_advice_requested/" target="_blank" rel="noopener">Platinum Preppy turned into a Sharpie marker, with a call for cap-fit ideas</a></h3>
+<p class="sum">A hobbyist converted a cheap Platinum Preppy into a Sharpie-style marker and asks how to keep the original cap usable. The thread has plenty of mod tips.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/fountainpens/comments/1y1kpxz/preppy_x_sharpie_advice_requested/" target="_blank" rel="noopener">Read on r/fountainpens ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="574b681750ba" data-topic="stationery" data-source="r/fountainpens" data-title="Pilot Elite 95S in wisteria paired with Esterbrook Dark Cherry Wood ink">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/fountainpens</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/fountainpens/comments/1y1prwu/wisteria_pilot_elite_95s/" target="_blank" rel="noopener">Pilot Elite 95S in wisteria paired with Esterbrook Dark Cherry Wood ink</a></h3>
+<p class="sum">A short write-up of a Pilot Elite 95S that writes smoothly, with an ink choice that matches the brown wood tones of the pen. Useful for pen-and-ink pairing ideas.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/fountainpens/comments/1y1prwu/wisteria_pilot_elite_95s/" target="_blank" rel="noopener">Read on r/fountainpens ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="2e897a84511a" data-topic="stationery" data-source="r/hobonichi" data-title="Hobonichi Weeks owners trade unusual uses for the planner">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>4 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1y0o6ai/niche_ideas_for_a_weeks/" target="_blank" rel="noopener">Hobonichi Weeks owners trade unusual uses for the planner</a></h3>
+<p class="sum">A thread on using a Weeks beyond planning: one user tracks health, habits and hobbies, and adds a Weeks Mega as a reading and media log. The comments offer many ideas for 2027.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1y0o6ai/niche_ideas_for_a_weeks/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="f8b348306a92" data-topic="stationery" data-source="r/hobonichi" data-title="Hobonichi Weeks starts with a 2026 reading recap spread">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1y1h4hu/weeks_popped/" target="_blank" rel="noopener">Hobonichi Weeks starts with a 2026 reading recap spread</a></h3>
+<p class="sum">A new Weeks begins with a year-in-books recap page, paired with a reminder not to let perfectionism block creativity. A simple, satisfying layout for a reading log.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1y1h4hu/weeks_popped/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="f59d16695653" data-topic="stationery" data-source="The Pen Addict" data-title="Pen Addict link roundup includes the Tokyo Pen Show 2026 recap">
+        <a class="media" href="https://www.penaddict.com/blog/2026/11/22/misfill-melon-soda-edition" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/0d9d068b6712809c.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">The Pen Addict</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.penaddict.com/blog/2026/11/22/misfill-melon-soda-edition" target="_blank" rel="noopener">Pen Addict link roundup includes the Tokyo Pen Show 2026 recap</a></h3>
+<p class="sum">The weekly Misfill post gathers reading links, including a Tokyo Pen Show 2026 write-up from The Penguin Post and a new Colorverse item.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.penaddict.com/blog/2026/11/22/misfill-melon-soda-edition" target="_blank" rel="noopener">Read on The Pen Addict ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="b9286cc84cde" data-topic="stationery" data-source="r/fountainpens" data-title="Fountain pen users share ways to track what is inked in each pen">
+        <a class="media" href="https://www.reddit.com/r/fountainpens/comments/1y1cjm8/how_are_you_all_keeping_track_of_whats_in_your/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/8e91eeaf797b23fb.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/fountainpens</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/fountainpens/comments/1y1cjm8/how_are_you_all_keeping_track_of_whats_in_your/" target="_blank" rel="noopener">Fountain pen users share ways to track what is inked in each pen</a></h3>
+<p class="sum">A lively thread (173 comments) comparing practical systems for logging pens, inks and fill dates. It is a handy source of low-tech journaling and logging ideas.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/fountainpens/comments/1y1cjm8/how_are_you_all_keeping_track_of_whats_in_your/" target="_blank" rel="noopener">Read on r/fountainpens ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="5887719c950f" data-topic="stationery" data-source="The Pen Addict" data-title="Pen Addict roundup: choosing a work pen, Lamy line variation and pencil talk">
+        <a class="media" href="https://www.penaddict.com/blog/2026/11/15/misfill-work-pen-edition" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/47a7a1c3def0b8e6.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">The Pen Addict</span><span>15 Nov</span>
+          </div>
+          <h3><a href="https://www.penaddict.com/blog/2026/11/15/misfill-work-pen-edition" target="_blank" rel="noopener">Pen Addict roundup: choosing a work pen, Lamy line variation and pencil talk</a></h3>
+<p class="sum">Another Misfill link collection, covering a work-pen selection series, a post on Lamy line variation and a pencil review.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.penaddict.com/blog/2026/11/15/misfill-work-pen-edition" target="_blank" rel="noopener">Read on The Pen Addict ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="39b85c7b9a51" data-topic="stationery" data-source="r/fountainpens" data-title="Ten currently inked pens include a Sailor, a Nakaya and a Pilot Custom Urushi">
+        <a class="media" href="https://www.reddit.com/r/fountainpens/comments/1y1t524/my_10_currently_inked/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/901986799f142418.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/fountainpens</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/fountainpens/comments/1y1t524/my_10_currently_inked/" target="_blank" rel="noopener">Ten currently inked pens include a Sailor, a Nakaya and a Pilot Custom Urushi</a></h3>
+<p class="sum">A detailed rotation list with nib sizes, led by Japanese pens: Sailor King of Pens Mono No Aware, Nakaya Cigar Portable and Pilot Custom Urushi Vermillion.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/fountainpens/comments/1y1t524/my_10_currently_inked/" target="_blank" rel="noopener">Read on r/fountainpens ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="156174350bbe" data-topic="stationery" data-source="r/hobonichi" data-title="A first Hobonichi gets the full sticker-maximalist treatment">
+        <a class="media" href="https://www.reddit.com/r/hobonichi/comments/1y16xm8/anyone_else_a_sticker_maximalist/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/9d6c47eb754275a2.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1y16xm8/anyone_else_a_sticker_maximalist/" target="_blank" rel="noopener">A first Hobonichi gets the full sticker-maximalist treatment</a></h3>
+<p class="sum">Photos of a heavily decorated first Hobonichi, one of the most upvoted spreads of the week. Useful for ideas on balancing stickers with writing space.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1y16xm8/anyone_else_a_sticker_maximalist/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card extra" hidden data-id="0c78b3153e1e" data-topic="stationery" data-source="r/hobonichi" data-title="Adding a Traveler&#39;s-style elastic to a Hobonichi cover">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1y1ie94/holes_in_covers/" target="_blank" rel="noopener">Adding a Traveler&#39;s-style elastic to a Hobonichi cover</a></h3>
+<p class="sum">A user punched a hole through a Hobonichi cover to add an elastic closure and asks whether a fabric cover would survive the same mod. Practical hack, with caveats in the replies.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1y1ie94/holes_in_covers/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card extra" hidden data-id="510d60969f37" data-topic="stationery" data-source="r/hobonichi" data-title="A set of monthly spread layouts from a Hobonichi user">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1y19n4r/a_few_of_my_monthly_spreads/" target="_blank" rel="noopener">A set of monthly spread layouts from a Hobonichi user</a></h3>
+<p class="sum">A photo set of finished monthly spreads, useful for seeing how others lay out Hobonichi months.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1y19n4r/a_few_of_my_monthly_spreads/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="e310a21a1b44" data-topic="stationery" data-source="r/hobonichi" data-title="December monthly spread asks what to put in the empty left side">
+        <a class="media" href="https://www.reddit.com/r/hobonichi/comments/1y0l72h/december_month_spread/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/a44c8c6fa0bc3618.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>4 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1y0l72h/december_month_spread/" target="_blank" rel="noopener">December monthly spread asks what to put in the empty left side</a></h3>
+<p class="sum">A decorated December spread with Daiso stickers. The poster asks for ideas to fill the unused left-hand space, and the replies offer layout suggestions.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1y0l72h/december_month_spread/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="1306b1549210" data-topic="stationery" data-source="r/fountainpens" data-title="Why does a new Pilot Custom 823 come with a cartridge?">
+        <a class="media" href="https://www.reddit.com/r/fountainpens/comments/1y1nra2/why_would_a_cartridge_be_included_with_my_new_823/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/b719c9989655fcf8.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/fountainpens</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/fountainpens/comments/1y1nra2/why_would_a_cartridge_be_included_with_my_new_823/" target="_blank" rel="noopener">Why does a new Pilot Custom 823 come with a cartridge?</a></h3>
+<p class="sum">A discussion about an included cartridge in a Pilot Custom 823, a vacuum-filling pen, and what it means for filling.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/fountainpens/comments/1y1nra2/why_would_a_cartridge_be_included_with_my_new_823/" target="_blank" rel="noopener">Read on r/fountainpens ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="more-row"><button class="pill more" type="button" aria-expanded="false">Show 6 more stories</button></div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+
+  <nav class="pager" aria-label="Other editions"><div class="wrap">
+<a class="pill" href="2026-11-22.html">‹ Sunday 22 November</a>  </div></nav>
+<script type="application/json" id="pline-stories">[{"date": "2026-11-20", "id": "1da5d10660a5", "image": "thumbs/b6cbc370c72cdbbf.webp", "kind": "reddit", "source": "r/ObsidianMD", "summary": "The plugin syncs a vault through your own Supabase project. Version 1.2.0 adds live editing across devices, version history and safer sync, a self-hosted alternative to paid sync.", "title": "SupaBase Jump 1.2.0 adds real-time multi-device editing and version history", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1y14yq9/supabase_jump_120_realtime_editing_across_devices/"}, {"date": "2026-11-20", "id": "e1913c1f15d3", "image": "thumbs/8f9b715577d04d8f.webp", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A customisable timeline plugin that builds a vertical timeline from Markdown notes. It is still in development and the author is asking for feedback before an early release. Useful for production schedules or research chronologies.", "title": "Aion Codex: a new Markdown-based vertical timeline plugin", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1y146zv/aion_codex_a_new_obsidian_timeline_plugin/"}, {"date": "2026-11-20", "id": "204b7a29af53", "kind": "reddit", "source": "r/ObsidianMD", "summary": "The abandoned Folder Note plugin, which stopped loading in recent Obsidian versions, is back under new maintenance and in Community Plugins. Click a folder to open its note and card.", "title": "Folder Note Revamped revives the classic folder-note plugin", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1y1gbr0/folder_note_revamped_the_classic_folder_note/"}, {"date": "2026-11-19", "id": "152041992dad", "kind": "reddit", "source": "r/ObsidianMD", "summary": "A popular discussion where one user lists the eight apps and services (notes, text files, saved links, to-dos, recipes) they consolidated into Obsidian. The comments are a useful source of workflow ideas.", "title": "Users compare how many apps Obsidian has replaced for them", "topic": "obsidian", "url": "https://www.reddit.com/r/ObsidianMD/comments/1y0bkz2/how_many_apps_did_obsidian_replace_for_you/"}, {"date": "2026-11-20", "id": "a7622b8cd5e4", "image": "thumbs/172d85a7eb55b924.webp", "kind": "reddit", "source": "r/hobonichi", "summary": "A 2027 back-page layout where each building on a skyline is a month and each row a day. A daily mood note fills the rows. It is a clear, copyable habit-tracker design for Hobonichi users.", "title": "Hobonichi back page tracks each day\u0027s conversation mood on skyline drawings", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1y1fh7l/2027_back_page_spread_im_excited_about/"}, {"date": "2026-11-21", "id": "c736d7348b28", "image": "thumbs/90025d9622b1d164.webp", "kind": "reddit", "source": "r/fountainpens", "summary": "A hobbyist converted a cheap Platinum Preppy into a Sharpie-style marker and asks how to keep the original cap usable. The thread has plenty of mod tips.", "title": "Platinum Preppy turned into a Sharpie marker, with a call for cap-fit ideas", "topic": "stationery", "url": "https://www.reddit.com/r/fountainpens/comments/1y1kpxz/preppy_x_sharpie_advice_requested/"}, {"date": "2026-11-21", "id": "574b681750ba", "kind": "reddit", "source": "r/fountainpens", "summary": "A short write-up of a Pilot Elite 95S that writes smoothly, with an ink choice that matches the brown wood tones of the pen. Useful for pen-and-ink pairing ideas.", "title": "Pilot Elite 95S in wisteria paired with Esterbrook Dark Cherry Wood ink", "topic": "stationery", "url": "https://www.reddit.com/r/fountainpens/comments/1y1prwu/wisteria_pilot_elite_95s/"}, {"date": "2026-11-19", "id": "2e897a84511a", "kind": "reddit", "source": "r/hobonichi", "summary": "A thread on using a Weeks beyond planning: one user tracks health, habits and hobbies, and adds a Weeks Mega as a reading and media log. The comments offer many ideas for 2027.", "title": "Hobonichi Weeks owners trade unusual uses for the planner", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1y0o6ai/niche_ideas_for_a_weeks/"}, {"date": "2026-11-20", "id": "f8b348306a92", "kind": "reddit", "source": "r/hobonichi", "summary": "A new Weeks begins with a year-in-books recap page, paired with a reminder not to let perfectionism block creativity. A simple, satisfying layout for a reading log.", "title": "Hobonichi Weeks starts with a 2026 reading recap spread", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1y1h4hu/weeks_popped/"}, {"date": "2026-11-22", "id": "f59d16695653", "image": "thumbs/0d9d068b6712809c.webp", "source": "The Pen Addict", "summary": "The weekly Misfill post gathers reading links, including a Tokyo Pen Show 2026 write-up from The Penguin Post and a new Colorverse item.", "title": "Pen Addict link roundup includes the Tokyo Pen Show 2026 recap", "topic": "stationery", "url": "https://www.penaddict.com/blog/2026/11/22/misfill-melon-soda-edition"}, {"date": "2026-11-20", "id": "b9286cc84cde", "image": "thumbs/8e91eeaf797b23fb.webp", "kind": "reddit", "source": "r/fountainpens", "summary": "A lively thread (173 comments) comparing practical systems for logging pens, inks and fill dates. It is a handy source of low-tech journaling and logging ideas.", "title": "Fountain pen users share ways to track what is inked in each pen", "topic": "stationery", "url": "https://www.reddit.com/r/fountainpens/comments/1y1cjm8/how_are_you_all_keeping_track_of_whats_in_your/"}, {"date": "2026-11-15", "id": "5887719c950f", "image": "thumbs/47a7a1c3def0b8e6.webp", "source": "The Pen Addict", "summary": "Another Misfill link collection, covering a work-pen selection series, a post on Lamy line variation and a pencil review.", "title": "Pen Addict roundup: choosing a work pen, Lamy line variation and pencil talk", "topic": "stationery", "url": "https://www.penaddict.com/blog/2026/11/15/misfill-work-pen-edition"}, {"date": "2026-11-21", "id": "39b85c7b9a51", "image": "thumbs/901986799f142418.webp", "kind": "reddit", "source": "r/fountainpens", "summary": "A detailed rotation list with nib sizes, led by Japanese pens: Sailor King of Pens Mono No Aware, Nakaya Cigar Portable and Pilot Custom Urushi Vermillion.", "title": "Ten currently inked pens include a Sailor, a Nakaya and a Pilot Custom Urushi", "topic": "stationery", "url": "https://www.reddit.com/r/fountainpens/comments/1y1t524/my_10_currently_inked/"}, {"date": "2026-11-20", "id": "156174350bbe", "image": "thumbs/9d6c47eb754275a2.webp", "kind": "reddit", "source": "r/hobonichi", "summary": "Photos of a heavily decorated first Hobonichi, one of the most upvoted spreads of the week. Useful for ideas on balancing stickers with writing space.", "title": "A first Hobonichi gets the full sticker-maximalist treatment", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1y16xm8/anyone_else_a_sticker_maximalist/"}, {"date": "2026-11-20", "id": "0c78b3153e1e", "kind": "reddit", "source": "r/hobonichi", "summary": "A user punched a hole through a Hobonichi cover to add an elastic closure and asks whether a fabric cover would survive the same mod. Practical hack, with caveats in the replies.", "title": "Adding a Traveler\u0027s-style elastic to a Hobonichi cover", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1y1ie94/holes_in_covers/"}, {"date": "2026-11-20", "id": "510d60969f37", "kind": "reddit", "source": "r/hobonichi", "summary": "A photo set of finished monthly spreads, useful for seeing how others lay out Hobonichi months.", "title": "A set of monthly spread layouts from a Hobonichi user", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1y19n4r/a_few_of_my_monthly_spreads/"}, {"date": "2026-11-19", "id": "e310a21a1b44", "image": "thumbs/a44c8c6fa0bc3618.webp", "kind": "reddit", "source": "r/hobonichi", "summary": "A decorated December spread with Daiso stickers. The poster asks for ideas to fill the unused left-hand space, and the replies offer layout suggestions.", "title": "December monthly spread asks what to put in the empty left side", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1y0l72h/december_month_spread/"}, {"date": "2026-11-21", "id": "1306b1549210", "image": "thumbs/b719c9989655fcf8.webp", "kind": "reddit", "source": "r/fountainpens", "summary": "A discussion about an included cartridge in a Pilot Custom 823, a vacuum-filling pen, and what it means for filling.", "title": "Why does a new Pilot Custom 823 come with a cartridge?", "topic": "stationery", "url": "https://www.reddit.com/r/fountainpens/comments/1y1nra2/why_would_a_cartridge_be_included_with_my_new_823/"}, {"date": "2026-11-14", "id": "254e93276c0b", "image": "thumbs/662c380e1ee76246.webp", "kind": "video", "source": "Corridor Crew", "summary": "The crew breaks down old effects work, discussing what holds up and what doesn\u0027t. It includes a paid Higgsfield partnership segment.", "title": "Corridor Crew artists react to bad and great CGI from the early 2000s", "topic": "vfx", "url": "https://www.youtube.com/watch?v=P-DlTagFC7k"}, {"id": "fe8dc035c198", "image": "thumbs/635b516289cabf5a.webp", "source": "RenderMan", "summary": "Pixar\u0027s RenderMan team congratulates the winners of its \"First Contact\" community art challenge. Useful as a showcase of what artists are making with the renderer.", "title": "RenderMan announces final results of its First Contact art challenge", "topic": "pipeline", "url": "https://renderman.pixar.com/news/renderman-first-contact-art-challenge-final-results"}, {"id": "14733a923a47", "image": "thumbs/cd5d2e5fb48406c4.webp", "source": "SideFX", "summary": "SideFX has a page for its Equinox 2026 event in Toronto, a gathering for the Houdini community.", "title": "SideFX lists Equinox 2026 Houdini event in Toronto", "topic": "pipeline", "url": "https://www.sidefx.com/community/equinox-toronto-2026/"}, {"id": "c2107317da7a", "image": "thumbs/92e98e19a913b406.webp", "source": "SideFX", "summary": "SideFX lists a Hive Alt event in London for Houdini users, though the page gives little detail.", "title": "Houdini HIVEalt event scheduled in London", "topic": "pipeline", "url": "https://www.sidefx.com/community/houdini-hivealt-london/"}, {"id": "73b7ac9c6af7", "image": "thumbs/ed7ec0cb344bffc2.webp", "source": "RenderMan", "summary": "A recap video of the RenderMan Art \u0026 Science Fair in Vancouver, where the team showed new work and collaborations from Pixar.", "title": "RenderMan shares a recap of its Art \u0026 Science Fair at Siggraph 2025", "topic": "pipeline", "url": "https://renderman.pixar.com/news/renderman-art-and-science-fair-2025"}]</script>
+</main>
+
+<footer><div class="wrap">
+<p>Edition compiled 2026-11-23 at 10:43 (Pacific/Auckland) from 33 of 40 sources, summaries written by claude-sonnet-5-5, tuned by 11 likes and 0 “less like this”. Summaries are paraphrased; tap a headline for the original. Pictures are thumbnails of each article's own preview image.</p>  <p>Read stories, votes and saves are remembered on this device, and synced through GitHub once a device is connected under Likes. <a href="https://github.com/Alt-Py/PLINE">How Pline works</a></p>
+</div></footer>
+
+<dialog id="likesDialog" aria-labelledby="likesTitle">
+  <form method="dialog" class="sheet" id="likesForm">
+    <h2 id="likesTitle">Likes, saves and sync</h2>
+    <p>Tap <b>More like this</b> or <b>Less like this</b> on any story and Pline learns your taste, by source and by subject. Tap the <b>bookmark</b> to keep a story on your <a href="saved.html">Saved</a> page.</p>
+    <p id="likesCount">No votes or saves yet.</p>
+    <p>Everything is kept on this device. To share it with your other devices and with tomorrow's edition, connect a GitHub token once on each device:</p>
+    <ol>
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub › Fine-grained tokens › Generate new token</a>.</li>
+      <li>Repository access: <b>Only select repositories › PLINE</b>.</li>
+      <li>Permissions: <b>Issues › Read and write</b>. Nothing else.</li>
+      <li>Paste the token below. It stays in this browser only.</li>
+    </ol>
+    <div class="row">
+      <input id="tokenInput" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…" aria-label="GitHub token">
+      <button class="pill primary" id="saveToken" type="button">Connect</button>
+    </div>
+    <div class="status" id="likesStatus" role="status"></div>
+    <div class="row">
+      <button class="pill" id="sendNow" type="button">Send now</button>
+      <button class="pill" id="forgetToken" type="button">Disconnect this device</button>
+      <button class="pill" value="close" style="margin-left:auto">Done</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>

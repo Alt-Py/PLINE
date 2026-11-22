@@ -1,0 +1,265 @@
+{
+ "date": "2026-11-23",
+ "generated_at": "2026-11-23T10:43:45+13:00",
+ "headline": "Obsidian plugin updates (Aion Codex timelines, SupaBase Jump 1.2.0, Folder Note Revamped) lead today, plus Hobonichi 2027 spreads and a Platinum Preppy x Sharpie conversion.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 33,
+ "sources_total": 40,
+ "source_errors": {
+  "YouTube · journaling": "no stories found",
+  "YouTube · 手帳": "no stories found",
+  "r/GraphicsProgramming": "no stories found",
+  "YouTube · Obsidian": "no stories found",
+  "YouTube · 万年筆": "no stories found",
+  "YouTube · VFX breakdowns": "no stories found",
+  "YouTube · Houdini & USD": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "1da5d10660a5",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "SupaBase Jump 1.2.0 adds real-time multi-device editing and version history",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y14yq9/supabase_jump_120_realtime_editing_across_devices/",
+   "summary": "The plugin syncs a vault through your own Supabase project. Version 1.2.0 adds live editing across devices, version history and safer sync, a self-hosted alternative to paid sync.",
+   "date": "2026-11-20",
+   "image": "thumbs/b6cbc370c72cdbbf.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "e1913c1f15d3",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Aion Codex: a new Markdown-based vertical timeline plugin",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y146zv/aion_codex_a_new_obsidian_timeline_plugin/",
+   "summary": "A customisable timeline plugin that builds a vertical timeline from Markdown notes. It is still in development and the author is asking for feedback before an early release. Useful for production schedules or research chronologies.",
+   "date": "2026-11-20",
+   "image": "thumbs/8f9b715577d04d8f.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "204b7a29af53",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Folder Note Revamped revives the classic folder-note plugin",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y1gbr0/folder_note_revamped_the_classic_folder_note/",
+   "summary": "The abandoned Folder Note plugin, which stopped loading in recent Obsidian versions, is back under new maintenance and in Community Plugins. Click a folder to open its note and card.",
+   "date": "2026-11-20",
+   "kind": "reddit"
+  },
+  {
+   "id": "152041992dad",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Users compare how many apps Obsidian has replaced for them",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y0bkz2/how_many_apps_did_obsidian_replace_for_you/",
+   "summary": "A popular discussion where one user lists the eight apps and services (notes, text files, saved links, to-dos, recipes) they consolidated into Obsidian. The comments are a useful source of workflow ideas.",
+   "date": "2026-11-19",
+   "kind": "reddit"
+  },
+  {
+   "id": "a7622b8cd5e4",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi back page tracks each day's conversation mood on skyline drawings",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y1fh7l/2027_back_page_spread_im_excited_about/",
+   "summary": "A 2027 back-page layout where each building on a skyline is a month and each row a day. A daily mood note fills the rows. It is a clear, copyable habit-tracker design for Hobonichi users.",
+   "date": "2026-11-20",
+   "image": "thumbs/172d85a7eb55b924.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c736d7348b28",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Platinum Preppy turned into a Sharpie marker, with a call for cap-fit ideas",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y1kpxz/preppy_x_sharpie_advice_requested/",
+   "summary": "A hobbyist converted a cheap Platinum Preppy into a Sharpie-style marker and asks how to keep the original cap usable. The thread has plenty of mod tips.",
+   "date": "2026-11-21",
+   "image": "thumbs/90025d9622b1d164.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "574b681750ba",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Elite 95S in wisteria paired with Esterbrook Dark Cherry Wood ink",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y1prwu/wisteria_pilot_elite_95s/",
+   "summary": "A short write-up of a Pilot Elite 95S that writes smoothly, with an ink choice that matches the brown wood tones of the pen. Useful for pen-and-ink pairing ideas.",
+   "date": "2026-11-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "2e897a84511a",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks owners trade unusual uses for the planner",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y0o6ai/niche_ideas_for_a_weeks/",
+   "summary": "A thread on using a Weeks beyond planning: one user tracks health, habits and hobbies, and adds a Weeks Mega as a reading and media log. The comments offer many ideas for 2027.",
+   "date": "2026-11-19",
+   "kind": "reddit"
+  },
+  {
+   "id": "f8b348306a92",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks starts with a 2026 reading recap spread",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y1h4hu/weeks_popped/",
+   "summary": "A new Weeks begins with a year-in-books recap page, paired with a reminder not to let perfectionism block creativity. A simple, satisfying layout for a reading log.",
+   "date": "2026-11-20",
+   "kind": "reddit"
+  },
+  {
+   "id": "f59d16695653",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Pen Addict link roundup includes the Tokyo Pen Show 2026 recap",
+   "url": "https://www.penaddict.com/blog/2026/11/22/misfill-melon-soda-edition",
+   "summary": "The weekly Misfill post gathers reading links, including a Tokyo Pen Show 2026 write-up from The Penguin Post and a new Colorverse item.",
+   "date": "2026-11-22",
+   "image": "thumbs/0d9d068b6712809c.webp"
+  },
+  {
+   "id": "b9286cc84cde",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Fountain pen users share ways to track what is inked in each pen",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y1cjm8/how_are_you_all_keeping_track_of_whats_in_your/",
+   "summary": "A lively thread (173 comments) comparing practical systems for logging pens, inks and fill dates. It is a handy source of low-tech journaling and logging ideas.",
+   "date": "2026-11-20",
+   "image": "thumbs/8e91eeaf797b23fb.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "5887719c950f",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Pen Addict roundup: choosing a work pen, Lamy line variation and pencil talk",
+   "url": "https://www.penaddict.com/blog/2026/11/15/misfill-work-pen-edition",
+   "summary": "Another Misfill link collection, covering a work-pen selection series, a post on Lamy line variation and a pencil review.",
+   "date": "2026-11-15",
+   "image": "thumbs/47a7a1c3def0b8e6.webp"
+  },
+  {
+   "id": "39b85c7b9a51",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Ten currently inked pens include a Sailor, a Nakaya and a Pilot Custom Urushi",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y1t524/my_10_currently_inked/",
+   "summary": "A detailed rotation list with nib sizes, led by Japanese pens: Sailor King of Pens Mono No Aware, Nakaya Cigar Portable and Pilot Custom Urushi Vermillion.",
+   "date": "2026-11-21",
+   "image": "thumbs/901986799f142418.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "156174350bbe",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A first Hobonichi gets the full sticker-maximalist treatment",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y16xm8/anyone_else_a_sticker_maximalist/",
+   "summary": "Photos of a heavily decorated first Hobonichi, one of the most upvoted spreads of the week. Useful for ideas on balancing stickers with writing space.",
+   "date": "2026-11-20",
+   "image": "thumbs/9d6c47eb754275a2.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "0c78b3153e1e",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Adding a Traveler's-style elastic to a Hobonichi cover",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y1ie94/holes_in_covers/",
+   "summary": "A user punched a hole through a Hobonichi cover to add an elastic closure and asks whether a fabric cover would survive the same mod. Practical hack, with caveats in the replies.",
+   "date": "2026-11-20",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "510d60969f37",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A set of monthly spread layouts from a Hobonichi user",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y19n4r/a_few_of_my_monthly_spreads/",
+   "summary": "A photo set of finished monthly spreads, useful for seeing how others lay out Hobonichi months.",
+   "date": "2026-11-20",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "e310a21a1b44",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "December monthly spread asks what to put in the empty left side",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y0l72h/december_month_spread/",
+   "summary": "A decorated December spread with Daiso stickers. The poster asks for ideas to fill the unused left-hand space, and the replies offer layout suggestions.",
+   "date": "2026-11-19",
+   "image": "thumbs/a44c8c6fa0bc3618.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "1306b1549210",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Why does a new Pilot Custom 823 come with a cartridge?",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y1nra2/why_would_a_cartridge_be_included_with_my_new_823/",
+   "summary": "A discussion about an included cartridge in a Pilot Custom 823, a vacuum-filling pen, and what it means for filling.",
+   "date": "2026-11-21",
+   "image": "thumbs/b719c9989655fcf8.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "254e93276c0b",
+   "topic": "vfx",
+   "source": "Corridor Crew",
+   "title": "Corridor Crew artists react to bad and great CGI from the early 2000s",
+   "url": "https://www.youtube.com/watch?v=P-DlTagFC7k",
+   "summary": "The crew breaks down old effects work, discussing what holds up and what doesn't. It includes a paid Higgsfield partnership segment.",
+   "date": "2026-11-14",
+   "image": "thumbs/662c380e1ee76246.webp",
+   "kind": "video"
+  },
+  {
+   "id": "fe8dc035c198",
+   "topic": "pipeline",
+   "source": "RenderMan",
+   "title": "RenderMan announces final results of its First Contact art challenge",
+   "url": "https://renderman.pixar.com/news/renderman-first-contact-art-challenge-final-results",
+   "summary": "Pixar's RenderMan team congratulates the winners of its \"First Contact\" community art challenge. Useful as a showcase of what artists are making with the renderer.",
+   "image": "thumbs/635b516289cabf5a.webp"
+  },
+  {
+   "id": "14733a923a47",
+   "topic": "pipeline",
+   "source": "SideFX",
+   "title": "SideFX lists Equinox 2026 Houdini event in Toronto",
+   "url": "https://www.sidefx.com/community/equinox-toronto-2026/",
+   "summary": "SideFX has a page for its Equinox 2026 event in Toronto, a gathering for the Houdini community.",
+   "image": "thumbs/cd5d2e5fb48406c4.webp"
+  },
+  {
+   "id": "c2107317da7a",
+   "topic": "pipeline",
+   "source": "SideFX",
+   "title": "Houdini HIVEalt event scheduled in London",
+   "url": "https://www.sidefx.com/community/houdini-hivealt-london/",
+   "summary": "SideFX lists a Hive Alt event in London for Houdini users, though the page gives little detail.",
+   "image": "thumbs/92e98e19a913b406.webp"
+  },
+  {
+   "id": "73b7ac9c6af7",
+   "topic": "pipeline",
+   "source": "RenderMan",
+   "title": "RenderMan shares a recap of its Art & Science Fair at Siggraph 2025",
+   "url": "https://renderman.pixar.com/news/renderman-art-and-science-fair-2025",
+   "summary": "A recap video of the RenderMan Art & Science Fair in Vancouver, where the team showed new work and collaborations from Pixar.",
+   "image": "thumbs/ed7ec0cb344bffc2.webp"
+  }
+ ]
+}
