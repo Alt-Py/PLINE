@@ -1,0 +1,296 @@
+{
+ "date": "2026-11-24",
+ "generated_at": "2026-11-24T15:52:52+13:00",
+ "headline": "A record 38 animated features are Oscar-eligible, a Houdini artist flies a Tesla with procedural thruster control, and Pilot adds crystal colours to Juice.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 35,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found",
+  "YouTube · journaling": "no stories found",
+  "YouTube · 手帳": "no stories found",
+  "YouTube · Obsidian": "no stories found",
+  "YouTube · VFX breakdowns": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "ee32fb6d6de8",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "PFX breaks down the invisible effects work in WWII drama Pressure",
+   "url": "https://www.artofvfx.com/pressure-pfx-reveals-the-invisible-visual-effects-behind-the-wwii-drama/",
+   "summary": "PFX shows how subtle environment extensions, beach assaults, advancing troops and coastal vessels were added to the film's battle scenes. A good look at the unglamorous, seamless work that gives period dramas their scale.",
+   "date": "2026-11-23",
+   "image": "thumbs/549d30f3cdd3d6e7.webp"
+  },
+  {
+   "id": "29be017d210b",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "Miniature supervisor walks through the model builds for Digger",
+   "url": "https://beforesandafters.com/2026/11/23/a-visual-journey-through-the-miniatures-of-digger/",
+   "summary": "Simon Weisse breaks down how the film's physical miniatures were built. A useful reference for how practical scale work is planned and shot alongside digital effects.",
+   "date": "2026-11-23",
+   "image": "thumbs/3ef9e6bf9e5339b9.webp"
+  },
+  {
+   "id": "0b22952d86cb",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Record 38 animated features qualify for the 99th Academy Awards",
+   "url": "https://www.cartoonbrew.com/awards/record-38-animated-features-eligible-for-oscars-269705.html",
+   "summary": "Cartoon Brew lists every Oscar-eligible animated feature in one of the deepest fields in years, plus the festival favourites that missed the cut. A strong signal of how crowded the animation business is.",
+   "date": "2026-11-23",
+   "image": "thumbs/afcc407131fd02a4.webp"
+  },
+  {
+   "id": "df24964cd28e",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "befores & afters magazine issue 70 covers Spider-Man: Brand New Day effects",
+   "url": "https://beforesandafters.com/2026/11/24/showcasing-spidey-in-action/",
+   "summary": "The new issue of the magazine is devoted to the visual effects of Spider-Man: Brand New Day, with the usual behind-the-scenes detail.",
+   "date": "2026-11-23",
+   "image": "thumbs/d39aa332b49e7643.webp"
+  },
+  {
+   "id": "4b3400122e2b",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "ASIFA-Hollywood's first showcase puts animation craft on the awards-season stage",
+   "url": "https://www.cartoonbrew.com/events/asifa-hollywood-first-animation-showcase-recap-269693.html",
+   "summary": "Two days of presentations in Los Angeles skipped screenings in favour of craft talks. Sessions covered Toy Story 5, Wildwood, Ray Gunn, Tangles and The Violinist.",
+   "date": "2026-11-23",
+   "image": "thumbs/c77ec2dfa0b9fc6c.webp"
+  },
+  {
+   "id": "69031405ce9b",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "David Fincher defends AI use after 'Cliff Booth' criticism",
+   "url": "https://www.reddit.com/r/vfx/comments/1y2i5pu/david_fincher_defends_ai_use_amid_cliff_booth/",
+   "summary": "The r/vfx thread debates the director's defence of generative AI in his work. It reflects how fraught AI has become for effects artists.",
+   "date": "2026-11-22",
+   "image": "thumbs/7db88f823105e56d.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "a28c9f2feef4",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Soul Catcher directors on mixing handmade stop motion with mystical CG",
+   "url": "https://www.cartoonbrew.com/awards/soul-catcher-amanda-strong-pamela-post-269701.html",
+   "summary": "Amanda Strong and Pamela Post describe a Ts'msyen story told in stop motion and enhanced with CG effects. It is a short-film Oscar contender with a hybrid-craft approach.",
+   "date": "2026-11-23",
+   "image": "thumbs/5c0263a6aa23db73.webp"
+  },
+  {
+   "id": "d25d1e81b076",
+   "topic": "vfx",
+   "source": "Corridor Crew",
+   "title": "Corridor Crew's VFX artists try a tabletop game session",
+   "url": "https://www.youtube.com/watch?v=jI9_auoadBY",
+   "summary": "A lighter video from the Corridor Crew team, who also promote their CorridorKey 2.0 tool. Entertainment more than technique.",
+   "date": "2026-11-22",
+   "image": "thumbs/9cd78934961c1ba5.webp",
+   "kind": "video"
+  },
+  {
+   "id": "26d017a844d7",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Wildwood becomes Laika's third-highest North American grosser",
+   "url": "https://www.cartoonbrew.com/box-office-report/cat-in-the-hat-wildwood-hexed-box-office-269685.html",
+   "summary": "The film passes The Boxtrolls' domestic total, while The Cat in the Hat reaches $70M worldwide. Disney's Hexed arrives for Thanksgiving.",
+   "date": "2026-11-23",
+   "image": "thumbs/469086651d0c69ea.webp",
+   "extra": true
+  },
+  {
+   "id": "d3f2a65ad2ee",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "South Korean animation studios see $50M in potential North American deals",
+   "url": "https://www.cartoonbrew.com/business/south-korean-animation-studios-north-american-business-269688.html",
+   "summary": "Seven Korean studios pitched to buyers in Toronto, where Studio Shelter's Brew & Banish Cafe won the top pitch prize.",
+   "date": "2026-11-23",
+   "image": "thumbs/4b0cac454b9e5567.webp",
+   "extra": true
+  },
+  {
+   "id": "7495452befc9",
+   "topic": "pipeline",
+   "source": "r/Houdini",
+   "title": "Procedural flight controller in Houdini flies a Tesla with ten thrusters",
+   "url": "https://www.reddit.com/r/Houdini/comments/1y2qzc4/instead_of_keyframing_a_flying_tesla_i_built_a/",
+   "summary": "Instead of keyframing, the artist built algorithms that coordinate ten rocket thrusters to hover and steer the car. Worth studying as a control-system approach to simulation-driven animation.",
+   "date": "2026-11-22",
+   "image": "thumbs/08a0d9f4733bd838.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "657c323d850f",
+   "topic": "pipeline",
+   "source": "r/GraphicsProgramming",
+   "title": "Practical, efficient render graphs explained for graphics programmers",
+   "url": "https://www.reddit.com/r/GraphicsProgramming/comments/1y29neo/practical_efficient_render_graphs/",
+   "summary": "A well-received r/GraphicsProgramming post on structuring render graphs for efficiency. It is relevant to anyone building or understanding modern renderer frame organisation.",
+   "date": "2026-11-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "69c283d91596",
+   "topic": "stationery",
+   "source": "ヤキツの小物箱",
+   "title": "Pilot adds crystal colours to its Juice line in this week's stationery news",
+   "url": "https://www.youtube.com/watch?v=E3DW9je2dy0",
+   "summary": "This week's Japanese new-product roundup covers Pilot's new crystal colours for the Juice gel pen. The video also suggests ways to use them.",
+   "date": "2026-11-23",
+   "title_ja": "ジュースに使い方を工夫できるクリスタルカラーが登場【第171回 今週の文房具新情報】",
+   "image": "thumbs/2d514080449d8e45.webp",
+   "kind": "video"
+  },
+  {
+   "id": "1d39ca32ffab",
+   "topic": "stationery",
+   "source": "The Pen Addict",
+   "title": "Luddite's Spreadsheet Notebook reviewed by The Pen Addict",
+   "url": "https://www.penaddict.com/blog/2026/11/23/luddite-function-spreadsheet-notebook-review",
+   "summary": "The Japanese maker bluntly claims everyone needs its spreadsheet-layout notebook. The review looks at whether the grid layout earns that confidence.",
+   "date": "2026-11-23",
+   "image": "thumbs/46a390dfc14206bc.webp"
+  },
+  {
+   "id": "3409ed5d2d99",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks setup: which tracker pages actually stuck for a full year",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y1ua0b/setting_up_my_weeks/",
+   "summary": "A user plans her 2027 Weeks layout by keeping the weight tracker and yearly to-do list she used consistently. She drops the budget and cafe logs, and the 185-upvote thread collects further ideas.",
+   "date": "2026-11-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "7cea2de1d216",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "1993 Pilot/Namiki Imperial Wedding pen with Court Carriage maki-e",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y2dkan/npd_pilotnamiki_court_carriage_imperial_wedding/",
+   "summary": "A collector shows a limited edition of 1,000 made for the Emperor's wedding, with artisan Kyusai Yoshida's decoration. It is a broken-in, smooth writer and a nice piece of history.",
+   "date": "2026-11-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "880f23f90837",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Ideas for filling the back pages of your Hobonichi",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y1x31a/is_anyone_starting_to_fill_out_back_pages/",
+   "summary": "Journalers share how they use the back pages, with journal prompts and a book-review log among the ideas. A good source of practical layouts.",
+   "date": "2026-11-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "5eabae1d2826",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "First urushi finish applied to an Opus 88 eyedropper",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y2ft70/opus_88_custom_urushi/",
+   "summary": "A hobbyist lacquers a yellow Opus 88 and ends up with green rather than the navy blue expected. The pen also has a Mark Bacas CSI-M nib grind.",
+   "date": "2026-11-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "645c2eab9035",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Reworking daily and weekly layouts for the Hobonichi Cousin in 2027",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y27m9f/looking_for_cousin_layout_thoughts/",
+   "summary": "A user rethinks the water tracker and other templates ahead of the new year and asks for layout input. The comments should have useful ideas for a Cousin setup.",
+   "date": "2026-11-21",
+   "kind": "reddit"
+  },
+  {
+   "id": "a7fa07d3ac5f",
+   "topic": "stationery",
+   "source": "The Well-Appointed Desk",
+   "title": "Review of a clear A5 Slim cover set for Traveler's Notebook",
+   "url": "https://www.wellappointeddesk.com/2026/11/product-review-clear-a5-slim-travelers-notebook-cover-set/",
+   "summary": "The Well-Appointed Desk tests a third-party clear vinyl cover instead of the official Cloth + Paper one. It is a cautionary and practical look at the budget option.",
+   "date": "2026-11-23",
+   "image": "thumbs/93164905288d85ed.webp"
+  },
+  {
+   "id": "ebcefe79c93c",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Ancora's Full Moon pen and rainy-day converter, picked up in Japan",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y2gsmy/new_pen_day/",
+   "summary": "A friend rearranged a Japan trip to collect the Full Moon pen from Ancora after the pre-order was missed. He also added a converter and a custom design.",
+   "date": "2026-11-22",
+   "image": "thumbs/6a18c0f7b7e97fcf.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "ca7b4efe8f2e",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Making weekly sticker sheets with a sticker printer for Hobonichi",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y28lb6/sticker_sheet/",
+   "summary": "A journaler learns to print custom weekly sticker sheets and is still fitting the day label to the box. A hands-on setup idea.",
+   "date": "2026-11-21",
+   "image": "thumbs/8b6ee22843a8e4b6.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "0d9021f55e3d",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Decorating a Hobonichi cover and keeping the inside clean for writing",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y198j0/shes_all_ready_for_2027_just_to_go_into_the_cover/",
+   "summary": "A user covers her planner in stickers but resists overloading the inside of her first Cousin so she can write. A good lesson in balancing decoration and use.",
+   "date": "2026-11-20",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "fac6fa74dee1",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "A new Pilot Vanishing Point colourway, inked with Take-Sumi",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y29ysb/i_have_been_wanting_this_pen/",
+   "summary": "A fan finds the colourway they wanted for a long time and asks what ink to use. Their other VP is always filled with Pilot's Take-Sumi.",
+   "date": "2026-11-21",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "1446ebfbbb84",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Plugin renders sheet music, maps, charts and timelines inside Obsidian notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y1youe/update_i_am_building_a_rendering_plugin_for_sheet/",
+   "summary": "An update to a rendering plugin adds ABC notation with playback and MIDI export, plus interactive Observable Plot and D3 charts from YAML or JavaScript. It also adds timelines, embedded maps and sub/superscript.",
+   "date": "2026-11-21",
+   "image": "thumbs/4fa0e94e7efc16e3.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "d8acf0d01902",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Customization Studio plugin restyles Kanban, Tasks, Dataview and Bases interfaces",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y2mdbw/i_made_customization_studio_an_obsidian_plugin/",
+   "summary": "A new Community Plugin gives visual settings for several popular plugins' interfaces, including Kanban, Spaced Repetition, Calendar and Day Planner. It leaves notes and the other plugins' settings untouched.",
+   "date": "2026-11-22",
+   "image": "thumbs/8f9ef4eef16ba404.webp",
+   "kind": "reddit"
+  }
+ ]
+}
