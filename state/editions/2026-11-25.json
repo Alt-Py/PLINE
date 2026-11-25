@@ -1,0 +1,255 @@
+{
+ "date": "2026-11-25",
+ "generated_at": "2026-11-25T13:36:17+13:00",
+ "headline": "Shirogumi's Godzilla Minus Zero breakdown, a record 38 animated Oscar contenders, and BOT VFX's hybrid AI-plus-Maya/Nuke pipeline lead today's edition.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 34,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found",
+  "YouTube · journaling": "no stories found",
+  "YouTube · 手帳": "no stories found",
+  "YouTube · Obsidian": "no stories found",
+  "YouTube · 万年筆": "no stories found",
+  "YouTube · VFX breakdowns": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "1dfed34d6db8",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Gizmo turns Obsidian notes into small interactive apps",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y32bbl/with_gizmo_your_obsidian_notes_are_proper_apps/",
+   "summary": "A developer-historian built Gizmo to replace piles of single-purpose plugins with one generalised layer that makes notes behave like apps. The thread drew strong interest and discussion, and it's worth a look if your vault leans on many trackers.",
+   "date": "2026-11-22",
+   "image": "thumbs/4a282cceb71b3d82.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c6669dd53b2f",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Upcoming plugin automates D&D character sheets inside Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y2zdz3/automated_dd_character_sheet_obsidian_plugin/",
+   "summary": "A preview video shows a free plugin with built-in SRDs that handles character creation, levelling, dice, spells and inventory, and reads your own notes. A good example of Obsidian acting as a structured game-prep tool.",
+   "date": "2026-11-22",
+   "image": "thumbs/73a4be3fab9a824c.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "c3e348ce0179",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi A5 back-filled with a Japan and Taipei trip",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y2x95r/back_filled_my_journal_a_hon_a5_for_my/",
+   "summary": "A user re-lived last month's trip by filling in their Hobonichi HON A5 afterwards. It shows how a travel journal can be built from memory and photos, with real pages to learn from.",
+   "date": "2026-11-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "bbeda52ad2b1",
+   "topic": "stationery",
+   "source": "JetPens blog",
+   "title": "JetPens ranks the best drawing inks for art and calligraphy",
+   "url": "https://www.jetpens.com/blog/The-Best-Drawing-Inks/pt/784",
+   "summary": "A buying guide on choosing drawing ink, with picks sorted by dark, gloss, matte and waterproof finish. Useful if you pair brush or dip pens with calligraphy work.",
+   "date": "2026-11-24",
+   "image": "thumbs/d2f74adfa08bde79.webp"
+  },
+  {
+   "id": "21070e043bb2",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Back-of-book trackers for a 2027 Hobonichi Weeks",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y2t3ko/the_trackers_i_have_made_so_far_in_my_hobonichi/",
+   "summary": "The owner has made event-ticket, movie and TV-show trackers in the back pages of a Weeks, with sticker details. It's a clear example of repurposing the spare pages for yearly logs.",
+   "date": "2026-11-22",
+   "kind": "reddit"
+  },
+  {
+   "id": "6e60b93d33b5",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pilot Kakuno special editions draw crowds and cheerful unboxings",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y3ftrh/kitty_kakuno_new_pen_day/",
+   "summary": "Two owners show off the Kitty-themed Kakuno pens and the Kakuno Choice event, where buyers wait in long lines to build a custom colour combination. The Kakuno remains a popular entry-level Japanese fountain pen.",
+   "date": "2026-11-23",
+   "also": [
+    {
+     "source": "r/fountainpens",
+     "url": "https://www.reddit.com/r/fountainpens/comments/1y2zleq/npd_choice_kakunos/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "2d24c7c90424",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Pelikan M200 paired with Sailor Manyo Sakura ink",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y2z6tx/a_perfect_pairing/",
+   "summary": "A reader matched a Pelikan M200 with Sailor's cherry-blossom Manyo ink, and the colours go well together. It's a small example of an ink-and-pen pairing.",
+   "date": "2026-11-22",
+   "image": "thumbs/4e00c6d407ef1342.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "dd8db2546164",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Doodle page drawn with a Pilot Kakuno EF and Document Black",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y315o6/doodle_page/",
+   "summary": "A sketchbook spread made with an extra-fine Kakuno and De Atramentis Document Black. The artist also describes working on breaking the habit of abandoning half-finished pages, which will resonate with sketchbook users.",
+   "date": "2026-11-22",
+   "image": "thumbs/dadee208a0bb34ea.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "9ae6c2484727",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Three ways to split a 2027 Hobonichi setup",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y2fmiu/using_two_separate_weeks_figured_it_out/",
+   "summary": "Owners describe pairing two books for 2027, such as Weeks plus an A6 or Cousin plus Weeks. One covers logistics and carry, the other holds memories, so each book keeps a clear job.",
+   "date": "2026-11-23",
+   "image": "thumbs/ecb9753a0337bc11.webp",
+   "also": [
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1y2u6tu/2026_cousin_2027_original_and_weekly_planner/"
+    },
+    {
+     "source": "r/hobonichi",
+     "url": "https://www.reddit.com/r/hobonichi/comments/1y34ltm/2027_plan_need_help/"
+    }
+   ],
+   "kind": "reddit"
+  },
+  {
+   "id": "bee34cfb3b65",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Washi tape keeps Hobonichi stickers non-permanent",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y359xn/ready_for_2027/",
+   "summary": "A 2027 Hobonichi preview with a handy tip: stick labels and stickers down with washi tape so you can change your mind later.",
+   "date": "2026-11-23",
+   "kind": "reddit"
+  },
+  {
+   "id": "777f8119f923",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi store customers report spam on unique email aliases",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y3f43g/psa_hobonichi_may_have_leaked_or_sold_your_email/",
+   "summary": "A user who gave the 1101.com shop a dedicated alias started receiving spam there, and others are checking whether they've seen the same. Worth watching if you've bought from the Hobonichi store.",
+   "date": "2026-11-23",
+   "image": "thumbs/e1d8827d0243b68c.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "b02c17bd2a86",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "First sketch with a Pilot PO nib",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y380sn/pilot_po_nib_and_first_sketch/",
+   "summary": "A fountain-pen user tries the Pilot PO (Posting) nib for drawing. It's a short look at a Japanese nib made for fine line work.",
+   "date": "2026-11-23",
+   "image": "thumbs/5c6ccc0a6190ce59.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "ad4fb9e23d42",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Shirogumi artists on Godzilla Minus Zero's effects work",
+   "url": "https://www.artofvfx.com/godzilla-minus-zero-tatsuji-nojima-takayuki-ueki-shirogumi/",
+   "summary": "A compositor and a VFX supervisor from the small Japanese studio that won the visual-effects Oscar for Godzilla Minus One discuss their follow-up. It is a rare look at how a compact team delivers blockbuster shots.",
+   "date": "2026-11-24",
+   "image": "thumbs/613556c88e80f566.webp"
+  },
+  {
+   "id": "c834f386faf1",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Record 38 films qualify for the animated feature Oscar",
+   "url": "https://www.cartoonbrew.com/newsletter/record-oscar-field-hexed-inspiration-bluths-childhood-nightmares-269738.html",
+   "summary": "Cartoon Brew lists every eligible film, from major-studio contenders to international titles. It's a good picture of how crowded and diverse this awards race is.",
+   "date": "2026-11-24",
+   "image": "thumbs/768b0beb223fbcce.webp"
+  },
+  {
+   "id": "1916e301a620",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "How Disney's Hexed drew on Milt Kahl and sparkly cat litter",
+   "url": "https://www.cartoonbrew.com/feature-film/hexed-filmmakers-milt-kahl-witch-hat-architecture-magic-269721.html",
+   "summary": "The directors and producers explain the look of the studio's original mother-daughter feature, from classic-animation influences to some unusual material references. Handy context for anyone interested in stylised lighting and surfacing.",
+   "date": "2026-11-24",
+   "image": "thumbs/b6baba2616377334.webp"
+  },
+  {
+   "id": "e1b46eea79b8",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Aardman opens its archives for a BBC 50th-anniversary documentary",
+   "url": "https://www.cartoonbrew.com/documentary-2/aardman-documentary-bbc-mitre-studios-269765.html",
+   "summary": "Cracking Job Gromit: Aardman at 50 mixes new animation with unseen footage and early character designs, giving a look at the studio's craft history.",
+   "date": "2026-11-24",
+   "image": "thumbs/7d9a10b1cc0a0d56.webp"
+  },
+  {
+   "id": "b119c7195da1",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Werwulf featurette shows the horror film's foggy medieval effects",
+   "url": "https://www.artofvfx.com/werwulf/",
+   "summary": "A new featurette on the creature-in-the-fog horror film highlights its atmosphere and the visual-effects work behind it.",
+   "date": "2026-11-24",
+   "image": "thumbs/08b70c2a2b729e3f.webp"
+  },
+  {
+   "id": "dee5b1be14f3",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "BOT VFX mixes FLUX.2 Klein and Wan with a Maya-Nuke pipeline",
+   "url": "https://www.cgchannel.com/2026/11/discover-bot-vfxs-hybrid-ai-vfx-pipeline-for-young-washington/",
+   "summary": "The studio explains how it combined generative models with a conventional Maya and Nuke pipeline on Young Washington. It's a concrete case of where AI fits into production, and where it doesn't replace traditional steps.",
+   "date": "2026-11-24"
+  },
+  {
+   "id": "0bf77490f86e",
+   "topic": "pipeline",
+   "source": "Samuel Krug VFX",
+   "title": "Blender and Houdini workflow walkthrough for the 'Blood Valley' piece",
+   "url": "https://www.youtube.com/watch?v=F47sNHhisqc",
+   "summary": "An artist shows how a Blender and Houdini project was built, explicitly without AI tools. It's good to watch for procedural techniques and moving assets between the two packages.",
+   "date": "2026-11-22",
+   "image": "thumbs/f7240a92493c133c.webp",
+   "kind": "video"
+  },
+  {
+   "id": "069bcb97821c",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Silhouette 2027 adds AI object removal and editable roto shapes",
+   "url": "https://www.cgchannel.com/2026/11/boris-fx-releases-silhouette-2027/",
+   "summary": "Boris FX's roto and paint tool gets AI-assisted clean-up and the ability to generate editable roto shapes, which could speed up compositing prep work.",
+   "date": "2026-11-22"
+  },
+  {
+   "id": "80f7e1d252aa",
+   "topic": "pipeline",
+   "source": "CG Channel",
+   "title": "Rebelle 8.4 adds brushstroke and texture-overlay controls",
+   "url": "https://www.cgchannel.com/2026/11/escape-motions-releases-rebelle-8/",
+   "summary": "Escape Motions' natural-media painting software gains finer brush controls and texture overlays. A modest release that may interest texture and concept artists.",
+   "date": "2026-11-23"
+  }
+ ]
+}
