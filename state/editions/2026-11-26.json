@@ -1,0 +1,324 @@
+{
+ "date": "2026-11-26",
+ "generated_at": "2026-11-26T13:16:35+13:00",
+ "headline": "Platinum fully redesigns its #3776 Century, the Academy's VFX Oscar longlist lands with Laika's Wildwood on it, and Outpost orders UK staff back to the office.",
+ "writer": "claude-sonnet-5-5",
+ "sources_ok": 35,
+ "sources_total": 40,
+ "source_errors": {
+  "r/midori": "no stories found",
+  "YouTube · journaling": "no stories found",
+  "r/GraphicsProgramming": "no stories found",
+  "YouTube · Obsidian": "no stories found",
+  "YouTube · 万年筆": "no stories found"
+ },
+ "taste": {
+  "likes": 11,
+  "dislikes": 0
+ },
+ "stories": [
+  {
+   "id": "ca2d9b63c271",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Saga plugin and theme adds maps, banners and TTRPG tools to Obsidian",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y414v7/saga_a_ttrpg_plugin_and_theme/",
+   "summary": "A community author built a plugin and theme to fill gaps tabletop RPG players found in Obsidian, such as maps, banners and extra UX touches, on top of Canvas and Bases. A useful example of a niche vault setup.",
+   "date": "2026-11-24",
+   "image": "thumbs/61a5606f91233ecd.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "30f3faf8bdab",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "StoryLine, a novel-writing plugin, repurposed for tabletop campaign notes",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y3vz6r/storyline_for_taking_notes_for_ttrpgs/",
+   "summary": "A player shows how a plugin made for writing books handles D&D notes, with automatic templates and sections and room to track scattered clues and tangled plots. Shows how writing-oriented plugins can be bent to other jobs.",
+   "date": "2026-11-23",
+   "kind": "reddit"
+  },
+  {
+   "id": "fa155a1c930d",
+   "topic": "obsidian",
+   "source": "r/ObsidianMD",
+   "title": "Obsidian users compare notes on self-hosting a sync server",
+   "url": "https://www.reddit.com/r/ObsidianMD/comments/1y3yl18/how_many_people_here_selfhost_a_sync_server/",
+   "summary": "A busy r/ObsidianMD thread asks how many people run their own sync server. The 121 comments compare setups and alternatives to the paid Sync service.",
+   "date": "2026-11-24",
+   "kind": "reddit"
+  },
+  {
+   "id": "485eacc13796",
+   "topic": "stationery",
+   "source": "Platinum",
+   "title": "Platinum fully redesigns the #3776 Century with a new slip-seal mechanism",
+   "url": "https://www.platinum-pen.co.jp/news/13625/",
+   "summary": "The 15-year-old no-dry-out flagship gets a ground-up redesign, with early sales of fine and medium nibs from 1 December 2026 and every nib size due by April 2027. A major refresh of one of Japan's defining fountain pens.",
+   "title_ja": "乾かない万年筆として誕生から15年、「＃3776 センチュリー」待望のフルリニューアル",
+   "image": "thumbs/182dc3b22125e8f4.webp"
+  },
+  {
+   "id": "b78ac80da12e",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Sailor's 80th-anniversary Pro Gear Slim honouring Mr. Morita arrives as a gift",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y415b0/new_birthday_pen/",
+   "summary": "A fountain pen fan shows the commemorative Sailor Pro Gear Slim, brought back from Japan, and asks for ink pairing ideas. A look at a limited Sailor release.",
+   "date": "2026-11-24",
+   "kind": "reddit"
+  },
+  {
+   "id": "764cc5122c8a",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A Hobonichi Weeks 2027 cover themed around animals and a vet-school milestone",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y42cm7/my_2027_weeks_cover/",
+   "summary": "A carefully decorated Frutiger Aero-style cover for the 2027 Weeks, continuing an animal theme across the user's journals. It is the day's most upvoted Hobonichi showcase.",
+   "date": "2026-11-24",
+   "kind": "reddit"
+  },
+  {
+   "id": "1eb08c76135b",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Fountain pen ink meets a knitting-project notebook, with lovely paper results",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y3zsr0/when_hobbies_collide/",
+   "summary": "A knitter records finished projects in a Makers notebook, pairing each one with an ink. The paper handles fountain pen ink well, and it is a nice example of matching ink to paper and purpose.",
+   "date": "2026-11-24",
+   "kind": "reddit"
+  },
+  {
+   "id": "67a5942397a3",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Pop-out fitness tracker makes the tiny Hobonichi Weeks columns practical",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y3rvjk/made_a_pop_out_fitness_tracker_so_i_save_time/",
+   "summary": "A journaler builds a fold-out workout tracker so she doesn't pencil routines into every narrow day. A compact layout idea for the Weeks format that she can reuse week to week.",
+   "date": "2026-11-23",
+   "kind": "reddit"
+  },
+  {
+   "id": "2072bbf30610",
+   "topic": "stationery",
+   "source": "ほぼ日手帳 公式チャンネル",
+   "title": "Hobonichi's official live session adds a new segment for journaling alongside viewers",
+   "url": "https://www.youtube.com/watch?v=v21M-Btlk2g",
+   "summary": "The official channel's \"Hobonichi time next to you\" live stream, now at Vol. 9, introduces a new corner. It is a relaxed way to watch people actually write in their techo.",
+   "date": "2026-11-25",
+   "title_ja": "新コーナーのお知らせ｜となりでほぼ日手帳タイム Vol.9",
+   "image": "thumbs/d98fc7934e6adb4f.webp",
+   "kind": "video"
+  },
+  {
+   "id": "fef9cc701801",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Eight-year Techo user switches to the A6 HON as a catch-all for ideas",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y3u73r/breaking_tradition/",
+   "summary": "After years with the standard A6 Hobonichi, this user moves to the HON for its layout, hardcover and coloured tabs. They will use it for essay and story ideas rather than as a planner.",
+   "date": "2026-11-23",
+   "image": "thumbs/97c16cbb1c1adf5d.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "81f2fc556ac1",
+   "topic": "stationery",
+   "source": "r/fountainpens",
+   "title": "Birthday find: a Pilot Custom 743 with a matching date code",
+   "url": "https://www.reddit.com/r/fountainpens/comments/1y4ay6f/bday_new_pen_day/",
+   "summary": "A collector lucked into a Pilot Custom 743 whose date code matches a personal date, which is a nice find for fans of Pilot's workhorse gold-nib pen.",
+   "date": "2026-11-24",
+   "image": "thumbs/d7832cf77f904d49.webp",
+   "kind": "reddit"
+  },
+  {
+   "id": "e77197ebad60",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Hobonichi Weeks set up as a seasonal log for a plant-nursery job",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y3wyix/finally_decorated_my_weeks_for_2027_work/",
+   "summary": "A plant worker decorates the 2027 Weeks to track dates, weather and notable sell-outs through the winter. It is a practical example of a work-focused journal.",
+   "date": "2026-11-23",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "82e4cc0d68f3",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "First spreads in the 2027 Hobonichi Cousin, enjoying the extra room",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y3hdrc/i_couldnt_wait_any_longer/",
+   "summary": "A first-time Cousin user starts decorating the larger pages and likes the added space compared with smaller formats.",
+   "date": "2026-11-23",
+   "image": "thumbs/6b4c1cacd565175f.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "c6b6d04ad37f",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A plastic-sheet trick helps beat sticker paralysis in the Hobonichi",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y471yh/sticker_paralysis_workaround/",
+   "summary": "Arranging stickers on a plastic sheet first lets you plan a collage before committing it to the page. A small technique for anyone nervous about sticker spreads.",
+   "date": "2026-11-24",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "a1ecd49a3175",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "Weeks becomes the main journal, a day-free A6 the catch-all",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y3x8hb/my_weeks_and_a6_deco/",
+   "summary": "A user sets up a two-notebook system for 2027, with the Weeks as the main journal and a day-free A6 as the junk and anything journal.",
+   "date": "2026-11-23",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "262af5a6520f",
+   "topic": "stationery",
+   "source": "r/hobonichi",
+   "title": "A weekly spread shared while rebuilding a journaling habit",
+   "url": "https://www.reddit.com/r/hobonichi/comments/1y432ka/week_of_november_23rd/",
+   "summary": "A Hobonichi user posts her week of 23 November as she tries to restore a routine disrupted by schedule changes.",
+   "date": "2026-11-24",
+   "image": "thumbs/e8c77df0c0c3593d.webp",
+   "kind": "reddit",
+   "extra": true
+  },
+  {
+   "id": "c243fef81456",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Oscars VFX longlist of 20 includes Laika's Wildwood as the only animated film",
+   "url": "https://www.cartoonbrew.com/awards/laika-wildwood-oscars-visual-effects-top-20-269785.html",
+   "summary": "The Academy's Visual Effects Branch has narrowed the field, with Dune: Part Three, Godzilla Minus Zero and The Odyssey among the contenders. Wildwood is the lone animated title.",
+   "date": "2026-11-25",
+   "image": "thumbs/074b4f57532ca9dc.webp",
+   "also": [
+    {
+     "source": "Art of VFX",
+     "url": "https://www.artofvfx.com/2027-oscars-discover-the-top-20-best-visual-effects-contenders/"
+    }
+   ]
+  },
+  {
+   "id": "cb8885bced9a",
+   "topic": "vfx",
+   "source": "fxguide",
+   "title": "The Odyssey: a 10-metre Cyclops, miniature ships and a burning Troy",
+   "url": "https://www.fxguide.com/fxpodcasts/odyssey/",
+   "summary": "fxguide talks with the VFX and special effects supervisors on Nolan's film about its mix of practical miniatures and digital work. It is a good read on how practical elements blend with CG on large-scale shots.",
+   "date": "2026-11-24",
+   "image": "thumbs/3d863d89a4fd49c5.webp"
+  },
+  {
+   "id": "d5587689d251",
+   "topic": "vfx",
+   "source": "befores & afters",
+   "title": "How the Balrog was built, and given speech, in Rings of Power season 3",
+   "url": "https://beforesandafters.com/2026/11/25/how-the-balrog-was-made-and-made-to-talk-in-s3-of-the-rings-of-power/",
+   "summary": "A deep dive into the creature work of the season, focusing on the making of the Balrog and how it was animated to talk.",
+   "date": "2026-11-25",
+   "image": "thumbs/993d428a495cc907.webp"
+  },
+  {
+   "id": "28ebda0590c5",
+   "topic": "vfx",
+   "source": "r/vfx",
+   "title": "Outpost orders UK staff into the office two days a week with a week's notice",
+   "url": "https://www.reddit.com/r/vfx/comments/1y46j5y/outpost_just_told_uk_staff_to_be_in_the_office_2/",
+   "summary": "A London supervisor reports that Outpost's UK team must return two days weekly while Montreal, India and Germany keep working from home. Long-time staff are reportedly considering leaving.",
+   "date": "2026-11-24",
+   "kind": "reddit"
+  },
+  {
+   "id": "7eab48970622",
+   "topic": "vfx",
+   "source": "Art of VFX",
+   "title": "Union VFX details invisible work on Wild Horse Nine",
+   "url": "https://www.artofvfx.com/wild-horse-nine-union-vfx-reveals-its-invisible-visual-effects-work/",
+   "summary": "The studio reunites with director Martin McDonagh for CG period aircraft, face replacements and subtle enhancements that protect the film's vintage look.",
+   "date": "2026-11-25",
+   "image": "thumbs/454de4794a987cbb.webp"
+  },
+  {
+   "id": "122718dc4751",
+   "topic": "vfx",
+   "source": "Movie VFX",
+   "title": "benuts VFX shows its Masterplan breakdown",
+   "url": "https://www.youtube.com/watch?v=BeVV1ZAwFlo",
+   "summary": "A short breakdown video that walks through how the shots in Masterplan were put together.",
+   "date": "2026-11-25",
+   "image": "thumbs/434aa2885411f5c2.webp",
+   "kind": "video"
+  },
+  {
+   "id": "fcf3dbfcead4",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Titmouse to adapt Image Comics' dragon fantasy Fireborn",
+   "url": "https://www.cartoonbrew.com/series/titmouse-fireborn-animated-series-image-comics-269718.html",
+   "summary": "The studio will adapt the comic about a teen in New York City who merges with a dragon egg.",
+   "date": "2026-11-24",
+   "image": "thumbs/837813a9858dccf9.webp"
+  },
+  {
+   "id": "20e8d9004fdd",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "BBC puts two dozen CBeebies shows on Netflix as cuts loom",
+   "url": "https://www.cartoonbrew.com/streaming/bbc-cbeebies-netflix-hey-duggee-269724.html",
+   "summary": "A six-month UK trial from 2 December includes Hey Duggee and Numberblocks, with funding for new preschool commissions.",
+   "date": "2026-11-24",
+   "image": "thumbs/c3c3278bffe25c4e.webp"
+  },
+  {
+   "id": "6fd827a07711",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "To The Woods director on hand-painted gouache and grief",
+   "url": "https://www.cartoonbrew.com/awards/2027-oscars-short-film-contenders-to-the-woods-director-agnes-patron-269756.html",
+   "summary": "Agnès Patron discusses her Oscar-contending short, built from hand-painted gouache and subtle gestures to evoke a sibling bond.",
+   "date": "2026-11-24",
+   "image": "thumbs/86c4a508ccffc640.webp",
+   "extra": true
+  },
+  {
+   "id": "16b2cebcfeaa",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Melk director on mixing Flemish painting with motion capture",
+   "url": "https://www.cartoonbrew.com/awards/melk-director-filip-anthonissen-269737.html",
+   "summary": "Filip Anthonissen talks about his Oscar-contending short, which draws on Flemish painting, mocap and rural childhood memories.",
+   "date": "2026-11-25",
+   "image": "thumbs/4adf51cc3416e082.webp",
+   "extra": true
+  },
+  {
+   "id": "2277773b97c9",
+   "topic": "vfx",
+   "source": "Cartoon Brew",
+   "title": "Rose of Versailles director on turning the manga into a musical",
+   "url": "https://www.cartoonbrew.com/feature-film/rose-of-versailles-ai-yoshimura-musical-interview-269791.html",
+   "summary": "Ai Yoshimura discusses the manga's androgynous character design and what animation allows in exploring gender expression.",
+   "date": "2026-11-25",
+   "image": "thumbs/b897096c22ec2fd4.webp",
+   "extra": true
+  },
+  {
+   "id": "f9343564e5a2",
+   "topic": "pipeline",
+   "source": "blendereverything",
+   "title": "Vibe-coded Houdini-style tool for Blender runs RBD and grain sims",
+   "url": "https://www.youtube.com/watch?v=Kjp0vHM4CfY",
+   "summary": "A video demo shows a Houdini-like node interface for Blender that runs rigid-body and grain simulations and bridges directly into Blender. It is an interesting experiment in procedural workflows.",
+   "date": "2026-11-25",
+   "image": "thumbs/db8e31d299f16e53.webp",
+   "kind": "video"
+  }
+ ]
+}
