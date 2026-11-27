@@ -1,0 +1,1440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Pline</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M22 50V14h12a11 11 0 0 1 0 22h-6' fill='none' stroke='%23f5f5f7' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;600&display=swap">
+<style>
+/* Apple-style full-bleed tiles in one dark palette: true-black and near-black bands alternate,
+   cards sit one step lighter, a single blue carries every action. */
+:root {
+  color-scheme: dark;
+  --bg: #000000;
+  --band: #0e0e0f;          /* alternate tile */
+  --band-2: #161617;        /* third tile tone */
+  --card: #1c1c1e;
+  --card-2: #232325;
+  --ink: #f5f5f7;
+  --body: #c7c7cc;          /* summaries: softer than headlines for long reads */
+  --muted: #8e8e93;
+  --hairline: #2c2c2e;
+  --accent: #2997ff;
+  --accent-focus: #4aa8ff;
+  --like: #2997ff;
+  --less: #ff9f0a;
+  --chip: rgba(255, 255, 255, 0.10);
+  --frost: rgba(16, 16, 18, 0.78);
+  --img-bg: #2a2a2c;
+  --font-display: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-text: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-jp: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-text); font-size: 17px; line-height: 1.47; letter-spacing: -0.374px;
+  -webkit-font-smoothing: antialiased; padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); text-decoration: none; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent-focus); outline-offset: 2px; border-radius: 8px; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.gnav { background: var(--bg); padding-top: env(safe-area-inset-top, 0px); border-bottom: 1px solid var(--hairline); }
+.gnav .wrap { height: 44px; display: flex; align-items: center; gap: 24px; }
+.brand { font-family: var(--font-display); font-weight: 600; font-size: 17px; letter-spacing: -0.2px; color: var(--ink); }
+.gnav nav { display: flex; gap: 20px; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
+.gnav nav::-webkit-scrollbar { display: none; }
+.gnav nav a { color: var(--ink); opacity: .75; font-size: 12px; letter-spacing: -0.12px; white-space: nowrap; }
+.gnav nav a:hover { opacity: 1; }
+
+.subnav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--frost); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--hairline); }
+.subnav .wrap { min-height: 52px; display: flex; align-items: center; gap: 12px; padding-block: 8px; }
+.subnav h2 { margin: 0; font-family: var(--font-display); font-size: 21px; font-weight: 600; letter-spacing: 0.231px; line-height: 1.19; white-space: nowrap; }
+.days { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+.days::-webkit-scrollbar { display: none; }
+.pill { font: inherit; font-size: 14px; letter-spacing: -0.224px; line-height: 1; border: 0; border-radius: 9999px; padding: 10px 14px; cursor: pointer; background: var(--chip); color: var(--ink); white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; min-height: 34px; transition: transform .12s ease; }
+.pill:active { transform: scale(0.95); }
+.pill[aria-current="page"], .pill[aria-pressed="true"], .pill.primary { background: var(--accent); color: #fff; }
+.pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--less); }
+.pill .dot[hidden] { display: none; }
+
+.hero { background: var(--bg); text-align: center; }
+.hero .wrap { padding-block: 64px 48px; display: grid; gap: 12px; justify-items: center; }
+.eyebrow { font-size: 14px; letter-spacing: -0.224px; color: var(--muted); font-weight: 600; }
+.hero h1 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 56px; line-height: 1.07; letter-spacing: -0.28px; text-wrap: balance; }
+.hero .lead { margin: 0; font-size: 21px; line-height: 1.38; color: var(--body); max-width: 42ch; text-wrap: balance; }
+.stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 12px; }
+.stat { display: inline-flex; align-items: baseline; gap: 6px; background: var(--card); border-radius: 9999px; padding: 8px 16px; font-size: 14px; color: var(--body); font-variant-numeric: tabular-nums; }
+.stat b { font-weight: 600; color: var(--ink); }
+
+.tile { --t-bg: var(--bg); --c-bg: var(--card); background: var(--t-bg); scroll-margin-top: 60px; }
+.tile.parchment { --t-bg: var(--band); --c-bg: var(--card); }
+.tile.dark { --t-bg: var(--band-2); --c-bg: var(--card-2); }
+.tile > .wrap { padding-block: 72px; display: grid; gap: 32px; }
+.tile-head { display: grid; gap: 6px; text-align: center; justify-items: center; }
+.tile-head h2 { margin: 0; font-family: var(--font-display); font-size: 40px; line-height: 1.1; font-weight: 600; text-wrap: balance; }
+.tile-head .jp { font-family: var(--font-jp); font-size: 14px; color: var(--muted); letter-spacing: 0.2em; }
+.tile-head p { margin: 0; font-size: 21px; line-height: 1.38; color: var(--body); }
+.tile-head .count { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 20px; }
+.card { background: var(--c-bg); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; transition: opacity .2s ease; }
+.card .media { display: block; position: relative; aspect-ratio: 16 / 10; background: var(--img-bg); overflow: hidden; }
+.card .media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.card .media:hover img { transform: scale(1.03); }
+.card .media .play { position: absolute; left: 14px; bottom: 14px; width: 44px; height: 44px; border-radius: 50%; background: rgba(0,0,0,.6); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); display: grid; place-items: center; }
+.body { padding: 20px 24px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
+.card.lead { grid-column: 1 / -1; }
+.card.lead .body { padding: 28px 32px 24px; justify-content: center; }
+.card.lead h3 { font-family: var(--font-display); font-size: 28px; line-height: 1.14; letter-spacing: -0.2px; }
+.card.lead .sum { font-size: 17px; line-height: 1.47; max-width: 62ch; }
+@media (min-width: 834px) {
+  .card.lead.has-img { flex-direction: row; }
+  .card.lead.has-img .media { flex: 0 0 56%; aspect-ratio: auto; min-height: 340px; }
+}
+.tile.stationery .card .media { aspect-ratio: 4 / 3; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 12px; letter-spacing: -0.12px; color: var(--muted); }
+.meta .src { font-weight: 600; color: var(--ink); }
+.badge { background: var(--accent); color: #fff; border-radius: 9999px; padding: 3px 8px; font-weight: 600; font-size: 11px; letter-spacing: 0; }
+.kind { border: 1px solid var(--hairline); color: var(--body); border-radius: 9999px; padding: 2px 8px; font-size: 11px; letter-spacing: 0; }
+.card h3 { margin: 0; font-size: 17px; line-height: 1.29; font-weight: 600; letter-spacing: -0.374px; text-wrap: pretty; }
+.card h3 a { color: var(--ink); }
+.card h3 a:hover { color: var(--accent); }
+.jp-title { font-family: var(--font-jp); font-size: 13px; color: var(--muted); letter-spacing: 0; line-height: 1.5; }
+.sum { margin: 0; font-size: 15px; line-height: 1.5; letter-spacing: -0.24px; color: var(--body); overflow-wrap: anywhere; }
+.foot { margin-top: auto; padding-top: 6px; display: flex; align-items: center; gap: 12px; }
+.links { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; letter-spacing: -0.224px; flex: 1; min-width: 0; }
+.links .also { color: var(--muted); }
+.votes { display: flex; gap: 6px; flex: none; }
+.vote { width: 36px; height: 36px; border-radius: 50%; border: 0; background: var(--chip); color: var(--body); display: grid; place-items: center; cursor: pointer; transition: transform .12s ease, background .15s ease, color .15s ease; }
+.vote:active { transform: scale(0.92); }
+.vote svg { width: 18px; height: 18px; }
+.vote.up[aria-pressed="true"] { background: var(--like); color: #fff; }
+.vote.down[aria-pressed="true"] { background: var(--less); color: #000; }
+.card.read { opacity: .5; }
+.card.read:hover, .card.read:focus-within { opacity: .9; }
+.hide-read .card.read { display: none; }
+[hidden] { display: none !important; }
+.more-row { display: flex; justify-content: center; }
+.pill.more { padding: 12px 22px; min-height: 44px; font-size: 15px; }
+.card.extra.revealed { animation: rise .35s ease both; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.allread { display: none; text-align: center; color: var(--muted); font-size: 14px; margin: 0; }
+.hide-read .grid.all-read + .allread { display: block; }
+
+.pager { background: var(--bg); }
+.pager .wrap { padding-block: 32px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.empty { background: var(--bg); text-align: center; }
+.empty .wrap { padding-block: 80px; display: grid; gap: 10px; justify-items: center; }
+.empty h2 { margin: 0; font-family: var(--font-display); font-size: 34px; font-weight: 600; }
+.empty p { margin: 0; color: var(--body); max-width: 46ch; }
+footer { background: var(--bg); color: var(--muted); font-size: 12px; letter-spacing: -0.12px; }
+footer .wrap { padding-block: 32px 56px; display: grid; gap: 8px; border-top: 1px solid var(--hairline); }
+footer p { margin: 0; line-height: 1.6; max-width: 90ch; }
+footer a { color: var(--muted); text-decoration: underline; }
+
+/* Likes panel */
+dialog { border: 0; padding: 0; border-radius: 18px; background: var(--card); color: var(--ink); width: min(520px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); overflow: auto; }
+dialog::backdrop { background: rgba(0, 0, 0, 0.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.sheet { padding: 28px; display: grid; gap: 14px; }
+.sheet h2 { margin: 0; font-family: var(--font-display); font-size: 24px; font-weight: 600; }
+.sheet p, .sheet li { margin: 0; font-size: 15px; line-height: 1.5; color: var(--body); }
+.sheet ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.sheet b { color: var(--ink); font-weight: 600; }
+.sheet .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.sheet input { flex: 1; min-width: 0; font: inherit; font-size: 15px; color: var(--ink); background: var(--bg); border: 1px solid var(--hairline); border-radius: 9999px; padding: 10px 16px; min-height: 44px; }
+.status { font-size: 14px; color: var(--muted); min-height: 1.4em; }
+.status.ok { color: #30d158; }
+.status.err { color: #ff6961; }
+
+@media (max-width: 734px) {
+  .hero h1 { font-size: 34px; }
+  .hero .lead, .tile-head p { font-size: 17px; }
+  .tile-head h2 { font-size: 28px; }
+  .tile > .wrap { padding-block: 48px; gap: 24px; }
+  .hero .wrap { padding-block: 40px 32px; }
+  .card.lead .body { padding: 20px 24px 20px; }
+  .card.lead h3 { font-size: 21px; }
+  .subnav h2 { display: none; }
+  .likes-label { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Save + Saved page */
+.vote.save[aria-pressed="true"] { background: var(--ink); color: #000; }
+.vote.save[aria-pressed="true"] .ic-off, .vote.save[aria-pressed="false"] .ic-on { display: none; }
+.pill .num { font-variant-numeric: tabular-nums; color: var(--muted); }
+.pill[aria-current="page"] .num { color: #fff; }
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.filters .pill[aria-pressed="true"] { background: var(--ink); color: #000; }
+.saved-at { color: var(--muted); }
+.card.unsaved { opacity: .45; }
+.empty-saved { text-align: center; color: var(--body); display: grid; gap: 8px; justify-items: center; padding-block: 24px 8px; }
+.empty-saved svg { width: 28px; height: 28px; color: var(--muted); }
+</style>
+</head>
+<body data-repo="Alt-Py/PLINE" data-issue="1" data-page="edition">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2.5 2.5 0 0 1 2.5 2.5V9h5.2a2 2 0 0 1 2 2.3l-1.2 8A2 2 0 0 1 17.5 21H7"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M17 14V3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-3Zm0 0-4 7a2.5 2.5 0 0 1-2.5-2.5V15H5.3a2 2 0 0 1-2-2.3l1.2-8A2 2 0 0 1 6.5 3H17"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="#fff" d="M8 5.5v13a1 1 0 0 0 1.5.9l10.4-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5Z"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1v16l-6.5-4.2-6.5 4.2v-16a1 1 0 0 1 1-1Z"/></symbol>
+  <symbol id="i-saved" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 3h11A1.5 1.5 0 0 1 19 4.5V21l-7-4.5L5 21V4.5A1.5 1.5 0 0 1 6.5 3Z"/></symbol>
+</svg>
+
+<header class="gnav">
+  <div class="wrap">
+    <a class="brand" href="./">Pline</a>
+    <nav aria-label="Topics">
+<a href="#vfx">VFX industry</a><a href="#pipeline">Houdini · USD</a><a href="#obsidian">Obsidian</a><a href="#stationery">Japanese stationery</a>    </nav>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="wrap">
+    <h2>Today</h2>
+    <nav class="days" aria-label="Editions">
+      <a class="pill" href="./" aria-current="page">Today</a>
+      <a class="pill" href="2026-11-26.html">Thu 26</a>
+      <a class="pill" href="2026-11-25.html">Wed 25</a>
+      <a class="pill" href="2026-11-24.html">Tue 24</a>
+      <a class="pill" href="2026-11-23.html">Mon 23</a>
+      <a class="pill" href="2026-11-22.html">Sun 22</a>
+      <a class="pill" href="2026-11-21.html">Sat 21</a>
+    </nav>
+    <a class="pill" href="saved.html" id="savedLink" aria-label="Saved stories"><svg width="16" height="16" aria-hidden="true"><use href="#i-saved"/></svg><span class="likes-label">Saved</span><span class="num" id="savedCount"></span></a>
+    <button class="pill" id="likesBtn" type="button" aria-haspopup="dialog" aria-label="Likes and sync"><svg width="16" height="16" aria-hidden="true"><use href="#i-up"/></svg><span class="likes-label">Likes</span><span class="dot" id="pendingDot" hidden></span></button>
+<button class="pill" id="hideRead" type="button" aria-pressed="false">Hide read</button>  </div>
+</div>
+
+<main>
+  <section class="hero"><div class="wrap">
+    <div class="eyebrow">Good morning, Thomas</div>
+    <h1>Friday 27 November</h1>
+<p class="lead">54 stories from 27 sources.</p>    <div class="stats">
+      <a class="stat" href="#vfx"><b>8</b>VFX industry</a>
+      <a class="stat" href="#pipeline"><b>8</b>Houdini, RenderMan &amp; USD</a>
+      <a class="stat" href="#obsidian"><b>8</b>Obsidian</a>
+      <a class="stat" href="#stationery"><b>8</b>Japanese stationery</a>
+    </div>
+  </div></section>
+
+  <section class="tile light vfx" id="vfx"><div class="wrap">
+    <div class="tile-head">
+      <h2>VFX industry</h2>
+      <p>Studios, shows and the business.</p>
+      <div class="count">8 stories · 3 more in reserve</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="985fe4b1d923" data-topic="vfx" data-source="befores &amp; afters" data-title="I mean, how freakin’ cool was ED-209?">
+        <a class="media" href="https://beforesandafters.com/2026/11/27/i-mean-how-freakin-cool-was-ed-209/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/98602a528f644ec3.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">befores &amp; afters</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://beforesandafters.com/2026/11/27/i-mean-how-freakin-cool-was-ed-209/" target="_blank" rel="noopener">I mean, how freakin’ cool was ED-209?</a></h3>
+<p class="sum">Behind one of Tippett Studio&#39;s landmark stop-motion characters. The post I mean, how freakin’ cool was ED-209? appeared first on befores &amp; afters .</p>          <div class="foot">
+            <div class="links">
+              <a href="https://beforesandafters.com/2026/11/27/i-mean-how-freakin-cool-was-ed-209/" target="_blank" rel="noopener">Read on befores &amp; afters ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="a3bce863b13e" data-topic="vfx" data-source="befores &amp; afters" data-title="Rebelway’s Biggest Sale of the Year is Here">
+        <a class="media" href="https://beforesandafters.com/2026/11/25/rebelways-biggest-sale-of-the-year-is-here/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/acb69a7571d54215.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">befores &amp; afters</span><span>3 days ago</span>
+          </div>
+          <h3><a href="https://beforesandafters.com/2026/11/25/rebelways-biggest-sale-of-the-year-is-here/" target="_blank" rel="noopener">Rebelway’s Biggest Sale of the Year is Here</a></h3>
+<p class="sum">Get 25% off any individual course and 10% off on course Bundle. The post Rebelway’s Biggest Sale of the Year is Here appeared first on befores &amp; afters .</p>          <div class="foot">
+            <div class="links">
+              <a href="https://beforesandafters.com/2026/11/25/rebelways-biggest-sale-of-the-year-is-here/" target="_blank" rel="noopener">Read on befores &amp; afters ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="cfedbff4a52d" data-topic="vfx" data-source="Art of VFX" data-title="VisionQuest: John Haley – Production VFX Supervisor">
+        <a class="media" href="https://www.artofvfx.com/visionquest-john-haley-production-vfx-supervisor/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/e5f0aed97443ff84.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Art of VFX</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.artofvfx.com/visionquest-john-haley-production-vfx-supervisor/" target="_blank" rel="noopener">VisionQuest: John Haley – Production VFX Supervisor</a></h3>
+<p class="sum">From The Lord of the Rings trilogy at Weta FX to the Marvel Cinematic Universe, John Haley has built an impressive career in visual effects. His credits include Lost in Space, Hellboy, Moon Knight, and Wonder Man. Today, he takes us behind the scenes of…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.artofvfx.com/visionquest-john-haley-production-vfx-supervisor/" target="_blank" rel="noopener">Read on Art of VFX ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="5b1468525a7f" data-topic="vfx" data-source="befores &amp; afters" data-title="On The Set Pic: ‘The Rings of Power’, s3">
+        <a class="media" href="https://beforesandafters.com/2026/11/19/on-the-set-pic-the-rings-of-power-s3/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/0944c529251f469b.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">befores &amp; afters</span><span>19 Nov</span>
+          </div>
+          <h3><a href="https://beforesandafters.com/2026/11/19/on-the-set-pic-the-rings-of-power-s3/" target="_blank" rel="noopener">On The Set Pic: ‘The Rings of Power’, s3</a></h3>
+<p class="sum">Stunt coordinator Roy Taylor with Morfydd Clark. The post On The Set Pic: ‘The Rings of Power’, s3 appeared first on befores &amp; afters .</p>          <div class="foot">
+            <div class="links">
+              <a href="https://beforesandafters.com/2026/11/19/on-the-set-pic-the-rings-of-power-s3/" target="_blank" rel="noopener">Read on befores &amp; afters ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="e5ae454dfec9" data-topic="vfx" data-source="DEBA : The HBT" data-title="The Making of Ramayana">
+        <a class="media" href="https://www.youtube.com/watch?v=4f4mvXyX-ro" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/d30d287f166e6c9a.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">DEBA : The HBT</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=4f4mvXyX-ro" target="_blank" rel="noopener">The Making of Ramayana</a></h3>
+<p class="sum">(3,805 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=4f4mvXyX-ro" target="_blank" rel="noopener">Watch on DEBA : The HBT ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="bef2d15a7712" data-topic="vfx" data-source="Art of VFX" data-title="Weekend Spotlight – November 21st, 2026">
+        <a class="media" href="https://www.artofvfx.com/weekend-spotlight-november-21st-2026/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/aac6872441972ea8.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Art of VFX</span><span>6 days ago</span>
+          </div>
+          <h3><a href="https://www.artofvfx.com/weekend-spotlight-november-21st-2026/" target="_blank" rel="noopener">Weekend Spotlight – November 21st, 2026</a></h3>
+<p class="sum">Every weekend, we highlight a handpicked selection of stories from Art of VFX. Whether you’ve missed an interview, want to revisit a great breakdown, or discover the artists behind today’s biggest productions, Weekend Spotlight is your chance to catch up on a…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.artofvfx.com/weekend-spotlight-november-21st-2026/" target="_blank" rel="noopener">Read on Art of VFX ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="292d9041b92c" data-topic="vfx" data-source="r/vfx" data-title="In Interstellar we saw one of the most visually accurate renders of a blackhole ever. Each frame took 100 hours to render with the VFX team coming up with a entirely new lensing technique.  They where able to do this because they didn&#39;t have Robert Downey  Jr in the movie sucking up all the budget.">
+        <a class="media" href="https://www.reddit.com/r/vfx/comments/1y4of8i/in_interstellar_we_saw_one_of_the_most_visually/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/c66a656d4917c5b9.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/vfx</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/vfx/comments/1y4of8i/in_interstellar_we_saw_one_of_the_most_visually/" target="_blank" rel="noopener">In Interstellar we saw one of the most visually accurate renders of a blackhole ever. Each frame took 100 hours to render with the VFX team coming up with a entirely new lensing technique.  They where able to do this because they didn&#39;t have Robert Downey  Jr in the movie sucking up all the budget.</a></h3>
+<p class="sum">100 upvotes, 34 comments on r/vfx.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/vfx/comments/1y4of8i/in_interstellar_we_saw_one_of_the_most_visually/" target="_blank" rel="noopener">Read on r/vfx ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="58f5f65e6b42" data-topic="vfx" data-source="r/vfx" data-title="DJV Studio is out: with H.264/HEVC, AAC playback and Blackmagic output. Open-source DJV stays free">
+        <a class="media" href="https://www.reddit.com/r/vfx/comments/1y4sh74/djv_studio_is_out_with_h264hevc_aac_playback_and/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/7185c685330d76d0.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/vfx</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/vfx/comments/1y4sh74/djv_studio_is_out_with_h264hevc_aac_playback_and/" target="_blank" rel="noopener">DJV Studio is out: with H.264/HEVC, AAC playback and Blackmagic output. Open-source DJV stays free</a></h3>
+<p class="sum">Greetings r/vfx, this is the DJV team. Former Lucasfilm software engineer Darby Johnston has been developing DJV, the open-source image sequence viewer since 2004, and many of you have used it to check your EXR renders and review shots. **DJV Studio** is the…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/vfx/comments/1y4sh74/djv_studio_is_out_with_h264hevc_aac_playback_and/" target="_blank" rel="noopener">Read on r/vfx ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card extra" hidden data-id="bcb8b04624d3" data-topic="vfx" data-source="r/vfx" data-title="Air your grievances, Dneggers">
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/vfx</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/vfx/comments/1y4csi3/air_your_grievances_dneggers/" target="_blank" rel="noopener">Air your grievances, Dneggers</a></h3>
+<p class="sum">Our favorite shitty studio is at it again. Feel free to share your gripes for us to sympathize 48 upvotes, 61 comments on r/vfx.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/vfx/comments/1y4csi3/air_your_grievances_dneggers/" target="_blank" rel="noopener">Read on r/vfx ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="f589c58084b9" data-topic="vfx" data-source="Fame Focus" data-title="Backroom VFX... How They Did It">
+        <a class="media" href="https://www.youtube.com/watch?v=PfQWsMhcNr0" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/660d50460b5bd3a1.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Fame Focus</span><span>5 days ago</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=PfQWsMhcNr0" target="_blank" rel="noopener">Backroom VFX... How They Did It</a></h3>
+<p class="sum">(19,881 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=PfQWsMhcNr0" target="_blank" rel="noopener">Watch on Fame Focus ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="c9426cca9342" data-topic="vfx" data-source="KibaKibi" data-title="Why Indian Movies CAN NOT make GOOD VFX | A KibaKibi Breakdown">
+        <a class="media" href="https://www.youtube.com/watch?v=zOHMhX26zkI" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/1d864046d0140555.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">KibaKibi</span><span>6 days ago</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=zOHMhX26zkI" target="_blank" rel="noopener">Why Indian Movies CAN NOT make GOOD VFX | A KibaKibi Breakdown</a></h3>
+<p class="sum">(253,178 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=zOHMhX26zkI" target="_blank" rel="noopener">Watch on KibaKibi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="more-row"><button class="pill more" type="button" aria-expanded="false">Show 3 more stories</button></div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+  <section class="tile dark pipeline" id="pipeline"><div class="wrap">
+    <div class="tile-head">
+      <h2>Houdini, RenderMan &amp; USD</h2>
+      <p>The tools in the pipeline.</p>
+      <div class="count">8 stories · 3 more in reserve</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="e226e6cd03f8" data-topic="pipeline" data-source="RenderMan" data-title="August 08, 2025 RenderMan at Siggraph 2025 The RenderMan team will be at SIGGRAPH 2025 in Vancouver. In the Art &amp; Science Fair we&#39;ll share the latest RenderMan innovations and industry collaborations at Pixar. The RenderMan team will also be showcasing the Walking Teapot Museum at the Siggraph show floor ... and yes, we&#39;ll be giving some away!">
+        <a class="media" href="https://renderman.pixar.com/news/renderman-at-siggraph-2025" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/148a0cac5df18b74.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">RenderMan</span><span>Recent</span>
+          </div>
+          <h3><a href="https://renderman.pixar.com/news/renderman-at-siggraph-2025" target="_blank" rel="noopener">August 08, 2025 RenderMan at Siggraph 2025 The RenderMan team will be at SIGGRAPH 2025 in Vancouver. In the Art &amp; Science Fair we&#39;ll share the latest RenderMan innovations and industry collaborations at Pixar. The RenderMan team will also be showcasing the Walking Teapot Museum at the Siggraph show floor ... and yes, we&#39;ll be giving some away!</a></h3>
+<p class="sum">The RenderMan team will be at SIGGRAPH 2025 in Vancouver. In the Art &amp; Science Fair we&#39;ll share the latest RenderMan innovations and industry collaborations at Pixar. The RenderMan team will also be showcasing the Walking Teapot Museum at the Siggraph show…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://renderman.pixar.com/news/renderman-at-siggraph-2025" target="_blank" rel="noopener">Read on RenderMan ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="8e7730e65ab8" data-topic="pipeline" data-source="MOON" data-title="MOON - Houdini ⟡ (Official Audio)">
+        <a class="media" href="https://www.youtube.com/watch?v=17RYwhjlz4c" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f970b2a5b0f221e7.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">MOON</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=17RYwhjlz4c" target="_blank" rel="noopener">MOON - Houdini ⟡ (Official Audio)</a></h3>
+<p class="sum">(9,192 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=17RYwhjlz4c" target="_blank" rel="noopener">Watch on MOON ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="4c05ee5ac30d" data-topic="pipeline" data-source="Houdini" data-title="Architectural Visualization | Experience Studios | Houdini Connect">
+        <a class="media" href="https://www.youtube.com/watch?v=AXfQKo9RHEI" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/0dfeae526dc5c515.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Houdini</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=AXfQKo9RHEI" target="_blank" rel="noopener">Architectural Visualization | Experience Studios | Houdini Connect</a></h3>
+<p class="sum">(3,695 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=AXfQKo9RHEI" target="_blank" rel="noopener">Watch on Houdini ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="46641710c671" data-topic="pipeline" data-source="Release - Topic" data-title="- YouTube">
+        <a class="media" href="https://www.youtube.com/watch?v=iNywxW-M_dg" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/926e721a2fa3f4a7.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Release - Topic</span><span>Today</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=iNywxW-M_dg" target="_blank" rel="noopener">- YouTube</a></h3>
+<p class="sum">(55 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=iNywxW-M_dg" target="_blank" rel="noopener">Watch on Release - Topic ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="58750ca4c73c" data-topic="pipeline" data-source="IndyZone チャンネル" data-title="[Houdini 22] Explaining the New COPs-Based HeightField Workflow!">
+        <a class="media" href="https://www.youtube.com/watch?v=4hA83Wr7ggw" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/c02b40a9f23f74f0.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">IndyZone チャンネル</span><span>3 days ago</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=4hA83Wr7ggw" target="_blank" rel="noopener">[Houdini 22] Explaining the New COPs-Based HeightField Workflow!</a></h3>
+<p class="sum">(1,778 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=4hA83Wr7ggw" target="_blank" rel="noopener">Watch on IndyZone チャンネル ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="78bdc3dc5d53" data-topic="pipeline" data-source="Aimpire Gamerz" data-title="Is King Solaris Really Unbeatable? Free sets vs Young Kotl | shadow fight 3 wheel of history event">
+        <a class="media" href="https://www.youtube.com/watch?v=G3nVjVvAqDY" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/4822bcaef73887eb.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Aimpire Gamerz</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=G3nVjVvAqDY" target="_blank" rel="noopener">Is King Solaris Really Unbeatable? Free sets vs Young Kotl | shadow fight 3 wheel of history event</a></h3>
+<p class="sum">(3,374 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=G3nVjVvAqDY" target="_blank" rel="noopener">Watch on Aimpire Gamerz ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="855877ef5705" data-topic="pipeline" data-source="Ivan da Vodka" data-title="JOJI | SOLARIS TOUR - LIVE IN BANGKOK">
+        <a class="media" href="https://www.youtube.com/watch?v=sw1qzOnqCBw" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/49f0eb77992af36d.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Ivan da Vodka</span><span>2 days ago</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=sw1qzOnqCBw" target="_blank" rel="noopener">JOJI | SOLARIS TOUR - LIVE IN BANGKOK</a></h3>
+<p class="sum">(11,309 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=sw1qzOnqCBw" target="_blank" rel="noopener">Watch on Ivan da Vodka ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="46251d20f377" data-topic="pipeline" data-source="MrFroost" data-title="Gladiador Solaris - AD3 + 40 abates 22/11/2026 (CRAFTLANDIA)">
+        <a class="media" href="https://www.youtube.com/watch?v=8gXKugKyqh8" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f2d9fe2140cd311f.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">MrFroost</span><span>3 days ago</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=8gXKugKyqh8" target="_blank" rel="noopener">Gladiador Solaris - AD3 + 40 abates 22/11/2026 (CRAFTLANDIA)</a></h3>
+<p class="sum">(624 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=8gXKugKyqh8" target="_blank" rel="noopener">Watch on MrFroost ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="fbd8ee082562" data-topic="pipeline" data-source="r/Houdini" data-title="Feedback on my demoreel">
+        <a class="media" href="https://www.reddit.com/r/Houdini/comments/1y4p7ky/feedback_on_my_demoreel/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/9933487b3ff291e8.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/Houdini</span><span>3 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/Houdini/comments/1y4p7ky/feedback_on_my_demoreel/" target="_blank" rel="noopener">Feedback on my demoreel</a></h3>
+<p class="sum">Hey everyone. I’d love to get some constructive criticism on my demo reel as I’ve been hoping to do more work outside of where I live, being Trinidad and Tobago. I’ve been using Houdini for about 2.5 years and learning vfx for about 4. Thank you in advance.…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/Houdini/comments/1y4p7ky/feedback_on_my_demoreel/" target="_blank" rel="noopener">Read on r/Houdini ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="4c9aea7f9ccc" data-topic="pipeline" data-source="John Muscarello" data-title="Dreo Solaris Slim H3 vs H2 vs Atom 316: Which Heater Wins?">
+        <a class="media" href="https://www.youtube.com/watch?v=D_twGzcbdok" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/be5ad7b56fb8f2d9.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">John Muscarello</span><span>4 days ago</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=D_twGzcbdok" target="_blank" rel="noopener">Dreo Solaris Slim H3 vs H2 vs Atom 316: Which Heater Wins?</a></h3>
+<p class="sum">(67 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=D_twGzcbdok" target="_blank" rel="noopener">Watch on John Muscarello ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="c16c7ab17eab" data-topic="pipeline" data-source="Center for Inquiry" data-title="Houdini vs. the Spirits: The Magician Who Investigated the Dead | Kenny Biddle">
+        <a class="media" href="https://www.youtube.com/watch?v=DfxQX5x7lIE" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/ec1bf0b919e5d2bb.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Center for Inquiry</span><span>6 days ago</span>
+<span class="kind">Video</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=DfxQX5x7lIE" target="_blank" rel="noopener">Houdini vs. the Spirits: The Magician Who Investigated the Dead | Kenny Biddle</a></h3>
+<p class="sum">(1,530 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=DfxQX5x7lIE" target="_blank" rel="noopener">Watch on Center for Inquiry ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="more-row"><button class="pill more" type="button" aria-expanded="false">Show 3 more stories</button></div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+  <section class="tile parchment obsidian" id="obsidian"><div class="wrap">
+    <div class="tile-head">
+      <h2>Obsidian</h2>
+      <p>Releases, plugins and the community.</p>
+      <div class="count">8 stories · 8 more in reserve</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="e410b8928f2e" data-topic="obsidian" data-source="Obsidian blog" data-title="Obsidian October 2025">
+        <a class="media" href="https://obsidian.md/blog/2025-obsidian-october/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/2025-obsidian-october/" target="_blank" rel="noopener">Obsidian October 2025</a></h3>
+<p class="sum">Every October, the Obsidian community comes together to hack on plugins, themes, vaults, and other projects. Polish your creations, ship updates, or kick off a new project you&#39;ve been eager to build!</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/2025-obsidian-october/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="ebfe50f82b5c" data-topic="obsidian" data-source="Obsidian blog" data-title="Obsidian is now free for work">
+        <a class="media" href="https://obsidian.md/blog/free-for-work/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/6dd95818447f7293.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/free-for-work/" target="_blank" rel="noopener">Obsidian is now free for work</a></h3>
+<p class="sum">Starting today, the Obsidian Commercial license is optional. Anyone can use Obsidian for work, for free. Explore organizations that support Obsidian on our new Enterprise page.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/free-for-work/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="7e7719d3dc9c" data-topic="obsidian" data-source="Obsidian blog" data-title="Second audit of Obsidian apps completed by Cure53">
+        <a class="media" href="https://obsidian.md/blog/cure53-second-client-audit/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/cure53-second-client-audit/" target="_blank" rel="noopener">Second audit of Obsidian apps completed by Cure53</a></h3>
+<p class="sum">A second audit of Obsidian apps finds that incremental updates since Obsidian 1.5.3 maintained the highest degree of attention to security, and that no new vulnerabilities were found.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/cure53-second-client-audit/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="5defda764660" data-topic="obsidian" data-source="Obsidian blog" data-title="Obsidian Softwear: new Fractal t-shirts and hoodies">
+        <a class="media" href="https://obsidian.md/blog/fractal-softwear/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/a6222e0c799a920f.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/fractal-softwear/" target="_blank" rel="noopener">Obsidian Softwear: new Fractal t-shirts and hoodies</a></h3>
+<p class="sum">Fractal is the latest Softwear update. Our new tees and hoodies are silkscreened using high-opacity colors, with a design by VFX artist and Obsidian user, Shaun Yue.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/fractal-softwear/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="12ba58383f16" data-topic="obsidian" data-source="Obsidian blog" data-title="Obsidian October 2024">
+        <a class="media" href="https://obsidian.md/blog/2024-obsidian-october/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/2024-obsidian-october/" target="_blank" rel="noopener">Obsidian October 2024</a></h3>
+<p class="sum">This year Obsidian October is all about speed. Learn how you can adopt the latest APIs and get feedback from our team.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/2024-obsidian-october/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="135e3355b3e4" data-topic="obsidian" data-source="Obsidian blog" data-title="Obsidian Sync now starts at $4 per month with the new Standard plan">
+        <a class="media" href="https://obsidian.md/blog/standard-plan/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/standard-plan/" target="_blank" rel="noopener">Obsidian Sync now starts at $4 per month with the new Standard plan</a></h3>
+<p class="sum">Obsidian Sync is our approach to making the most intuitive and secure sync option. With the new Standard plan, we&#39;re excited to make Sync accessible to even more people.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/standard-plan/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="17a929f58ab6" data-topic="obsidian" data-source="Obsidian blog" data-title="New Obsidian Sync plans: bigger, better, faster, smoother">
+        <a class="media" href="https://obsidian.md/blog/new-sync-plans/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/new-sync-plans/" target="_blank" rel="noopener">New Obsidian Sync plans: bigger, better, faster, smoother</a></h3>
+<p class="sum">Obsidian Sync now offers larger vaults, bigger files, regional servers, faster sync, and more flexible storage. New plans are launching in January, and you can join Sync now for a special holiday promotion.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/new-sync-plans/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="533c10eb43ae" data-topic="obsidian" data-source="Obsidian blog" data-title="Obsidian Importer now converts Apple Notes to portable, durable files">
+        <a class="media" href="https://obsidian.md/blog/apple-notes-export/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/7b82033c21d4fccf.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/apple-notes-export/" target="_blank" rel="noopener">Obsidian Importer now converts Apple Notes to portable, durable files</a></h3>
+<p class="sum">Obsidian Importer now helps you easily convert your Apple Notes data to portable files that you can use with any Markdown app. Supports tables, images, drawings, scans, PDFs, and links introduced in iOS 17.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/apple-notes-export/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="534e6bfc46f3" data-topic="obsidian" data-source="Obsidian blog" data-title="2024 Gems of the year winners">
+        <a class="media" href="https://obsidian.md/blog/2024-goty-winners/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/2024-goty-winners/" target="_blank" rel="noopener">2024 Gems of the year winners</a></h3>
+<p class="sum">Today we’re thrilled to announce the winners of our fifth annual Gems of the Year awards! After our panel narrowed down the selection and the community voted on...</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/2024-goty-winners/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="29e6033bdd89" data-topic="obsidian" data-source="Obsidian blog" data-title="2024 Gems of the year nominations">
+        <a class="media" href="https://obsidian.md/blog/2024-goty-nominations/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/2024-goty-nominations/" target="_blank" rel="noopener">2024 Gems of the year nominations</a></h3>
+<p class="sum">2024 is over and that means it&#39;s time to nominate your favorite projects from the Obsidian community for our Gems of the Year awards! To nominate projects go he...</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/2024-goty-nominations/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="25a22d18a5b4" data-topic="obsidian" data-source="Obsidian blog" data-title="Save the web">
+        <a class="media" href="https://obsidian.md/blog/save-the-web/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/7c1e228eb0b43cfc.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/save-the-web/" target="_blank" rel="noopener">Save the web</a></h3>
+<p class="sum">Highlight and capture web pages in your favorite browser with the new Obsidian Web Clipper extension.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/save-the-web/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="2c30543a2818" data-topic="obsidian" data-source="Obsidian blog" data-title="Announcing JSON Canvas: an open file format for infinite canvas data">
+        <a class="media" href="https://obsidian.md/blog/json-canvas/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/840b4606fd76cc36.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/json-canvas/" target="_blank" rel="noopener">Announcing JSON Canvas: an open file format for infinite canvas data</a></h3>
+<p class="sum">The Obsidian Canvas file format is now called JSON Canvas and has its own site, specification, and open source resources.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/json-canvas/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="cceed1aedd55" data-topic="obsidian" data-source="Obsidian blog" data-title="2023 Gems of the year winners">
+        <a class="media" href="https://obsidian.md/blog/2023-goty-winners/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/2023-goty-winners/" target="_blank" rel="noopener">2023 Gems of the year winners</a></h3>
+<p class="sum">It has been nearly four years since the first line of code of Obsidian was written on January 31st, 2020. Today we&#39;re thrilled to announce the winners of our fo...</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/2023-goty-winners/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="c5ccf2d05789" data-topic="obsidian" data-source="Obsidian blog" data-title="New security page and independent audit completed by Cure53">
+        <a class="media" href="https://obsidian.md/blog/cure53-security-audit/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/cure53-security-audit/" target="_blank" rel="noopener">New security page and independent audit completed by Cure53</a></h3>
+<p class="sum">Independent audits help us ensure that our code and procedures meet the highest security standards. Our new Security page hosts audits completed by third parties, including our first report by Cure53 covering Obsidian apps.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/cure53-security-audit/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="cc6a62742e36" data-topic="obsidian" data-source="Obsidian blog" data-title="2023 Gems of the year nominations">
+        <a class="media" href="https://obsidian.md/blog/2023-goty-nominations/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/2023-goty-nominations/" target="_blank" rel="noopener">2023 Gems of the year nominations</a></h3>
+<p class="sum">**(Update)** See [2023 Gems of the Year](https://obsidian.md/blog/2023-goty-winners/) for the final results! --- The year is almost over and that means it&#39;s tim...</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/2023-goty-nominations/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="829aa2b6e8bf" data-topic="obsidian" data-source="Obsidian blog" data-title="Goodbye legacy editor">
+        <a class="media" href="https://obsidian.md/blog/goodbye-legacy-editor/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/f9b48989cd33cf58.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Obsidian blog</span><span>Recent</span>
+          </div>
+          <h3><a href="https://obsidian.md/blog/goodbye-legacy-editor/" target="_blank" rel="noopener">Goodbye legacy editor</a></h3>
+<p class="sum">In the upcoming Obsidian v1.5, the legacy editor will be removed from the app.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://obsidian.md/blog/goodbye-legacy-editor/" target="_blank" rel="noopener">Read on Obsidian blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="more-row"><button class="pill more" type="button" aria-expanded="false">Show 8 more stories</button></div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+  <section class="tile dark stationery" id="stationery"><div class="wrap">
+    <div class="tile-head">
+<div class="jp" lang="ja">文房具</div>      <h2>Japanese stationery</h2>
+      <p>Pens, inks, paper and journaling.</p>
+      <div class="count">8 stories · 8 more in reserve</div>
+    </div>
+    <div class="grid">
+      <article class="card lead has-img" data-id="cfba5c44465e" data-topic="stationery" data-source="Pilot" data-title="2026.11.26 新製品情報 万年筆『カクノ Tiny Friends（タイニーフレンズ）』限定発売">
+        <a class="media" href="https://www.pilot.co.jp/press_release/2026/11/26/_tiny_friends.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/21ec62ea380a76bf.webp" alt="" loading="eager" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Pilot</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.pilot.co.jp/press_release/2026/11/26/_tiny_friends.html" target="_blank" rel="noopener">2026.11.26 新製品情報 万年筆『カクノ Tiny Friends（タイニーフレンズ）』限定発売</a></h3>
+<p class="sum">エントリーモデルの万年筆「kakuno（カクノ）」の限定モデルとして、『カクノTiny Friends（タイニーフレンズ）』を数量限定で発売します。 今回発売する『カクノ Tiny Friends』...</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.pilot.co.jp/press_release/2026/11/26/_tiny_friends.html" target="_blank" rel="noopener">Read on Pilot ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="f2897257adae" data-topic="stationery" data-source="Platinum" data-title="カスタマーハラスメントに関する方針 | プラチナ万年筆">
+        <a class="media" href="https://www.platinum-pen.co.jp/news/13606/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/cc624308a7204cbc.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Platinum</span><span>Recent</span>
+          </div>
+          <h3><a href="https://www.platinum-pen.co.jp/news/13606/" target="_blank" rel="noopener">カスタマーハラスメントに関する方針 | プラチナ万年筆</a></h3>
+<p class="sum">カスタマーハラスメントに関する方針１．基本方針当社は、お客様にご満足いただける商品・サービスの提供を目指し、お客様からのご意見・ご要望を真摯に受け止め、誠実に対応してまいります。一方で、従業員の人格を否定する言動、威圧的・・・</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.platinum-pen.co.jp/news/13606/" target="_blank" rel="noopener">Read on Platinum ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="35ea7d8b5600" data-topic="stationery" data-source="Platinum" data-title="ペンズアレイタケウチ(愛知県岡崎市）にて当社万年筆の試筆、販売会を開催いたします。 | プラチナ万年筆">
+        <a class="media" href="https://www.platinum-pen.co.jp/news/13506/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/c1ae88c9f86a5221.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Platinum</span><span>Recent</span>
+          </div>
+          <h3><a href="https://www.platinum-pen.co.jp/news/13506/" target="_blank" rel="noopener">ペンズアレイタケウチ(愛知県岡崎市）にて当社万年筆の試筆、販売会を開催いたします。 | プラチナ万年筆</a></h3>
+<p class="sum">＜プラチナ万年筆 試筆・販売会＞・場所：PEN’S ALLEY Takeuchi 2階・開催日時：2026年8月22日(土)、23日(日) 両日・ 11:00〜18:00・内容：出雲、プラチナプラチナ、セルロイド、センチ・・・</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.platinum-pen.co.jp/news/13506/" target="_blank" rel="noopener">Read on Platinum ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="87da0e734212" data-topic="stationery" data-source="Platinum" data-title="夏季休業のお知らせ | プラチナ万年筆">
+        <a class="media" href="https://www.platinum-pen.co.jp/news/13495/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/cc624308a7204cbc.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Platinum</span><span>Recent</span>
+          </div>
+          <h3><a href="https://www.platinum-pen.co.jp/news/13495/" target="_blank" rel="noopener">夏季休業のお知らせ | プラチナ万年筆</a></h3>
+<p class="sum">当社は下記の期間、夏季休業とさせていただきます。期間中は大変ご不便をおかけ致しますが、何卒ご了承くださいますようお願い申し上げます。＜休業期間＞8月8日（土)〜8月16日（日）8月17日（月）より通常通り営業いたします。</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.platinum-pen.co.jp/news/13495/" target="_blank" rel="noopener">Read on Platinum ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-id="d0f87303568d" data-topic="stationery" data-source="JetPens blog" data-title="JetPens Coupons, Promos, and More">
+        <div class="body">
+          <div class="meta">
+            <span class="src">JetPens blog</span><span>2 days ago</span>
+          </div>
+          <h3><a href="https://www.jetpens.com/blog/JetPens-Coupons-Promos-and-More/pt/15" target="_blank" rel="noopener">JetPens Coupons, Promos, and More</a></h3>
+<p class="sum">At JetPens, we try our hardest to provide the best pricing for our loyal customers. We know that you have a choice when you shop and we’re delighted that you choose to shop with us. Table of Contents JetPens Black Friday and Cyber Monday Specials JetPens…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.jetpens.com/blog/JetPens-Coupons-Promos-and-More/pt/15" target="_blank" rel="noopener">Read on JetPens blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="4dd573954812" data-topic="stationery" data-source="The Pen Addict" data-title="The Pen Addict Podcast: Episode 742 - 2026 Under $50 Gift Guide">
+        <a class="media" href="https://www.penaddict.com/blog/2026/11/25/the-pen-addict-podcast-episode-742-2026-under-50-gift-guide" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/d2266cc39e5f4402.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">The Pen Addict</span><span>2 days ago</span>
+          </div>
+          <h3><a href="https://www.penaddict.com/blog/2026/11/25/the-pen-addict-podcast-episode-742-2026-under-50-gift-guide" target="_blank" rel="noopener">The Pen Addict Podcast: Episode 742 - 2026 Under $50 Gift Guide</a></h3>
+<p class="sum">One of Ana’s favorite picks, the Lisa Congdon x CCH Small Square Stationery Tray . Ana Reinert joins me for our annual gift guide episode, this time with a focus on a price point we have both spent well over a decade focusing on. If you had a cap of $50, what…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.penaddict.com/blog/2026/11/25/the-pen-addict-podcast-episode-742-2026-under-50-gift-guide" target="_blank" rel="noopener">Read on The Pen Addict ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="03f3a83f69e5" data-topic="stationery" data-source="The Pen Addict" data-title="Luddite Function Notebook, uniball Zento Giveaway">
+        <a class="media" href="https://www.penaddict.com/blog/2026/11/24/luddite-function-notebook-uniball-zento-giveaway" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/d1d76890adec4b1e.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">The Pen Addict</span><span>3 days ago</span>
+          </div>
+          <h3><a href="https://www.penaddict.com/blog/2026/11/24/luddite-function-notebook-uniball-zento-giveaway" target="_blank" rel="noopener">Luddite Function Notebook, uniball Zento Giveaway</a></h3>
+<p class="sum">Yesterday, I reviewed the Luddite Spreadsheet Notebook , and along with that, I also picked up the Luddite Section Notebook , which has more of a traditional grid layout. I have one Section Notebook in B5 size to give away, and I’m including a Standard…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.penaddict.com/blog/2026/11/24/luddite-function-notebook-uniball-zento-giveaway" target="_blank" rel="noopener">Read on The Pen Addict ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img" data-id="30795124c8e3" data-topic="stationery" data-source="The Well-Appointed Desk" data-title="Quote of the Week: Give Thanks Continuously">
+        <a class="media" href="https://www.wellappointeddesk.com/2026/11/quote-of-the-week-give-thanks-continuously/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/7bfd62766ec6ea1e.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">The Well-Appointed Desk</span><span>Yesterday</span>
+<span class="badge">New</span>          </div>
+          <h3><a href="https://www.wellappointeddesk.com/2026/11/quote-of-the-week-give-thanks-continuously/" target="_blank" rel="noopener">Quote of the Week: Give Thanks Continuously</a></h3>
+<p class="sum">“Cultivate the habit of being grateful for every good thing that comes to you, and to give thanks continuously. ” ― Ralph Waldo Emerson This week’s quote is from pen community favorite Ralph Waldo Emerson and is perfect for the week of Thanksgiving. I think…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.wellappointeddesk.com/2026/11/quote-of-the-week-give-thanks-continuously/" target="_blank" rel="noopener">Read on The Well-Appointed Desk ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="5f88f2d81fb0" data-topic="stationery" data-source="The Well-Appointed Desk" data-title="Link Love: It’s Gift Guide Season!">
+        <a class="media" href="https://www.wellappointeddesk.com/2026/11/link-love-its-gift-guide-season/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/1e43b8ddcdc3ba20.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">The Well-Appointed Desk</span><span>2 days ago</span>
+          </div>
+          <h3><a href="https://www.wellappointeddesk.com/2026/11/link-love-its-gift-guide-season/" target="_blank" rel="noopener">Link Love: It’s Gift Guide Season!</a></h3>
+<p class="sum">Hi! I’m Ana. I bother Brad Dowdy a lot. So much so, that he invited me to come on his infamous Pen Addict podcast years ago to chat about Holiday Gift Guides. And I kept coming back… year after year. So, this week the latest Holiday Gift Guide episode…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.wellappointeddesk.com/2026/11/link-love-its-gift-guide-season/" target="_blank" rel="noopener">Read on The Well-Appointed Desk ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="1fd233d3766e" data-topic="stationery" data-source="The Well-Appointed Desk" data-title="Giveaway: Ohuhu Alcohol Markers Double Tipped, Set of 100">
+        <a class="media" href="https://www.wellappointeddesk.com/2026/11/giveaway-ohuhu-alcohol-markers-double-tipped-set-of-100/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/dbbdc27438297542.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">The Well-Appointed Desk</span><span>3 days ago</span>
+          </div>
+          <h3><a href="https://www.wellappointeddesk.com/2026/11/giveaway-ohuhu-alcohol-markers-double-tipped-set-of-100/" target="_blank" rel="noopener">Giveaway: Ohuhu Alcohol Markers Double Tipped, Set of 100</a></h3>
+<p class="sum">As I mentioned in my lists post last week, my motto for 2027 is “use the good stuff.” As part of that, I want to take the “good stuff” that I’m not using and share it out into the world. To that end, today I’m offering a giveaway of a set of alcohol markers.…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.wellappointeddesk.com/2026/11/giveaway-ohuhu-alcohol-markers-double-tipped-set-of-100/" target="_blank" rel="noopener">Read on The Well-Appointed Desk ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="9488e389e034" data-topic="stationery" data-source="The Pen Addict" data-title="LAMY AL-Star Disco Ballpoint Giveaway Winner">
+        <a class="media" href="https://www.penaddict.com/blog/2026/11/21/lamy-al-star-disco-ballpoint-giveaway-winner" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/eaaa9d1215b9ab8d.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">The Pen Addict</span><span>6 days ago</span>
+          </div>
+          <h3><a href="https://www.penaddict.com/blog/2026/11/21/lamy-al-star-disco-ballpoint-giveaway-winner" target="_blank" rel="noopener">LAMY AL-Star Disco Ballpoint Giveaway Winner</a></h3>
+<p class="sum">I mentioned my love of the LAMY AL-Star Ballpoint as my favorite Jetstream refill vessel in yesterday’s post , so let’s give one away today! This one is in the Disco colorway , which ships with the LAMY M16 ballpoint refill. Maybe one day they will default to…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.penaddict.com/blog/2026/11/21/lamy-al-star-disco-ballpoint-giveaway-winner" target="_blank" rel="noopener">Read on The Pen Addict ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card extra" hidden data-id="1b11cd82ccc1" data-topic="stationery" data-source="JetPens blog" data-title="Holiday Gift Guide: The Best Stationery for Everyone on Your List">
+        <div class="body">
+          <div class="meta">
+            <span class="src">JetPens blog</span><span>20 Nov</span>
+          </div>
+          <h3><a href="https://www.jetpens.com/blog/Holiday-Gift-Guide-The-Best-Stationery-for-Everyone-on-Your-List/pt/1057" target="_blank" rel="noopener">Holiday Gift Guide: The Best Stationery for Everyone on Your List</a></h3>
+<p class="sum">With the holidays quickly approaching, it’s time to start thinking about the gifts you’ll be picking up for everyone on your list. And we might be biased, but we know what everyone will love: stationery! In this guide, JetPens team members suggest products…</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.jetpens.com/blog/Holiday-Gift-Guide-The-Best-Stationery-for-Everyone-on-Your-List/pt/1057" target="_blank" rel="noopener">Read on JetPens blog ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="753c7d5719f4" data-topic="stationery" data-source="ももじの手帳の中身" data-title="[Fountain Pen] Finally Got the Glow-in-the-Dark Kaweco! F-Nib Writing Experience and Ink Selectio...">
+        <a class="media" href="https://www.youtube.com/watch?v=6kILGJhmNzk" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/2d368f7b5b9b8a4a.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">ももじの手帳の中身</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=6kILGJhmNzk" target="_blank" rel="noopener">[Fountain Pen] Finally Got the Glow-in-the-Dark Kaweco! F-Nib Writing Experience and Ink Selectio...</a></h3>
+<p class="sum">(323 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=6kILGJhmNzk" target="_blank" rel="noopener">Watch on ももじの手帳の中身 ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="3b5dc9d37719" data-topic="stationery" data-source="Aligned Plans" data-title="ブラックフライデーで文房具を買う前にこれを見て！">
+        <a class="media" href="https://www.youtube.com/watch?v=SH9lY57o7rY" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/2860118270ac705d.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">Aligned Plans</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=SH9lY57o7rY" target="_blank" rel="noopener">ブラックフライデーで文房具を買う前にこれを見て！</a></h3>
+<p class="sum">(1,555 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=SH9lY57o7rY" target="_blank" rel="noopener">Watch on Aligned Plans ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="950d911884ff" data-topic="stationery" data-source="コスメップル【暮らしの新作】" data-title="[December 2026] New &amp; Limited Edition Stationery Roundup! RURU MARY’S x Tsutaya Books, Planner De...">
+        <a class="media" href="https://www.youtube.com/watch?v=SMdxoutIYow" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/6d81e3c962d9e119.webp" alt="" loading="lazy" decoding="async">
+<span class="play"><svg width="20" height="20"><use href="#i-play"/></svg></span>        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">コスメップル【暮らしの新作】</span><span>Yesterday</span>
+<span class="kind">Video</span><span class="badge">New</span>          </div>
+          <h3><a href="https://www.youtube.com/watch?v=SMdxoutIYow" target="_blank" rel="noopener">[December 2026] New &amp; Limited Edition Stationery Roundup! RURU MARY’S x Tsutaya Books, Planner De...</a></h3>
+<p class="sum">(191 views)</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.youtube.com/watch?v=SMdxoutIYow" target="_blank" rel="noopener">Watch on コスメップル【暮らしの新作】 ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card has-img extra" hidden data-id="01255f5e8301" data-topic="stationery" data-source="r/hobonichi" data-title="The Week I Went to Ghibli Park">
+        <a class="media" href="https://www.reddit.com/r/hobonichi/comments/1y4yoz1/the_week_i_went_to_ghibli_park/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="thumbs/d606dd76b6515e8b.webp" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="body">
+          <div class="meta">
+            <span class="src">r/hobonichi</span><span>2 days ago</span>
+<span class="kind">Discussion</span>          </div>
+          <h3><a href="https://www.reddit.com/r/hobonichi/comments/1y4yoz1/the_week_i_went_to_ghibli_park/" target="_blank" rel="noopener">The Week I Went to Ghibli Park</a></h3>
+<p class="sum">It was a busy and challenging week, but a fun one! 102 upvotes, 10 comments on r/hobonichi.</p>          <div class="foot">
+            <div class="links">
+              <a href="https://www.reddit.com/r/hobonichi/comments/1y4yoz1/the_week_i_went_to_ghibli_park/" target="_blank" rel="noopener">Read on r/hobonichi ›</a>
+            </div>
+            <div class="votes">
+              <button class="vote up" type="button" aria-pressed="false" aria-label="More like this" title="More like this"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+              <button class="vote down" type="button" aria-pressed="false" aria-label="Less like this" title="Less like this"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+              <button class="vote save" type="button" aria-pressed="false" aria-label="Save for later" title="Save for later"><svg class="ic-off" aria-hidden="true"><use href="#i-save"/></svg><svg class="ic-on" aria-hidden="true"><use href="#i-saved"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="more-row"><button class="pill more" type="button" aria-expanded="false">Show 8 more stories</button></div>
+    <p class="allread">You're all caught up here.</p>
+  </div></section>
+
+  <nav class="pager" aria-label="Other editions"><div class="wrap">
+<a class="pill" href="2026-11-26.html">‹ Thursday 26 November</a>  </div></nav>
+<script type="application/json" id="pline-stories">[{"date": "2026-11-26", "id": "cfba5c44465e", "image": "thumbs/21ec62ea380a76bf.webp", "source": "Pilot", "summary": "\u30a8\u30f3\u30c8\u30ea\u30fc\u30e2\u30c7\u30eb\u306e\u4e07\u5e74\u7b46\u300ckakuno\uff08\u30ab\u30af\u30ce\uff09\u300d\u306e\u9650\u5b9a\u30e2\u30c7\u30eb\u3068\u3057\u3066\u3001\u300e\u30ab\u30af\u30ceTiny Friends\uff08\u30bf\u30a4\u30cb\u30fc\u30d5\u30ec\u30f3\u30ba\uff09\u300f\u3092\u6570\u91cf\u9650\u5b9a\u3067\u767a\u58f2\u3057\u307e\u3059\u3002 \u4eca\u56de\u767a\u58f2\u3059\u308b\u300e\u30ab\u30af\u30ce Tiny Friends\u300f...", "title": "2026.11.26 \u65b0\u88fd\u54c1\u60c5\u5831 \u4e07\u5e74\u7b46\u300e\u30ab\u30af\u30ce Tiny Friends\uff08\u30bf\u30a4\u30cb\u30fc\u30d5\u30ec\u30f3\u30ba\uff09\u300f\u9650\u5b9a\u767a\u58f2", "topic": "stationery", "url": "https://www.pilot.co.jp/press_release/2026/11/26/_tiny_friends.html"}, {"id": "f2897257adae", "image": "thumbs/cc624308a7204cbc.webp", "source": "Platinum", "summary": "\u30ab\u30b9\u30bf\u30de\u30fc\u30cf\u30e9\u30b9\u30e1\u30f3\u30c8\u306b\u95a2\u3059\u308b\u65b9\u91dd\uff11\uff0e\u57fa\u672c\u65b9\u91dd\u5f53\u793e\u306f\u3001\u304a\u5ba2\u69d8\u306b\u3054\u6e80\u8db3\u3044\u305f\u3060\u3051\u308b\u5546\u54c1\u30fb\u30b5\u30fc\u30d3\u30b9\u306e\u63d0\u4f9b\u3092\u76ee\u6307\u3057\u3001\u304a\u5ba2\u69d8\u304b\u3089\u306e\u3054\u610f\u898b\u30fb\u3054\u8981\u671b\u3092\u771f\u646f\u306b\u53d7\u3051\u6b62\u3081\u3001\u8aa0\u5b9f\u306b\u5bfe\u5fdc\u3057\u3066\u307e\u3044\u308a\u307e\u3059\u3002\u4e00\u65b9\u3067\u3001\u5f93\u696d\u54e1\u306e\u4eba\u683c\u3092\u5426\u5b9a\u3059\u308b\u8a00\u52d5\u3001\u5a01\u5727\u7684\u30fb\u30fb\u30fb", "title": "\u30ab\u30b9\u30bf\u30de\u30fc\u30cf\u30e9\u30b9\u30e1\u30f3\u30c8\u306b\u95a2\u3059\u308b\u65b9\u91dd | \u30d7\u30e9\u30c1\u30ca\u4e07\u5e74\u7b46", "topic": "stationery", "url": "https://www.platinum-pen.co.jp/news/13606/"}, {"id": "35ea7d8b5600", "image": "thumbs/c1ae88c9f86a5221.webp", "source": "Platinum", "summary": "\uff1c\u30d7\u30e9\u30c1\u30ca\u4e07\u5e74\u7b46 \u8a66\u7b46\u30fb\u8ca9\u58f2\u4f1a\uff1e\u30fb\u5834\u6240\uff1aPEN\u2019S ALLEY Takeuchi 2\u968e\u30fb\u958b\u50ac\u65e5\u6642\uff1a2026\u5e748\u670822\u65e5(\u571f)\u300123\u65e5(\u65e5) \u4e21\u65e5\u30fb 11:00\u301c18:00\u30fb\u5185\u5bb9\uff1a\u51fa\u96f2\u3001\u30d7\u30e9\u30c1\u30ca\u30d7\u30e9\u30c1\u30ca\u3001\u30bb\u30eb\u30ed\u30a4\u30c9\u3001\u30bb\u30f3\u30c1\u30fb\u30fb\u30fb", "title": "\u30da\u30f3\u30ba\u30a2\u30ec\u30a4\u30bf\u30b1\u30a6\u30c1(\u611b\u77e5\u770c\u5ca1\u5d0e\u5e02\uff09\u306b\u3066\u5f53\u793e\u4e07\u5e74\u7b46\u306e\u8a66\u7b46\u3001\u8ca9\u58f2\u4f1a\u3092\u958b\u50ac\u3044\u305f\u3057\u307e\u3059\u3002 | \u30d7\u30e9\u30c1\u30ca\u4e07\u5e74\u7b46", "topic": "stationery", "url": "https://www.platinum-pen.co.jp/news/13506/"}, {"id": "87da0e734212", "image": "thumbs/cc624308a7204cbc.webp", "source": "Platinum", "summary": "\u5f53\u793e\u306f\u4e0b\u8a18\u306e\u671f\u9593\u3001\u590f\u5b63\u4f11\u696d\u3068\u3055\u305b\u3066\u3044\u305f\u3060\u304d\u307e\u3059\u3002\u671f\u9593\u4e2d\u306f\u5927\u5909\u3054\u4e0d\u4fbf\u3092\u304a\u304b\u3051\u81f4\u3057\u307e\u3059\u304c\u3001\u4f55\u5352\u3054\u4e86\u627f\u304f\u3060\u3055\u3044\u307e\u3059\u3088\u3046\u304a\u9858\u3044\u7533\u3057\u4e0a\u3052\u307e\u3059\u3002\uff1c\u4f11\u696d\u671f\u9593\uff1e8\u67088\u65e5\uff08\u571f)\u301c8\u670816\u65e5\uff08\u65e5\uff098\u670817\u65e5\uff08\u6708\uff09\u3088\u308a\u901a\u5e38\u901a\u308a\u55b6\u696d\u3044\u305f\u3057\u307e\u3059\u3002", "title": "\u590f\u5b63\u4f11\u696d\u306e\u304a\u77e5\u3089\u305b | \u30d7\u30e9\u30c1\u30ca\u4e07\u5e74\u7b46", "topic": "stationery", "url": "https://www.platinum-pen.co.jp/news/13495/"}, {"date": "2026-11-25", "id": "d0f87303568d", "source": "JetPens blog", "summary": "At JetPens, we try our hardest to provide the best pricing for our loyal customers. We know that you have a choice when you shop and we\u2019re delighted that you choose to shop with us. Table of Contents JetPens Black Friday and Cyber Monday Specials JetPens\u2026", "title": "JetPens Coupons, Promos, and More", "topic": "stationery", "url": "https://www.jetpens.com/blog/JetPens-Coupons-Promos-and-More/pt/15"}, {"date": "2026-11-25", "id": "4dd573954812", "image": "thumbs/d2266cc39e5f4402.webp", "source": "The Pen Addict", "summary": "One of Ana\u2019s favorite picks, the Lisa Congdon x CCH Small Square Stationery Tray . Ana Reinert joins me for our annual gift guide episode, this time with a focus on a price point we have both spent well over a decade focusing on. If you had a cap of $50, what\u2026", "title": "The Pen Addict Podcast: Episode 742 - 2026 Under $50 Gift Guide", "topic": "stationery", "url": "https://www.penaddict.com/blog/2026/11/25/the-pen-addict-podcast-episode-742-2026-under-50-gift-guide"}, {"date": "2026-11-24", "id": "03f3a83f69e5", "image": "thumbs/d1d76890adec4b1e.webp", "source": "The Pen Addict", "summary": "Yesterday, I reviewed the Luddite Spreadsheet Notebook , and along with that, I also picked up the Luddite Section Notebook , which has more of a traditional grid layout. I have one Section Notebook in B5 size to give away, and I\u2019m including a Standard\u2026", "title": "Luddite Function Notebook, uniball Zento Giveaway", "topic": "stationery", "url": "https://www.penaddict.com/blog/2026/11/24/luddite-function-notebook-uniball-zento-giveaway"}, {"date": "2026-11-26", "id": "30795124c8e3", "image": "thumbs/7bfd62766ec6ea1e.webp", "source": "The Well-Appointed Desk", "summary": "\u201cCultivate the habit of being grateful for every good thing that comes to you, and to give thanks continuously. \u201d \u2015 Ralph Waldo Emerson This week\u2019s quote is from pen community favorite Ralph Waldo Emerson and is perfect for the week of Thanksgiving. I think\u2026", "title": "Quote of the Week: Give Thanks Continuously", "topic": "stationery", "url": "https://www.wellappointeddesk.com/2026/11/quote-of-the-week-give-thanks-continuously/"}, {"date": "2026-11-25", "id": "5f88f2d81fb0", "image": "thumbs/1e43b8ddcdc3ba20.webp", "source": "The Well-Appointed Desk", "summary": "Hi! I\u2019m Ana. I bother Brad Dowdy a lot. So much so, that he invited me to come on his infamous Pen Addict podcast years ago to chat about Holiday Gift Guides. And I kept coming back\u2026 year after year. So, this week the latest Holiday Gift Guide episode\u2026", "title": "Link Love: It\u2019s Gift Guide Season!", "topic": "stationery", "url": "https://www.wellappointeddesk.com/2026/11/link-love-its-gift-guide-season/"}, {"date": "2026-11-24", "id": "1fd233d3766e", "image": "thumbs/dbbdc27438297542.webp", "source": "The Well-Appointed Desk", "summary": "As I mentioned in my lists post last week, my motto for 2027 is \u201cuse the good stuff.\u201d As part of that, I want to take the \u201cgood stuff\u201d that I\u2019m not using and share it out into the world. To that end, today I\u2019m offering a giveaway of a set of alcohol markers.\u2026", "title": "Giveaway: Ohuhu Alcohol Markers Double Tipped, Set of 100", "topic": "stationery", "url": "https://www.wellappointeddesk.com/2026/11/giveaway-ohuhu-alcohol-markers-double-tipped-set-of-100/"}, {"date": "2026-11-21", "id": "9488e389e034", "image": "thumbs/eaaa9d1215b9ab8d.webp", "source": "The Pen Addict", "summary": "I mentioned my love of the LAMY AL-Star Ballpoint as my favorite Jetstream refill vessel in yesterday\u2019s post , so let\u2019s give one away today! This one is in the Disco colorway , which ships with the LAMY M16 ballpoint refill. Maybe one day they will default to\u2026", "title": "LAMY AL-Star Disco Ballpoint Giveaway Winner", "topic": "stationery", "url": "https://www.penaddict.com/blog/2026/11/21/lamy-al-star-disco-ballpoint-giveaway-winner"}, {"date": "2026-11-20", "id": "1b11cd82ccc1", "source": "JetPens blog", "summary": "With the holidays quickly approaching, it\u2019s time to start thinking about the gifts you\u2019ll be picking up for everyone on your list. And we might be biased, but we know what everyone will love: stationery! In this guide, JetPens team members suggest products\u2026", "title": "Holiday Gift Guide: The Best Stationery for Everyone on Your List", "topic": "stationery", "url": "https://www.jetpens.com/blog/Holiday-Gift-Guide-The-Best-Stationery-for-Everyone-on-Your-List/pt/1057"}, {"date": "2026-11-26", "id": "753c7d5719f4", "image": "thumbs/2d368f7b5b9b8a4a.webp", "kind": "video", "source": "\u3082\u3082\u3058\u306e\u624b\u5e33\u306e\u4e2d\u8eab", "summary": "(323 views)", "title": "[Fountain Pen] Finally Got the Glow-in-the-Dark Kaweco! F-Nib Writing Experience and Ink Selectio...", "topic": "stationery", "url": "https://www.youtube.com/watch?v=6kILGJhmNzk"}, {"date": "2026-11-26", "id": "3b5dc9d37719", "image": "thumbs/2860118270ac705d.webp", "kind": "video", "source": "Aligned Plans", "summary": "(1,555 views)", "title": "\u30d6\u30e9\u30c3\u30af\u30d5\u30e9\u30a4\u30c7\u30fc\u3067\u6587\u623f\u5177\u3092\u8cb7\u3046\u524d\u306b\u3053\u308c\u3092\u898b\u3066\uff01", "topic": "stationery", "url": "https://www.youtube.com/watch?v=SH9lY57o7rY"}, {"date": "2026-11-26", "id": "950d911884ff", "image": "thumbs/6d81e3c962d9e119.webp", "kind": "video", "source": "\u30b3\u30b9\u30e1\u30c3\u30d7\u30eb\u3010\u66ae\u3089\u3057\u306e\u65b0\u4f5c\u3011", "summary": "(191 views)", "title": "[December 2026] New \u0026 Limited Edition Stationery Roundup! RURU MARY\u2019S x Tsutaya Books, Planner De...", "topic": "stationery", "url": "https://www.youtube.com/watch?v=SMdxoutIYow"}, {"date": "2026-11-25", "id": "01255f5e8301", "image": "thumbs/d606dd76b6515e8b.webp", "kind": "reddit", "source": "r/hobonichi", "summary": "It was a busy and challenging week, but a fun one! 102 upvotes, 10 comments on r/hobonichi.", "title": "The Week I Went to Ghibli Park", "topic": "stationery", "url": "https://www.reddit.com/r/hobonichi/comments/1y4yoz1/the_week_i_went_to_ghibli_park/"}, {"id": "e410b8928f2e", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "Every October, the Obsidian community comes together to hack on plugins, themes, vaults, and other projects. Polish your creations, ship updates, or kick off a new project you\u0027ve been eager to build!", "title": "Obsidian October 2025", "topic": "obsidian", "url": "https://obsidian.md/blog/2025-obsidian-october/"}, {"id": "ebfe50f82b5c", "image": "thumbs/6dd95818447f7293.webp", "source": "Obsidian blog", "summary": "Starting today, the Obsidian Commercial license is optional. Anyone can use Obsidian for work, for free. Explore organizations that support Obsidian on our new Enterprise page.", "title": "Obsidian is now free for work", "topic": "obsidian", "url": "https://obsidian.md/blog/free-for-work/"}, {"id": "7e7719d3dc9c", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "A second audit of Obsidian apps finds that incremental updates since Obsidian 1.5.3 maintained the highest degree of attention to security, and that no new vulnerabilities were found.", "title": "Second audit of Obsidian apps completed by Cure53", "topic": "obsidian", "url": "https://obsidian.md/blog/cure53-second-client-audit/"}, {"id": "5defda764660", "image": "thumbs/a6222e0c799a920f.webp", "source": "Obsidian blog", "summary": "Fractal is the latest Softwear update. Our new tees and hoodies are silkscreened using high-opacity colors, with a design by VFX artist and Obsidian user, Shaun Yue.", "title": "Obsidian Softwear: new Fractal t-shirts and hoodies", "topic": "obsidian", "url": "https://obsidian.md/blog/fractal-softwear/"}, {"id": "12ba58383f16", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "This year Obsidian October is all about speed. Learn how you can adopt the latest APIs and get feedback from our team.", "title": "Obsidian October 2024", "topic": "obsidian", "url": "https://obsidian.md/blog/2024-obsidian-october/"}, {"id": "135e3355b3e4", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "Obsidian Sync is our approach to making the most intuitive and secure sync option. With the new Standard plan, we\u0027re excited to make Sync accessible to even more people.", "title": "Obsidian Sync now starts at $4 per month with the new Standard plan", "topic": "obsidian", "url": "https://obsidian.md/blog/standard-plan/"}, {"id": "17a929f58ab6", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "Obsidian Sync now offers larger vaults, bigger files, regional servers, faster sync, and more flexible storage. New plans are launching in January, and you can join Sync now for a special holiday promotion.", "title": "New Obsidian Sync plans: bigger, better, faster, smoother", "topic": "obsidian", "url": "https://obsidian.md/blog/new-sync-plans/"}, {"id": "533c10eb43ae", "image": "thumbs/7b82033c21d4fccf.webp", "source": "Obsidian blog", "summary": "Obsidian Importer now helps you easily convert your Apple Notes data to portable files that you can use with any Markdown app. Supports tables, images, drawings, scans, PDFs, and links introduced in iOS 17.", "title": "Obsidian Importer now converts Apple Notes to portable, durable files", "topic": "obsidian", "url": "https://obsidian.md/blog/apple-notes-export/"}, {"id": "534e6bfc46f3", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "Today we\u2019re thrilled to announce the winners of our fifth annual Gems of the Year awards! After our panel narrowed down the selection and the community voted on...", "title": "2024 Gems of the year winners", "topic": "obsidian", "url": "https://obsidian.md/blog/2024-goty-winners/"}, {"id": "29e6033bdd89", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "2024 is over and that means it\u0027s time to nominate your favorite projects from the Obsidian community for our Gems of the Year awards! To nominate projects go he...", "title": "2024 Gems of the year nominations", "topic": "obsidian", "url": "https://obsidian.md/blog/2024-goty-nominations/"}, {"id": "25a22d18a5b4", "image": "thumbs/7c1e228eb0b43cfc.webp", "source": "Obsidian blog", "summary": "Highlight and capture web pages in your favorite browser with the new Obsidian Web Clipper extension.", "title": "Save the web", "topic": "obsidian", "url": "https://obsidian.md/blog/save-the-web/"}, {"id": "2c30543a2818", "image": "thumbs/840b4606fd76cc36.webp", "source": "Obsidian blog", "summary": "The Obsidian Canvas file format is now called JSON Canvas and has its own site, specification, and open source resources.", "title": "Announcing JSON Canvas: an open file format for infinite canvas data", "topic": "obsidian", "url": "https://obsidian.md/blog/json-canvas/"}, {"id": "cceed1aedd55", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "It has been nearly four years since the first line of code of Obsidian was written on January 31st, 2020. Today we\u0027re thrilled to announce the winners of our fo...", "title": "2023 Gems of the year winners", "topic": "obsidian", "url": "https://obsidian.md/blog/2023-goty-winners/"}, {"id": "c5ccf2d05789", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "Independent audits help us ensure that our code and procedures meet the highest security standards. Our new Security page hosts audits completed by third parties, including our first report by Cure53 covering Obsidian apps.", "title": "New security page and independent audit completed by Cure53", "topic": "obsidian", "url": "https://obsidian.md/blog/cure53-security-audit/"}, {"id": "cc6a62742e36", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "**(Update)** See [2023 Gems of the Year](https://obsidian.md/blog/2023-goty-winners/) for the final results! --- The year is almost over and that means it\u0027s tim...", "title": "2023 Gems of the year nominations", "topic": "obsidian", "url": "https://obsidian.md/blog/2023-goty-nominations/"}, {"id": "829aa2b6e8bf", "image": "thumbs/f9b48989cd33cf58.webp", "source": "Obsidian blog", "summary": "In the upcoming Obsidian v1.5, the legacy editor will be removed from the app.", "title": "Goodbye legacy editor", "topic": "obsidian", "url": "https://obsidian.md/blog/goodbye-legacy-editor/"}, {"date": "2026-11-26", "id": "985fe4b1d923", "image": "thumbs/98602a528f644ec3.webp", "source": "befores \u0026 afters", "summary": "Behind one of Tippett Studio\u0027s landmark stop-motion characters. The post I mean, how freakin\u2019 cool was ED-209? appeared first on befores \u0026 afters .", "title": "I mean, how freakin\u2019 cool was ED-209?", "topic": "vfx", "url": "https://beforesandafters.com/2026/11/27/i-mean-how-freakin-cool-was-ed-209/"}, {"date": "2026-11-24", "id": "a3bce863b13e", "image": "thumbs/acb69a7571d54215.webp", "source": "befores \u0026 afters", "summary": "Get 25% off any individual course and 10% off on course Bundle. The post Rebelway\u2019s Biggest Sale of the Year is Here appeared first on befores \u0026 afters .", "title": "Rebelway\u2019s Biggest Sale of the Year is Here", "topic": "vfx", "url": "https://beforesandafters.com/2026/11/25/rebelways-biggest-sale-of-the-year-is-here/"}, {"date": "2026-11-26", "id": "cfedbff4a52d", "image": "thumbs/e5f0aed97443ff84.webp", "source": "Art of VFX", "summary": "From The Lord of the Rings trilogy at Weta FX to the Marvel Cinematic Universe, John Haley has built an impressive career in visual effects. His credits include Lost in Space, Hellboy, Moon Knight, and Wonder Man. Today, he takes us behind the scenes of\u2026", "title": "VisionQuest: John Haley \u2013 Production VFX Supervisor", "topic": "vfx", "url": "https://www.artofvfx.com/visionquest-john-haley-production-vfx-supervisor/"}, {"date": "2026-11-19", "id": "5b1468525a7f", "image": "thumbs/0944c529251f469b.webp", "source": "befores \u0026 afters", "summary": "Stunt coordinator Roy Taylor with Morfydd Clark. The post On The Set Pic: \u2018The Rings of Power\u2019, s3 appeared first on befores \u0026 afters .", "title": "On The Set Pic: \u2018The Rings of Power\u2019, s3", "topic": "vfx", "url": "https://beforesandafters.com/2026/11/19/on-the-set-pic-the-rings-of-power-s3/"}, {"date": "2026-11-26", "id": "e5ae454dfec9", "image": "thumbs/d30d287f166e6c9a.webp", "kind": "video", "source": "DEBA : The HBT", "summary": "(3,805 views)", "title": "The Making of Ramayana", "topic": "vfx", "url": "https://www.youtube.com/watch?v=4f4mvXyX-ro"}, {"date": "2026-11-21", "id": "bef2d15a7712", "image": "thumbs/aac6872441972ea8.webp", "source": "Art of VFX", "summary": "Every weekend, we highlight a handpicked selection of stories from Art of VFX. Whether you\u2019ve missed an interview, want to revisit a great breakdown, or discover the artists behind today\u2019s biggest productions, Weekend Spotlight is your chance to catch up on a\u2026", "title": "Weekend Spotlight \u2013 November 21st, 2026", "topic": "vfx", "url": "https://www.artofvfx.com/weekend-spotlight-november-21st-2026/"}, {"date": "2026-11-24", "id": "292d9041b92c", "image": "thumbs/c66a656d4917c5b9.webp", "kind": "reddit", "source": "r/vfx", "summary": "100 upvotes, 34 comments on r/vfx.", "title": "In Interstellar we saw one of the most visually accurate renders of a blackhole ever. Each frame took 100 hours to render with the VFX team coming up with a entirely new lensing technique.  They where able to do this because they didn\u0027t have Robert Downey  Jr in the movie sucking up all the budget.", "topic": "vfx", "url": "https://www.reddit.com/r/vfx/comments/1y4of8i/in_interstellar_we_saw_one_of_the_most_visually/"}, {"date": "2026-11-24", "id": "58f5f65e6b42", "image": "thumbs/7185c685330d76d0.webp", "kind": "reddit", "source": "r/vfx", "summary": "Greetings r/vfx, this is the DJV team. Former Lucasfilm software engineer Darby Johnston has been developing DJV, the open-source image sequence viewer since 2004, and many of you have used it to check your EXR renders and review shots. **DJV Studio** is the\u2026", "title": "DJV Studio is out: with H.264/HEVC, AAC playback and Blackmagic output. Open-source DJV stays free", "topic": "vfx", "url": "https://www.reddit.com/r/vfx/comments/1y4sh74/djv_studio_is_out_with_h264hevc_aac_playback_and/"}, {"date": "2026-11-24", "id": "bcb8b04624d3", "kind": "reddit", "source": "r/vfx", "summary": "Our favorite shitty studio is at it again. Feel free to share your gripes for us to sympathize 48 upvotes, 61 comments on r/vfx.", "title": "Air your grievances, Dneggers", "topic": "vfx", "url": "https://www.reddit.com/r/vfx/comments/1y4csi3/air_your_grievances_dneggers/"}, {"date": "2026-11-22", "id": "f589c58084b9", "image": "thumbs/660d50460b5bd3a1.webp", "kind": "video", "source": "Fame Focus", "summary": "(19,881 views)", "title": "Backroom VFX... How They Did It", "topic": "vfx", "url": "https://www.youtube.com/watch?v=PfQWsMhcNr0"}, {"date": "2026-11-21", "id": "c9426cca9342", "image": "thumbs/1d864046d0140555.webp", "kind": "video", "source": "KibaKibi", "summary": "(253,178 views)", "title": "Why Indian Movies CAN NOT make GOOD VFX | A KibaKibi Breakdown", "topic": "vfx", "url": "https://www.youtube.com/watch?v=zOHMhX26zkI"}, {"id": "e226e6cd03f8", "image": "thumbs/148a0cac5df18b74.webp", "source": "RenderMan", "summary": "The RenderMan team will be at SIGGRAPH 2025 in Vancouver. In the Art \u0026 Science Fair we\u0027ll share the latest RenderMan innovations and industry collaborations at Pixar. The RenderMan team will also be showcasing the Walking Teapot Museum at the Siggraph show\u2026", "title": "August 08, 2025 RenderMan at Siggraph 2025 The RenderMan team will be at SIGGRAPH 2025 in Vancouver. In the Art \u0026 Science Fair we\u0027ll share the latest RenderMan innovations and industry collaborations at Pixar. The RenderMan team will also be showcasing the Walking Teapot Museum at the Siggraph show floor ... and yes, we\u0027ll be giving some away!", "topic": "pipeline", "url": "https://renderman.pixar.com/news/renderman-at-siggraph-2025"}, {"date": "2026-11-26", "id": "8e7730e65ab8", "image": "thumbs/f970b2a5b0f221e7.webp", "kind": "video", "source": "MOON", "summary": "(9,192 views)", "title": "MOON - Houdini \u27e1 (Official Audio)", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=17RYwhjlz4c"}, {"date": "2026-11-26", "id": "4c05ee5ac30d", "image": "thumbs/0dfeae526dc5c515.webp", "kind": "video", "source": "Houdini", "summary": "(3,695 views)", "title": "Architectural Visualization | Experience Studios | Houdini Connect", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=AXfQKo9RHEI"}, {"date": "2026-11-27", "id": "46641710c671", "image": "thumbs/926e721a2fa3f4a7.webp", "kind": "video", "source": "Release - Topic", "summary": "(55 views)", "title": "- YouTube", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=iNywxW-M_dg"}, {"date": "2026-11-24", "id": "58750ca4c73c", "image": "thumbs/c02b40a9f23f74f0.webp", "kind": "video", "source": "IndyZone \u30c1\u30e3\u30f3\u30cd\u30eb", "summary": "(1,778 views)", "title": "[Houdini 22] Explaining the New COPs-Based HeightField Workflow!", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=4hA83Wr7ggw"}, {"date": "2026-11-26", "id": "78bdc3dc5d53", "image": "thumbs/4822bcaef73887eb.webp", "kind": "video", "source": "Aimpire Gamerz", "summary": "(3,374 views)", "title": "Is King Solaris Really Unbeatable? Free sets vs Young Kotl | shadow fight 3 wheel of history event", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=G3nVjVvAqDY"}, {"date": "2026-11-25", "id": "855877ef5705", "image": "thumbs/49f0eb77992af36d.webp", "kind": "video", "source": "Ivan da Vodka", "summary": "(11,309 views)", "title": "JOJI | SOLARIS TOUR - LIVE IN BANGKOK", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=sw1qzOnqCBw"}, {"date": "2026-11-24", "id": "46251d20f377", "image": "thumbs/f2d9fe2140cd311f.webp", "kind": "video", "source": "MrFroost", "summary": "(624 views)", "title": "Gladiador Solaris - AD3 + 40 abates 22/11/2026 (CRAFTLANDIA)", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=8gXKugKyqh8"}, {"date": "2026-11-24", "id": "fbd8ee082562", "image": "thumbs/9933487b3ff291e8.webp", "kind": "reddit", "source": "r/Houdini", "summary": "Hey everyone. I\u2019d love to get some constructive criticism on my demo reel as I\u2019ve been hoping to do more work outside of where I live, being Trinidad and Tobago. I\u2019ve been using Houdini for about 2.5 years and learning vfx for about 4. Thank you in advance.\u2026", "title": "Feedback on my demoreel", "topic": "pipeline", "url": "https://www.reddit.com/r/Houdini/comments/1y4p7ky/feedback_on_my_demoreel/"}, {"date": "2026-11-23", "id": "4c9aea7f9ccc", "image": "thumbs/be5ad7b56fb8f2d9.webp", "kind": "video", "source": "John Muscarello", "summary": "(67 views)", "title": "Dreo Solaris Slim H3 vs H2 vs Atom 316: Which Heater Wins?", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=D_twGzcbdok"}, {"date": "2026-11-21", "id": "c16c7ab17eab", "image": "thumbs/ec1bf0b919e5d2bb.webp", "kind": "video", "source": "Center for Inquiry", "summary": "(1,530 views)", "title": "Houdini vs. the Spirits: The Magician Who Investigated the Dead | Kenny Biddle", "topic": "pipeline", "url": "https://www.youtube.com/watch?v=DfxQX5x7lIE"}]</script>
+</main>
+
+<footer><div class="wrap">
+<p>Edition compiled 2026-11-27 at 13:33 (Pacific/Auckland) from 39 of 40 sources, tuned by 11 likes and 0 “less like this”. Summaries are paraphrased; tap a headline for the original. Pictures are thumbnails of each article's own preview image.</p>  <p>Read stories, votes and saves are remembered on this device, and synced through GitHub once a device is connected under Likes. <a href="https://github.com/Alt-Py/PLINE">How Pline works</a></p>
+</div></footer>
+
+<dialog id="likesDialog" aria-labelledby="likesTitle">
+  <form method="dialog" class="sheet" id="likesForm">
+    <h2 id="likesTitle">Likes, saves and sync</h2>
+    <p>Tap <b>More like this</b> or <b>Less like this</b> on any story and Pline learns your taste, by source and by subject. Tap the <b>bookmark</b> to keep a story on your <a href="saved.html">Saved</a> page.</p>
+    <p id="likesCount">No votes or saves yet.</p>
+    <p>Everything is kept on this device. To share it with your other devices and with tomorrow's edition, connect a GitHub token once on each device:</p>
+    <ol>
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub › Fine-grained tokens › Generate new token</a>.</li>
+      <li>Repository access: <b>Only select repositories › PLINE</b>.</li>
+      <li>Permissions: <b>Issues › Read and write</b>. Nothing else.</li>
+      <li>Paste the token below. It stays in this browser only.</li>
+    </ol>
+    <div class="row">
+      <input id="tokenInput" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…" aria-label="GitHub token">
+      <button class="pill primary" id="saveToken" type="button">Connect</button>
+    </div>
+    <div class="status" id="likesStatus" role="status"></div>
+    <div class="row">
+      <button class="pill" id="sendNow" type="button">Send now</button>
+      <button class="pill" id="forgetToken" type="button">Disconnect this device</button>
+      <button class="pill" value="close" style="margin-left:auto">Done</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>
